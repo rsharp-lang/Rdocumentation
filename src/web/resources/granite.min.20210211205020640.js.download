@@ -48,11 +48,11 @@ s.resolve(r)
 s.reject(t.responseText)
 }}};
 t.open("GET",l,true);
-t.send();
+
 return s
 }function e(){var t=new XMLHttpRequest();
 t.open("GET",l,false);
-t.send();
+
 try{return r=JSON.parse(t.responseText).token
 }catch(s){o(s)
 }}function m(){r=undefined;
