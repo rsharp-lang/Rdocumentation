@@ -1,0 +1,6 @@
+(function(){var c=CQ_Analytics.ClientContextMgr.getRegisteredStore("akamaiprofile");
+var b="CN";
+if(b.length===2){c.setProperty("countryCode",b)
+}var a="BJ";
+if(a.length>=1&&a.length<=5){c.setProperty("regionCode",a)
+}}());
