@@ -1,0 +1,6 @@
+[submodule "modules/Linq.js"]
+	path = modules/Linq.js
+	url = https://github.com/biocad-cloud/data.ts.git
+[submodule "modules/php.NET"]
+	path = modules/php.NET
+	url = https://github.com/biocad-cloud/php-dotnet.git
