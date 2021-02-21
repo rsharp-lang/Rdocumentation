@@ -6,7 +6,7 @@
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "../dist",
-    "outFile": "../../build/Rdocumentation.js",
+    "outFile": "../../build/rlang.js",
     "declaration": true
   },
   "exclude": [

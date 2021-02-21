@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Rdocumentation", "Rdocumentation\Rdocumentation.njsproj", "{2190E880-D811-4172-AAE4-5246A02787CC}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "rlang", "rlang\rlang.njsproj", "{26F18D77-9475-40F5-A6B8-67EFE11326DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2190E880-D811-4172-AAE4-5246A02787CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2190E880-D811-4172-AAE4-5246A02787CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2190E880-D811-4172-AAE4-5246A02787CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26F18D77-9475-40F5-A6B8-67EFE11326DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26F18D77-9475-40F5-A6B8-67EFE11326DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26F18D77-9475-40F5-A6B8-67EFE11326DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26F18D77-9475-40F5-A6B8-67EFE11326DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

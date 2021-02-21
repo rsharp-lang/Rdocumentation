@@ -104,3 +104,10 @@ dist
 .tern-port
 *.sqlite
 *.cache
+*.dll
+*.suo
+
+.suo
+
+obj/
+modules/typescript/.vs/Rdocumentation/v16/.suo
