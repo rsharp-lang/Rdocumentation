@@ -384,5 +384,14 @@
 <script type="text/javascript" src="/resources/javascript/mathworks-aem.min.20210211205020640.js"></script>
 <script type="text/javascript" src="/resources/javascript/matrixmenu.min.20210211205020640.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (document.cookie.indexOf('video-reg') !== -1) {
+            //target dom span class
+            $('.icon-video-locked').css('display', 'none');
+        }
+    });
+</script>
+
 <a class="btn btn_color_mediumgray" id="go-top" tabindex="0"><span class="sr-only">Go to top of page</span><span
         class="icon-arrow-open-up icon_24"></span></a>
