@@ -4,3 +4,6 @@
 [submodule "modules/php.NET"]
 	path = modules/php.NET
 	url = https://github.com/biocad-cloud/php-dotnet.git
+[submodule "modules/marked.js"]
+	path = modules/marked.js
+	url = https://github.com/BioDeep/marked.git
