@@ -1,0 +1,148 @@
+<div class="sticky_header_container includes_subnav affix-top">
+    <!-- Section Header: Start -->
+    <div class="section_header level_3" aria-hidden="true">
+        <div class="container">
+            <div class="row" id="mobile_search_row">
+                <div class="col-sm-6 col-md-7" id="section_header_title">
+                    <div>
+                        <div class="sectionHead sectionhead containsResourceName resourceClass-sectionhead">
+                            <div class="section_header_content">
+                                <div class="section_header_title">
+                                    <h1>
+
+                                        Linear Model
+                                    </h1>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5" id="mobile_search">
+                    <div>
+                        <div
+                            class="sectionHeadSearchBox sectionheadsearchbox containsResourceName resourceClass-sectionheadsearchbox">
+                            <div class="search_nested_content_container">
+
+                                <div id="search_scope_site" class="collapse in">
+                                    <form name="search" id="site_search" class="site_search"
+                                        action="https://uk.mathworks.com/search.html" method="get">
+                                        <div class="input-group">
+                                            <label id="search-mathworks" class="sr-only" for="query">Search
+                                                MathWorks.com</label>
+                                            <input type="hidden" name="c[]" value="entire_site">
+                                            <input type="search" name="q" id="query"
+                                                class="form-control conjoined_search"
+                                                placeholder="Search MathWorks.com" autocomplete="off"
+                                                data-site-domain="uk" data-site-language="en"
+                                                aria-labelledby="search-mathworks">
+                                            <div class="input-group-btn">
+
+                                                <button type="submit" id="searchbutton"
+                                                    class="btn icon-search btn_search_adjacent btn_search icon_16"
+                                                    aria-label="Search"><span class="sr-only">Search</span></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <script>
+                                    $(".search_scope_trigger").click(function handlerSearch(event) {
+                                        var target1 = event.target.parentNode.attributes.getNamedItem("data-groupid").nodeValue;
+                                        $('#' + target1).removeClass("in");
+                                    });
+                                </script>
+
+
+                            </div>
+                            <button class="btn icon-remove btn_search pull-right icon_32 visible-xs"
+                                data-toggle="collapse" data-target="#mobile_search" aria-expanded="false"
+                                aria-controls="mobile_search"><span class="sr-only">Close Mobile Search</span>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="visible-xs" id="search_actuator">
+                    <button
+                        class="btn icon-search btn_search pull-right icon_16 containsResourceName resourceClass-button"
+                        data-toggle="collapse" data-target="#mobile_search" aria-expanded="false"
+                        aria-controls="mobile_search"><span class="sr-only">Close Mobile Search</span></button>
+                </div>
+            </div>
+            <!-- Mobile Local Nav: Start -->
+            <div class="row visible-xs visible-sm" id="mobile_subnav">
+                <div class="col-xs-12">
+                    <div class="navbar-collapse collapse mobile_subnav_content">
+                        <div>
+                            <div class="localNavigation localnav containsResourceName resourceClass-localnav">
+
+
+                                <ul id="localnav_mobile" class="nav navbar-nav subnav" style="float:none">
+
+                                </ul>
+                                <div>
+                                    <div class="cq-placeholder" data-emptytext="Local Navigation"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Local Nav: End -->
+        </div>
+    </div>
+
+    <div class="horizontal_nav hidden-xs hidden-sm ">
+        <div class="horizontal_nav_container">
+
+            <div>
+                <div class="container">
+                    <div class="row">
+
+
+                        <div class="col-md-12 hidden-xs hidden-sm">
+                            <div>
+                                <div
+                                    class="callToAction calltoactionheader containsResourceName resourceClass-calltoactionheader">
+
+
+                                    <div class="cta_box ">
+                                        <ul class="list-inline">
+                                            <li class="cta_item cta_item_general">
+                                                <a href="https://uk.mathworks.com/campaigns/products/trials/targeted/mal.html"
+                                                    class="
+                      icon-download
+                      " data-link="lead" data-offertype="trial" data-component="calltoactionheader">
+                                                    Trial software
+                                                </a>
+                                            </li>
+
+                                            <li class="cta_item cta_item_general">
+                                                <a href="https://uk.mathworks.com/company/aboutus/contact_us/contact_sales.html"
+                                                    class="
+                      icon-phone
+                      " data-link="lead" data-offertype="Contact Sales" data-component="calltoactionheader">
+                                                    Contact sales
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
