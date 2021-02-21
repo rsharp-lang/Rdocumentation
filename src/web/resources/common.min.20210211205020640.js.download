@@ -2440,10 +2440,14 @@ a.prototype.postMessage(f,e)
 }else{if(b==="logout"){a.logout()
 }}}}}catch(d){return
 }};
-a.prototype._writeIframe=function(b){window.addEventListener("DOMContentLoaded",function(){if(!document.querySelector("#embeddedStatus")){document.querySelector("body").appendChild(a.getIframe())
+a.prototype._writeIframe=function(b){
+    window.addEventListener("DOMContentLoaded",function(){
+        if(!document.querySelector("#embeddedStatus")){
+            // document.querySelector("body").appendChild(a.getIframe())
 }},false)
 };
-a.prototype._getIframe=function(){return this._iframe[0]
+a.prototype._getIframe=function(){
+
 };
 return a
 }());
