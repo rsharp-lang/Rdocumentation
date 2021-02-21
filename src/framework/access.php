@@ -1,5 +1,7 @@
 <?php
 
+imports("MVC.controller");
+
 class accessController extends controller {
 
     public function accessControl() {
