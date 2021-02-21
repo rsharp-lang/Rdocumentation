@@ -1,4 +1,6 @@
 /// <reference path="linq.d.ts" />
+/// <reference path="marked.d.ts" />
+/// <reference path="rlang.d.ts" />
 declare module app {
     function start(): void;
 }

@@ -15,15 +15,7 @@ class App {
         $blog_data = [
             "title" => "test title",
             "sub_title" => "test secondary title",
-            "content" => "
-                # test header
-                ## test header2
-
-                |a|b|c|
-                |-|-|-|
-                |a|a|a|
-                |b|b|b|
-            "
+            "content" => ""
         ];
 
         View::Display($blog_data);

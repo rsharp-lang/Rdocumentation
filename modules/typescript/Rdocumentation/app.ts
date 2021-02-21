@@ -1,4 +1,6 @@
 ///<reference path="../../build/linq.d.ts" />
+///<reference path="../../build/marked.d.ts" />
+///<reference path="../../build/rlang.d.ts" />
 
 module app {
 

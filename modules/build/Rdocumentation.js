@@ -12,6 +12,8 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 ///<reference path="../../build/linq.d.ts" />
+///<reference path="../../build/marked.d.ts" />
+///<reference path="../../build/rlang.d.ts" />
 var app;
 (function (app) {
     function start() {
@@ -67,6 +69,9 @@ var pages;
                 configurable: true
             });
             BlogReader.prototype.runInit = function () {
+                $ts.getText("@data:markdown", function (md) {
+                    $ts("#blog_content").display(marked(md));
+                });
             };
             return BlogReader;
         }(pages.AppBase));

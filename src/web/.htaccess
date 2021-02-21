@@ -27,7 +27,7 @@ Header set Cache-Control: "max-age=0, no-store"
 
 # ErrorDocument 404 /index.php?app=custom_errors&error=404
 
-
+RewriteRule ^blog/markdown/(.+)$ /api.php?app=content&id=$1
 RewriteRule ^blog/$ /blog.php?app=index
 RewriteRule ^blog/(.+)$ /blog.php?app=$1
 

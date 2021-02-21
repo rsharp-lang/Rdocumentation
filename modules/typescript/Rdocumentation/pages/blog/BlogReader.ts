@@ -7,9 +7,9 @@ namespace pages.blog {
         }
 
         runInit() {
-          
+            $ts.getText("@data:markdown", function (md) {
+                $ts("#blog_content").display(marked(md));
+            });
         }
-
-
     }
 }
