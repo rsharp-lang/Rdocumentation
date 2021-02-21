@@ -60,7 +60,7 @@ h2,h3{page-break-after:avoid}
 .table td,.table th{background-color:#fff !important}
 .table-bordered td,.table-bordered th{border:1px solid #ddd !important}
 }
-@font-face{font-family:"Glyphicons Halflings";src:url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/glyphicons-halflings-regular.20210211205020640.eot);src:url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/glyphicons-halflings-regular.20210211205020640.eot?#iefix) format("embedded-opentype"),url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/glyphicons-halflings-regular.20210211205020640.woff2) format("woff2"),url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/glyphicons-halflings-regular.20210211205020640.woff) format("woff"),url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/glyphicons-halflings-regular.20210211205020640.ttf) format("truetype"),url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/glyphicons-halflings-regular.20210211205020640.svg#glyphicons_halflingsregular) format("svg")}
+@font-face{font-family:"Glyphicons Halflings";src:url(/resources/fonts/glyphicons-halflings-regular.20210211205020640.eot);src:url(/resources/fonts/glyphicons-halflings-regular.20210211205020640.eot?#iefix) format("embedded-opentype"),url(/resources/fonts/glyphicons-halflings-regular.20210211205020640.woff2) format("woff2"),url(/resources/fonts/glyphicons-halflings-regular.20210211205020640.woff) format("woff"),url(/resources/fonts/glyphicons-halflings-regular.20210211205020640.ttf) format("truetype"),url(/resources/fonts/glyphicons-halflings-regular.20210211205020640.svg#glyphicons_halflingsregular) format("svg")}
 .glyphicon{position:relative;top:1px;display:inline-block;font-family:"Glyphicons Halflings";font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .glyphicon-asterisk:before{content:"\002a"}
 .glyphicon-plus:before{content:"\002b"}
@@ -1517,9 +1517,9 @@ td.visible-print,th.visible-print{display:table-cell !important}
 @-ms-viewport{width:device-width}
 @-o-viewport{width:device-width}
 @viewport{width:device-width}
-@font-face{font-family:'mathworks';font-style:normal;font-weight:normal;src:url("../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/mathworks.20210211205020640.woff") format("woff"),url("../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/mathworks.20210211205020640.ttf") format("truetype")}
-@font-face{font-family:'mathworks-eps';font-style:normal;font-weight:normal;src:url("../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/mathworks-eps.20210211205020640.woff") format("woff"),url("../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/mathworks-eps.20210211205020640.ttf") format("truetype")}
-@font-face{font-family:'mathworks-pictograms';font-style:normal;font-weight:normal;src:url("../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/mathworks-pictograms.20210211205020640.woff") format("woff"),url("../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/fonts/mathworks-pictograms.20210211205020640.ttf") format("truetype")}
+@font-face{font-family:'mathworks';font-style:normal;font-weight:normal;src:url("/resources/fonts/mathworks.20210211205020640.woff") format("woff"),url("/resources/fonts/mathworks.20210211205020640.ttf") format("truetype")}
+@font-face{font-family:'mathworks-eps';font-style:normal;font-weight:normal;src:url("/resources/fonts/mathworks-eps.20210211205020640.woff") format("woff"),url("/resources/fonts/mathworks-eps.20210211205020640.ttf") format("truetype")}
+@font-face{font-family:'mathworks-pictograms';font-style:normal;font-weight:normal;src:url("/resources/fonts/mathworks-pictograms.20210211205020640.woff") format("woff"),url("/resources/fonts/mathworks-pictograms.20210211205020640.ttf") format("truetype")}
 .sticky_header_container [class^="col-"]{min-height:0}
 .modal-open .sticky_header_container.affix{padding-right:17px}
 .modal-open #go-top{right:27px}
@@ -2495,10 +2495,10 @@ a.tag_component.tag_remove .icon-remove:hover{color:#005487}
 #headernav_collapse li.headernav_store [class*="companion_btn"].btn-xs{height:25px;padding-top:2px;padding-bottom:0}
 #headernav_collapse li.headernav_login .dropdown-menu{margin-top:7px;z-index:1037}
 #headernav_collapse li.headernav_login>a,#headernav_collapse li.headernav_contact a{width:24px;height:24px;padding:0;display:block;background:transparent no-repeat center center;background-size:cover;transition:background-image .3s ease}
-#headernav_collapse li.headernav_contact a{background-image:url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/ico-header-contact.20210211205020640.svg),url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/ico-header-contact-hover.20210211205020640.svg)}
-#headernav_collapse li.headernav_contact a:hover{background-image:url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/ico-header-contact-hover.20210211205020640.svg)}
-#headernav_collapse li.headernav_login>a{border-radius:50%;background-image:url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/ico-header-account.20210211205020640.svg),url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/ico-header-account-hover.20210211205020640.svg)}
-#headernav_collapse li.headernav_login>a:hover{background-image:url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/ico-header-account-hover.20210211205020640.svg)}
+#headernav_collapse li.headernav_contact a{background-image:url(/resources/images/ico-header-contact.20210211205020640.svg),url(/resources/images/ico-header-contact-hover.20210211205020640.svg)}
+#headernav_collapse li.headernav_contact a:hover{background-image:url(/resources/images/ico-header-contact-hover.20210211205020640.svg)}
+#headernav_collapse li.headernav_login>a{border-radius:50%;background-image:url(/resources/images/ico-header-account.20210211205020640.svg),url(/resources/images/ico-header-account-hover.20210211205020640.svg)}
+#headernav_collapse li.headernav_login>a:hover{background-image:url(/resources/images/ico-header-account-hover.20210211205020640.svg)}
 .navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:focus,.navbar-default .navbar-nav>.open>a:hover{background:transparent}
 #header_desktop li.headernav_matrix button{top:-5px}
 }
@@ -2715,7 +2715,7 @@ footer h5,footer .ff_section_title{padding-bottom:3px;margin-bottom:10px;border-
 .footer .social_media_icons li{padding-left:0;margin-bottom:0;background:0;float:left}
 .footer .social_media_icons li+li{margin:0 0 0 8px}
 .footer .social_media_icons [class*="ico_"]{width:16px;height:16px}
-.footer .social_media_icons .ico_sm{width:16px;height:16px;background-image:url("../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/ico-sprite.20210211205020640.png");display:block}
+.footer .social_media_icons .ico_sm{width:16px;height:16px;background-image:url("/resources/images/ico-sprite.20210211205020640.png");display:block}
 .ico_sm.ico_google{background-position:0 0}
 .ico_sm.ico_facebook{background-position:0 -16px}
 .ico_sm.ico_linkedin{background-position:0 -32px}
@@ -3756,8 +3756,8 @@ span.text_center_md{display:block}
 #topnav_collapse{max-height:none;margin-right:-15px;margin-left:-15px;background:#fff;border-top:0}
 #topnav_collapse li+li{border-top:1px solid #e6e6e6}
 #topnav_collapse li.headernav_login>a{padding-left:48px !important}
-#topnav_collapse li.headernav_login>a:before{width:24px;height:24px;padding:0;border-radius:50%;background:transparent url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/ico-header-account.20210211205020640.svg) no-repeat center center;background-size:cover;content:"";display:block;float:left;position:absolute;top:calc(50% - 12px);left:15px;transition:background-image .3s ease}
-#topnav_collapse li.headernav_login>a:hover:before{background-image:url(../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/ico-header-account-hover.20210211205020640.svg)}
+#topnav_collapse li.headernav_login>a:before{width:24px;height:24px;padding:0;border-radius:50%;background:transparent url(/resources/images/ico-header-account.20210211205020640.svg) no-repeat center center;background-size:cover;content:"";display:block;float:left;position:absolute;top:calc(50% - 12px);left:15px;transition:background-image .3s ease}
+#topnav_collapse li.headernav_login>a:hover:before{background-image:url(/resources/images/ico-header-account-hover.20210211205020640.svg)}
 #topnav_collapse li.headernav_login.dropdown>a{background-image:none !important}
 #topnav_collapse li.headernav_login.dropdown>a:before{display:inline;content:none;position:relative}
 #topnav_collapse li.headernav_login.dropdown .mobile_account_image{width:24px;height:24px;border-radius:50%;background:transparent no-repeat center center;background-size:cover;display:inline-block;float:left;position:absolute;top:calc(50% - 12px);left:15px}
@@ -4397,7 +4397,7 @@ form .form_captcha_input{width:160px}
 .package-panel:hover{border-color:#0076a8;box-shadow:0 1px 1px rgba(0,118,168,0.35);cursor:pointer}
 .trials_for_all_confirmation{display:none}
 .spinning_redirect,.ajax_error_redirect{display:none}
-#headernav_collapse li.headernav_logout>a{border-radius:50%;width:24px;height:24px;padding:0;display:block;background:transparent url("../../../../../etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/ico-header-account.svg") no-repeat center center;background-size:cover;transition:background-image .3s ease}
+#headernav_collapse li.headernav_logout>a{border-radius:50%;width:24px;height:24px;padding:0;display:block;background:transparent url("/resources/images/ico-header-account.svg") no-repeat center center;background-size:cover;transition:background-image .3s ease}
 #headernav_collapse li.headernav_logout .dropdown-menu{z-index:1037}
 legend.control-label{display:inline-block !important;max-width:100% !important;margin-bottom:5px !important;font-weight:700 !important;border:none !important;color:inherit !important;font-size:inherit !important}
 @media screen and (min-width:768px) and (max-width:991px){#topnav{border-right:1px solid #e6e6e6;border-left:1px solid #e6e6e6}
