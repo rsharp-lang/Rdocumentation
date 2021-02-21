@@ -32,3 +32,5 @@ RewriteRule ^blog/$ /blog.php?app=index
 RewriteRule ^blog/(.+)$ /blog.php?app=$1
 
 RewriteRule ^([a-zA-Z_0-9]+)$ /index.php?app=$1
+
+RewriteRule ^typescripts/(.+)$ /proxy.php?app=typescripts&file=$1
