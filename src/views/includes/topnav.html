@@ -1,461 +1,150 @@
-    <!-- Mobile TopNav: Start -->
-    <div class="header visible-xs visible-sm" id="header_mobile" style="">
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <button type="button" class="navbar-toggle topnav_toggle" data-toggle="collapse"
-                                data-target="#topnav_collapse">
-                                <span class="sr-only">Toggle Main Navigation</span>
-                                <span class="icon-menu"></span>
-                            </button>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="text-center">
-                                <a href="https://uk.mathworks.com/?s_tid=gn_logo" class="svg_link navbar-brand">
-                                    <img src="/resources/pic-header-mathworks-logo.20210211205020640.svg"
-                                        class="mw_logo" alt="MathWorks - Mobile View">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xs-3">
-                            <div class="matrix_affordance_container_mobile" id="matrix_affordance_container_mobile">
-                                <div id="headernav_matrix_small" class="headernav_matrix"><button title="Matrix Menu"
-                                        class="navbar-toggle matrix_toggle" data-toggle="collapse"
-                                        data-target="#matrix_collapse" id="matrix_waffle_small"
-                                        aria-label="Mathworks Menu" type="button"><span
-                                            class="icon-matrix"></span></button></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row visible-xs visible-sm">
-                        <div class="col-xs-12">
-                            <div class="navbar-collapse collapse" id="topnav_collapse">
-                                <div
-                                    class="topNavigation topnavigation containsResourceName resourceClass-topnavigation">
-
-                                    <ul class="nav navbar-nav" id="topnav">
-                                        <li class="headernav_login" style="">
-                                            <a class="mwa-nav_login"
-                                                href="https://uk.mathworks.com/login?uri=https%3A%2F%2Fuk.mathworks.com%2Fdiscovery%2Flinear-model.html"><span
-                                                    class="visible-xs visible-sm">Sign In <span class="sr-only">to Your
-                                                        MathWorks Account</span></span><span
-                                                    class="visible-lg visible-md"><span class="sr-only">Sign In to Your
-                                                        MathWorks Account</span></span></a>
-                                        </li>
-                                        <li class="headernav_logout dropdown" style="display: none;">
-                                            <a href="https://uk.mathworks.com/discovery/linear-model.html#"
-                                                role="button" aria-haspopup="menu" aria-controls="mwa-nav"
-                                                class="dropdown-toggle mwa_image_drop_down" data-toggle="dropdown">
-                                                <span class="visible-xs visible-sm">
-                                                    <span class="mobile_account_image sr-only">
-                                                        Access your MathWorks Account
-                                                    </span>
-                                                    <span class="mobile_account_name" aria-hidden="true"></span>
-                                                    <b class="caret"></b>
-                                                </span>
-                                            </a>
-                                            <ul role="menu" class="dropdown-menu" id="mwa-nav">
-                                                <li class="mwa-nav_account"><a role="menuitem" class="mwa-account">My
-                                                        Account</a></li>
-                                                <li class="mwa-nav_community"><a role="menuitem"
-                                                        class="mwa-community-profile">My Community Profile</a></li>
-                                                <li class="mwa-nav_associate"><a role="menuitem"
-                                                        class="mwa-link-license">Link License</a></li>
-                                                <li class="mwa-nav_logout"><a role="menuitem" class="mwa-logout">Sign
-                                                        Out</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-
-
-                                        <li class="topnav_products ">
-                                            <a href="https://uk.mathworks.com/products.html?s_tid=gn_ps">Products</a>
-                                        </li>
-
-                                        <li class="topnav_solutions ">
-                                            <a href="https://uk.mathworks.com/solutions.html?s_tid=gn_sol">Solutions</a>
-                                        </li>
-
-                                        <li class="topnav_academia ">
-                                            <a href="https://uk.mathworks.com/academia.html?s_tid=gn_acad">Academia</a>
-                                        </li>
-
-                                        <li class="topnav_support ">
-                                            <a href="https://uk.mathworks.com/support.html?s_tid=gn_supp">Support</a>
-                                        </li>
-
-                                        <li class="topnav_community ">
-                                            <a href="https://uk.mathworks.com/matlabcentral/?s_tid=gn_mlc">Community</a>
-                                        </li>
-
-                                        <li class="topnav_events ">
-                                            <a
-                                                href="https://uk.mathworks.com/company/events.html?s_tid=gn_ev">Events</a>
-                                        </li>
-
-
-                                        <li class="headernav_store">
-                                            <a href="https://uk.mathworks.com/products/get-matlab.html?s_tid=gn_getml">Get
-                                                MATLAB</a>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <div class="navbar-collapse collapse" id="matrix_collapse">
-                                <div class="matrix_menu_container_mobile" id="matrix_menu_container_mobile">
-                                    <header class="App-header">
-                                        <div class="matrix_container collapse" aria-describedby="matrix_title">
-                                            <nav class="matrix_content">
-                                                <h3 class="sr-only" id="matrix_title">MathWorks Matrix Menu</h3>
-                                                <ul class="list-unstyled matrix_links_primary">
-                                                    <li class=""><a class="svg_link"
-                                                            href="https://uk.mathworks.com/help" role="button"
-                                                            aria-label="Help Center" id="matrix_link_help_center"><img
-                                                                src="/resources/ico-matrix-helpcenter.svg"
-                                                                alt="help_center" aria-hidden="true"><span
-                                                                class="matrix_link_title">Help Center</span></a></li>
-                                                    <li class=""><a class="svg_link"
-                                                            href="https://uk.mathworks.com/matlabcentral" role="button"
-                                                            aria-label="Community" id="matrix_link_community"><img
-                                                                src="/resources/ico-matrix-community.svg"
-                                                                alt="community" aria-hidden="true"><span
-                                                                class="matrix_link_title">Community</span></a></li>
-                                                    <li class=""><a class="svg_link" href="https://uk.mathworks.com/"
-                                                            role="button" aria-label="MathWorks"
-                                                            id="matrix_link_mathworks_dotcom"><img
-                                                                src="/resources/ico-matrix-mathworks.svg"
-                                                                alt="mathworks_dotcom" aria-hidden="true"><span
-                                                                class="matrix_link_title">MathWorks</span></a></li>
-                                                </ul>
-                                                <ul class="list-unstyled matrix_links_secondary">
-                                                    <li class=""><a class="svg_link"
-                                                            href="https://uk.mathworks.com/matlabcentral/answers/index"
-                                                            role="button" aria-label="Answers"
-                                                            id="matrix_link_answers"><img
-                                                                src="/resources/ico-matrix-answers.svg" alt="answers"
-                                                                aria-hidden="true"><span
-                                                                class="matrix_link_title">Answers</span></a></li>
-                                                    <li class=""><a class="svg_link"
-                                                            href="https://uk.mathworks.com/matlabcentral/fileexchange"
-                                                            role="button" aria-label="File Exchange"
-                                                            id="matrix_link_file_exchange"><img
-                                                                src="/resources/ico-matrix-fileexchange.svg"
-                                                                alt="file_exchange" aria-hidden="true"><span
-                                                                class="matrix_link_title">File Exchange</span></a></li>
-                                                    <li class=""><a class="svg_link"
-                                                            href="https://uk.mathworks.com/videos.html" role="button"
-                                                            aria-label="Videos" id="matrix_link_videos"><img
-                                                                src="/resources/ico-matrix-videos.svg" alt="videos"
-                                                                aria-hidden="true"><span
-                                                                class="matrix_link_title">Videos</span></a></li>
-                                                    <li class=""><a class="svg_link"
-                                                            href="https://matlabacademy.mathworks.com/" role="button"
-                                                            aria-label="Online Training"
-                                                            id="matrix_link_online_training"><img
-                                                                src="/resources/ico-matrix-onlinetraining.svg"
-                                                                alt="online_training" aria-hidden="true"><span
-                                                                class="matrix_link_title">Online Training</span></a>
-                                                    </li>
-                                                    <li class=""><a class="svg_link" href="https://blogs.mathworks.com/"
-                                                            role="button" aria-label="Blogs" id="matrix_link_blogs"><img
-                                                                src="/resources/ico-matrix-blogs.svg" alt="blogs"
-                                                                aria-hidden="true"><span
-                                                                class="matrix_link_title">Blogs</span></a></li>
-                                                    <li class=""><a class="svg_link"
-                                                            href="https://uk.mathworks.com/matlabcentral/cody"
-                                                            role="button" aria-label="Cody" id="matrix_link_cody"><img
-                                                                src="/resources/ico-matrix-cody.svg" alt="cody"
-                                                                aria-hidden="true"><span
-                                                                class="matrix_link_title">Cody</span></a></li>
-                                                    <li class=""><a class="svg_link"
-                                                            href="https://matlab.mathworks.com/" role="button"
-                                                            aria-label="MATLAB Online"
-                                                            id="matrix_link_matlab_online"><img
-                                                                src="/resources/ico-matrix-matlabonline.svg"
-                                                                alt="matlab_online" aria-hidden="true"><span
-                                                                class="matrix_link_title">MATLAB Online</span></a></li>
-                                                    <li class=""><a class="svg_link" href="https://drive.matlab.com/"
-                                                            role="button" aria-label="MATLAB Drive"
-                                                            id="matrix_link_matlab_drive"><img
-                                                                src="/resources/ico-matrix-matlabdrive.svg"
-                                                                alt="matlab_drive" aria-hidden="true"><span
-                                                                class="matrix_link_title">MATLAB Drive</span></a></li>
-                                                    <li class=""><a class="svg_link"
-                                                            href="https://grader.mathworks.com/" role="button"
-                                                            aria-label="MATLAB Grader"
-                                                            id="matrix_link_matlab_grader"><img
-                                                                src="/resources/ico-matrix-matlabgrader.svg"
-                                                                alt="matlab_grader" aria-hidden="true"><span
-                                                                class="matrix_link_title">MATLAB Grader</span></a></li>
-                                                    <li class=""><a class="svg_link"
-                                                            href="https://uk.mathworks.com/support/bugreports/"
-                                                            role="button" aria-label="Bug Reports"
-                                                            id="matrix_link_bug_reports"><img
-                                                                src="/resources/ico-matrix-bugreports.svg"
-                                                                alt="bug_reports" aria-hidden="true"><span
-                                                                class="matrix_link_title">Bug Reports</span></a></li>
-                                                    <li class=""><a class="svg_link" href="https://thingspeak.com/"
-                                                            role="button" aria-label="ThingSpeak"
-                                                            id="matrix_link_thingspeak"><img
-                                                                src="/resources/ico-matrix-thingspeak.svg"
-                                                                alt="thingspeak" aria-hidden="true"><span
-                                                                class="matrix_link_title">ThingSpeak</span></a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </header>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- Mobile TopNav: End -->
-    <!-- Desktop TopNav: Start -->
-    <div class="header hidden-xs hidden-sm" id="header_desktop">
-        <nav class="navbar navbar-default" role="navigation">
+<!-- Mobile TopNav: Start -->
+<div class="header visible-xs visible-sm" id="header_mobile" style="">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
-                        <div class="navbar-header">
-                            <div class="logo_container hidden-xs hidden-sm">
-                                <a href="https://uk.mathworks.com/?s_tid=gn_logo" class="svg_link pull-left">
-                                    <img src="/resources/pic-header-mathworks-logo.20210211205020640.svg"
-                                        class="mw_logo" alt="MathWorks">
-                                </a>
-                            </div>
-                            <div class="navbar-collapse collapse hidden-xs hidden-sm">
-
-                                <div
-                                    class="topNavigation topnavigation containsResourceName resourceClass-topnavigation">
-
-
-                                    <ul id="topnav" class="nav navbar-nav">
-                                        <li class="topnav_products ">
-                                            <a href="https://uk.mathworks.com/products.html?s_tid=gn_ps">Products</a>
-                                        </li>
-
-                                        <li class="topnav_solutions ">
-                                            <a href="https://uk.mathworks.com/solutions.html?s_tid=gn_sol">Solutions</a>
-                                        </li>
-
-                                        <li class="topnav_academia ">
-                                            <a href="https://uk.mathworks.com/academia.html?s_tid=gn_acad">Academia</a>
-                                        </li>
-
-                                        <li class="topnav_support ">
-                                            <a href="https://uk.mathworks.com/support.html?s_tid=gn_supp">Support</a>
-                                        </li>
-
-                                        <li class="topnav_community ">
-                                            <a href="https://uk.mathworks.com/matlabcentral/?s_tid=gn_mlc">Community</a>
-                                        </li>
-
-                                        <li class="topnav_events ">
-                                            <a
-                                                href="https://uk.mathworks.com/company/events.html?s_tid=gn_ev">Events</a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-
-                            </div>
+                    <div class="col-xs-3">
+                        <button type="button" class="navbar-toggle topnav_toggle" data-toggle="collapse"
+                            data-target="#topnav_collapse">
+                            <span class="sr-only">Toggle Main Navigation</span>
+                            <span class="icon-menu"></span>
+                        </button>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="text-center">
+                            <a href="https://uk.mathworks.com/?s_tid=gn_logo" class="svg_link navbar-brand">
+                                <img src="/resources/pic-header-mathworks-logo.20210211205020640.svg" class="mw_logo"
+                                    alt="MathWorks - Mobile View">
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div
-                            class="headerNavigation headernavigation containsResourceName resourceClass-headernavigation">
-                            <div class="collapse navbar-collapse" id="headernav_collapse">
-                                <ul class="nav navbar-nav navbar-right" id="headernav">
-
-                                    <li class="headernav_store"><a
-                                            href="https://uk.mathworks.com/products/get-matlab.html?s_tid=gn_getml"
-                                            class="btn btn_color_blue companion_btn btn-xs">Get MATLAB</a></li>
-
-                                    <li class="headernav_login" style="">
-                                        <a class="mwa-nav_login"
-                                            href="https://uk.mathworks.com/login?uri=https%3A%2F%2Fuk.mathworks.com%2Fdiscovery%2Flinear-model.html"><span
-                                                class="visible-xs visible-sm">Sign In <span class="sr-only">to Your
-                                                    MathWorks Account</span></span><span
-                                                class="visible-lg visible-md"><span class="sr-only">Sign In to Your
-                                                    MathWorks Account</span></span></a>
-                                    </li>
-                                    <li class="headernav_logout dropdown" style="display: none;">
-                                        <a href="https://uk.mathworks.com/discovery/linear-model.html#" role="button"
-                                            aria-haspopup="menu" aria-controls="mwa-nav"
-                                            class="dropdown-toggle mwa_image_drop_down" data-toggle="dropdown">
-                                            <span class="visible-xs visible-sm">
-                                                <span class="mobile_account_image sr-only">
-                                                    Access your MathWorks Account
-                                                </span>
-                                                <span class="mobile_account_name" aria-hidden="true"></span>
-                                                <b class="caret"></b>
-                                            </span>
-                                        </a>
-                                        <ul role="menu" class="dropdown-menu" id="mwa-nav">
-                                            <li class="mwa-nav_account"><a role="menuitem" class="mwa-account">My
-                                                    Account</a></li>
-                                            <li class="mwa-nav_community"><a role="menuitem"
-                                                    class="mwa-community-profile">My Community Profile</a></li>
-                                            <li class="mwa-nav_associate"><a role="menuitem"
-                                                    class="mwa-link-license">Link License</a></li>
-                                            <li class="mwa-nav_logout"><a role="menuitem" class="mwa-logout">Sign
-                                                    Out</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li id="headernav_matrix" class="headernav_matrix">
-                                        <div id="wrapper"><button title="Matrix Menu" class="waffle"
-                                                id="matrix_waffle_large" aria-label="Mathworks Menu" type="button"><span
-                                                    class="icon-matrix"></span></button>
-                                            <header class="App-header">
-                                                <div class="matrix_container collapse" aria-describedby="matrix_title">
-                                                    <nav class="matrix_content">
-                                                        <h3 class="sr-only" id="matrix_title">MathWorks Matrix Menu</h3>
-                                                        <ul class="list-unstyled matrix_links_primary">
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://uk.mathworks.com/help" role="button"
-                                                                    aria-label="Help Center"
-                                                                    id="matrix_link_help_center"><img
-                                                                        src="/resources/ico-matrix-helpcenter.svg"
-                                                                        alt="help_center" aria-hidden="true"><span
-                                                                        class="matrix_link_title">Help Center</span></a>
-                                                            </li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://uk.mathworks.com/matlabcentral"
-                                                                    role="button" aria-label="Community"
-                                                                    id="matrix_link_community"><img
-                                                                        src="/resources/ico-matrix-community.svg"
-                                                                        alt="community" aria-hidden="true"><span
-                                                                        class="matrix_link_title">Community</span></a>
-                                                            </li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://uk.mathworks.com/" role="button"
-                                                                    aria-label="MathWorks"
-                                                                    id="matrix_link_mathworks_dotcom"><img
-                                                                        src="/resources/ico-matrix-mathworks.svg"
-                                                                        alt="mathworks_dotcom" aria-hidden="true"><span
-                                                                        class="matrix_link_title">MathWorks</span></a>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="list-unstyled matrix_links_secondary">
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://uk.mathworks.com/matlabcentral/answers/index"
-                                                                    role="button" aria-label="Answers"
-                                                                    id="matrix_link_answers"><img
-                                                                        src="/resources/ico-matrix-answers.svg"
-                                                                        alt="answers" aria-hidden="true"><span
-                                                                        class="matrix_link_title">Answers</span></a>
-                                                            </li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://uk.mathworks.com/matlabcentral/fileexchange"
-                                                                    role="button" aria-label="File Exchange"
-                                                                    id="matrix_link_file_exchange"><img
-                                                                        src="/resources/ico-matrix-fileexchange.svg"
-                                                                        alt="file_exchange" aria-hidden="true"><span
-                                                                        class="matrix_link_title">File
-                                                                        Exchange</span></a></li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://uk.mathworks.com/videos.html"
-                                                                    role="button" aria-label="Videos"
-                                                                    id="matrix_link_videos"><img
-                                                                        src="/resources/ico-matrix-videos.svg"
-                                                                        alt="videos" aria-hidden="true"><span
-                                                                        class="matrix_link_title">Videos</span></a></li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://matlabacademy.mathworks.com/"
-                                                                    role="button" aria-label="Online Training"
-                                                                    id="matrix_link_online_training"><img
-                                                                        src="/resources/ico-matrix-onlinetraining.svg"
-                                                                        alt="online_training" aria-hidden="true"><span
-                                                                        class="matrix_link_title">Online
-                                                                        Training</span></a></li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://blogs.mathworks.com/" role="button"
-                                                                    aria-label="Blogs" id="matrix_link_blogs"><img
-                                                                        src="/resources/ico-matrix-blogs.svg"
-                                                                        alt="blogs" aria-hidden="true"><span
-                                                                        class="matrix_link_title">Blogs</span></a></li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://uk.mathworks.com/matlabcentral/cody"
-                                                                    role="button" aria-label="Cody"
-                                                                    id="matrix_link_cody"><img
-                                                                        src="/resources/ico-matrix-cody.svg" alt="cody"
-                                                                        aria-hidden="true"><span
-                                                                        class="matrix_link_title">Cody</span></a></li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://matlab.mathworks.com/" role="button"
-                                                                    aria-label="MATLAB Online"
-                                                                    id="matrix_link_matlab_online"><img
-                                                                        src="/resources/ico-matrix-matlabonline.svg"
-                                                                        alt="matlab_online" aria-hidden="true"><span
-                                                                        class="matrix_link_title">MATLAB
-                                                                        Online</span></a></li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://drive.matlab.com/" role="button"
-                                                                    aria-label="MATLAB Drive"
-                                                                    id="matrix_link_matlab_drive"><img
-                                                                        src="/resources/ico-matrix-matlabdrive.svg"
-                                                                        alt="matlab_drive" aria-hidden="true"><span
-                                                                        class="matrix_link_title">MATLAB
-                                                                        Drive</span></a></li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://grader.mathworks.com/" role="button"
-                                                                    aria-label="MATLAB Grader"
-                                                                    id="matrix_link_matlab_grader"><img
-                                                                        src="/resources/ico-matrix-matlabgrader.svg"
-                                                                        alt="matlab_grader" aria-hidden="true"><span
-                                                                        class="matrix_link_title">MATLAB
-                                                                        Grader</span></a></li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://uk.mathworks.com/support/bugreports/"
-                                                                    role="button" aria-label="Bug Reports"
-                                                                    id="matrix_link_bug_reports"><img
-                                                                        src="/resources/ico-matrix-bugreports.svg"
-                                                                        alt="bug_reports" aria-hidden="true"><span
-                                                                        class="matrix_link_title">Bug Reports</span></a>
-                                                            </li>
-                                                            <li class=""><a class="svg_link"
-                                                                    href="https://thingspeak.com/" role="button"
-                                                                    aria-label="ThingSpeak"
-                                                                    id="matrix_link_thingspeak"><img
-                                                                        src="/resources/ico-matrix-thingspeak.svg"
-                                                                        alt="thingspeak" aria-hidden="true"><span
-                                                                        class="matrix_link_title">ThingSpeak</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
-                                            </header>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul class="countrynav">
-                                    <!-- Code to Remove Tracking from Previous page and add new tracking -->
-                                    <li class="footernav_country">
-                                        <a href="https://uk.mathworks.com/discovery/linear-model.html#"
-                                            data-toggle="modal" data-target="#country-unselected">
-                                            <span class="sr-only">Select a Web Site</span>
-                                            <span class="icon-globe icon_color_quinary icon_16"></span><span
-                                                id="countrySelectorButtonText">United Kingdom</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="col-xs-3">
+                        <div class="matrix_affordance_container_mobile" id="matrix_affordance_container_mobile">
+                            <div id="headernav_matrix_small" class="headernav_matrix"><button title="Matrix Menu"
+                                    class="navbar-toggle matrix_toggle" data-toggle="collapse"
+                                    data-target="#matrix_collapse" id="matrix_waffle_small" aria-label="Mathworks Menu"
+                                    type="button"><span class="icon-matrix"></span></button></div>
                         </div>
-
                     </div>
                 </div>
             </div>
-        </nav>
-    </div>
-    <!-- Desktop TopNav: End -->
+            <div class="container">
+                <div class="row visible-xs visible-sm">
+                    <div class="col-xs-12">
+                        <div class="navbar-collapse collapse" id="topnav_collapse">
+                            <div class="topNavigation topnavigation containsResourceName resourceClass-topnavigation">
+
+                                <ul class="nav navbar-nav" id="topnav">
+
+
+                                    <li class="topnav_products ">
+                                        <a href="https://uk.mathworks.com/products.html?s_tid=gn_ps">Products</a>
+                                    </li>
+
+                                    <li class="topnav_solutions ">
+                                        <a href="https://uk.mathworks.com/solutions.html?s_tid=gn_sol">Solutions</a>
+                                    </li>
+
+                                    <li class="topnav_academia ">
+                                        <a href="https://uk.mathworks.com/academia.html?s_tid=gn_acad">Academia</a>
+                                    </li>
+
+                                    <li class="topnav_support ">
+                                        <a href="https://uk.mathworks.com/support.html?s_tid=gn_supp">Support</a>
+                                    </li>
+
+                                    <li class="topnav_community ">
+                                        <a href="https://uk.mathworks.com/matlabcentral/?s_tid=gn_mlc">Community</a>
+                                    </li>
+
+                                    <li class="topnav_events ">
+                                        <a href="https://uk.mathworks.com/company/events.html?s_tid=gn_ev">Events</a>
+                                    </li>
+
+
+                                    <li class="headernav_store">
+                                        <a href="/login">{$user_name}</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Mobile TopNav: End -->
+<!-- Desktop TopNav: Start -->
+<div class="header hidden-xs hidden-sm" id="header_desktop">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="navbar-header">
+                        <div class="logo_container hidden-xs hidden-sm">
+                            <a href="https://uk.mathworks.com/?s_tid=gn_logo" class="svg_link pull-left">
+                                <img src="/resources/pic-header-mathworks-logo.20210211205020640.svg" class="mw_logo"
+                                    alt="MathWorks">
+                            </a>
+                        </div>
+                        <div class="navbar-collapse collapse hidden-xs hidden-sm">
+
+                            <div class="topNavigation topnavigation containsResourceName resourceClass-topnavigation">
+
+
+                                <ul id="topnav" class="nav navbar-nav">
+                                    <li class="topnav_products ">
+                                        <a href="https://uk.mathworks.com/products.html?s_tid=gn_ps">Products</a>
+                                    </li>
+
+                                    <li class="topnav_solutions ">
+                                        <a href="https://uk.mathworks.com/solutions.html?s_tid=gn_sol">Solutions</a>
+                                    </li>
+
+                                    <li class="topnav_academia ">
+                                        <a href="https://uk.mathworks.com/academia.html?s_tid=gn_acad">Academia</a>
+                                    </li>
+
+                                    <li class="topnav_support ">
+                                        <a href="https://uk.mathworks.com/support.html?s_tid=gn_supp">Support</a>
+                                    </li>
+
+                                    <li class="topnav_community ">
+                                        <a href="https://uk.mathworks.com/matlabcentral/?s_tid=gn_mlc">Community</a>
+                                    </li>
+
+                                    <li class="topnav_events ">
+                                        <a href="https://uk.mathworks.com/company/events.html?s_tid=gn_ev">Events</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="headerNavigation headernavigation containsResourceName resourceClass-headernavigation">
+                        <div class="collapse navbar-collapse" id="headernav_collapse">
+                            <ul class="nav navbar-nav navbar-right" id="headernav">
+
+                                <li class="headernav_store">
+                                    <a href="/login" class="btn btn_color_blue companion_btn btn-xs">{$user_name}</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Desktop TopNav: End -->

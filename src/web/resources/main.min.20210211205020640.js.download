@@ -1,4 +1,4 @@
-(function(a){a(function(){function c(g,h){try{if(a.cq.isAuthor()||window.location.hash=="#debug"){if(typeof console!="undefined"&&typeof console.log!="undefined"){console.log(g);
+window.$CQ=_g.$;(function(a){a(function(){function c(g,h){try{if(a.cq.isAuthor()||window.location.hash=="#debug"){if(typeof console!="undefined"&&typeof console.log!="undefined"){console.log(g);
 console.log(h)
 }alert(g.name+":\n"+g.message+".\n"+h+".")
 }}catch(j){}}try{var d=a.browser.msie?0:250;
