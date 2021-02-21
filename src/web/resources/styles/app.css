@@ -1056,3 +1056,7 @@ img.MathJax_strut {
     padding: 1px 3px;
     border: 1px solid
 }
+
+#MathJax_Hidden {
+    visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;
+}
