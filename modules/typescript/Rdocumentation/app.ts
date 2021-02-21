@@ -4,6 +4,8 @@ module app {
 
     export function start() {
         Router.AddAppHandler(new pages.blog.BlogReader());
+
+        Router.RunApp();
     }
 }
 

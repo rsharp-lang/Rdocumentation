@@ -16,6 +16,7 @@ var app;
 (function (app) {
     function start() {
         Router.AddAppHandler(new pages.blog.BlogReader());
+        Router.RunApp();
     }
     app.start = start;
 })(app || (app = {}));
@@ -33,15 +34,15 @@ var pages;
         AppBase.prototype.init = function () {
             var cookieValue;
             if (!isNullOrUndefined(cookieValue = localStorage.getItem(cookieName)) && cookieValue == cookieAccept) {
-                $ts("#cookieBannerRemove").hide();
+                $ts("#cookie-banner").hide();
             }
             else {
-                $ts("#cookieBannerRemove").show();
+                $ts("#cookie-banner").show();
             }
             this.runInit();
         };
         AppBase.prototype.cookieBannerRemove = function () {
-            $ts("#cookieBannerRemove").hide();
+            $ts("#cookie-banner").hide();
             // write lock
             localStorage.setItem(cookieName, cookieAccept);
         };

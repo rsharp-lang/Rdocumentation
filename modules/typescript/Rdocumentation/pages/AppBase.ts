@@ -9,9 +9,9 @@ namespace pages {
             let cookieValue: string;
 
             if (!isNullOrUndefined(cookieValue = localStorage.getItem(cookieName)) && cookieValue == cookieAccept) {
-                $ts("#cookieBannerRemove").hide();
+                $ts("#cookie-banner").hide();
             } else {
-                $ts("#cookieBannerRemove").show();
+                $ts("#cookie-banner").show();
             }
 
             this.runInit();
@@ -20,7 +20,7 @@ namespace pages {
         abstract runInit();
 
         public cookieBannerRemove() {
-            $ts("#cookieBannerRemove").hide();
+            $ts("#cookie-banner").hide();
             // write lock
             localStorage.setItem(cookieName, cookieAccept);
         }
