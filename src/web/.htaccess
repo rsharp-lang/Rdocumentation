@@ -26,3 +26,9 @@ Header set Cache-Control: "max-age=0, no-store"
 </FilesMatch>
 
 # ErrorDocument 404 /index.php?app=custom_errors&error=404
+
+
+RewriteRule ^blog/$ /blog.php?app=index
+RewriteRule ^blog/(.+)$ /blog.php?app=$1
+
+RewriteRule ^([a-zA-Z_0-9]+)$ /index.php?app=$1
