@@ -21,7 +21,7 @@ class App {
         View::Display($blog_data);
     }
 
-    public function add() {
+    public function write() {
         View::Display();
     }
 }
