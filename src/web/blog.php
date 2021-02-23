@@ -20,4 +20,8 @@ class App {
 
         View::Display($blog_data);
     }
+
+    public function add() {
+        View::Display();
+    }
 }

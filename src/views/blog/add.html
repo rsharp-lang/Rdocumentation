@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head class="at-element-marker">
+
+    <meta name="app" content="BlogReader" />
+
+    <meta name="data:markdown" content="/blog/markdown/1" />
+
+
+    ${../includes/head.html}
+</head>
+
+<body>
+    <div>
+        <div id="MathJax_Hidden"></div>
+    </div>
+    <div id="MathJax_Message" style="display: none;"></div>
+
+    ${../includes/topnav.html}
+    ${../includes/search.html}
+
+    <div class="content_container">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            <h2 class="h3 add_font_color_orange">{$sub_title}</h2>
+                            <div>
+                                <div class="mainParsys parsys containsResourceName resourceClass-parsys">
+                                    <div class="text containsResourceName section resourceClass-text">
+                                        <div class="mw-text" id="blog_content">
+
+                                            <!-- blog post content at here -->
+                                            {$content}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="separator"></div>
+                        </div>
+
+                        ${../includes/widget.html}
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    ${../includes/footer.html}
+    ${../includes/cookie-banner.html}
+    ${../includes/script.html}
+</body>
+
+</html>
