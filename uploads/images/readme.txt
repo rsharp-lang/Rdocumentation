@@ -1,1 +1,0 @@
-folder for save the uploaded images of the blog post

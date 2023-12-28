@@ -1,3 +1,0 @@
-# R# language syntax highlights
-
-
