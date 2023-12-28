@@ -39,7 +39,10 @@ for(dll_name in clr_modules) {
 
 str(index);
 
-let index_html = lapply(index, function(pkg) {
+let index_html = index 
+# filter empty clr modules
+|> which(pkg -> length(pkg$libs) > 0) 
+|> lapply(function(pkg) {
     const [dll_name, libs] = pkg;
     const lib_urls = `<li><a href="./vignettes/${dll_name}/${libs}.html">${libs}</a></li>`;
 
