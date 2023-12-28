@@ -29,9 +29,25 @@ for(dll_name in clr_modules) {
         });
     }
     
-    index[[basename(dll_name)]] = libs;
+    index[[basename(dll_name)]] = {
+        dll_name: basename(dll_name),
+        libs: libs
+    };
 
     NULL;
 }
 
 str(index);
+
+let index_html = lapply(index, function(pkg) {
+    const [dll_name, libs] = pkg;
+    const lib_urls = `<li><a href="./vignettes/${dll_name}/${libs}.html">${libs}</a></li>`;
+
+    `<h2>${dll_name}.dll</h2>
+    
+    <ul>
+        ${paste(lib_urls, sep = "")}
+    </ul>`;
+});
+
+writeLines(index_html, con = `${dirname(@dir)}/index.html`);
