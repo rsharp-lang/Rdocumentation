@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>‘Not Available’ / Missing Values</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>is.na {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>‘Not Available’ / Missing Values</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> NA is a logical constant of length 1 which contains a missing value indicator. <br /> NA can be coerced to any other vector type except raw. There are also constants <br /> NA_integer_, NA_real_, NA_complex_ and NA_character_ of the other atomic vector <br /> types which support missing values: all of these are reserved words in the R <br /> language.<br /> <br /> The generic Function Is.na indicates which elements are missing.<br /> The generic Function Is.na&lt;- sets elements To NA.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>is.na</strong>(<i>x</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>an R object to be tested: the default method for is.na and anyNA <br />
+ handle atomic vectors, lists, pairlists, and NULL.</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        <p>The default method for is.na applied to an atomic vector returns a logical vector <br />
+ of the same length as its argument x, containing TRUE for those elements marked NA <br />
+ or, for numeric or complex vectors, NaN, and FALSE otherwise. (A complex value is <br />
+ regarded as NA if either its real or imaginary part is NA or NaN.) dim, dimnames <br />
+ and names attributes are copied to the result.</p>
+
+<p>The Default methods also work For lists And pairlists</p>
+
+<p>For Is.na, elementwise the result Is false unless that element Is a length-one atomic <br />
+ vector And the single element of that vector Is regarded as NA Or NaN (note that any <br />
+ Is.na method for the class of the element Is ignored).</p>
+
+<p>anyNA(recursive = FALSE) works the same way as Is.na; anyNA(recursive = TRUE) applies <br />
+ anyNA (with method dispatch) to each element.</p>
+
+<p>The data frame method For Is.na returns a logical matrix With the same dimensions As <br />
+ the data frame, And With dimnames taken from the row And column names Of the data <br />
+ frame.</p>
+
+<p>anyNA(NULL) Is false; Is.na(NULL) Is logical(0) (no longer warning since R version <br />
+ 3.5.0).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

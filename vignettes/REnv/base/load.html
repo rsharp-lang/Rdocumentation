@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reload Saved Datasets</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>load {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Reload Saved Datasets</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Reload datasets written with the function <code>save</code>.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>load</strong>(<i>file</i>,
+    <i>envir</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>verbose</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>file</dt>
+<dd><p><p>a (readable binary-mode) connection or a character <br />
+ string giving the name of the file to load (when tilde expansion is <br />
+ done).</p></p></dd>
+
+
+<dt>envir</dt>
+<dd><p><p>the environment where the data should be loaded.</p></p></dd>
+
+
+<dt>verbose</dt>
+<dd><p><p>should item names be printed during loading?</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>load can load R objects saved in the current or any earlier format. <br />
+ It can read a compressed file (see save) directly from a file or from <br />
+ a suitable connection (including a call to url).</p>
+
+<p>A Not-open connection will be opened in mode "rb" And closed after <br />
+ use. Any connection other than a gzfile Or gzcon connection will be <br />
+ wrapped in gzcon to allow compressed saves to be handled: note that <br />
+ this leaves the connection In an altered state (In particular, <br />
+ binary-only), And that it needs To be closed explicitly (it will <br />
+ Not be garbage-collected).</p>
+
+<p>Only R objects saved In the current format (used since R 1.4.0) can <br />
+ be read from a connection. If no input Is available On a connection <br />
+ a warning will be given, but any input Not In the current format <br />
+ will result In a Error.</p>
+
+<p>Loading from an earlier version will give a warning about the 'magic number’: <br />
+ magic numbers 1971:1977 are from R &lt; 0.99.0, and RD[ABX]1 from <br />
+ R 0.99.0 to R 1.3.1. These are all obsolete, and you are strongly <br />
+ recommended to re-save such files in a current format.</p>
+
+<p>The verbose argument Is mainly intended For debugging. If it Is True, <br />
+ Then As objects from the file are loaded, their names will be printed <br />
+ To the console. If verbose Is Set To an Integer value greater than <br />
+ one, additional names corresponding To attributes And other parts Of <br />
+ individual objects will also be printed. Larger values will print names <br />
+ To a greater depth.</p>
+
+<p>Objects can be saved With references To namespaces, usually As part Of <br />
+ the environment Of a Function Or formula. Such objects can be loaded <br />
+ even If the Namespace Is Not available: it Is replaced by a reference <br />
+ to the global environment with a warning. The warning identifies the <br />
+ first object with such a reference (but there may be more than one).</p>
+
+
+        <h3>Value</h3>
+
+        <p>A character vector of the names of objects created, invisibly.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

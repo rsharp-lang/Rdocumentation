@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Generate All Combinations of n Elements, Taken m at a Time</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>combn {set}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Generate All Combinations of n Elements, Taken m at a Time</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Generate all combinations of the elements of x taken <br /> m at a time. If x is a positive integer, returns all <br /> combinations of the elements of seq(x) taken m at a <br /> time. If argument FUN is not NULL, applies a function <br /> given by the argument to each point. If simplify is <br /> FALSE, returns a list; otherwise returns an array, typically <br /> a matrix. ... are passed unchanged to the FUN function, <br /> if specified.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>combn</strong>(<i>x</i>, <i>m</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>vector source For combinations, Or Integer n For x &lt;- seq_len(n).</p></p></dd>
+
+
+<dt>m</dt>
+<dd><p><p>number of elements to choose.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>Factors x are accepted.</p>
+
+
+        <h3>Value</h3>
+
+        <p>A list or array, see the simplify argument above. In the <br />
+ latter case, the identity dim(combn(n, m)) == c(m, choose(n, m)) <br />
+ holds.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>set</em> version 2.33.856.6961 <a
+                href="../set.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

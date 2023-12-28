@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Conditional Element Selection</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>ifelse {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Conditional Element Selection</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> ifelse returns a value with the same shape as test which is filled with <br /> elements selected from either yes or no depending on whether the <br /> element of test is <code>TRUE</code> or <code>FALSE</code>.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>ifelse</strong>(<i>test</i>, <i>yes</i>, <i>no</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>test</dt>
+<dd><p><p>an object which can be coerced to logical mode.</p></p></dd>
+
+
+<dt>yes</dt>
+<dd><p><p>return values for true elements of test.</p></p></dd>
+
+
+<dt>no</dt>
+<dd><p><p>return values for false elements of test.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>If yes or no are too short, their elements are recycled. yes will <br />
+ be evaluated if and only if any element of test is true, and <br />
+ analogously for no.</p>
+
+<p>Missing values In test give missing values In the result.</p>
+
+
+        <h3>Value</h3>
+
+        <p>A vector of the same length and attributes (including dimensions and "class") <br />
+ as test and data values from the values of yes or no. The mode of the answer <br />
+ will be coerced from logical to accommodate first any values taken from yes <br />
+ and then any values taken from no.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

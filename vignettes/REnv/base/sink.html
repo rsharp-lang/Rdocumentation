@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Send R Output to a File</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>sink {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Send R Output to a File</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> <code>sink</code> diverts R output to a connection (and stops such diversions).</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>sink</strong>(
+    <i>file</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>append</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>split</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>file</dt>
+<dd><p><p>a writable connection Or a character String naming <br />
+ the file To write To, Or NULL To Stop sink-ing.</p></p></dd>
+
+
+<dt>append</dt>
+<dd><p><p>logical. If TRUE, output will be appended to file; <br />
+ otherwise, it will overwrite the contents of file.</p></p></dd>
+
+
+<dt>split</dt>
+<dd><p><p>logical: if TRUE, output will be sent to the new sink <br />
+ and to the current output stream, like the Unix <br />
+ program <code>tee</code>.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>sink diverts R output to a connection (and must be used <br />
+ again to finish such a diversion, see below!). If file <br />
+ is a character string, a file connection with that name <br />
+ will be established for the duration of the diversion.</p>
+
+<p>Normal R output (To connection stdout) Is diverted by the <br />
+ Default type = "output". Only prompts And (most) messages <br />
+ Continue To appear On the console. Messages sent To <br />
+ stderr() (including those from message, warning And Stop) <br />
+ can be diverted by sink(type = "message") (see below).</p>
+
+<p>sink() Or sink(file = NULL) ends the last diversion (of <br />
+ the specified type). There Is a stack of diversions for <br />
+ normal output, so output reverts to the previous diversion <br />
+ (if there was one). The stack Is of up to 21 connections <br />
+ (20 diversions).</p>
+
+<p>If file Is a connection it will be opened If necessary <br />
+ (In "wt" mode) And closed once it Is removed from the <br />
+ stack Of diversions.</p>
+
+<p>split = TRUE only splits R output (via Rvprintf) And the <br />
+ default output from writeLines: it does Not split all <br />
+ output that might be sent To stdout().</p>
+
+<p>Sink-ing the messages stream should be done only with <br />
+ great care. For that stream file must be an already open <br />
+ connection, And there Is no stack of connections.</p>
+
+<p>If file Is a character String, the file will be opened <br />
+ Using the current encoding. If you want a different <br />
+ encoding (e.g., To represent strings which have been <br />
+ stored In UTF-8), use a file connection — but some <br />
+ ways To produce R output will already have converted <br />
+ such strings To the current encoding.</p>
+
+
+        <h3>Value</h3>
+
+        <p>sink returns NULL.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

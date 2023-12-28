@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Report the Space Allocated for an Object</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>object.size {env}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Report the Space Allocated for an Object</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Provides an estimate of the memory that is being used to store <br /> an R# object.<br /> <br /> Exactly which parts of the memory allocation should be attributed <br /> to which object is not clear-cut. This function merely provides <br /> a rough indication: it should be reasonably accurate for atomic <br /> vectors, but does not detect if elements of a list are shared, for <br /> example. (Sharing amongst elements of a character vector is taken <br /> into account, but not that between character vectors in a single <br /> object.)<br /><br /> The calculation Is Of the size Of the Object, And excludes the <br /> space needed To store its name In the symbol table.<br /><br /> Associated space(e.g., the environment of a function And what the <br /> pointer in a EXTPTRSXP points to) Is Not included in the <br /> calculation.<br /><br /> Object sizes are larger On 64-bit builds than 32-bit ones, but will <br /> very likely be the same On different platforms With the same word <br /> length And pointer size.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>object.size</strong>(<i>x</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>an R# object.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        <p>An object of class "object_size" with a length-one double value, <br />
+ an estimate of the memory allocation attributable to the object <br />
+ in bytes.</p><h4>clr value class</h4><ul><li>integer</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>env</em> version 2.33.856.6961 <a
+                href="../env.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

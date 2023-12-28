@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Median Value</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>median {math}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Median Value</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Compute the sample median.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>median</strong>(<i>x</i>,
+    <i>na.rm</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>an object for which a method has been defined, <br />
+ or a numeric vector containing the values whose median is to <br />
+ be computed.</p></p></dd>
+
+
+<dt>na.rm</dt>
+<dd><p><p>a logical value indicating whether NA values should be stripped <br />
+ before the computation proceeds.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>This is a generic function for which methods can be written. <br />
+ However, the default method makes use of is.na, sort and mean <br />
+ from package base all of which are generic, and so the default <br />
+ method will work for most classes (e.g., "Date") for which <br />
+ a median is a reasonable concept.</p>
+
+
+        <h3>Value</h3>
+
+        <p>The default method returns a length-one object of the same type <br />
+ as x, except when x is logical or integer of even length, when <br />
+ the result will be double.</p>
+
+<p>If there are no values Or If na.rm = False And there are NA <br />
+ values the result Is NA Of the same type As x (Or more generally <br />
+ the result Of x[FALSE][NA]).</p><h4>clr value class</h4><ul><li>double</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>math</em> version 2.33.856.6961 <a
+                href="../math.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

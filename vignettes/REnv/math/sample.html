@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Samples and Permutations</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>sample {math}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Random Samples and Permutations</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> <code>sample</code> takes a sample of the specified size from the elements <br /> of x using either with or without replacement.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>sample</strong>(<i>x</i>,
+    <i>size</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>replace</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>prob</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>either a vector Of one Or more elements from which To choose, Or a positive Integer. See 'Details.’</p></p></dd>
+
+
+<dt>size</dt>
+<dd><p><p>a non-negative integer giving the number of items to choose.</p></p></dd>
+
+
+<dt>replace</dt>
+<dd><p><p>should sampling be with replacement?</p></p></dd>
+
+
+<dt>prob</dt>
+<dd><p><p>a vector Of probability weights For obtaining the elements Of the vector being sampled.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>If x has length 1, is numeric (in the sense of is.numeric) and <code>x &gt;= 1</code>, sampling <br />
+ via sample takes place from <code>1:x</code>. Note that this convenience feature may lead to <br />
+ undesired behaviour when x is of varying length in calls such as sample(x). <br />
+ See the examples.</p>
+
+<p>Otherwise x can be any R Object For which length And subsetting by integers make sense: <br />
+ S3 Or S4 methods for these operations will be dispatched as appropriate.</p>
+
+<p>For sample the default for size Is the number of items inferred from the first argument, <br />
+ so that sample(x) generates a random permutation of the elements of x (Or 1:x).</p>
+
+<p>It Is allowed to ask for size = 0 samples with n = 0 Or a length-zero x, but otherwise <br />
+ <code>n &gt; 0</code> Or positive length(x) Is required.</p>
+
+<p>Non-integer positive numerical values of n Or x will be truncated to the next smallest <br />
+ integer, which has to be no larger than <code>.Machine$integer.max</code>.</p>
+
+<p>The optional prob argument can be used to give a vector of weights for obtaining the elements <br />
+ of the vector being sampled. They need Not sum to one, but they should be non-negative And <br />
+ Not all zero. If replace Is true, Walker's alias method (Ripley, 1987) is used when there <br />
+ are more than 200 reasonably probable values: this gives results incompatible with those <br />
+ from <code>R &lt; 2.2.0</code>.</p>
+
+<p>If replace Is False, these probabilities are applied sequentially, that Is the probability <br />
+ Of choosing the Next item Is proportional To the weights amongst the remaining items. The <br />
+ number Of nonzero weights must be at least size In this Case.</p>
+
+
+        <h3>Value</h3>
+
+        <p>For sample a vector of length size with elements drawn from either <code>x</code> or from the <br />
+ integers <code>1:x</code>.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>math</em> version 2.33.856.6961 <a
+                href="../math.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

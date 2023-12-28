@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sample Ranks</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>rank {ranking}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Sample Ranks</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Returns the sample ranks of the values in a vector. Ties <br /> (i.e., equal values) and missing values can be handled in<br /> several ways.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>rank</strong>(<i>x</i>,
+    <i>na.last</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>ties.method</i> = OrdinalRanking);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>a numeric, complex, character Or logical vector.</p></p></dd>
+
+
+<dt>na.last</dt>
+<dd><p><p>For controlling the treatment of NAs. If TRUE, missing values in the <br />
+ data are put last; if FALSE, they are put first; if NA, they are <br />
+ removed; if "keep" they are kept with rank NA.</p></p></dd>
+
+
+<dt>ties.method</dt>
+<dd><p><p>a character string specifying how ties are treated, see ‘Details’; <br />
+ can be abbreviated.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>If all components are different (and no NAs), the ranks are well defined, <br />
+ with values in seq_along(x). With some values equal (called ‘ties’), <br />
+ the argument ties.method determines the result at the corresponding indices. <br />
+ The "first" method results in a permutation with increasing values at each <br />
+ index set of ties, and analogously "last" with decreasing values. The <br />
+ "random" method puts these in random order whereas the default, "average", <br />
+ replaces them by their mean, and "max" and "min" replaces them by their <br />
+ maximum and minimum respectively, the latter being the typical sports <br />
+ ranking.</p>
+
+<p>NA values are never considered to be equal: for na.last = TRUE and <code>na.last = FALSE</code><br />
+ they are given distinct ranks in the order in which they occur in x.</p>
+
+<p>NB: rank is not itself generic but xtfrm is, and rank(xtfrm(x), ....) will have <br />
+ the desired result if there is a xtfrm method. Otherwise, rank will make use <br />
+ of ==, >, is.na and extraction methods for classed objects, possibly rather <br />
+ slowly.</p>
+
+
+        <h3>Value</h3>
+
+        <p>A numeric vector of the same length as x with names copied from x <br />
+ (unless na.last = NA, when missing values are removed). The vector is <br />
+ of integer type unless x is a long vector or ties.method = "average" when <br />
+ it is of double type (whether or not there are any ties).</p><h4>clr value class</h4><ul><li>double</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>ranking</em> version 2.33.856.6961 <a
+                href="../ranking.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

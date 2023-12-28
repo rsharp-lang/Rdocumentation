@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Invoke a System Command</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>system {utils}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Invoke a System Command</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> <code>system</code> invokes the OS command specified by <code>command</code>.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>system</strong>(<i>command</i>,
+    <i>intern</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>ignore.stdout</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>ignore.stderr</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>wait</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>input</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>show.output.on.console</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>minimized</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>invisible</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>timeout</i> = <span style='color: green;'>0</span>,
+    <i>clr</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>command</dt>
+<dd><p><p>the system command to be invoked, as a character string.</p></p></dd>
+
+
+<dt>intern</dt>
+<dd><p><p>a logical (not NA) which indicates whether to capture the <br />
+ output of the command as an R character vector.</p></p></dd>
+
+
+<dt>ignore.stdout</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>ignore.stderr</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>wait</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>input</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>show.output.on.console</dt>
+<dd><p><p>logical (Not NA), indicates whether to capture the output of the command And show <br />
+ it on the R console (Not used by Rterm, which shows the output in the terminal <br />
+ unless wait Is false).</p></p></dd>
+
+
+<dt>minimized</dt>
+<dd><p><p>logical (Not NA), indicates whether a command window should be displayed initially <br />
+ as a minimized window.</p></p></dd>
+
+
+<dt>invisible</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>timeout</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>This interface has become rather complicated over the years: see system2 for a more <br />
+ portable and flexible interface which is recommended for new code.</p>
+
+<p>command Is parsed as a command plus arguments separated by spaces. So if the path to <br />
+ the command (Or a single argument such as a file path) contains spaces, it must be <br />
+ quoted e.g. by shQuote. Only double quotes are allowed on Windows: see the examples. <br />
+ (Note: a Windows path name cannot contain a Double quote, so we Do Not need To worry <br />
+ about escaping embedded quotes.)</p>
+
+<p>command must be an executable (extensions '.exe’, ‘.com’) or a batch file (extensions <br />
+ ‘.cmd’ and ‘.bat’): these extensions are tried in turn if none is supplied. This <br />
+ means that redirection, pipes, DOS internal commands, ... cannot be used: see shell <br />
+ if you want to pass a shell command-line.</p>
+
+<p>The search path For command may be system-dependent: it will include the R 'bin’ <br />
+ directory, the working directory and the Windows system directories before PATH.</p>
+
+<p>When timeout Is non-zero, the command Is terminated after the given number of seconds. <br />
+ The termination works for typical commands, but Is Not guaranteed it Is possible to <br />
+ write a program that would keep running after the time Is out. Timeouts can only be <br />
+ set with wait = TRUE.</p>
+
+<p>The ordering Of arguments after the first two has changed from time To time: it Is <br />
+ recommended to name all arguments after the first.</p>
+
+<p>There are many pitfalls In Using system To ascertain If a command can be run — <br />
+ Sys.which Is more suitable.</p>
+
+
+        <h3>Value</h3>
+
+        <p>If intern = TRUE, a character vector giving the output of the command, one line per <br />
+ character string. (Output lines of more than 8095 bytes will be split.) If the command <br />
+ could not be run an R error is generated. Under the Rgui console intern = TRUE also <br />
+ captures stderr unless ignore.stderr = TRUE. If command runs but gives a non-zero exit <br />
+ status this will be reported with a warning and in the attribute "status" of the result: <br />
+ an attribute "errmsg" may also be available.</p>
+
+<p>If intern = False, the Return value Is an Error code (0 For success), given the invisible <br />
+ attribute (so needs To be printed explicitly). If the command could Not be run For any <br />
+ reason, the value Is 127 And a warning Is issued (As from R 3.5.0). Otherwise If <br />
+ wait = True the value Is the Exit status returned by the command, And If wait = False it <br />
+ Is 0 (the conventional success value).</p>
+
+<p>If the command times out, a warning Is reported And the Exit status Is 124. Some Windows <br />
+ commands Return out-Of-range status values (e.g., -1) And so only the bottom 16 bits Of <br />
+ the value are used.</p>
+
+<p>If intern = False, wait = True, show.output.On.console = True the 'stdout’ and ‘stderr’ <br />
+ (unless ignore.stdout = TRUE or ignore.stderr = TRUE) output from a command that is a <br />
+ ‘console application’ should appear in the R console (Rgui) or the window running R <br />
+ (Rterm).</p>
+
+<p>Not all Windows executables properly respect redirection of output, Or may only do so <br />
+ from a console application such as Rterm And Not from Rgui For example, 'fc.exe’ was <br />
+ among these in the past, but we have had more success recently.</p><h4>clr value class</h4><ul><li>string</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>utils</em> version 2.33.856.6961 <a
+                href="../utils.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Null Object</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>is.null {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>The Null Object</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> <code>NULL</code> represents the null object in R: it is a reserved word. <br /> <code>NULL</code> is often returned by expressions and functions whose <br /> value is undefined.<br /> <br /> is.null is a primitive function.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>is.null</strong>(<i>x</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>an object to be tested or coerced.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p><code>NULL</code> can be indexed (see Extract) in just about any syntactically <br />
+ legal way: whether it makes sense or not, the result is always <code>NULL</code>. <br />
+ Objects with value <code>NULL</code> can be changed by replacement operators <br />
+ and will be coerced to the type of the right-hand side.</p>
+
+<p><code>NULL</code> Is also used as the empty pairlist: see the examples. Because <br />
+ pairlists are often promoted To lists, you may encounter <code>NULL</code> being <br />
+ promoted To an empty list.</p>
+
+<p>Objects with value <code>NULL</code> cannot have attributes as there Is only <br />
+ one null object attempts to assign them are either an error (attr) <br />
+ Or promote the object to an empty list with attribute(s) (attributes <br />
+ And structure).</p>
+
+
+        <h3>Value</h3>
+
+        <p>is.null returns TRUE if its argument's value is NULL and FALSE otherwise.</p><h4>clr value class</h4><ul><li>boolean</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

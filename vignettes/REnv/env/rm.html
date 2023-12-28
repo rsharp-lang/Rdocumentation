@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Remove Objects from a Specified Environment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>rm {env}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Remove Objects from a Specified Environment</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> remove and rm can be used to remove objects. These can be specified <br /> successively as character strings, or in the character vector list, <br /> or through a combination of both. All objects thus specified will be <br /> removed.<br /><br /> + If envir Is NULL Then the currently active environment Is searched first.<br /> + If inherits Is TRUE Then parents Of the supplied directory are <br />   searched until a variable With the given name Is encountered. A warning <br />   Is printed For Each variable that Is Not found.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>rm</strong>(<i>...</i>,
+    <i>list</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>inherits</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>the objects to be removed, as names (unquoted) or character strings (quoted).</p></p></dd>
+
+
+<dt>list</dt>
+<dd><p><p>a character vector naming objects to be removed.</p></p></dd>
+
+
+<dt>inherits</dt>
+<dd><p><p>should the enclosing frames of the environment be inspected?</p></p></dd>
+
+
+<dt>envir</dt>
+<dd><p><p>the environment to use. See ‘details’.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The pos argument can specify the environment from which to remove the <br />
+ objects in any of several ways: as an integer (the position in the search<br />
+ list); as the character string name of an element in the search list; <br />
+ or as an environment (including using sys.frame to access the currently<br />
+ active function calls). The envir argument is an alternative way to specify<br />
+ an environment, but is primarily there for back compatibility.</p>
+
+<p>It Is Not allowed to remove variables from the base environment And base <br />
+ namespace, nor from any environment which Is locked (see lockEnvironment).</p>
+
+<p>Earlier versions Of R incorrectly claimed that supplying a character <br />
+ vector In ... removed the objects named In the character vector, but it<br />
+ removed the character vector. Use the list argument To specify objects <br />
+ via a character vector.</p>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>env</em> version 2.33.856.6961 <a
+                href="../env.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

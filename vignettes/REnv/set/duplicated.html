@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Determine Duplicate Elements</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>duplicated {set}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Determine Duplicate Elements</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> <code>duplicated()</code> determines which elements of a vector or data frame <br /> are duplicates of elements with smaller subscripts, and returns a <br /> logical vector indicating which elements (rows) are duplicates.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>duplicated</strong>(<i>x</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>a vector Or a data frame Or an array Or NULL.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>These are generic functions with methods for vectors (including lists), data frames <br />
+ and arrays (including matrices).</p>
+
+<p>For the default methods, And whenever there are equivalent method definitions for <br />
+ duplicated And anyDuplicated, anyDuplicated(x, ...) Is a “generalized” shortcut <br />
+ for any(duplicated(x, ...)), in the sense that it returns the index i of the first <br />
+ duplicated entry x[i] if there Is one, And 0 otherwise. Their behaviours may be <br />
+ different when at least one of duplicated And anyDuplicated has a relevant method.</p>
+
+<p>duplicated(x, fromLast = TRUE) Is equivalent to but faster than rev(duplicated(rev(x))).</p>
+
+<p>The data frame method works by pasting together a character representation Of the <br />
+ rows separated by \r, so may be imperfect If the data frame has characters With <br />
+ embedded carriage returns Or columns which Do Not reliably map To characters.</p>
+
+<p>The array method calculates For Each element Of the Sub-array specified by MARGIN <br />
+ If the remaining dimensions are identical To those For an earlier (Or later, When <br />
+ fromLast = True) element (In row-major order). This would most commonly be used <br />
+ To find duplicated rows (the Default) Or columns (With MARGIN = 2). Note that <br />
+ MARGIN = 0 returns an array Of the same dimensionality attributes As x.</p>
+
+<p>Missing values("NA") are regarded As equal, numeric And complex ones differing from <br />
+ NaN; character strings will be compared In a “common encoding”; For details, see <br />
+ match (And unique) which use the same concept.</p>
+
+<p>Values in incomparables will never be marked as duplicated. This Is intended to be <br />
+ used for a fairly small set of values And will Not be efficient for a very large <br />
+ set.</p>
+
+<p>When used on a data frame with more than one column, Or an array Or matrix when <br />
+ comparing dimensions of length greater than one, this tests for identity of character <br />
+ representations. This will catch people who unwisely rely on exact equality of <br />
+ floating-point numbers!</p>
+
+<p>Except for factors, logical And raw vectors the default nmax = NA Is equivalent <br />
+ to nmax = length(x). Since a hash table of size 8*nmax bytes Is allocated, setting <br />
+ nmax suitably can save large amounts of memory. For factors it Is automatically <br />
+ set to the smaller of length(x) And the number of levels plus one (for NA). <br />
+ If nmax Is set too small there Is liable to be an error nmax = 1 Is silently <br />
+ ignored.</p>
+
+<p>Long vectors are supported For the Default method Of duplicated, but may only be <br />
+ usable if nmax Is supplied.</p>
+
+
+        <h3>Value</h3>
+
+        <p>duplicated(): For a vector input, a logical vector of the <br />
+ same length as x. For a data frame, a logical vector with one element <br />
+ for each row. For a matrix or array, and when MARGIN = 0, a logical <br />
+ array with the same dimensions and dimnames.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>set</em> version 2.33.856.6961 <a
+                href="../set.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

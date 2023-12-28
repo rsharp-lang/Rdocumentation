@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pearson Correlation Testing in R Programming</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>pearson {math}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Pearson Correlation Testing in R Programming</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Correlation is a statistical measure that indicates <br /> how strongly two variables are related. It involves <br /> the relationship between multiple variables as well. <br /> For instance, if one is interested to know whether <br /> there is a relationship between the heights of fathers <br /> and sons, a correlation coefficient can be calculated <br /> to answer this question. Generally, it lies between <br /> -1 and +1. It is a scaled version of covariance and <br /> provides the direction and strength of a relationship. <br /> <br /> this function measure a Parametric Correlation – Pearson correlation(r): <br /> It measures a linear dependence between two variables (x and y) <br /> is known as a parametric correlation test because it depends on <br /> the distribution of the data.<br /> <br /> Pearson Rank Correlation is a parametric correlation. <br /> The Pearson correlation coefficient is probably the most<br /> widely used measure for linear relationships between two <br /> normal distributed variables and thus often just called <br /> "correlation coefficient".</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>pearson</strong>(<i>x</i>, <i>y</i>,
+    <i>MAXIT</i> = <span style='color: green;'>5000</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>y</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>MAXIT</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        <ol>
+<li>r takes a value between -1 (negative correlation) and 1 (positive correlation).
+
+<ol start="2">
+<li>r = 0 means no correlation.</li>
+<li>Can Not be applied to ordinal variables.</li>
+<li>The sample size should be moderate (20-30) For good estimation.</li>
+<li>Outliers can lead To misleading values means Not robust With outliers.</li>
+</ol></li>
+</ol><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>math</em> version 2.33.856.6961 <a
+                href="../math.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Evaluate an (Unevaluated) Expression</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>eval {reflections}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Evaluate an (Unevaluated) Expression</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Evaluate an R expression in a specified environment.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>eval</strong>(<i>expr</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>expr</dt>
+<dd><p><p>an object to be evaluated. See 'Details’.</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>the environment In which expr Is To be evaluated. <br />
+ May also be NULL, a list, a data frame, a pairlist Or an Integer <br />
+ As specified To sys.Call.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>eval evaluates the expr argument in the environment specified by envir <br />
+ and returns the computed value. If envir is not specified, then the <br />
+ default is parent.frame() (the environment where the call to eval was <br />
+ made).</p>
+
+<p>Objects to be evaluated can be of types call Or expression Or name <br />
+ (when the name Is looked up in the current scope And its binding Is <br />
+ evaluated), a promise Or any of the basic types such as vectors, <br />
+ functions And environments (which are returned unchanged).</p>
+
+
+        <h3>Value</h3>
+
+        <p>The result of evaluating the object: for an expression vector this is <br />
+ the result of evaluating the last element.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>reflections</em> version 2.33.856.6961 <a
+                href="../reflections.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Correlation, Variance and Covariance (Matrices)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>cor {math}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Correlation, Variance and Covariance (Matrices)</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> var, cov and cor compute the variance of x and the covariance or <br /> correlation of x and y if these are vectors. If x and y are matrices <br /> then the covariances (or correlations) between the columns of x and<br /> the columns of y are computed.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>cor</strong>(<i>x</i>,
+    <i>y</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>use</i> = <span style='color: brown;'><strong>"everything"</strong></span>,
+    <i>method</i> = ["pearson","kendall","spearman"]);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>a numeric vector, matrix or data frame.</p></p></dd>
+
+
+<dt>y</dt>
+<dd><p><p>NULL (default) or a vector, matrix or data frame <br />
+ with compatible dimensions to x. The default is equivalent to <br />
+ y = x (but more efficient).</p></p></dd>
+
+
+<dt>use</dt>
+<dd><p><p>an optional character string giving a method for<br />
+ computing covariances in the presence of missing values. This must<br />
+ be (an abbreviation of) one of the strings "everything", "all.obs",<br />
+ "complete.obs", "na.or.complete", or "pairwise.complete.obs".</p></p></dd>
+
+
+<dt>method</dt>
+<dd><p><p>a character string indicating which correlation <br />
+ coefficient (or covariance) is to be computed. One of "pearson" <br />
+ (default), "kendall", or "spearman": can be abbreviated.</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>For cov and cor one must either give a matrix or data frame for x <br />
+ or give both x and y.</p>
+
+<p>The inputs must be numeric (as determined by is.numeric: logical <br />
+ values are also allowed for historical compatibility): the "kendall" <br />
+ and "spearman" methods make sense for ordered inputs but xtfrm can <br />
+ be used to find a suitable prior transformation to numbers.</p>
+
+<p>var is just another interface to cov, where na.rm is used to determine <br />
+ the default for use when that is unspecified. If na.rm is TRUE then <br />
+ the complete observations (rows) are used (use = "na.or.complete") to <br />
+ compute the variance. Otherwise, by default use = "everything".</p>
+
+<p>If use is "everything", NAs will propagate conceptually, i.e., a <br />
+ resulting value will be NA whenever one of its contributing observations <br />
+ is NA.</p>
+
+<p>If use is "all.obs", then the presence of missing observations will <br />
+ produce an error. If use is "complete.obs" then missing values are <br />
+ handled by casewise deletion (and if there are no complete cases, <br />
+ that gives an error).</p>
+
+<p>"na.or.complete" is the same unless there are no complete cases, that gives<br />
+ NA. Finally, if use has the value "pairwise.complete.obs" then the <br />
+ correlation or covariance between each pair of variables is computed <br />
+ using all complete pairs of observations on those variables. This can <br />
+ result in covariance or correlation matrices which are not positive <br />
+ semi-definite, as well as NA entries if there are no complete pairs <br />
+ for that pair of variables. For cov and var, "pairwise.complete.obs" <br />
+ only works with the "pearson" method. Note that (the equivalent of) <br />
+ var(double(0), use = *) gives NA for use = "everything" and "na.or.complete", <br />
+ and gives an error in the other cases.</p>
+
+<p>The denominator n - 1n−1 is used which gives an unbiased estimator of <br />
+ the (co)variance for i.i.d. observations. These functions return NA <br />
+ when there is only one observation (whereas S-PLUS has been returning <br />
+ NaN).</p>
+
+<p>For cor(), if method is "kendall" or "spearman", Kendall's \tauτ or Spearman's <br />
+ \rhoρ statistic is used to estimate a rank-based measure of association. <br />
+ These are more robust and have been recommended if the data do not <br />
+ necessarily come from a bivariate normal distribution.</p>
+
+<p>For cov(), a non-Pearson method is unusual but available for the sake of <br />
+ completeness. Note that "spearman" basically computes cor(R(x), R(y)) (or <br />
+ cov(., .)) where R(u) := rank(u, na.last = "keep"). In the case of missing <br />
+ values, the ranks are calculated depending on the value of use, either <br />
+ based on complete observations, or based on pairwise completeness with <br />
+ reranking for each pair.</p>
+
+<p>When there are ties, Kendall's \tau_bτ b<br />
+ is computed, as proposed by Kendall (1945).</p>
+
+<p>Scaling a covariance matrix into a correlation one can be achieved in <br />
+ many ways, mathematically most appealing by multiplication with a <br />
+ diagonal matrix from left and right, or more efficiently by using <br />
+ sweep(.., FUN = "/") twice. The cov2cor function is even a bit more <br />
+ efficient, and provided mostly for didactical reasons.</p>
+
+
+        <h3>Value</h3>
+
+        <p>For r &lt;- cor(*, use = "all.obs"), it is now guaranteed that all(abs(r) &lt;= 1).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>math</em> version 2.33.856.6961 <a
+                href="../math.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

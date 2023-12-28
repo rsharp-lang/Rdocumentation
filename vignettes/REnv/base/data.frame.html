@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Frames</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>data.frame {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Data Frames</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> The function <code>data.frame()</code> creates data frames, tightly coupled collections <br /> of variables which share many of the properties of matrices and of lists, <br /> used as the fundamental data structure by most of R's modeling software.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>data.frame</strong>(<i>...</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>columns</dt>
+<dd><p><p>these arguments are of either the form value or <code>tag = value</code>. Component names <br />
+ are created based on the tag (if present) or the deparsed argument itself.</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        <p>A data frame, a matrix-like structure whose columns may be of differing types <br />
+ (<code>numeric</code>, <code>logical</code>, <code>factor</code> and <code>character</code> and so on).</p>
+
+<p>How the names Of the data frame are created Is complex, And the rest Of this <br />
+ paragraph Is only the basic story. If the arguments are all named And simple <br />
+ objects (Not lists, matrices Of data frames) Then the argument names give the <br />
+ column names. For an unnamed simple argument, a deparsed version Of the <br />
+ argument Is used As the name (With an enclosing <code>I(...)</code> removed). For a named <br />
+ <code>matrix</code>/<code>list</code>/<code>dataframe</code> argument With more than one named column, the names Of <br />
+ the columns are the name Of the argument followed by a dot And the column name <br />
+ inside the argument: If the argument Is unnamed, the argument's column names <br />
+ are used. For a named or unnamed matrix/list/data frame argument that contains <br />
+ a single column, the column name in the result is the column name in the <br />
+ argument. <br />
+ Finally, the names are adjusted to be unique and syntactically valid unless <br />
+ <code>check.names = FALSE</code>.</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

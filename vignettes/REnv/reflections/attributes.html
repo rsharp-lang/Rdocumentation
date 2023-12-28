@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object Attribute Lists</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>attributes {reflections}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Object Attribute Lists</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> These functions access an object's attributes. The first form <br /> below returns the object's attribute list. The replacement <br /> forms uses the list on the right-hand side of the assignment <br /> as the object's attributes (if appropriate).</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>attributes</strong>(<i>x</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>any R object</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>Unlike attr it is not an error to set attributes on a NULL object:<br />
+ it will first be coerced to an empty list.</p>
+
+<p>Note that some attributes (namely Class, comment, Dim, dimnames, <br />
+ names, row.names And tsp) are treated specially And have restrictions<br />
+ On the values which can be Set. (Note that this Is Not True Of <br />
+ levels which should be Set For factors via the levels replacement <br />
+ Function.)</p>
+
+<p>Attributes are Not stored internally As a list And should be thought<br />
+ Of As a Set And Not a vector, i.e, the order Of the elements Of <br />
+ attributes() does Not matter. This Is also reflected by identical()'s<br />
+ behaviour with the default argument attrib.as.set = TRUE. Attributes <br />
+ must have unique names (and NA is taken as "NA", not a missing value).</p>
+
+<p>Assigning attributes first removes all attributes, Then sets any Dim <br />
+ attribute And Then the remaining attributes In the order given: this<br />
+ ensures that setting a Dim attribute always precedes the dimnames <br />
+ attribute.</p>
+
+<p>The mostattributes assignment takes special care For the Dim, names And<br />
+ dimnames attributes, And assigns them only When known To be valid <br />
+ whereas an attributes assignment would give an Error If any are Not. <br />
+ It Is principally intended For arrays, And should be used With care<br />
+ On classed objects. For example, it does Not check that row.names<br />
+ are assigned correctly For data frames.</p>
+
+<p>The names Of a pairlist are Not stored As attributes, but are reported <br />
+ As If they were (And can be Set by the replacement form Of attributes).</p>
+
+<p>NULL objects cannot have attributes And attempts To assign them will<br />
+ promote the Object To an empty list. Both assignment And replacement<br />
+ forms Of attributes are primitive functions.</p>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>reflections</em> version 2.33.856.6961 <a
+                href="../reflections.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

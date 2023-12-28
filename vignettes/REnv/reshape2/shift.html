@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>shift: Fast lead/lag for vectors and lists</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>shift {reshape2}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>shift: Fast lead/lag for vectors and lists</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> lead or lag vectors, lists, data.frames or data.tables implemented in VisualBasic for speed.<br /> <br /> shift accepts vectors, lists, data.frames or data.tables. It always <br /> returns a list except when the input is a vector and length(n) == 1 <br /> in which case a vector is returned, for convenience. This is so that <br /> it can be used conveniently within data.table's syntax. For example, <br /> DT[, (cols) := shift(.SD, 1L), by=id] would lag every column of .SD by<br /> 1 for each group and DT[, newcol := colA + shift(colB)] would assign <br /> the sum of two vectors to newcol.<br /><br /> Argument n allows multiple values. For example, DT[, (cols) := shift(.SD, 1:2), by=id] <br /> would lag every column of .SD by 1 And 2 for each group. If .SD contained<br /> four columns, the first two elements of the list would correspond to <br /> lag=1 And lag=2 for the first column of .SD, the next two for second <br /> column of .SD And so on. Please see examples for more.<br /><br /> shift Is designed mainly for use in data.tables along with := Or set. <br /> Therefore, it returns an unnamed list by default as assigning names for <br /> each group over And over can be quite time consuming with many groups. <br /> It may be useful to set names automatically in other cases, which can <br /> be done by setting give.names to TRUE.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>shift</strong>(<i>x</i>,
+    <i>n</i> = <span style='color: green;'>1</span>,
+    <i>fill</i> = <span style='color: brown;'><strong>"NA"</strong></span>,
+    <i>type</i> = ["lag","lead","shift"],
+    <i>give.names</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>A vector, list, data.frame Or data.table.</p></p></dd>
+
+
+<dt>n</dt>
+<dd><p><p>integer vector denoting the offset by which <br />
+ to lead or lag the input. To create multiple lead/lag vectors, <br />
+ provide multiple values to n; negative values of n will "flip" <br />
+ the value of type, i.e., n=-1 and type='lead' is the same as <br />
+ n=1 and type='lag'.</p>
+
+<p>this parameter could also be a character vector of the names for <br />
+ removes from a given list, if the input x is a tuple list object</p></p></dd>
+
+
+<dt>fill</dt>
+<dd><p><p>Value to use for padding when the window goes beyond the input <br />
+ length.</p></p></dd>
+
+
+<dt>type</dt>
+<dd><p><p>default is "lag" (look "backwards"). The other <br />
+ possible values "lead" (look "forwards") and "shift" (behave same <br />
+ as "lag" except given names).</p></p></dd>
+
+
+<dt>give.names</dt>
+<dd><p><p>default is FALSE which returns an unnamed<br />
+ list. When TRUE, names are automatically generated corresponding <br />
+ to type and n. If answer is an atomic vector, then the argument <br />
+ is ignored.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The function behavior is different at here when compare with the <br />
+ <code>shift</code> function of the <code>data.table</code> package from the original<br />
+ R language: the shift function from R language not allow the <strong><code>fill</code></strong><br />
+ data be nothing, but the <code>shift</code> function in R# language will <br />
+ behavior a different result: when the <strong><code>fill</code></strong> value<br />
+ is nothing at here, this function will becomes skip for <strong><code>type</code></strong><br />
+ is <code>lag</code> or <code>shift</code> and this function will becomes take for <strong><code>type</code></strong><br />
+ is <code>lead</code>.</p>
+
+
+        <h3>Value</h3>
+
+        <p>A list containing the lead/lag of input x.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>reshape2</em> version 2.33.856.6961 <a
+                href="../reshape2.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

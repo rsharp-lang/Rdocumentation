@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loading/Attaching and Listing of Packages</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>library {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Loading/Attaching and Listing of Packages</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> library and require load and attach add-on packages.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>library</strong>(<i>package</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>package</dt>
+<dd><p><p>the name Of a package, given As a name Or <br />
+ literal character String, Or a character String, depending On <br />
+ whether character.only Is False (Default) Or True.</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>library(package) and require(package) both load the namespace of <br />
+ the package with name package and attach it on the search list. <br />
+ require is designed for use inside other functions; it returns <br />
+ FALSE and gives a warning (rather than an error as library() does <br />
+ by default) if the package does not exist. Both functions check <br />
+ and update the list of currently attached packages and do not <br />
+ reload a namespace which is already loaded. (If you want to <br />
+ reload such a package, call detach(unload = TRUE) or unloadNamespace <br />
+ first.) If you want to load a package without attaching it on <br />
+ the search list, see requireNamespace.</p>
+
+<p>To suppress messages during the loading of packages use <br />
+ suppressPackageStartupMessages: this will suppress all messages from <br />
+ R itself but Not necessarily all those from package authors.</p>
+
+<p>If library Is called With no package Or help argument, it lists all <br />
+ available packages In the libraries specified by Lib.loc, And returns <br />
+ the corresponding information In an Object Of Class "libraryIQR". <br />
+ (The Structure Of this Class may change In future versions.) Use <br />
+ .packages(all = True) To obtain just the names Of all available packages, <br />
+ And installed.packages() For even more information.</p>
+
+<p>library(help = somename) computes basic information about the package <br />
+ somename, And returns this in an object of class "packageInfo". <br />
+ (The structure of this class may change in future versions.) When <br />
+ used with the default value (NULL) for lib.loc, the attached packages <br />
+ are searched before the libraries.</p>
+
+
+        <h3>Value</h3>
+
+        <p>Normally library returns (invisibly) the list of attached <br />
+ packages, but TRUE or FALSE if logical.return is TRUE. When <br />
+ called as library() it returns an object of class "libraryIQR", <br />
+ and for library(help=), one of class "packageInfo".</p>
+
+<p>require returns(invisibly) a logical indicating whether the required <br />
+ package Is available.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

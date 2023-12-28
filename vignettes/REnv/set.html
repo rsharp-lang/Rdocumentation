@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>set</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; set; REnv" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="Set Operations..." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {set}">
+      <tbody>
+        <tr>
+          <td>{set}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>set</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' Set Operations</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "set"</span><span style="color: blue;"> from</span><span style="color: brown"> "REnv"</span>;
+                           </code>
+    </p>
+    <p><p>Set Operations</p></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line">
+        <tbody><tr>
+  <td id="unset">
+    <a href="./set/unset.html">unset</a>
+  </td>
+  <td><p>unset — Unset the feature slots value from a given variable</p></td>
+</tr>
+<tr>
+  <td id="table">
+    <a href="./set/table.html">table</a>
+  </td>
+  <td><h3>Cross Tabulation and Table Creation</h3>
+
+<p>table uses the cross-classifying factors to build<br />
+ a contingency table of the counts at each combination <br />
+ of factor levels.</p></td>
+</tr>
+<tr>
+  <td id="setdiff">
+    <a href="./set/setdiff.html">setdiff</a>
+  </td>
+  <td><h3>setdiff: Set Difference of Subsets</h3></td>
+</tr>
+<tr>
+  <td id="rev">
+    <a href="./set/rev.html">rev</a>
+  </td>
+  <td><h2>Reverse Elements</h2>
+
+<p>rev provides a reversed version of its argument. <br />
+ It is generic function with a default method for <br />
+ vectors and one for dendrograms.</p>
+
+<p>Note that this Is no longer needed (nor efficient) <br />
+ For obtaining vectors sorted into descending order,<br />
+ since that Is now rather more directly achievable <br />
+ by sort(x, decreasing = True).</p></td>
+</tr>
+<tr>
+  <td id="count">
+    <a href="./set/count.html">count</a>
+  </td>
+  <td><p>is a <code>table</code> liked function for count string occurance number</p></td>
+</tr>
+<tr>
+  <td id="intersect">
+    <a href="./set/intersect.html">intersect</a>
+  </td>
+  <td><p>Performs set intersection</p></td>
+</tr>
+<tr>
+  <td id="union">
+    <a href="./set/union.html">union</a>
+  </td>
+  <td><p>Performs set union</p></td>
+</tr>
+<tr>
+  <td id="index_of">
+    <a href="./set/index_of.html">index_of</a>
+  </td>
+  <td><p>Create the hash index for element search</p></td>
+</tr>
+<tr>
+  <td id="against">
+    <a href="./set/against.html">against</a>
+  </td>
+  <td><p>create subset of the given <strong><code>listSet</code></strong> via <br />
+ tuple value match against with the given <br />
+ <strong><code>index_set</code></strong>.</p></td>
+</tr>
+<tr>
+  <td id="loop">
+    <a href="./set/loop.html">loop</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="duplicated">
+    <a href="./set/duplicated.html">duplicated</a>
+  </td>
+  <td><h3>Determine Duplicate Elements</h3>
+
+<p><code>duplicated()</code> determines which elements of a vector or data frame <br />
+ are duplicates of elements with smaller subscripts, and returns a <br />
+ logical vector indicating which elements (rows) are duplicates.</p></td>
+</tr>
+<tr>
+  <td id="crossing">
+    <a href="./set/crossing.html">crossing</a>
+  </td>
+  <td><p>Find Unique Combinations of All Elements <br />
+ from Two Vectors in R. Expand data frame <br />
+ to include all possible combinations of <br />
+ values.</p></td>
+</tr>
+<tr>
+  <td id="combn">
+    <a href="./set/combn.html">combn</a>
+  </td>
+  <td><p>Generate All Combinations of n Elements, Taken m at a Time</p>
+
+<p>Generate all combinations of the elements of x taken <br />
+ m at a time. If x is a positive integer, returns all <br />
+ combinations of the elements of seq(x) taken m at a <br />
+ time. If argument FUN is not NULL, applies a function <br />
+ given by the argument to each point. If simplify is <br />
+ FALSE, returns a list; otherwise returns an array, typically <br />
+ a matrix. ... are passed unchanged to the FUN function, <br />
+ if specified.</p></td>
+</tr>
+<tr>
+  <td id="jaccard">
+    <a href="./set/jaccard.html">jaccard</a>
+  </td>
+  <td><p>The Jaccard Index, also known as the Jaccard similarity coefficient, <br />
+ is a statistic used in understanding the similarities between sample <br />
+ sets. The measurement emphasizes similarity between finite sample <br />
+ sets, and is formally defined as the size of the intersection divided<br />
+ by the size of the union of the sample sets.</p></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

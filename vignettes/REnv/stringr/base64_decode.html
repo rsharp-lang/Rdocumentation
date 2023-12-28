@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>decode base64 string as text or the raw bytes buffer object.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>base64_decode {stringr}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>decode base64 string as text or the raw bytes buffer object.</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>base64_decode</strong>(<i>base64</i>,
+    <i>asText.encoding</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>wrap</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>base64</dt>
+<dd><p><p>a string in base64 encode pattern</p></p></dd>
+
+
+<dt>asText.encoding</dt>
+<dd><p><p>if this parameter is not nothing, then the output will be convert as text</p></p></dd>
+
+
+<dt>wrap</dt>
+<dd><p><p>wrap the result as memory stream object instead of the raw bytes vector output</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>if the base64 encoded data is text data, that parameter <br />
+ <code>asText_encoding</code> assign of value <code>utf8</code> usually.</p>
+
+
+        <h3>Value</h3>
+
+        <p>this function returns a text data or memory stream buffer object.</p><h4>clr value class</h4><ul><li>string</li><li><a href="/vignettes/clr/System/Byte.html">Byte</a></li><li><a href="/vignettes/clr/System/IO/MemoryStream.html">MemoryStream</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stringr</em> version 2.33.856.6961 <a
+                href="../stringr.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

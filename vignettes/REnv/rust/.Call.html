@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Modern Interfaces to VisualBasic.NET code</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>.Call {rust}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Modern Interfaces to VisualBasic.NET code</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Functions to pass R# objects to compiled VisualBasic.NET code that has been loaded into R#.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>.Call</strong>(<i>NAME</i>, <i>PACKAGE</i>,
+    <i>...</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>NAME</dt>
+<dd><p><p>a character string giving the name of a C function, or an object <br />
+ of class "NativeSymbolInfo", "RegisteredNativeSymbol" or <br />
+ "NativeSymbol" referring to such a name.</p></p></dd>
+
+
+<dt>PACKAGE</dt>
+<dd><p><p>If supplied, confine the search For a character String .NAME To <br />
+ the DLL given by this argument (plus the conventional extension, <br />
+ '.so’, ‘.dll’, ...).<br />
+ This argument follows ... And so its name cannot be abbreviated.<br />
+ This Is intended to add safety for packages, which can ensure by <br />
+ using this argument that no other package can override their <br />
+ external symbols, And also speeds up the search (see 'Note’).</p></p></dd>
+
+
+<dt>args</dt>
+<dd><p><p>arguments to be passed to the compiled code. Up to 65 for .Call.</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        <p>An R object constructed in the compiled code.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>rust</em> version 2.33.856.6961 <a
+                href="../rust.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

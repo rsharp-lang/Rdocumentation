@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stop Function Execution</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>stop {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Stop Function Execution</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> <code>stop</code> stops execution of the current expression and executes an error action.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>stop</strong>(
+    <i>message</i> = <span style='color: brown;'><strong>"unexpected error"</strong></span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>message</dt>
+<dd><p><p>@<code>T:System.String</code> array or @<code>T:System.Exception</code>, zero Or more objects which <br />
+ can be coerced to character (And which are pasted together with no separator) Or <br />
+ a single condition object.</p></p></dd>
+
+
+<dt>envir</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The error action is controlled by error handlers established within the executing <br />
+ code and by the current default error handler set by options(error=). The error <br />
+ is first signaled as if using signalCondition(). If there are no handlers or if <br />
+ all handlers return, then the error message is printed (if options("show.error.messages") <br />
+ is true) and the default error handler is used. The default behaviour (the NULL <br />
+ error-handler) in interactive use is to return to the top level prompt or the top <br />
+ level browser, and in non-interactive use to (effectively) call q("no", status = 1, <br />
+ runLast = FALSE). The default handler stores the error message in a buffer; it can <br />
+ be retrieved by geterrmessage(). It also stores a trace of the call stack that can <br />
+ be retrieved by traceback().</p>
+
+<p>Errors will be truncated To getOption("warning.length") characters, Default 1000.</p>
+
+<p>If a condition Object Is supplied it should be the only argument, And further arguments <br />
+ will be ignored, With a warning.</p>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/Message.html">Message</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/Message.html">Message</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

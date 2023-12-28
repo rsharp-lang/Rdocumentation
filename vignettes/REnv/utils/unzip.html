@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Extract or List Zip Archives</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>unzip {utils}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Extract or List Zip Archives</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Extract files from or list a zip archive.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>unzip</strong>(<i>zipfile</i>,
+    <i>files</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>list</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>overwrite</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>junkpaths</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>exdir</i> = <span style='color: brown;'><strong>"."</strong></span>,
+    <i>unzip</i> = <span style='color: brown;'><strong>"internal"</strong></span>,
+    <i>setTimes</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>zipfile</dt>
+<dd><p><p>The pathname of the zip file: tilde expansion (see <br />
+ path.expand) will be performed.</p></p></dd>
+
+
+<dt>files</dt>
+<dd><p><p>A character vector of recorded filepaths to be extracted: <br />
+ the default is to extract all files.</p></p></dd>
+
+
+<dt>list</dt>
+<dd><p><p>If TRUE, list the files and extract none. The <br />
+ equivalent of unzip -l.</p></p></dd>
+
+
+<dt>overwrite</dt>
+<dd><p><p>If TRUE, overwrite existing files (the equivalent of unzip -o),<br />
+ otherwise ignore such files (the equivalent of unzip -n).</p></p></dd>
+
+
+<dt>junkpaths</dt>
+<dd><p><p>If TRUE, use only the basename of the stored filepath when <br />
+ extracting. The equivalent of unzip -j.</p></p></dd>
+
+
+<dt>exdir</dt>
+<dd><p><p>The directory to extract files to (the equivalent of unzip -d). <br />
+ It will be created if necessary.</p></p></dd>
+
+
+<dt>unzip</dt>
+<dd><p><p>The method to be used. An alternative is to use getOption("unzip"),<br />
+ which on a Unix-alike may be set to the path to a unzip program.</p></p></dd>
+
+
+<dt>setTimes</dt>
+<dd><p><p>logical. For the internal method only, should the file times be set <br />
+ based on the times in the zip file? (NB: this applies to included <br />
+ files, not to directories.)</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The default internal method is a minimal implementation, principally <br />
+ designed for Windows' users to be able to unpack Windows binary <br />
+ packages without external software. It does not (for example) support <br />
+ Unicode filenames as introduced in zip 3.0: for that use unzip = <br />
+ "unzip" with unzip 6.00 or later. It does have some support for bzip2 <br />
+ compression and > 2GB zip files (but not >= 4GB files pre-compression <br />
+ contained in a zip file: like many builds of unzip it may truncate <br />
+ these, in R's case with a warning if possible).<br />
+ If unzip specifies a program, the format of the dates listed with <br />
+ list = TRUE is unknown (on Windows it can even depend on the current<br />
+ locale) and the return values could be NA or expressed in the wrong <br />
+ time zone or misinterpreted (the latter being far less likely as from <br />
+ unzip 6.00).<br />
+ File times in zip files are stored in the style of MS-DOS, as local <br />
+ times to an accuracy of 2 seconds. This is not very useful when transferring <br />
+ zip files between machines (even across continents), so we chose not <br />
+ to restore them by default.</p>
+
+
+        <h3>Value</h3>
+
+        <p>If list = TRUE, a data frame with columns Name (character) Length <br />
+ (the size of the uncompressed file, numeric) and Date (of class<br />
+ "POSIXct").<br />
+ Otherwise for the "internal" method, a character vector of the <br />
+ filepaths extracted to, invisibly.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>utils</em> version 2.33.856.6961 <a
+                href="../utils.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

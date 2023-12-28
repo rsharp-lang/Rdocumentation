@@ -1,0 +1,441 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>math</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; math; REnv" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="the R# math module..." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {math}">
+      <tbody>
+        <tr>
+          <td>{math}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>math</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' the R# math module</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "math"</span><span style="color: blue;"> from</span><span style="color: brown"> "REnv"</span>;
+                           </code>
+    </p>
+    <p><p>the R# math module</p></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           <p>the R# math module</p>
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line">
+        <tbody><tr>
+  <td id="floor">
+    <a href="./math/floor.html">floor</a>
+  </td>
+  <td><h3>Rounding of Numbers</h3>
+
+<p>floor takes a single numeric argument x and returns a <br />
+ numeric vector containing the largest integers not<br />
+ greater than the corresponding elements of x.</p></td>
+</tr>
+<tr>
+  <td id="ceiling">
+    <a href="./math/ceiling.html">ceiling</a>
+  </td>
+  <td><h3>Rounding of Numbers</h3>
+
+<p>ceiling takes a single numeric argument x and returns<br />
+ a numeric vector containing the smallest integers not <br />
+ less than the corresponding elements of x.</p></td>
+</tr>
+<tr>
+  <td id="trunc">
+    <a href="./math/trunc.html">trunc</a>
+  </td>
+  <td><h3>Rounding of Numbers</h3>
+
+<p>trunc takes a single numeric argument x and returns a <br />
+ numeric vector containing the integers formed by truncating <br />
+ the values in x toward 0.</p></td>
+</tr>
+<tr>
+  <td id="sign">
+    <a href="./math/sign.html">sign</a>
+  </td>
+  <td><h3>Sign Function</h3>
+
+<p>sign returns a vector with the signs of the corresponding <br />
+ elements of x (the sign of a real number is 1, 0, or -1−1 <br />
+ if the number is positive, zero, or negative, respectively).</p>
+
+<p>Note that sign does not operate on complex vectors.</p></td>
+</tr>
+<tr>
+  <td id="is.nan">
+    <a href="./math/is.nan.html">is.nan</a>
+  </td>
+  <td><h2>Finite, Infinite and NaN Numbers</h2>
+
+<p>is.finite and is.infinite return a vector of the same <br />
+ length as x, indicating which elements are finite <br />
+ (not infinite and not missing) or infinite.</p>
+
+<p>Inf And -Inf are positive And negative infinity whereas<br />
+ NaN means 'Not a Number’. (These apply to numeric values <br />
+ and real and imaginary parts of complex values but not <br />
+ to values of integer vectors.) Inf and NaN are reserved <br />
+ words in the R language.</p></td>
+</tr>
+<tr>
+  <td id="fit">
+    <a href="./math/fit.html">fit</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="is.finite">
+    <a href="./math/is.finite.html">is.finite</a>
+  </td>
+  <td><h2>Finite, Infinite and NaN Numbers</h2>
+
+<p>is.finite and is.infinite return a vector of the same length <br />
+ as x, indicating which elements are finite (not infinite and <br />
+ not missing) or infinite.</p></td>
+</tr>
+<tr>
+  <td id="is.infinite">
+    <a href="./math/is.infinite.html">is.infinite</a>
+  </td>
+  <td><h2>Finite, Infinite and NaN Numbers</h2>
+
+<p>is.finite and is.infinite return a vector of the same length as <br />
+ x, indicating which elements are finite (not infinite and not <br />
+ missing) or infinite.</p></td>
+</tr>
+<tr>
+  <td id="diff">
+    <a href="./math/diff.html">diff</a>
+  </td>
+  <td><h3>Lagged Differences</h3>
+
+<p>Returns suitably lagged and iterated differences.</p></td>
+</tr>
+<tr>
+  <td id="round">
+    <a href="./math/round.html">round</a>
+  </td>
+  <td><p>rounds the values in its first argument to the specified number of decimal places (default 0). <br />
+ See <em>'Details'</em> about "round to even" when rounding off a 5.</p></td>
+</tr>
+<tr>
+  <td id="log">
+    <a href="./math/log.html">log</a>
+  </td>
+  <td><p>computes logarithms, by default natural logarithms, log10 computes common (i.e., base 10) logarithms, <br />
+ and log2 computes binary (i.e., base 2) logarithms. <br />
+ The general form log(x, base) computes logarithms with base base.</p></td>
+</tr>
+<tr>
+  <td id="log2">
+    <a href="./math/log2.html">log2</a>
+  </td>
+  <td><h3>Logarithms and Exponentials</h3>
+
+<p>log2 computes binary (i.e., base 2) logarithms.</p></td>
+</tr>
+<tr>
+  <td id="log10">
+    <a href="./math/log10.html">log10</a>
+  </td>
+  <td><h3>Logarithms and Exponentials</h3>
+
+<p>log10 computes common (i.e., base 10) logarithms</p></td>
+</tr>
+<tr>
+  <td id="sin">
+    <a href="./math/sin.html">sin</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="cos">
+    <a href="./math/cos.html">cos</a>
+  </td>
+  <td><p>evaluate the cosine alpha</p></td>
+</tr>
+<tr>
+  <td id="prod">
+    <a href="./math/prod.html">prod</a>
+  </td>
+  <td><p>Product of Vector Elements</p>
+
+<p>prod returns the product of all the values present in its arguments.</p></td>
+</tr>
+<tr>
+  <td id="sum">
+    <a href="./math/sum.html">sum</a>
+  </td>
+  <td><h4>Sum of Vector Elements</h4>
+
+<p>sum returns the sum of all the values present in its arguments.</p></td>
+</tr>
+<tr>
+  <td id="pow">
+    <a href="./math/pow.html">pow</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="sqrt">
+    <a href="./math/sqrt.html">sqrt</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="exp">
+    <a href="./math/exp.html">exp</a>
+  </td>
+  <td><h4>Logarithms and Exponentials</h4>
+
+<p>computes the exponential function.</p></td>
+</tr>
+<tr>
+  <td id="max">
+    <a href="./math/max.html">max</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="min">
+    <a href="./math/min.html">min</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="mean">
+    <a href="./math/mean.html">mean</a>
+  </td>
+  <td><p>Arithmetic Mean</p></td>
+</tr>
+<tr>
+  <td id="median">
+    <a href="./math/median.html">median</a>
+  </td>
+  <td><h3>Median Value</h3>
+
+<p>Compute the sample median.</p></td>
+</tr>
+<tr>
+  <td id="abs">
+    <a href="./math/abs.html">abs</a>
+  </td>
+  <td><p>abs(x) computes the absolute value of x</p></td>
+</tr>
+<tr>
+  <td id="rsd">
+    <a href="./math/rsd.html">rsd</a>
+  </td>
+  <td><h2>relative standard deviation</h2>
+
+<p>Relative standard deviation is a common formula <br />
+ used in statistics and probability theory to determine<br />
+ a standardized measure of the ratio of the standard<br />
+ deviation to the mean. This formula is useful in<br />
+ various situations including when comparing your <br />
+ own data to other related data and in financial <br />
+ settings such as the stock market.</p>
+
+<p>Relative standard deviation, which also may be referred <br />
+ to as RSD or the coefficient of variation, is used <br />
+ to determine if the standard deviation of a set of <br />
+ data is small or large when compared to the mean.<br />
+ In other words, the relative standard deviation can<br />
+ tell you how precise the average of your results is.<br />
+ This formula is most frequently used in chemistry, <br />
+ statistics and other math-related settings but can <br />
+ also be used in the business world when assessing<br />
+ finances and the stock market.</p>
+
+<p>The relative standard deviation Of a Set Of data can be<br />
+ depicted As either a percentage Or As a number. The <br />
+ higher the relative standard deviation, the more spread <br />
+ out the results are from the mean Of the data. On the<br />
+ other hand, a lower relative standard deviation means <br />
+ that the measurement Of data Is more precise.</p></td>
+</tr>
+<tr>
+  <td id="sd">
+    <a href="./math/sd.html">sd</a>
+  </td>
+  <td><h3>Standard Deviation</h3>
+
+<p>This function computes the standard deviation of the values in x. <br />
+ If na.rm is TRUE then missing values are removed before computation <br />
+ proceeds.</p></td>
+</tr>
+<tr>
+  <td id="pearson">
+    <a href="./math/pearson.html">pearson</a>
+  </td>
+  <td><h2>Pearson Correlation Testing in R Programming</h2>
+
+<p>Correlation is a statistical measure that indicates <br />
+ how strongly two variables are related. It involves <br />
+ the relationship between multiple variables as well. <br />
+ For instance, if one is interested to know whether <br />
+ there is a relationship between the heights of fathers <br />
+ and sons, a correlation coefficient can be calculated <br />
+ to answer this question. Generally, it lies between <br />
+ -1 and +1. It is a scaled version of covariance and <br />
+ provides the direction and strength of a relationship. </p>
+
+<p>this function measure a Parametric Correlation – Pearson correlation(r): <br />
+ It measures a linear dependence between two variables (x and y) <br />
+ is known as a parametric correlation test because it depends on <br />
+ the distribution of the data.</p>
+
+<p>Pearson Rank Correlation is a parametric correlation. <br />
+ The Pearson correlation coefficient is probably the most<br />
+ widely used measure for linear relationships between two <br />
+ normal distributed variables and thus often just called <br />
+ "correlation coefficient".</p></td>
+</tr>
+<tr>
+  <td id="cor.test">
+    <a href="./math/cor.test.html">cor.test</a>
+  </td>
+  <td><h3>Test for Association/Correlation Between Paired Samples</h3>
+
+<p>Test for association between paired samples, using one of <br />
+ Pearson's product moment correlation coefficient, Kendall's <br />
+ 	auτ or Spearman's \rhoρ.</p></td>
+</tr>
+<tr>
+  <td id="set.seed">
+    <a href="./math/set.seed.html">set.seed</a>
+  </td>
+  <td><p>set.seed is the recommended way to specify seeds.</p></td>
+</tr>
+<tr>
+  <td id="rnd">
+    <a href="./math/rnd.html">rnd</a>
+  </td>
+  <td><p>get a random number value between <code>[0,1]</code>.</p></td>
+</tr>
+<tr>
+  <td id="runif">
+    <a href="./math/runif.html">runif</a>
+  </td>
+  <td><p>runif generates random deviates.</p></td>
+</tr>
+<tr>
+  <td id="rnorm">
+    <a href="./math/rnorm.html">rnorm</a>
+  </td>
+  <td><h3>The Normal Distribution</h3>
+
+<p>Density, distribution function, quantile function and random generation for <br />
+ the normal distribution with mean equal to mean and standard deviation equal <br />
+ to sd.</p></td>
+</tr>
+<tr>
+  <td id="sample">
+    <a href="./math/sample.html">sample</a>
+  </td>
+  <td><h3>Random Samples and Permutations</h3>
+
+<p><code>sample</code> takes a sample of the specified size from the elements <br />
+ of x using either with or without replacement.</p></td>
+</tr>
+<tr>
+  <td id="sample.int">
+    <a href="./math/sample.int.html">sample.int</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="cluster_1D">
+    <a href="./math/cluster_1D.html">cluster_1D</a>
+  </td>
+  <td><p>grouping data input by given numeric tolerance</p></td>
+</tr>
+<tr>
+  <td id="numeric_tags">
+    <a href="./math/numeric_tags.html">numeric_tags</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="var">
+    <a href="./math/var.html">var</a>
+  </td>
+  <td><h3>Correlation, Variance and Covariance (Matrices)</h3>
+
+<p>var, cov and cor compute the variance of x and the covariance or <br />
+ correlation of x and y if these are vectors. If x and y are <br />
+ matrices then the covariances (or correlations) between the columns <br />
+ of x and the columns of y are computed.</p></td>
+</tr>
+<tr>
+  <td id="cor">
+    <a href="./math/cor.html">cor</a>
+  </td>
+  <td><h3>Correlation, Variance and Covariance (Matrices)</h3>
+
+<p>var, cov and cor compute the variance of x and the covariance or <br />
+ correlation of x and y if these are vectors. If x and y are matrices <br />
+ then the covariances (or correlations) between the columns of x and<br />
+ the columns of y are computed.</p></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

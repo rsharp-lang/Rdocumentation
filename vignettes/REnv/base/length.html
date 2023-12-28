@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Length of an Object</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>length {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Length of an Object</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Get or set the length of vectors (including lists) and factors, <br /> and of any other R object for which a method has been defined.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>length</strong>(<i>x</i>,
+    <i>newSize</i> = <span style='color: green;'>-1</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>an R object. For replacement, a vector or factor.</p></p></dd>
+
+
+<dt>newSize</dt>
+<dd><p><p>a non-negative integer or double (which will be rounded down).</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        <p>The default method for length currently returns a non-negative <br />
+ integer of length 1, except for vectors of more than 2^31 - 1 <br />
+ elements, when it returns a double.</p>
+
+<p>For vectors(including lists) And factors the length Is the <br />
+ number of elements. For an environment it Is the number of <br />
+ objects in the environment, And NULL has length 0. For expressions <br />
+ And pairlists (including language objects And dotlists) it Is the <br />
+ length of the pairlist chain. All other objects (including <br />
+ functions) have length one: note that For functions this differs <br />
+ from S.</p>
+
+<p>The replacement form removes all the attributes Of x except its <br />
+ names, which are adjusted (And If necessary extended by "").</p><h4>clr value class</h4><ul><li>integer</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Make Syntactically Valid Names</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>make.names {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Make Syntactically Valid Names</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Make syntactically valid names out of character vectors.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>make.names</strong>(<i>names</i>,
+    <i>unique</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>allow.</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>names</dt>
+<dd><p><p>character vector To be coerced To syntactically valid names. <br />
+ This Is coerced To character If necessary.</p></p></dd>
+
+
+<dt>unique</dt>
+<dd><p><p>logical; if TRUE, the resulting elements are unique. This may <br />
+ be desired for, e.g., column names.</p></p></dd>
+
+
+<dt>allow.</dt>
+<dd><p><p>logical. For compatibility with R prior to 1.9.0.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>A syntactically valid name consists of letters, numbers and <br />
+ the dot or underline characters and starts with a letter or <br />
+ the dot not followed by a number. Names such as ".2way" are <br />
+ not valid, and neither are the reserved words.</p>
+
+<p>The definition Of a letter depends On the current locale, but <br />
+ only ASCII digits are considered To be digits.</p>
+
+<p>The character "X" Is prepended If necessary. All invalid <br />
+ characters are translated To ".". A missing value Is translated <br />
+ To "NA". Names which match R keywords have a dot appended To <br />
+ them. Duplicated values are altered by make.unique.</p>
+
+
+        <h3>Value</h3>
+
+        <p>A character vector of same length as names with each <br />
+ changed to a syntactically valid name, in the current locale's <br />
+ encoding.</p><h4>clr value class</h4><ul><li>string</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

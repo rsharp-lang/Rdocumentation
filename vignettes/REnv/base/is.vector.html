@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>‘is.vector’ returns ‘TRUE’ if ‘x’ is a vector of the specified</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>is.vector {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>‘is.vector’ returns ‘TRUE’ if ‘x’ is a vector of the specified</h2>
+
+        <h3>Description</h3>
+
+        <p>mode having no attributes <em>other than names</em>.  It returns 'FALSE’<br /> otherwise.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>is.vector</strong>(<i>x</i>,
+    <i>mode</i> = <span style='color: brown;'><strong>"any"</strong></span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>an R object.</p></p></dd>
+
+
+<dt>mode</dt>
+<dd><p><p>character string naming an atomic mode or ‘"list"’ or<br />
+ '"expression"’ or (except for ‘vector’) ‘"any"’.  Currently,<br />
+ 'is.vector()’ allows any type (see ‘typeof’) for ‘mode’, and<br />
+ when mode Is Not '"any"’, ‘is.vector(x, mode)’ is almost the<br />
+ same as 'typeof(x) == mode’.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The atomic modes are ‘"logical"’, ‘"integer"’, ‘"numeric"’<br />
+ (synonym '"double"’), ‘"complex"’, ‘"character"’ and ‘"raw"’.</p>
+
+<p>If 'mode = "any"’, ‘is.vector’ may return ‘TRUE’ for the atomic<br />
+ modes, 'list’ and ‘expression’.  For any ‘mode’, it will return<br />
+ 'FALSE’ if ‘x’ has any attributes except names.  (This is<br />
+ incompatible with S.)  On the other hand, 'as.vector’ removes<br />
+ <em>all</em> attributes including names For results Of atomic mode (but<br />
+ Not those of mode '"list"’ nor ‘"expression"’).</p>
+
+<p>Note that factors are <em>not</em> vectors; 'is.vector’ returns ‘FALSE’<br />
+ And 'as.vector’ converts a factor to a character vector for ‘mode<br />
+ = "any"'.</p>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type boolean.<h4>clr value class</h4><ul><li>boolean</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

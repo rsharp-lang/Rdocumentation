@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sequence Generation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>seq {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Sequence Generation</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Generate regular sequences. seq is a standard generic with a default method. <br /> seq.int is a primitive which can be much faster but has a few restrictions. <br /> seq_along and seq_len are very fast primitives for two common cases.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>seq</strong>(<i>from</i>, <i>to</i>,
+    <i>by</i> = <span style='color: green;'>1</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>from</dt>
+<dd><p><p>the starting And (maximal) End values Of the sequence. <br />
+ Of length 1 unless just from Is supplied As an unnamed argument.</p></p></dd>
+
+
+<dt>[to]</dt>
+<dd><p><p>the starting And (maximal) End values Of the sequence. <br />
+ Of length 1 unless just from Is supplied As an unnamed argument.</p></p></dd>
+
+
+<dt>by</dt>
+<dd><p><p>number: increment of the sequence.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>Numerical inputs should all be finite (that is, not infinite, NaN or NA).<br />
+ The interpretation Of the unnamed arguments Of seq And seq.int Is Not standard, <br />
+ And it Is recommended always To name the arguments When programming.</p>
+
+<p>seq Is generic, And only the default method Is described here. Note that it <br />
+ dispatches on the class of the first argument irrespective of argument names. <br />
+ This can have unintended consequences if it Is called with just one argument <br />
+ intending this to be taken as along.with it Is much better to use seq_along <br />
+ in that case.</p>
+
+<p>seq.int Is an internal generic which dispatches on methods for "seq" based on <br />
+ the class of the first supplied argument (before argument matching).</p>
+
+<p>Typical usages are</p>
+
+<ul>
+<li>seq(from, to)</li>
+<li>seq(from, to, by= )</li>
+<li>seq(from, to, length.out= )</li>
+<li>seq(along.with= )</li>
+<li>seq(from)</li>
+<li><p>seq(length.out= )</p>
+
+<p>The first form generates the sequence from, from+/-1, ..., To (identical To <br />
+from:to).</p>
+
+<p>The second form generates from, from+by, ..., up To the sequence value less <br />
+than Or equal To To. Specifying To - from And by Of opposite signs Is an Error. <br />
+Note that the computed final value can go just beyond To To allow For rounding <br />
+Error, but Is truncated To To. ('Just beyond’ is by up to 1e-10 times<br />
+abs(from - to).)</p>
+
+<p>The third generates a sequence Of length.out equally spaced values from from To <br />
+To. (length.out Is usually abbreviated To length Or len, And seq_len Is much <br />
+faster.)</p>
+
+<p>The fourth form generates the Integer sequence 1, 2, ..., length(along.With). <br />
+(along.With Is usually abbreviated To along, And seq_along Is much faster.)</p>
+
+<p>The fifth form generates the sequence 1, 2, ..., length(from) (As If argument <br />
+along.With had been specified), unless the argument Is numeric Of length 1 When <br />
+it Is interpreted As 1:from (even for seq(0) for compatibility with S). Using <br />
+either seq_along Or seq_len Is much preferred (unless strict S compatibility <br />
+Is essential).</p>
+
+<p>The final form generates the Integer sequence 1, 2, ..., length.out unless <br />
+length.out = 0, When it generates Integer(0).</p>
+
+<p>Very small sequences (With from - To Of the order Of 10^{-14} times the larger <br />
+Of the ends) will Return from.</p>
+
+<p>For seq(only), up To two Of from, To And by can be supplied As complex values <br />
+provided length.out Or along.With Is specified. More generally, the Default <br />
+method Of seq will handle classed objects With methods For the Math, Ops <br />
+And Summary group generics.</p>
+
+<p>seq.int, seq_along And seq_len are primitive.</p></li>
+</ul>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

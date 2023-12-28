@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Options Settings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>getOption {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Options Settings</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Allow the user to set and examine a variety of global options which affect the way in <br /> which R computes and displays its results.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>getOption</strong>(<i>x</i>,
+    <i>default</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>a character string holding an option name.</p></p></dd>
+
+
+<dt>default</dt>
+<dd><p><p>if the specified option is not set in the options list, this <br />
+ value is returned. This facilitates retrieving an option and checking whether it is <br />
+ set and setting it separately if not.</p></p></dd>
+
+
+<dt>envir</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>Invoking options() with no arguments returns a list with the current values of the options. <br />
+ Note that not all options listed below are set initially. To access the value of a single <br />
+ option, one should use, e.g., getOption("width") rather than options("width") which is a <br />
+ list of length one.</p>
+
+
+        <h3>Value</h3>
+
+        <p>For getOption, the current value set for option x, or default (which defaults <br />
+ to NULL) if the option is unset.</p><h4>clr value class</h4><ul><li>string</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

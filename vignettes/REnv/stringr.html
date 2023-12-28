@@ -1,0 +1,285 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>stringr</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; stringr; REnv" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="Simple, Consistent Wrappers for Common String Operations stringr..." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {stringr}">
+      <tbody>
+        <tr>
+          <td>{stringr}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>stringr</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' Simple, Consistent Wrappers for Common String Operations</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "stringr"</span><span style="color: blue;"> from</span><span style="color: brown"> "REnv"</span>;
+                           </code>
+    </p>
+    <p><p>Simple, Consistent Wrappers for Common String Operations</p>
+
+<p>stringr provide fast, correct implementations of common string manipulations. <br />
+ stringr focusses on the most important and commonly used string manipulation <br />
+ functions whereas stringi provides a comprehensive set covering almost anything <br />
+ you can imagine.</p></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           <p>Simple, Consistent Wrappers for Common String Operations</p>
+
+<p>stringr provide fast, correct implementations of common string manipulations. <br />
+ stringr focusses on the most important and commonly used string manipulation <br />
+ functions whereas stringi provides a comprehensive set covering almost anything <br />
+ you can imagine.</p>
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line">
+        <tbody><tr>
+  <td id="html">
+    <a href="./stringr/html.html">html</a>
+  </td>
+  <td><p>comvert any object to html text document</p></td>
+</tr>
+<tr>
+  <td id="toString">
+    <a href="./stringr/toString.html">toString</a>
+  </td>
+  <td><h1>Convert an R Object to a Character String</h1>
+
+<p>This is a helper function for format to produce a <br />
+ single character string describing an R object.</p></td>
+</tr>
+<tr>
+  <td id="loadXml">
+    <a href="./stringr/loadXml.html">loadXml</a>
+  </td>
+  <td><p>load a .NET object from the xml data file</p></td>
+</tr>
+<tr>
+  <td id="xml">
+    <a href="./stringr/xml.html">xml</a>
+  </td>
+  <td><p>Convert most of the R# object or VB.NET object to xml document string.</p></td>
+</tr>
+<tr>
+  <td id="bdecode">
+    <a href="./stringr/bdecode.html">bdecode</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="bencode">
+    <a href="./stringr/bencode.html">bencode</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="json">
+    <a href="./stringr/json.html">json</a>
+  </td>
+  <td><p>Convert most of the R# object or VB.NET object to json string.</p></td>
+</tr>
+<tr>
+  <td id="base64">
+    <a href="./stringr/base64.html">base64</a>
+  </td>
+  <td><p>encode byte stream or text content into base64 string</p></td>
+</tr>
+<tr>
+  <td id="base64_decode">
+    <a href="./stringr/base64_decode.html">base64_decode</a>
+  </td>
+  <td><p>decode base64 string as text or the raw bytes buffer object.</p></td>
+</tr>
+<tr>
+  <td id="urldecode">
+    <a href="./stringr/urldecode.html">urldecode</a>
+  </td>
+  <td><p>Decodes URL-encoded string</p>
+
+<p>Decodes any <code>%&#35;&#35;</code> encoding in the given string. <br />
+ Plus symbols ('+') are decoded to a space character.</p></td>
+</tr>
+<tr>
+  <td id="grep">
+    <a href="./stringr/grep.html">grep</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="nchar">
+    <a href="./stringr/nchar.html">nchar</a>
+  </td>
+  <td><h3>Count the Number of Characters (or Bytes or Width)</h3>
+
+<p>nchar takes a character vector as an argument and <br />
+ returns a vector whose elements contain the sizes <br />
+ of the corresponding elements of x.</p></td>
+</tr>
+<tr>
+  <td id="regexp">
+    <a href="./stringr/regexp.html">regexp</a>
+  </td>
+  <td><p>Initializes a new instance of the <code>RegularExpression</code> class<br />
+ for the specified regular expression <strong><code>pattern</code></strong>.</p></td>
+</tr>
+<tr>
+  <td id="regex_match">
+    <a href="./stringr/regex_match.html">regex_match</a>
+  </td>
+  <td><p>Searches the specified input string for the first <br />
+ occurrence of the regular expression specified in <br />
+ the System.Text.RegularExpressions.Regex <br />
+ constructor.</p></td>
+</tr>
+<tr>
+  <td id="sprintf">
+    <a href="./stringr/sprintf.html">sprintf</a>
+  </td>
+  <td><h4>Use C-style String Formatting Commands</h4>
+
+<p>A wrapper for the C function sprintf, that returns a character <br />
+ vector containing a formatted combination of text and variable <br />
+ values.</p></td>
+</tr>
+<tr>
+  <td id="paste0">
+    <a href="./stringr/paste0.html">paste0</a>
+  </td>
+  <td><p><code>paste0(..., collapse)</code> is equivalent to <code>paste(..., sep = "", collapse)</code>, slightly more efficiently.</p></td>
+</tr>
+<tr>
+  <td id="str_pad">
+    <a href="./stringr/str_pad.html">str_pad</a>
+  </td>
+  <td><p>Pad A String.</p></td>
+</tr>
+<tr>
+  <td id="str_empty">
+    <a href="./stringr/str_empty.html">str_empty</a>
+  </td>
+  <td><p>test of the give character vector is empty string or not</p></td>
+</tr>
+<tr>
+  <td id="tagvalue">
+    <a href="./stringr/tagvalue.html">tagvalue</a>
+  </td>
+  <td><p>parse the string text in format like <code>tag{delimiter}value</code></p></td>
+</tr>
+<tr>
+  <td id="tolower">
+    <a href="./stringr/tolower.html">tolower</a>
+  </td>
+  <td><h3>Character Translation and Casefolding</h3>
+
+<p>Translate characters in character vectors, in particular <br />
+ from upper to lower case or vice versa.</p></td>
+</tr>
+<tr>
+  <td id="toupper">
+    <a href="./stringr/toupper.html">toupper</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="concatenate">
+    <a href="./stringr/concatenate.html">concatenate</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="chr">
+    <a href="./stringr/chr.html">chr</a>
+  </td>
+  <td><p><code>chr</code> returns the characters corresponding to the <br />
+ specified ASCII codes.</p></td>
+</tr>
+<tr>
+  <td id="charAt">
+    <a href="./stringr/charAt.html">charAt</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="substr">
+    <a href="./stringr/substr.html">substr</a>
+  </td>
+  <td><h3>Substrings of a Character Vector</h3>
+
+<p>Extract or replace substrings in a character vector.</p></td>
+</tr>
+<tr>
+  <td id="str_replace">
+    <a href="./stringr/str_replace.html">str_replace</a>
+  </td>
+  <td><p>Pattern Matching and Replacement</p></td>
+</tr>
+<tr>
+  <td id="random_str">
+    <a href="./stringr/random_str.html">random_str</a>
+  </td>
+  <td><p>generate random string which is all consist <br />
+ with ascii chars.</p></td>
+</tr>
+<tr>
+  <td id="text_equals">
+    <a href="./stringr/text_equals.html">text_equals</a>
+  </td>
+  <td></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

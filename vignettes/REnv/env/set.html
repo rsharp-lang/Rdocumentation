@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assign a Value to a Name</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>set {env}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Assign a Value to a Name</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Assign a value to a name in an environment.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>set</strong>(<i>name</i>, <i>value</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>env</dt>
+<dd><p><p>the environment To use. See 'Details’.</p></p></dd>
+
+
+<dt>name</dt>
+<dd><p><p>a variable name, given as a character string. No coercion is done, <br />
+ and the first element of a character vector of length greater than <br />
+ one will be used, with a warning.</p></p></dd>
+
+
+<dt>value</dt>
+<dd><p><p>a value To be assigned To x.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>There are no restrictions on the name given as x: it can be a <br />
+ non-syntactic name (see make.names).<br />
+ The pos argument can specify the environment In which To assign <br />
+ the Object In any Of several ways: as -1 (the default), as a <br />
+ positive integer (the position in the search list); as the <br />
+ character string name of an element in the search list; Or as <br />
+ an environment (including using sys.frame to access the currently <br />
+ active function calls). The envir argument Is an alternative way <br />
+ to specify an environment, but Is primarily for back compatibility.<br />
+ assign does Not dispatch assignment methods, so it cannot be used <br />
+ To Set elements Of vectors, names, attributes, etc.<br />
+ Note that assignment To an attached list Or data frame changes the <br />
+ attached copy And Not the original Object: see attach And With.</p>
+
+
+        <h3>Value</h3>
+
+        <p>This function is invoked for its side effect, which is assigning <br />
+ value to the variable x. If no envir is specified, then the assignment <br />
+ takes place in the currently active environment.<br />
+ If inherits Is TRUE, enclosing environments of the supplied environment <br />
+ are searched until the variable x Is encountered. The value Is Then <br />
+ assigned In the environment In which the variable Is encountered <br />
+ (provided that the binding Is Not locked: see lockBinding : If it Is, <br />
+ an error Is signaled). If the symbol Is Not encountered Then assignment <br />
+ takes place In the user's workspace (the global environment).<br />
+ If inherits Is FALSE, assignment takes place in the initial frame of <br />
+ envir, unless an existing binding Is locked Or there Is no existing <br />
+ binding And the environment Is locked (when an error Is signaled).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>env</em> version 2.33.856.6961 <a
+                href="../env.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

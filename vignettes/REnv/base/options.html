@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Options Settings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>options {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Options Settings</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Allow the user to set and examine a variety of global options which <br /> affect the way in which R computes and displays its results.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>options</strong>(<i>...</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>opts</dt>
+<dd><p><p>any options can be defined, using name = value. However, only the <br />
+ ones below are used in base R.</p>
+
+<p>Options can also be passed by giving a Single unnamed argument which <br />
+ Is a named list.</p></p></dd>
+
+
+<dt>envir</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>Options used in base R</p>
+
+<ul>
+<li>add.smooth: typically logical, defaulting to TRUE. Could also be set to an <br />
+integer for specifying how many (simulated) smooths should be added. This <br />
+is currently only used by plot.lm.</li>
+<li><p>askYesNo: a function (typically set by a front-end) to ask the user binary <br />
+response functions in a consistent way, or a vector of strings used by <br />
+askYesNo to use as default responses for such questions.</p>
+
+<p>browserNLdisabled:<br />
+logical: whether newline is disabled as a synonym for "n" in the browser.</p>
+
+<p>checkPackageLicense:<br />
+logical, not set by default. If true, loadNamespace asks a user to accept any <br />
+non-standard license at first load of the package.</p>
+
+<p>check.bounds:<br />
+logical, defaulting to FALSE. If true, a warning is produced whenever a vector <br />
+(atomic or list) is extended, by something like x &lt;- 1:3; x[5] &lt;- 6.</p>
+
+<p>CBoundsCheck:<br />
+logical, controlling whether .C and .Fortran make copies to check for array <br />
+over-runs on the atomic vector arguments.</p>
+
+<p>Initially set from value of the environment variable R_C_BOUNDS_CHECK (set to <br />
+yes to enable).</p>
+
+<p>conflicts.policy:<br />
+character string or list controlling handling of conflicts found in calls to <br />
+library or require. See library for details.</p>
+
+<p>continue:<br />
+a non-empty string setting the prompt used for lines which continue over one <br />
+line.</p>
+
+<p>defaultPackages:<br />
+the packages that are attached by default when R starts up. Initially set from <br />
+value of the environment variable R_DEFAULT_PACKAGES, or if that is unset <br />
+to c("datasets", "utils", "grDevices", "graphics", "stats", "methods"). (Set <br />
+R_DEFAULT_PACKAGES to NULL or a comma-separated list of package names.) It <br />
+will not work to set this in a ‘.Rprofile’ file, as its value is consulted <br />
+before that file is read.</p>
+
+<p>deparse.cutoff:<br />
+integer value controlling the printing of language constructs which are deparsed. <br />
+Default 60.</p>
+
+<p>deparse.max.lines:<br />
+controls the number of lines used when deparsing in traceback, browser, and <br />
+upon entry to a function whose debugging flag is set. Initially unset, and <br />
+only used if set to a positive integer.</p>
+
+<p>digits:<br />
+controls the number of significant (see signif) digits to print when printing <br />
+numeric values. It is a suggestion only. Valid values are 1...22 with default </p>
+
+<ol start="7">
+<li>See the note in print.default about values greater than 15.</li>
+</ol>
+
+<p>digits.secs:<br />
+controls the maximum number of digits to print when formatting time values <br />
+in seconds. Valid values are 0...6 with default 0. See strftime.</p>
+
+<p>download.file.extra:<br />
+Extra command-line argument(s) for non-default methods: see download.file.</p>
+
+<p>download.file.method:<br />
+Method to be used for download.file. Currently download methods "internal",<br />
+"wininet" (Windows only), "libcurl", "wget" and "curl" are available. If <br />
+not set, method = "auto" is chosen: see download.file.</p>
+
+<p>echo:<br />
+logical. Only used in non-interactive mode, when it controls whether input <br />
+is echoed. Command-line option --slave sets this to FALSE, but otherwise <br />
+it starts the session as TRUE.</p>
+
+<p>encoding:<br />
+The name of an encoding, default "native.enc". See connections.</p>
+
+<p>error:<br />
+either a function or an expression governing the handling of non-catastrophic <br />
+errors such as those generated by stop as well as by signals and internally <br />
+detected errors. If the option is a function, a call to that function, with<br />
+no arguments, is generated as the expression. By default the option is not<br />
+set: see stop for the behaviour in that case. The functions dump.frames <br />
+and recover provide alternatives that allow post-mortem debugging. Note that <br />
+these need to specified as e.g. options(error = utils::recover) in startup<br />
+files such as ‘.Rprofile’.</p>
+
+<p>expressions:<br />
+sets a limit on the number of nested expressions that will be evaluated. Valid <br />
+values are 25...500000 with default 5000. If you increase it, you may also <br />
+want to start R with a larger protection stack; see --max-ppsize in Memory. <br />
+Note too that you may cause a segfault from overflow of the C stack, and on <br />
+OSes where it is possible you may want to increase that. Once the limit is <br />
+reached an error is thrown. The current number under evaluation can be found <br />
+by calling Cstack_info.</p>
+
+<p>interrupt:<br />
+a function taking no arguments to be called on a user interrupt if the interrupt <br />
+condition is not otherwise handled.</p>
+
+<p>keep.parse.data:<br />
+When internally storing source code (keep.source is TRUE), also store parse data. <br />
+Parse data can then be retrieved with getParseData() and used e.g. for spell<br />
+checking of string constants or syntax highlighting. The value has effect only<br />
+when internally storing source code (see keep.source). The default is TRUE.</p>
+
+<p>keep.parse.data.pkgs:<br />
+As for keep.parse.data, used only when packages are installed. Defaults to FALSE <br />
+unless the environment variable R_KEEP_PKG_PARSE_DATA is set to yes. The space <br />
+overhead of parse data can be substantial even after compression and it causes <br />
+performance overhead when loading packages.</p>
+
+<p>keep.source:<br />
+When TRUE, the source code for functions (newly defined or loaded) is stored <br />
+internally allowing comments to be kept in the right places. Retrieve the source <br />
+by printing or using deparse(fn, control = "useSource").</p>
+
+<p>The default is interactive(), i.e., TRUE for interactive use.</p>
+
+<p>keep.source.pkgs:<br />
+As for keep.source, used only when packages are installed. Defaults to FALSE <br />
+unless the environment variable R_KEEP_PKG_SOURCE is set to yes.</p>
+
+<p>matprod:<br />
+a string selecting the implementation of the matrix products %*%, crossprod, <br />
+and tcrossprod for double and complex vectors:</p>
+
+<p>"internal"<br />
+uses an unoptimized 3-loop algorithm which correctly propagates NaN and Inf<br />
+values and is consistent in precision with other summation algorithms inside<br />
+R like sum or colSums (which now means that it uses a long double accumulator<br />
+for summation if available and enabled, see capabilities).</p>
+
+<p>"default"<br />
+uses BLAS to speed up computation, but to ensure correct propagation of NaN <br />
+and Inf values it uses an unoptimized 3-loop algorithm for inputs that may <br />
+contain NaN or Inf values. When deemed beneficial for performance, "default"<br />
+may call the 3-loop algorithm unconditionally, i.e., without checking the <br />
+input for NaN/Inf values. The 3-loop algorithm uses (only) a double accumulator<br />
+for summation, which is consistent with the reference BLAS implementation.</p>
+
+<p>"blas"<br />
+uses BLAS unconditionally without any checks and should be used with extreme <br />
+caution. BLAS libraries do not propagate NaN or Inf values correctly and <br />
+for inputs with NaN/Inf values the results may be undefined.</p>
+
+<p>"default.simd"<br />
+is experimental and will likely be removed in future versions of R. It <br />
+provides the same behavior as "default", but the check whether the input <br />
+contains NaN/Inf values is faster on some SIMD hardware. On older systems<br />
+it will run correctly, but may be much slower than "default".</p>
+
+<p>max.print:<br />
+integer, defaulting to 99999. print or show methods can make use of this option, <br />
+to limit the amount of information that is printed, to something in the order <br />
+of (and typically slightly less than) max.print entries.</p>
+
+<p>OutDec:<br />
+character string containing a single character. The preferred character to be <br />
+used as the decimal point in output conversions, that is in printing, <br />
+plotting, format and as.character but not when deparsing nor by sprintf nor<br />
+formatC (which are sometimes used prior to printing.)</p>
+
+<p>pager:<br />
+the command used for displaying text files by file.show, details depending on<br />
+the platform:</p>
+
+<p>On a unix-alike<br />
+defaults to ‘R_HOME/bin/pager’, which is a shell script running the command-line<br />
+specified by the environment variable PAGER whose default is set at <br />
+configuration, usually to less.</p>
+
+<p>On Windows<br />
+defaults to "internal", which uses a pager similar to the GUI console. <br />
+Another possibility is "console" to use the console itself.</p>
+
+<p>Can be a character string or an R function, in which case it needs to accept<br />
+the arguments (files, header, title, delete.file) corresponding to the <br />
+first four arguments of file.show.</p>
+
+<p>papersize:<br />
+the default paper format used by postscript; set by environment variable<br />
+R_PAPERSIZE when R is started: if that is unset or invalid it defaults <br />
+platform dependently</p>
+
+<p>on a unix-alike<br />
+to a value derived from the locale category LC_PAPER, or if that is unavailable <br />
+to a default set when R was built.</p>
+
+<p>on Windows<br />
+to "a4", or "letter" in US and Canadian locales.</p>
+
+<p>PCRE_limit_recursion:<br />
+Logical: should grep(perl = TRUE) and similar limit the maximal recursion<br />
+allowed when matching? PCRE can be built not to use a recursion stack (see<br />
+pcre_config, but it is by default with a recursion limit of 10000000 which <br />
+potentially needs a very large C stack: see the discussion at <br />
+<a href="http://www.pcre.org/original/doc/html/pcrestack.html">http://www.pcre.org/original/doc/html/pcrestack.html</a>. If true, the limit is <br />
+reduced using R's estimate of the C stack size available (if known), <br />
+otherwise 10000. If NA, the limit is imposed only if any input string has <br />
+1000 or more bytes.</p>
+
+<p>PCRE_study:<br />
+Logical or integer: should grep(perl = TRUE) and similar ‘study’ the patterns? <br />
+Either logical or a numerical threshold for the minimum number of strings <br />
+to be matched for the pattern to be studied (the default is 10)). Missing <br />
+values and negative numbers are treated as false.</p>
+
+<p>PCRE_use_JIT:<br />
+Logical: should grep(perl = TRUE), strsplit(perl = TRUE) and similar make use<br />
+of PCRE's Just-In-Time compiler for studied patterns, if available? Missing <br />
+values are treated as false.</p>
+
+<p>pdfviewer:<br />
+default PDF viewer. The default is set from the environment variable<br />
+R_PDFVIEWER, the default value of which</p>
+
+<p>on a unix-alike<br />
+is set when R is configured, and</p>
+
+<p>on Windows<br />
+is the full path to open.exe, a utility supplied with R.</p>
+
+<p>printcmd:<br />
+the command used by postscript for printing; set by environment variable <br />
+R_PRINTCMD when R is started. This should be a command that expects either <br />
+input to be piped to ‘stdin’ or to be given a single filename argument. <br />
+Usually set to "lpr" on a Unix-alike.</p>
+
+<p>prompt:<br />
+a non-empty string to be used for R's prompt; should usually end in a <br />
+blank (" ").</p>
+
+<p>rl_word_breaks:<br />
+(Unix only:) Used for the readline-based terminal interface. Default <br />
+value " \t\n\"\'`>&lt;=%;,|&amp;{()}".</p>
+
+<p>This is the set of characters use to break the input line into tokens for<br />
+object- and file-name completion. Those who do not use spaces around <br />
+operators may prefer<br />
+<code>" \t\n\"\\'`&gt;&lt;=+-*%;,|&amp;{()}"</code></p>
+
+<p>save.defaults, save.image.defaults:<br />
+see save.</p>
+
+<p>scipen:<br />
+integer. A penalty to be applied when deciding to print numeric values in <br />
+fixed or exponential notation. Positive values bias towards fixed and<br />
+negative towards scientific notation: fixed notation will be preferred<br />
+unless it is more than scipen digits wider.</p>
+
+<p>setWidthOnResize:<br />
+a logical. If set and TRUE, R run in a terminal using a recent readline<br />
+library will set the width option when the terminal is resized.</p>
+
+<p>showWarnCalls, showErrorCalls:<br />
+a logical. Should warning and error messages show a summary of the call<br />
+stack? By default error calls are shown in non-interactive sessions.</p>
+
+<p>showNCalls:<br />
+integer. Controls how long the sequence of calls must be (in bytes) before <br />
+ellipses are used. Defaults to 40 and should be at least 30 and no more <br />
+than 500.</p>
+
+<p>show.error.locations:<br />
+Should source locations of errors be printed? If set to TRUE or "top", the<br />
+source location that is highest on the stack (the most recent call) will<br />
+be printed. "bottom" will print the location of the earliest call found <br />
+on the stack.</p>
+
+<p>Integer values can select other entries. The value 0 corresponds to "top"<br />
+and positive values count down the stack from there. The value -1 corresponds<br />
+to "bottom" and negative values count up from there.</p>
+
+<p>show.error.messages:<br />
+a logical. Should error messages be printed? Intended for use with try or a <br />
+user-installed error handler.</p>
+
+<p>stringsAsFactors:<br />
+The default setting for arguments of data.frame and read.table.</p>
+
+<p>texi2dvi:<br />
+used by functions texi2dvi and texi2pdf in package tools.</p>
+
+<p>unix-alike only:<br />
+Set at startup from the environment variable R_TEXI2DVICMD, which defaults <br />
+first to the value of environment variable TEXI2DVI, and then to a value <br />
+set when R was installed (the full path to a texi2dvi script if one was <br />
+found). If necessary, that environment variable can be set to "emulation".</p>
+
+<p>timeout:<br />
+integer. The timeout for some Internet operations, in seconds. Default 60 <br />
+seconds. See download.file and connections.</p>
+
+<p>topLevelEnvironment:<br />
+see topenv and sys.source.</p>
+
+<p>url.method:<br />
+character string: the default method for url. Normally unset, which is <br />
+equivalent to "default", which is "internal" except on Windows.</p>
+
+<p>useFancyQuotes:<br />
+controls the use of directional quotes in sQuote, dQuote and in rendering <br />
+text help (see Rd2txt in package tools). Can be TRUE, FALSE, "TeX" or <br />
+"UTF-8".</p>
+
+<p>verbose:<br />
+logical. Should R report extra information on progress? Set to TRUE by the<br />
+command-line option --verbose.</p>
+
+<p>warn:<br />
+sets the handling of warning messages. If warn is negative all warnings are <br />
+ignored. If warn is zero (the default) warnings are stored until the <br />
+top–level function returns. If 10 or fewer warnings were signalled they <br />
+will be printed otherwise a message saying how many were signalled. An object <br />
+called last.warning is created and can be printed through the function<br />
+warnings. If warn is one, warnings are printed as they occur. If warn is<br />
+two (or larger, coercible to integer), all warnings are turned into errors.</p>
+
+<p>warnPartialMatchArgs:<br />
+logical. If true, warns if partial matching is used in argument matching.</p>
+
+<p>warnPartialMatchAttr:<br />
+logical. If true, warns if partial matching is used in extracting attributes<br />
+via attr.</p>
+
+<p>warnPartialMatchDollar:<br />
+logical. If true, warns if partial matching is used for extraction by $.</p>
+
+<p>warning.expression:<br />
+an R code expression to be called if a warning is generated, replacing the <br />
+standard message. If non-null it is called irrespective of the value of <br />
+option warn.</p>
+
+<p>warning.length:<br />
+sets the truncation limit for error and warning messages. A non-negative <br />
+integer, with allowed values 100...8170, default 1000.</p>
+
+<p>nwarnings:<br />
+the limit for the number of warnings kept when warn = 0, default 50. This <br />
+will discard messages if called whilst they are being collected. If <br />
+you increase this limit, be aware that the current implementation pre-allocates <br />
+the equivalent of a named list for them, i.e., do not increase it to more <br />
+than say a million.</p>
+
+<p>width:<br />
+controls the maximum number of columns on a line used in printing vectors,<br />
+matrices and arrays, and when filling by cat.</p>
+
+<p>Columns are normally the same as characters except in East Asian languages.</p>
+
+<p>You may want to change this if you re-size the window that R is running in. <br />
+Valid values are 10...10000 with default normally 80. (The limits on valid<br />
+values are in file ‘Print.h’ and can be changed by re-compiling R.) Some <br />
+R consoles automatically change the value when they are resized.</p>
+
+<p>See the examples on Startup for one way to set this automatically from the <br />
+terminal width when R is started.</p>
+
+<p>The ‘factory-fresh’ default settings of some of these options are</p>
+
+<p>add.smooth TRUE<br />
+check.bounds   FALSE<br />
+continue   "+ "<br />
+digits 7<br />
+echo   TRUE<br />
+encoding   "native.enc"<br />
+error  NULL<br />
+expressions    5000<br />
+keep.source    interactive()<br />
+keep.source.pkgs   FALSE<br />
+max.print  99999<br />
+OutDec "."<br />
+prompt "> "<br />
+scipen 0<br />
+show.error.messages    TRUE<br />
+timeout    60<br />
+verbose    FALSE<br />
+warn   0<br />
+warning.length 1000<br />
+width  80<br />
+Others are set from environment variables or are platform-dependent.</p></li>
+</ul>
+
+
+        <h3>Value</h3>
+
+        <p>For options(), a list of all set options sorted by name. For options(name), a list of <br />
+ length one containing the set value, or NULL if it is unset. For uses setting one or more <br />
+ options, a list with the previous values of the options changed (returned invisibly).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

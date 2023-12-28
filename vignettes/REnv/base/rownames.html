@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Row and Column Names</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>rownames {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Row and Column Names</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Retrieve or set the row or column names of a matrix-like object.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>rownames</strong>(<i>object</i>,
+    <i>namelist</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>[object]</dt>
+<dd><p><p>a matrix-like R object, with at least two dimensions for colnames.</p></p></dd>
+
+
+<dt>namelist</dt>
+<dd><p><p>a valid value for that component of <code>dimnames(x)</code>. <br />
+ For a matrix or array this is either NULL or a character vector of non-zero <br />
+ length equal to the appropriate dimension.</p></p></dd>
+
+
+<dt>envir</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The extractor functions try to do something sensible for any matrix-like object x. <br />
+ If the object has dimnames the first component is used as the row names, and the <br />
+ second component (if any) is used for the column names. For a data frame, rownames <br />
+ and colnames eventually call row.names and names respectively, but the latter are <br />
+ preferred.</p>
+
+<p>If do.NULL Is FALSE, a character vector (of length NROW(x) Or NCOL(x)) Is returned <br />
+ in any case, prepending prefix to simple numbers, if there are no dimnames Or the <br />
+ corresponding component of the dimnames Is NULL.</p>
+
+<p>The replacement methods For arrays/matrices coerce vector And factor values Of value <br />
+ To character, but Do Not dispatch methods For As.character.</p>
+
+<p>For a data frame, value for rownames should be a character vector of non-duplicated <br />
+ And non-missing names (this Is enforced), And for colnames a character vector of <br />
+ (preferably) unique syntactically-valid names. In both cases, value will be coerced <br />
+ by as.character, And setting colnames will convert the row names To character.</p>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

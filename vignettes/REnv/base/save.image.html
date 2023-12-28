@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Save R Objects</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>save.image {base}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Save R Objects</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> <code>save.image()</code> is just a short-cut for ‘save my current workspace’, <br /> i.e., save(list = ls(all.names = TRUE), file = ".RData", envir = .GlobalEnv). <br /> It is also what happens with q("yes").</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>save.image</strong>(
+    <i>file</i> = <span style='color: brown;'><strong>".RData"</strong></span>,
+    <i>version</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>ascii</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>compress</i> = <span style='color: brown;'><strong>"!ascii"</strong></span>,
+    <i>safe</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>file</dt>
+<dd><p><p>a (writable binary-mode) connection or the name of the file <br />
+ where the data will be saved (when tilde expansion is done). Must be a file <br />
+ name for save.image or version = 1.</p></p></dd>
+
+
+<dt>version</dt>
+<dd><p><p>the workspace format version to use. NULL specifies the <br />
+ current default format (2). Version 1 was the default from R 0.99.0 to R 1.3.1 <br />
+ and version 2 from R 1.4.0. Version 3 is supported from R 3.5.0.</p></p></dd>
+
+
+<dt>ascii</dt>
+<dd><p><p>if TRUE, an ASCII representation of the data is written. <br />
+ The default value of ascii is FALSE which leads to a binary file being written. <br />
+ If NA and version >= 2, a different ASCII representation is used which writes <br />
+ double/complex numbers as binary fractions.</p></p></dd>
+
+
+<dt>compress</dt>
+<dd><p><p>logical Or character string specifying whether saving to <br />
+ a named file Is to use compression. TRUE corresponds to gzip compression, And <br />
+ character strings "gzip", "bzip2" Or "xz" specify the type of compression. Ignored <br />
+ when file Is a connection And for workspace format version 1.</p></p></dd>
+
+
+<dt>safe</dt>
+<dd><p><p>logical. If TRUE, a temporary file is used for creating the <br />
+ saved workspace. The temporary file is renamed to file if the save succeeds. This <br />
+ preserves an existing workspace file if the save fails, but at the cost of using <br />
+ extra disk space during the save.</p></p></dd>
+
+
+<dt>envir</dt>
+<dd><p><p>environment to search for objects to be saved.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        This function has no value returns.
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a
+                href="../base.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

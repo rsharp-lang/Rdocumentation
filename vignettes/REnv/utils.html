@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>utils</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; utils; REnv" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="The R Utils Package..." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {utils}">
+      <tbody>
+        <tr>
+          <td>{utils}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>utils</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' The R Utils Package</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "utils"</span><span style="color: blue;"> from</span><span style="color: brown"> "REnv"</span>;
+                           </code>
+    </p>
+    <p><p>The R Utils Package</p></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           <p>The R Utils Package</p>
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line">
+        <tbody><tr>
+  <td id="install.packages">
+    <a href="./utils/install.packages.html">install.packages</a>
+  </td>
+  <td><h1>Install Packages from Repositories or Local Files</h1>
+
+<p>Download and install packages from CRAN-like repositories or from local files.</p>
+
+<p>This is the main function to install packages. It takes a vector of names and <br />
+ a destination library, downloads the packages from the repositories and installs <br />
+ them. (If the library is omitted it defaults to the first directory in <br />
+ .libPaths(), with a message if there is more than one.) If lib is omitted or <br />
+ is of length one and is not a (group) writable directory, in interactive use <br />
+ the code offers to create a personal library tree (the first element of <br />
+ Sys.getenv("R_LIBS_USER")) and install there. Detection of a writable <br />
+ directory is problematic on Windows: see the ‘Note’ section.</p>
+
+<p>For installs from a repository an attempt Is made To install the packages In <br />
+ an order that respects their dependencies. This does assume that all the <br />
+ entries In Lib are On the Default library path For installs (Set by <br />
+ environment variable R_LIBS).</p>
+
+<p>You are advised To run update.packages before install.packages To ensure that <br />
+ any already installed dependencies have their latest versions.</p></td>
+</tr>
+<tr>
+  <td id="installed.packages">
+    <a href="./utils/installed.packages.html">installed.packages</a>
+  </td>
+  <td><h2>Find Installed Packages</h2>
+
+<p>Find (or retrieve) details of all packages installed in the specified libraries.</p>
+
+<p><code>installed.packages</code> scans the ‘DESCRIPTION’ files of each package found along <br />
+ <code>lib.loc</code> and returns a matrix of package names, library paths and version numbers.</p>
+
+<p>The information found Is cached (by library) For the R session And specified fields argument, <br />
+ And updated only If the top-level library directory has been altered, <br />
+ For example by installing Or removing a package. If the cached information becomes confused, <br />
+ it can be refreshed by running <code>installed.packages(noCache = True)</code>.</p></td>
+</tr>
+<tr>
+  <td id="wget">
+    <a href="./utils/wget.html">wget</a>
+  </td>
+  <td><p>retrieving files using HTTP, HTTPS, FTP and FTPS, the most widely used Internet protocols.</p></td>
+</tr>
+<tr>
+  <td id="clear">
+    <a href="./utils/clear.html">clear</a>
+  </td>
+  <td><p>Clears the console buffer and corresponding console window of display information.</p></td>
+</tr>
+<tr>
+  <td id="sleep">
+    <a href="./utils/sleep.html">sleep</a>
+  </td>
+  <td><p>Suspends the current thread for the specified number of seconds.</p></td>
+</tr>
+<tr>
+  <td id="head">
+    <a href="./utils/head.html">head</a>
+  </td>
+  <td><p>Return the First or Last Part of an Object</p>
+
+<p>Returns the first or last parts of a vector, matrix, table, data frame or function. <br />
+ Since head() and tail() are generic functions, they may also have been extended <br />
+ to other classes.</p></td>
+</tr>
+<tr>
+  <td id="memory.size">
+    <a href="./utils/memory.size.html">memory.size</a>
+  </td>
+  <td><h3>Report on Memory Allocation</h3>
+
+<p><code>memory.size</code> reports the current or maximum memory allocation <br />
+ of the malloc function used in this version of R.</p></td>
+</tr>
+<tr>
+  <td id="commandline">
+    <a href="./utils/commandline.html">commandline</a>
+  </td>
+  <td><p>create commandline string</p></td>
+</tr>
+<tr>
+  <td id="system">
+    <a href="./utils/system.html">system</a>
+  </td>
+  <td><h3>Invoke a System Command</h3>
+
+<p><code>system</code> invokes the OS command specified by <code>command</code>.</p></td>
+</tr>
+<tr>
+  <td id="workdir">
+    <a href="./utils/workdir.html">workdir</a>
+  </td>
+  <td><p>Create a new temporary work directory environment for the code</p></td>
+</tr>
+<tr>
+  <td id="md5">
+    <a href="./utils/md5.html">md5</a>
+  </td>
+  <td><h2>Vectorized hash/hmac functions</h2></td>
+</tr>
+<tr>
+  <td id="debug">
+    <a href="./utils/debug.html">debug</a>
+  </td>
+  <td><h3>Debug an Expression</h3>
+
+<p>apply for debug in Visual Studio, like a script breakpoint</p></td>
+</tr>
+<tr>
+  <td id="pause">
+    <a href="./utils/pause.html">pause</a>
+  </td>
+  <td><p>Pause the current console program.</p></td>
+</tr>
+<tr>
+  <td id="data">
+    <a href="./utils/data.html">data</a>
+  </td>
+  <td><h3>Data Sets</h3>
+
+<p>Loads specified data sets, or list the available data sets.</p></td>
+</tr>
+<tr>
+  <td id="system.file">
+    <a href="./utils/system.file.html">system.file</a>
+  </td>
+  <td><h3>Find Names of R System Files</h3>
+
+<p>Finds the full file names of files in packages etc.</p></td>
+</tr>
+<tr>
+  <td id="description">
+    <a href="./utils/description.html">description</a>
+  </td>
+  <td><p>loading a <code>DESCRIPTION</code> file</p></td>
+</tr>
+<tr>
+  <td id="now">
+    <a href="./utils/now.html">now</a>
+  </td>
+  <td><p>get current system time</p></td>
+</tr>
+<tr>
+  <td id="timespan">
+    <a href="./utils/timespan.html">timespan</a>
+  </td>
+  <td><p>create the time span value based on the given time ticks</p></td>
+</tr>
+<tr>
+  <td id="package.skeleton">
+    <a href="./utils/package.skeleton.html">package.skeleton</a>
+  </td>
+  <td><h3>Create a Skeleton for a New Source Package</h3>
+
+<p>package.skeleton automates some of the setup for a new source <br />
+ package. It creates directories, saves functions, data, and <br />
+ R code files to appropriate places, and creates skeleton help<br />
+ files and a ‘Read-and-delete-me’ file describing further steps <br />
+ in packaging.</p></td>
+</tr>
+<tr>
+  <td id="unzip">
+    <a href="./utils/unzip.html">unzip</a>
+  </td>
+  <td><h3>Extract or List Zip Archives</h3>
+
+<p>Extract files from or list a zip archive.</p></td>
+</tr>
+<tr>
+  <td id="zip">
+    <a href="./utils/zip.html">zip</a>
+  </td>
+  <td><p>Create Zip Archives</p>
+
+<p>A wrapper for an external zip command to create zip archives.</p></td>
+</tr>
+<tr>
+  <td id="sendMessage">
+    <a href="./utils/sendMessage.html">sendMessage</a>
+  </td>
+  <td><p>send task message to the parent node</p></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

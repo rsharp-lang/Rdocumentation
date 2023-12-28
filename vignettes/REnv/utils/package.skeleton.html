@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create a Skeleton for a New Source Package</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>package.skeleton {utils}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Create a Skeleton for a New Source Package</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> package.skeleton automates some of the setup for a new source <br /> package. It creates directories, saves functions, data, and <br /> R code files to appropriate places, and creates skeleton help<br /> files and a ‘Read-and-delete-me’ file describing further steps <br /> in packaging.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>package.skeleton</strong>(
+    <i>name</i> = <span style='color: brown;'><strong>"anRpackage"</strong></span>,
+    <i>path</i> = <span style='color: brown;'><strong>"./"</strong></span>,
+    <i>force</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>code.files</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>encoding</i> = <span style='color: brown;'><strong>"unknown"</strong></span>,
+    <i>...</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>name</dt>
+<dd><p><p>character string: the package name and directory name for your package. <br />
+ Must be a valid package name.</p></p></dd>
+
+
+<dt>path</dt>
+<dd><p><p>path to put the package directory in.</p></p></dd>
+
+
+<dt>force</dt>
+<dd><p><p>If False will Not overwrite an existing directory.</p></p></dd>
+
+
+<dt>code.files</dt>
+<dd><p><p>a character vector with the paths to R code files to build the <br />
+ package around. See ‘Details’.</p></p></dd>
+
+
+<dt>encoding</dt>
+<dd><p><p>optionally a character string with an encoding for an optional <br />
+ Encoding: line in ‘DESCRIPTION’ when non-ASCII characters will <br />
+ be used; typically one of "latin1", "latin2", or "UTF-8"; see <br />
+ the WRE manual.</p></p></dd>
+
+
+<dt>list</dt>
+<dd><p><p>character vector naming the R objects to put in the package. Usually, <br />
+ at most one of list, environment, or code_files will be supplied. <br />
+ See ‘Details’.</p></p></dd>
+
+
+<dt>environment</dt>
+<dd><p><p>an environment where objects are looked for. See ‘Details’.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The arguments list, environment, and code_files provide alternative<br />
+ ways to initialize the package. If code_files is supplied, the files<br />
+ so named will be sourced to form the environment, then used to <br />
+ generate the package skeleton. Otherwise list defaults to the objects<br />
+ in environment (including those whose names start with .), but can <br />
+ be supplied to select a subset of the objects in that environment.</p>
+
+<p>Stubs of help files are generated for functions, data objects, And S4 <br />
+ classes And methods, using the prompt, promptClass, And promptMethods <br />
+ functions. If an object from another package Is intended to be imported <br />
+ And re-exported without changes, the promptImport function should be <br />
+ used after package.skeleton to generate a simple help file linking to <br />
+ the original one.</p>
+
+<p>The package sources are placed In subdirectory name Of path. If code_files <br />
+ Is supplied, these files are copied; otherwise, objects will be dumped <br />
+ into individual source files. The file names In code_files should have <br />
+ suffix ".R" And be In the current working directory.</p>
+
+<p>The filenames created For source And documentation Try To be valid For<br />
+ all OSes known To run R. Invalid characters are replaced by <em>, invalid <br />
+ names are preceded by zz, names are converted To lower Case (To avoid <br />
+ Case collisions On Case-insensitive file systems) And Finally the converted <br />
+ names are made unique by make.unique(sep = "</em>"). This can be done For <br />
+ code And help files but Not data files (which are looked For by name). <br />
+ Also, the code And help files should have names starting With an ASCII <br />
+ letter Or digit, And this Is checked And If necessary z prepended.<br />
+ Functions with names starting with a dot are placed in file 'R/name-internal.R’.<br />
+ When you are done, delete the 'Read-and-delete-me’ file, as it should <br />
+ not be distributed.</p>
+
+
+        <h3>Value</h3>
+
+        <p>Used for its side-effects.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>utils</em> version 2.33.856.6961 <a
+                href="../utils.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>
