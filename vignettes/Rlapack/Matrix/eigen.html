@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spectral Decomposition of a Matrix</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>eigen {Matrix}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Spectral Decomposition of a Matrix</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Computes eigenvalues and eigenvectors of numeric <br /> (double, integer, logical) or complex matrices.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>eigen</strong>(<i>x</i>,
+    <i>symmetric</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>only.values</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>EISPACK</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>a numeric Or complex matrix whose spectral<br />
+ decomposition Is To be computed. Logical matrices <br />
+ are coerced To numeric.</p></p></dd>
+
+
+<dt>symmetric</dt>
+<dd><p><p>If True, the matrix Is assumed To be symmetric <br />
+ (Or Hermitian If complex) And only its lower<br />
+ triangle (diagonal included) Is used. If symmetric<br />
+ Is Not specified, isSymmetric(x) Is used.</p></p></dd>
+
+
+<dt>only.values</dt>
+<dd><p><p>If True, only the eigenvalues are computed And <br />
+ returned, otherwise both eigenvalues And <br />
+ eigenvectors are returned.</p></p></dd>
+
+
+<dt>EISPACK</dt>
+<dd><p><p>logical. Defunct And ignored.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>If symmetric is unspecified, isSymmetric(x) determines<br />
+ if the matrix is symmetric up to plausible numerical <br />
+ inaccuracies. It is surer and typically much faster to<br />
+ set the value yourself.</p>
+
+<p>Computing the eigenvectors Is the slow part For large <br />
+ matrices.</p>
+
+<p>Computing the eigendecomposition Of a matrix Is subject <br />
+ To errors On a real-world computer: the definitive <br />
+ analysis Is Wilkinson (1965). All you can hope For Is a <br />
+ solution To a problem suitably close To x. So even <br />
+ though a real asymmetric x may have an algebraic solution<br />
+ With repeated real eigenvalues, the computed solution <br />
+ may be Of a similar matrix With complex conjugate pairs<br />
+ Of eigenvalues.</p>
+
+<p>Unsuccessful results from the underlying LAPACK code will <br />
+ result In an Error giving a positive Error code (most <br />
+ often 1): these can only be interpreted by detailed study<br />
+ Of the FORTRAN code.</p>
+
+
+        <h3>Value</h3>
+
+        <p>The spectral decomposition of x is returned as a list <br />
+ with components</p>
+
+<ol>
+<li>values: a vector containing the p eigenvalues Of x, sorted<br />
+        In decreasing order, according To Mod(values) In <br />
+        the asymmetric Case When they might be complex (even <br />
+        For real matrices). For real asymmetric matrices <br />
+        the vector will be complex only If complex conjugate<br />
+        pairs Of eigenvalues are detected.</li>
+<li><p>vectors: either a p * p matrix whose columns contain the<br />
+         eigenvectors Of x, Or NULL If only.values Is True. <br />
+         The vectors are normalized To unit length.</p>
+
+<p>Recall that the eigenvectors are only defined up To a constant: <br />
+even when the length Is specified they are still only defined<br />
+up to a scalar of modulus one (the sign for real matrices).</p>
+
+<p>When only.values Is Not true, as by default, the result Is of <br />
+S3 class "eigen".</p>
+
+<p>If r &lt;- eigen(A), And V &lt;- r$vectors; lam &lt;- r$values, Then</p></li>
+</ol>
+
+<pre><code class="">A = V Lmbd V^(-1)
+</code></pre>
+
+<p>(up to numerical fuzz), where Lmbd = diag(lam).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>Matrix</em> version 5.0.1.2389 <a
+                href="../Matrix.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

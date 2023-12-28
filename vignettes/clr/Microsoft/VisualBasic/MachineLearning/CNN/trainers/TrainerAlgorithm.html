@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.CNN.trainers.TrainerAlgorithm</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>TrainerAlgorithm {Microsoft.VisualBasic.MachineLearning.CNN.trainers}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>TrainerAlgorithm</h2>
+
+        <h3>Description</h3>
+
+        Trainers take the generated output of activations and gradients in
+ order to modify the weights in the network to make a better prediction
+ the next time the network runs with a data block.
+ 
+ @author Daniel Persson (mailto.woden@gmail.com)
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.CNN.trainers
+export class TrainerAlgorithm {
+   # alpha
+   learning_rate: double;
+   eps: double;
+   momentum: double;
+   batch_size: integer;
+   conv_net: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/ConvolutionalNN.html">ConvolutionalNN</a>;
+   get_output: double;
+}
+</code>
+        </pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

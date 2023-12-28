@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DBSCAN density reachability and connectivity clustering</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>dbscan {clustering}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>DBSCAN density reachability and connectivity clustering</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Generates a density based clustering of arbitrary shape as <br /> introduced in Ester et al. (1996).<br /> <br /> Clusters require a minimum no of points (MinPts) within a maximum <br /> distance (eps) around one of its members (the seed). Any point <br /> within eps around any point which satisfies the seed condition <br /> is a cluster member (recursively). Some points may not belong to <br /> any clusters (noise).</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>dbscan</strong>(<i>data</i>, <i>eps</i>,
+    <i>minPts</i> = <span style='color: green;'>5</span>,
+    <i>scale</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>method</i> = raw,
+    <i>seeds</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>countmode</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>filterNoise</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>reorder.class</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>densityCut</i> = <span style='color: green;'>-1</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>data</dt>
+<dd><p><p>data matrix, data.frame, dissimilarity matrix <br />
+ or dist-object. Specify method="dist" if the data should be <br />
+ interpreted as dissimilarity matrix or object. Otherwise Euclidean <br />
+ distances will be used.</p></p></dd>
+
+
+<dt>eps</dt>
+<dd><p><p>Reachability distance, see Ester et al. (1996).</p></p></dd>
+
+
+<dt>minPts</dt>
+<dd><p><p>Reachability minimum no. Of points, see Ester et al. (1996).</p></p></dd>
+
+
+<dt>scale</dt>
+<dd><p><p>scale the data if TRUE.</p></p></dd>
+
+
+<dt>method</dt>
+<dd><p><p>"dist" treats data as distance matrix (relatively fast but memory <br />
+ expensive), "raw" treats data as raw data and avoids calculating a <br />
+ distance matrix (saves memory but may be slow), "hybrid" expects <br />
+ also raw data, but calculates partial distance matrices (very fast <br />
+ with moderate memory requirements).</p></p></dd>
+
+
+<dt>seeds</dt>
+<dd><p><p>FALSE to not include the isseed-vector in the dbscan-object.</p></p></dd>
+
+
+<dt>countmode</dt>
+<dd><p><p>NULL or vector of point numbers at which to report progress.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        <p>the result data is not keeps the same order as the data input!</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/MLkit/dbscanResult.html">dbscanResult</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>clustering</em> version 1.0.0.0 <a
+                href="../clustering.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

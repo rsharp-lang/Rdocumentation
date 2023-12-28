@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>igraph</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; igraph; igraph" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="package or create network graph and do network analysis...." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {igraph}">
+      <tbody>
+        <tr>
+          <td>{igraph}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>igraph</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' package or create network graph and do network analysis.</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "igraph"</span><span style="color: blue;"> from</span><span style="color: brown"> "igraph"</span>;
+                           </code>
+    </p>
+    <p><p>package or create network graph and do network analysis.</p></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           <p>package or create network graph and do network analysis.</p>
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line">
+        <tbody><tr>
+  <td id="graph">
+    <a href="./igraph/graph.html">graph</a>
+  </td>
+  <td><p>create a new graph object with the given network <br />
+ edge data and the node properties</p></td>
+</tr>
+<tr>
+  <td id="V">
+    <a href="./igraph/V.html">V</a>
+  </td>
+  <td><p>get graph vertex collection</p></td>
+</tr>
+<tr>
+  <td id="E">
+    <a href="./igraph/E.html">E</a>
+  </td>
+  <td><p>get graph edge collection.</p></td>
+</tr>
+<tr>
+  <td id="xref">
+    <a href="./igraph/xref.html">xref</a>
+  </td>
+  <td><p>get node reference id list</p></td>
+</tr>
+<tr>
+  <td id="subgraphFromPoint">
+    <a href="./igraph/subgraphFromPoint.html">subgraphFromPoint</a>
+  </td>
+  <td><p>extract sub-network from a given network via a specific network node as centroid.</p></td>
+</tr>
+<tr>
+  <td id="metadata">
+    <a href="./igraph/metadata.html">metadata</a>
+  </td>
+  <td><p>create meta data for network tabular model.</p></td>
+</tr>
+<tr>
+  <td id="save.network">
+    <a href="./igraph/save.network.html">save.network</a>
+  </td>
+  <td><p>save the network graph</p></td>
+</tr>
+<tr>
+  <td id="read.network">
+    <a href="./igraph/read.network.html">read.network</a>
+  </td>
+  <td><p>load network graph object from a given file location</p></td>
+</tr>
+<tr>
+  <td id="empty.network">
+    <a href="./igraph/empty.network.html">empty.network</a>
+  </td>
+  <td><p>Create a new network graph or clear the given network graph</p></td>
+</tr>
+<tr>
+  <td id="trim.edges">
+    <a href="./igraph/trim.edges.html">trim.edges</a>
+  </td>
+  <td><p>removes duplicated edges in the network</p></td>
+</tr>
+<tr>
+  <td id="connected_graph">
+    <a href="./igraph/connected_graph.html">connected_graph</a>
+  </td>
+  <td><p>removes all of the isolated nodes.</p></td>
+</tr>
+<tr>
+  <td id="node.names">
+    <a href="./igraph/node.names.html">node.names</a>
+  </td>
+  <td><p>set node data names</p></td>
+</tr>
+<tr>
+  <td id="degree">
+    <a href="./igraph/degree.html">degree</a>
+  </td>
+  <td><p>Calculate node degree in given graph</p></td>
+</tr>
+<tr>
+  <td id="compute.network">
+    <a href="./igraph/compute.network.html">compute.network</a>
+  </td>
+  <td><p>compute network properties' data</p></td>
+</tr>
+<tr>
+  <td id="eval">
+    <a href="./igraph/eval.html">eval</a>
+  </td>
+  <td><p>evaluate node/edge property values</p></td>
+</tr>
+<tr>
+  <td id="delete">
+    <a href="./igraph/delete.html">delete</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="add.nodes">
+    <a href="./igraph/add.nodes.html">add.nodes</a>
+  </td>
+  <td><p>a nodes by given label list.</p></td>
+</tr>
+<tr>
+  <td id="add.node">
+    <a href="./igraph/add.node.html">add.node</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="mass">
+    <a href="./igraph/mass.html">mass</a>
+  </td>
+  <td><p>set or get mass value of the nodes in the given graph</p></td>
+</tr>
+<tr>
+  <td id="attrs">
+    <a href="./igraph/attrs.html">attrs</a>
+  </td>
+  <td><p>Set node attribute data</p></td>
+</tr>
+<tr>
+  <td id="add.edge">
+    <a href="./igraph/add.edge.html">add.edge</a>
+  </td>
+  <td><p>add edge link into the given network graph</p></td>
+</tr>
+<tr>
+  <td id="weight">
+    <a href="./igraph/weight.html">weight</a>
+  </td>
+  <td><p>set edge weight and get edge weights</p></td>
+</tr>
+<tr>
+  <td id="pushEdges">
+    <a href="./igraph/pushEdges.html">pushEdges</a>
+  </td>
+  <td><p>Add edges by a given node label tuple list</p></td>
+</tr>
+<tr>
+  <td id="getElementByID">
+    <a href="./igraph/getElementByID.html">getElementByID</a>
+  </td>
+  <td><p>get node elements by given id</p></td>
+</tr>
+<tr>
+  <td id="group">
+    <a href="./igraph/group.html">group</a>
+  </td>
+  <td><p>Make node groups by given type name</p></td>
+</tr>
+<tr>
+  <td id="class">
+    <a href="./igraph/class.html">class</a>
+  </td>
+  <td><p>get/set node class type</p></td>
+</tr>
+<tr>
+  <td id="vertex">
+    <a href="./igraph/vertex.html">vertex</a>
+  </td>
+  <td><p>get all nodes in the given graph model</p></td>
+</tr>
+<tr>
+  <td id="edges">
+    <a href="./igraph/edges.html">edges</a>
+  </td>
+  <td><p>get all edges in the given graph model</p></td>
+</tr>
+<tr>
+  <td id="has.edge">
+    <a href="./igraph/has.edge.html">has.edge</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="attributes">
+    <a href="./igraph/attributes.html">attributes</a>
+  </td>
+  <td><p>get or set element attribute values</p></td>
+</tr>
+<tr>
+  <td id="selects">
+    <a href="./igraph/selects.html">selects</a>
+  </td>
+  <td><p>Node select by group or other condition</p></td>
+</tr>
+<tr>
+  <td id="decompose">
+    <a href="./igraph/decompose.html">decompose</a>
+  </td>
+  <td><p>Decompose a graph into components, Creates a separate graph <br />
+ for each component of a graph.</p></td>
+</tr>
+<tr>
+  <td id="extract.sub_graph">
+    <a href="./igraph/extract.sub_graph.html">extract.sub_graph</a>
+  </td>
+  <td><p>extract sub graph component by a specific <br />
+ given node group tag data.</p></td>
+</tr>
+<tr>
+  <td id="components">
+    <a href="./igraph/components.html">components</a>
+  </td>
+  <td><p>get subnetwork components directly by test node disconnections</p></td>
+</tr>
+<tr>
+  <td id="louvain_cluster">
+    <a href="./igraph/louvain_cluster.html">louvain_cluster</a>
+  </td>
+  <td></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

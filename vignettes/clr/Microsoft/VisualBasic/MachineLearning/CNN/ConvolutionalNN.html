@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.CNN.ConvolutionalNN</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>ConvolutionalNN {Microsoft.VisualBasic.MachineLearning.CNN}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>ConvolutionalNN</h2>
+
+        <h3>Description</h3>
+
+        A network class holding the layers and some helper functions
+ for training and validation.
+ 
+ Convolutional neural network (CNN) is a regularized type of feed-forward 
+ neural network that learns feature engineering by itself via filters
+ (or kernel) optimization. Vanishing gradients and exploding gradients, 
+ seen during backpropagation in earlier neural networks, are prevented by 
+ using regularized weights over fewer connections.
+ 
+ @author Daniel Persson (mailto.woden@gmail.com) and s.chekanov
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.CNN
+export class ConvolutionalNN {
+   LayerNum: integer;
+   input: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/layers/InputLayer.html">InputLayer</a>;
+   output: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/losslayers/LossLayer.html">LossLayer</a>;
+   # Accumulate parameters and gradients for the entire network
+   BackPropagationResult: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/data/BackPropResult.html">BackPropResult[]</a>;
+   # This is a convenience function for returning the argmax
+   #  prediction, assuming the last layer of the net is a softmax
+   Prediction: integer;
+}
+</code>
+        </pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

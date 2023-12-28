@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>train SVM model</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>trainSVMModel {SVM}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>train SVM model</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>trainSVMModel</strong>(<i>problem</i>,
+    <i>svmType</i> = C_SVC,
+    <i>kernelType</i> = RBF,
+    <i>degree</i> = <span style='color: green;'>3</span>,
+    <i>gamma</i> = <span style='color: green;'>0.5</span>,
+    <i>coefficient0</i> = <span style='color: green;'>0</span>,
+    <i>nu</i> = <span style='color: green;'>0.5</span>,
+    <i>cacheSize</i> = <span style='color: green;'>40</span>,
+    <i>C</i> = <span style='color: green;'>1</span>,
+    <i>EPS</i> = <span style='color: green;'>0.001</span>,
+    <i>P</i> = <span style='color: green;'>0.1</span>,
+    <i>shrinking</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>probability</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>weights</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>verbose</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>problem</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>svmType</dt>
+<dd><p><p>Type of SVM (default C-SVC)</p></p></dd>
+
+
+<dt>kernelType</dt>
+<dd><p><p>Type of kernel function (default Polynomial)</p></p></dd>
+
+
+<dt>degree</dt>
+<dd><p><p>Degree in kernel function (default 3).</p></p></dd>
+
+
+<dt>gamma</dt>
+<dd><p><p>Gamma in kernel function (default 1/k)</p></p></dd>
+
+
+<dt>coefficient0</dt>
+<dd><p><p>Zeroeth coefficient in kernel function (default 0)</p></p></dd>
+
+
+<dt>nu</dt>
+<dd><p><p>The parameter nu of nu-SVC, one-class SVM, and nu-SVR (default 0.5)</p></p></dd>
+
+
+<dt>cacheSize</dt>
+<dd><p><p>Cache memory size in MB (default 100)</p></p></dd>
+
+
+<dt>C</dt>
+<dd><p><p>The parameter C of C-SVC, epsilon-SVR, and nu-SVR (default 1)</p></p></dd>
+
+
+<dt>EPS</dt>
+<dd><p><p>Tolerance of termination criterion (default 0.001)</p></p></dd>
+
+
+<dt>P</dt>
+<dd><p><p>The epsilon in loss function of epsilon-SVR (default 0.1)</p></p></dd>
+
+
+<dt>shrinking</dt>
+<dd><p><p>Whether to use the shrinking heuristics, (default True)</p></p></dd>
+
+
+<dt>probability</dt>
+<dd><p><p>Whether to train an SVC or SVR model for probability estimates, (default False)</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        this function returns data object in these one of the listed data types: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/SVMModel.html">SVMModel</a>, <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/SVMMultipleSet.html">SVMMultipleSet</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/SVMModel.html">SVMModel</a></li><li><a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/SVMMultipleSet.html">SVMMultipleSet</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>SVM</em> version 1.0.0.0 <a
+                href="../SVM.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

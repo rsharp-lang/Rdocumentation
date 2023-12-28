@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculate Moran's I quickly for point data</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>moran.test {stats}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Calculate Moran's I quickly for point data</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> test spatial cluster via moran index</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>moran.test</strong>(<i>x</i>,
+    <i>sx</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>sy</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>alternative</i> = TwoSided,
+    <i>throwMaxIterError</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>parallel</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>alternative</dt>
+<dd><p><p>a character sring specifying the alternative hypothesis that is<br />
+ tested against; must be one of "two.sided", "less", or "greater",<br />
+ or any unambiguous abbreviation of these.</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type list. the list data also has some specificied data fields: <code>list(observed, expected, sd, p.value, z, prob2, t, df)</code>.<h4>clr value class</h4><ul><li>list</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stats</em> version 5.0.1.2389 <a
+                href="../stats.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

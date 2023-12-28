@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>do clustering via binary tree</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>btree {clustering}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>do clustering via binary tree</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>btree</strong>(<i>d</i>,
+    <i>equals</i> = <span style='color: green;'>0.9</span>,
+    <i>gt</i> = <span style='color: green;'>0.7</span>,
+    <i>as.hclust</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>method</i> = SpectrumDotProduct);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>d</dt>
+<dd><p><p>the input dataset</p></p></dd>
+
+
+<dt>equals</dt>
+<dd><p><p>the score threshold that asserts that two vector is<br />
+ equals, then they will assigned to a same tree cluster node.</p></p></dd>
+
+
+<dt>gt</dt>
+<dd><p><p>the score threshold that asserts that two vector is not<br />
+ the same but similar to other, then we could put the new vector into the<br />
+ right node of current cluster tree node.</p></p></dd>
+
+
+<dt>as.hclust</dt>
+<dd><p><p>and also converts the tree data as the hclust data model?</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        <p>the cluster result could be converts from clr object to R# dataframe object<br />
+ via the <code>as.data.frame</code> function.</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/BinaryTree/BTreeCluster.html">BTreeCluster</a></li><li><a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Cluster.html">Cluster</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>clustering</em> version 1.0.0.0 <a
+                href="../clustering.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>JSON</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; JSON; base" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="JSON (JavaScript Object Notation) is a lightweight data-intercha..." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {JSON}">
+      <tbody>
+        <tr>
+          <td>{JSON}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>JSON</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' JSON (JavaScript Object Notation) is a lightweight data-interchange format.</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "JSON"</span><span style="color: blue;"> from</span><span style="color: brown"> "base"</span>;
+                           </code>
+    </p>
+    <p><p>JSON (JavaScript Object Notation) is a lightweight data-interchange format. <br />
+ It is easy for humans to read and write. It is easy for machines to parse and <br />
+ generate. It is based on a subset of the JavaScript Programming Language <br />
+ Standard ECMA-262 3rd Edition - December 1999. JSON is a text format that <br />
+ is completely language independent but uses conventions of the <code>R&#35;</code> language. <br />
+ JSON is an ideal data-interchange language.</p>
+
+<p>JSON Is built On two structures:</p>
+
+<ul>
+<li>A collection Of name/value pairs. In various languages, this Is realized As <br />
+  an Object, record, struct, dictionary, hash table, keyed list, Or <br />
+  associative array.</li>
+<li><p>An ordered list Of values. In most languages, this Is realized As an array, <br />
+  vector, list, Or sequence.</p>
+
+<p>These are universal data structures. Virtually all modern programming languages <br />
+support them In one form Or another. It makes sense that a data format that <br />
+Is interchangeable With programming languages also be based On these structures.</p></li>
+</ul></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           <p>JSON (JavaScript Object Notation) is a lightweight data-interchange format. <br />
+ It is easy for humans to read and write. It is easy for machines to parse and <br />
+ generate. It is based on a subset of the JavaScript Programming Language <br />
+ Standard ECMA-262 3rd Edition - December 1999. JSON is a text format that <br />
+ is completely language independent but uses conventions of the <code>R&#35;</code> language. <br />
+ JSON is an ideal data-interchange language.</p>
+
+<p>JSON Is built On two structures:</p>
+
+<ul>
+<li>A collection Of name/value pairs. In various languages, this Is realized As <br />
+  an Object, record, struct, dictionary, hash table, keyed list, Or <br />
+  associative array.</li>
+<li><p>An ordered list Of values. In most languages, this Is realized As an array, <br />
+  vector, list, Or sequence.</p>
+
+<p>These are universal data structures. Virtually all modern programming languages <br />
+support them In one form Or another. It makes sense that a data format that <br />
+Is interchangeable With programming languages also be based On these structures.</p></li>
+</ul>
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line">
+        <tbody><tr>
+  <td id="unescape">
+    <a href="./JSON/unescape.html">unescape</a>
+  </td>
+  <td><p>do string unescape</p></td>
+</tr>
+<tr>
+  <td id="json_decode">
+    <a href="./JSON/json_decode.html">json_decode</a>
+  </td>
+  <td><h3>Decodes a JSON string</h3>
+
+<p>a short cut method of <code>parseJSON</code></p></td>
+</tr>
+<tr>
+  <td id="json_encode">
+    <a href="./JSON/json_encode.html">json_encode</a>
+  </td>
+  <td><p>Returns the JSON representation of a value</p></td>
+</tr>
+<tr>
+  <td id="parseJSON">
+    <a href="./JSON/parseJSON.html">parseJSON</a>
+  </td>
+  <td><p>parse JSON string into the raw JSON model or R data object</p></td>
+</tr>
+<tr>
+  <td id="parseBSON">
+    <a href="./JSON/parseBSON.html">parseBSON</a>
+  </td>
+  <td><p>parse the binary JSON data into the raw JSON model or R data object</p></td>
+</tr>
+<tr>
+  <td id="object">
+    <a href="./JSON/object.html">object</a>
+  </td>
+  <td><p>Convert the raw json model into R data object</p></td>
+</tr>
+<tr>
+  <td id="writeBSON">
+    <a href="./JSON/writeBSON.html">writeBSON</a>
+  </td>
+  <td><p>save any R object into BSON stream data</p></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

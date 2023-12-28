@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Empirical Cumulative Distribution Function</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>ecdf {stats}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Empirical Cumulative Distribution Function</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Compute an empirical cumulative distribution function, with several methods for <br /> plotting, printing and computing with such an “ecdf” object.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>ecdf</strong>(<i>x</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>numeric vector of the observations for ecdf; for the methods, an object <br />
+ inheriting from class "ecdf".</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The objects of class "ecdf" are not intended to be used for permanent storage <br />
+ and may change structure between versions of R (and did at R 3.0.0). They <br />
+ can usually be re-created by</p>
+
+<p></p>
+
+<pre><code class="R">eval(attr(old_obj, "call"), environment(old_obj))
+</code></pre>
+
+<p>since the data used Is stored As part Of the Object's environment.</p>
+
+
+        <h3>Value</h3>
+
+        <p>For ecdf, a function of class "ecdf", inheriting from the "stepfun" class,<br />
+ and hence inheriting a knots() method.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stats</em> version 5.0.1.2389 <a
+                href="../stats.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

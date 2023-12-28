@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adjust P-values for Multiple Comparisons</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>p.adjust {stats}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Adjust P-values for Multiple Comparisons</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Given a set of p-values, returns p-values adjusted <br /> using one of several methods.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>p.adjust</strong>(<i>p</i>,
+    <i>method</i> = fdr,
+    <i>n</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>p</dt>
+<dd><p><p>numeric vector Of p-values (possibly With NAs). Any other R Object Is <br />
+ coerced by As.numeric.</p></p></dd>
+
+
+<dt>method</dt>
+<dd><p><p>correction method. Can be abbreviated.</p></p></dd>
+
+
+<dt>n</dt>
+<dd><p><p>number of comparisons, must be at least length(p); only set this (to <br />
+ non-default) when you know what you are doing!</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The adjustment methods include the Bonferroni correction ("bonferroni") <br />
+ in which the p-values are multiplied by the number of comparisons. Less<br />
+ conservative corrections are also included by Holm (1979) ("holm"), <br />
+ Hochberg (1988) ("hochberg"), Hommel (1988) ("hommel"), Benjamini &amp; <br />
+ Hochberg (1995) ("BH" or its alias "fdr"), and Benjamini &amp; Yekutieli <br />
+ (2001) ("BY"), respectively. A pass-through option ("none") is also included.<br />
+ The set of methods are contained in the p.adjust.methods vector for the <br />
+ benefit of methods that need to have the method as an option and pass it <br />
+ on to p.adjust.</p>
+
+<p>The first four methods are designed To give strong control Of the family-wise <br />
+ Error rate. There seems no reason To use the unmodified Bonferroni correction <br />
+ because it Is dominated by Holm's method, which is also valid under arbitrary<br />
+ assumptions.</p>
+
+<p>Hochberg's and Hommel's methods are valid when the hypothesis tests are <br />
+ independent or when they are non-negatively associated (Sarkar, 1998; Sarkar <br />
+ and Chang, 1997). Hommel's method is more powerful than Hochberg's, but the <br />
+ difference is usually small and the Hochberg p-values are faster to compute.<br />
+ The "BH" (aka "fdr") And "BY" method of Benjamini, Hochberg, And Yekutieli <br />
+ control the false discovery rate, the expected proportion of false discoveries<br />
+ amongst the rejected hypotheses. The false discovery rate Is a less stringent <br />
+ condition than the family-wise error rate, so these methods are more powerful <br />
+ than the others.</p>
+
+<p>Note that you can Set n larger than length(p) which means the unobserved<br />
+ p-values are assumed To be greater than all the observed p For "bonferroni" <br />
+ And "holm" methods And equal To 1 For the other methods.</p>
+
+
+        <h3>Value</h3>
+
+        <p>A numeric vector of corrected p-values (of the same length as p, with names <br />
+ copied from p).</p><h4>clr value class</h4><ul><li>double</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stats</em> version 5.0.1.2389 <a
+                href="../stats.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sequence Graph Transform (SGT) — Sequence Embedding for Clustering, Classification, and Search</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>SGT {dataset}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Sequence Graph Transform (SGT) — Sequence Embedding for Clustering, Classification, and Search</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Sequence Graph Transform (SGT) is a sequence embedding function. SGT extracts <br /> the short- and long-term sequence features and embeds them in a finite-dimensional <br /> feature space. The long and short term patterns embedded in SGT can be tuned <br /> without any increase in the computation.<br /> <br /> > <a href="https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py">https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py</a></p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>SGT</strong>(
+    <i>alphabets</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>kappa</i> = <span style='color: green;'>1</span>,
+    <i>length.sensitive</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>mode</i> = Full);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>alphabets</dt>
+<dd><p><p>Optional, except if mode is Spark.<br />
+ The set of alphabets that make up all<br />
+ the sequences in the dataset. If not passed, the<br />
+ alphabet set is automatically computed as the<br />
+ unique set of elements that make all the sequences.<br />
+ A list or 1d-array of the set of elements that make up the<br />
+ sequences. For example, np.array(["A", "B", "C"].<br />
+ If mode is 'spark', the alphabets are necessary.</p></p></dd>
+
+
+<dt>kappa</dt>
+<dd><p><p>Tuning parameter, kappa > 0, to change the extraction of<br />
+ long-term dependency. Higher the value the lesser<br />
+ the long-term dependency captured in the embedding.<br />
+ Typical values for kappa are 1, 5, 10.</p></p></dd>
+
+
+<dt>length.sensitive</dt>
+<dd><p><p>Default False. This is set to true if the embedding of<br />
+ should have the information of the length of the sequence.<br />
+ If set to false then the embedding of two sequences with<br />
+ similar pattern but different lengths will be the same.<br />
+ lengthsensitive = false is similar to length-normalization.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>Compute embedding of a single or a collection of discrete item<br />
+ sequences. A discrete item sequence is a sequence made from a set<br />
+ discrete elements, also known as alphabet set. For example,<br />
+ suppose the alphabet set is the set of roman letters,<br />
+ {A, B, ..., Z}. This set is made of discrete elements. Examples of<br />
+ sequences from such a set are AABADDSA, UADSFJPFFFOIHOUGD, etc.<br />
+ Such sequence datasets are commonly found in online industry,<br />
+ for example, item purchase history, where the alphabet set is<br />
+ the set of all product items. Sequence datasets are abundant in<br />
+ bioinformatics as protein sequences.<br />
+ Using the embeddings created here, classification and clustering<br />
+ models can be built for sequence datasets.<br />
+ Read more in <a href="https://arxiv.org/pdf/1608.03533.pdf">https://arxiv.org/pdf/1608.03533.pdf</a></p>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <a href="/vignettes/clr/Microsoft/VisualBasic/Data/GraphTheory/SequenceGraphTransform.html">SequenceGraphTransform</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/Microsoft/VisualBasic/Data/GraphTheory/SequenceGraphTransform.html">SequenceGraphTransform</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>dataset</em> version 1.0.0.0 <a
+                href="../dataset.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

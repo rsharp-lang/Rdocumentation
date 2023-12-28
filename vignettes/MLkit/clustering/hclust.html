@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hierarchical Clustering</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>hclust {clustering}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Hierarchical Clustering</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Hierarchical cluster analysis on a set of dissimilarities and methods for analyzing it.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>hclust</strong>(<i>d</i>,
+    <i>method</i> = <span style='color: brown;'><strong>"complete"</strong></span>,
+    <i>debug</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>d</dt>
+<dd><p><p>a dissimilarity structure as produced by dist.</p></p></dd>
+
+
+<dt>method</dt>
+<dd><p><p>the agglomeration method to be used. This should be (an unambiguous abbreviation of) <br />
+ one of "ward.D", "ward.D2", "single", "complete", "average" (= UPGMA), "mcquitty" (= WPGMA), <br />
+ "median" (= WPGMC) or "centroid" (= UPGMC).</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>This function performs a hierarchical cluster analysis using a set of dissimilarities for <br />
+ the n objects being clustered. Initially, each object is assigned to its own cluster and <br />
+ then the algorithm proceeds iteratively, at each stage joining the two most similar clusters, <br />
+ continuing until there is just a single cluster. At each stage distances between clusters <br />
+ are recomputed by the Lance–Williams dissimilarity update formula according to the particular <br />
+ clustering method being used.</p>
+
+<p>A number Of different clustering methods are provided. Ward's minimum variance method aims <br />
+ at finding compact, spherical clusters. The complete linkage method finds similar clusters. <br />
+ The single linkage method (which is closely related to the minimal spanning tree) adopts a <br />
+ ‘friends of friends’ clustering strategy. The other methods can be regarded as aiming for <br />
+ clusters with characteristics somewhere between the single and complete link methods. <br />
+ Note however, that methods "median" and "centroid" are not leading to a monotone distance <br />
+ measure, or equivalently the resulting dendrograms can have so called inversions or reversals <br />
+ which are hard to interpret, but note the trichotomies in Legendre and Legendre (2012).</p>
+
+<p>Two different algorithms are found In the literature For Ward clustering. The one used by <br />
+ Option "ward.D" (equivalent To the only Ward Option "ward" In R versions &lt;= 3.0.3) does <br />
+ Not implement Ward's (1963) clustering criterion, whereas option "ward.D2" implements that <br />
+ criterion (Murtagh and Legendre 2014). With the latter, the dissimilarities are squared before <br />
+ cluster updating. Note that agnes(<em>, method="ward") corresponds to hclust(</em>, "ward.D2").</p>
+
+<p>If members!= NULL, Then d Is taken To be a dissimilarity matrix between clusters instead <br />
+ Of dissimilarities between singletons And members gives the number Of observations per cluster. <br />
+ This way the hierarchical cluster algorithm can be 'started in the middle of the dendrogram’, <br />
+ e.g., in order to reconstruct the part of the tree above a cut (see examples). Dissimilarities <br />
+ between clusters can be efficiently computed (i.e., without hclust itself) only for a limited <br />
+ number of distance/linkage combinations, the simplest one being squared Euclidean distance <br />
+ and centroid linkage. In this case the dissimilarities between the clusters are the squared <br />
+ Euclidean distances between cluster means.</p>
+
+<p>In hierarchical cluster displays, a decision Is needed at each merge to specify which subtree <br />
+ should go on the left And which on the right. Since, for n observations there are n-1 merges, <br />
+ there are 2^{(n-1)} possible orderings for the leaves in a cluster tree, Or dendrogram. The <br />
+ algorithm used in hclust Is to order the subtree so that the tighter cluster Is on the left <br />
+ (the last, i.e., most recent, merge of the left subtree Is at a lower value than the last <br />
+ merge of the right subtree). Single observations are the tightest clusters possible, And <br />
+ merges involving two observations place them in order by their observation sequence number.</p>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Cluster.html">Cluster</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Cluster.html">Cluster</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>clustering</em> version 1.0.0.0 <a
+                href="../clustering.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

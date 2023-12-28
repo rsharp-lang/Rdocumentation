@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Extract File Information</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>file.size {file}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Extract File Information</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Utility function to extract information about files on the user's file systems.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>file.size</strong>(<i>x</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>character vectors containing file paths. Tilde-expansion is done: see path.expand.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>What constitutes a ‘file’ is OS-dependent but includes directories. (However, <br />
+ directory names must not include a trailing backslash or slash on Windows.) <br />
+ See also the section in the help for file.exists on case-insensitive file <br />
+ systems.</p>
+
+<p>The file 'mode’ follows POSIX conventions, giving three octal digits summarizing <br />
+ the permissions for the file owner, the owner's group and for anyone respectively. <br />
+ Each digit is the logical or of read (4), write (2) and execute/search (1) <br />
+ permissions.</p>
+
+<p>See files For how file paths With marked encodings are interpreted.</p>
+
+<p>File modes are probably only useful On NTFS file systems, And it seems all three <br />
+ digits refer To the file's owner. The execute/search bits are set for directories, <br />
+ and for files based on their extensions (e.g., ‘.exe’, ‘.com’, ‘.cmd’ and ‘.bat’ <br />
+ files). file.access will give a more reliable view of read/write access <br />
+ availability to the R process.</p>
+
+<p>UTF-8-encoded file names Not valid in the current locale can be used.</p>
+
+<p>Junction points And symbolic links are followed, so information Is given about <br />
+ the file/directory To which the link points rather than about the link.</p>
+
+
+        <h3>Value</h3>
+
+        <p>Double: File size In bytes. For missing file, this function will <br />
+ returns a negative number -1; and the file is exists on the filesystem, this <br />
+ function returns ZERO(empty file) or a positive number.</p><h4>clr value class</h4><ul><li>integer</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>file</em> version 2.33.856.6961 <a
+                href="../file.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

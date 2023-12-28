@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.NeuralNetwork.ANNTrainer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>ANNTrainer {Microsoft.VisualBasic.MachineLearning.NeuralNetwork}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>ANNTrainer</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.NeuralNetwork
+export class ANNTrainer {
+   TrainingType: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/TrainingType.html">TrainingType</a>;
+   MinError: double;
+   # 对@``P:Microsoft.VisualBasic.MachineLearning.NeuralNetwork.Neuron.Gradient``的剪裁限制阈值，小于等于零表示不进行剪裁，默认不剪裁
+   Truncate: double;
+   # 是否对训练样本数据集进行选择性的训练，假若目标样本在当前所训练的模型上面
+   #  所计算得到的预测结果和其真实结果的误差足够小的话，目标样本将不会再进行训练
+   Selective: boolean;
+   ErrorThreshold: double;
+   # [0,1]之间,建议设置一个[0.3,0.6]之间的值, 这个参数表示被随机删除的节点的数量百分比,值越高,则剩下的神经元节点越少
+   dropOutRate: double;
+   # 最终得到的训练结果神经网络
+   NeuronNetwork: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Network.html">Network</a>;
+   TrainingSet: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/TrainingSample.html">TrainingSample[]</a>;
+   # 训练所使用到的经验数量,即数据集的大小size
+   XP: integer;
+}
+</code>
+        </pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Model Predictions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>predict {math}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Model Predictions</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> predict is a generic function for predictions from the results of <br /> various model fitting functions. The function invokes particular <br /> methods which depend on the class of the first argument.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>predict</strong>(<i>lm</i>, <i>x</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>lm</dt>
+<dd><p><p>a model Object For which prediction Is desired.</p></p></dd>
+
+
+<dt>x</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>Most prediction methods which are similar to those for linear models <br />
+ have an argument newdata specifying the first place to look for <br />
+ explanatory variables to be used for prediction. Some considerable <br />
+ attempts are made to match up the columns in newdata to those used <br />
+ for fitting, for example that they are of comparable types and that <br />
+ any factors have the same level set in the same order (or can be <br />
+ transformed to be so).</p>
+
+<p>Time series prediction methods In package stats have an argument <br />
+ n.ahead specifying how many time steps ahead To predict.</p>
+
+<p>Many methods have a logical argument se.fit saying If standard errors <br />
+ are To returned.</p>
+
+
+        <h3>Value</h3>
+
+        <p>The form of the value returned by predict depends on the class of its argument. <br />
+ See the documentation of the particular methods for details of what is <br />
+ produced by that method.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>math</em> version 5.0.1.2389 <a
+                href="../math.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

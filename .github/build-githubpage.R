@@ -15,7 +15,10 @@ for(dll_name in clr_modules) {
 
     # generates the html help documents
     for(pkg_namespace in package_utils::parseDll(dll = `${app_dir}/${dll_name}`)) {
-        Rdocuments(pkg_namespace, outputdir = `${vignettes}/${basename(dll_name)}`, 
-            package = "R");
+        try({
+            Rdocuments(pkg_namespace, 
+                outputdir = `${vignettes}/${basename(dll_name)}/${[pkg_namespace]::namespace}`, 
+                package = "R");
+        });
     }
 }

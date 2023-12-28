@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>``file.exists`` returns a logical vector indicating whether the files named by its</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>file.exists {file}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>``file.exists`` returns a logical vector indicating whether the files named by its</h2>
+
+        <h3>Description</h3>
+
+        <p>argument exist. (Here ‘exists’ is in the sense of the system's stat call: a file <br /> will be reported as existing only if you have the permissions needed by stat. <br /> Existence can also be checked by file.access, which might use different permissions <br /> and so obtain a different result. Note that the existence of a file does not <br /> imply that it is readable: for that use file.access.) What constitutes a ‘file’ <br /> is system-dependent, but should include directories. (However, directory names <br /> must not include a trailing backslash or slash on Windows.) Note that if the file <br /> is a symbolic link on a Unix-alike, the result indicates if the link points to <br /> an actual file, not just if the link exists. Lastly, note the different function <br /> exists which checks for existence of R objects.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>file.exists</strong>(<i>files</i>,
+    <i>ZERO.Nonexists</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>files</dt>
+<dd><p><p>character vectors, containing file names or paths.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        <p>this function returns FALSE if the given files value is NULL</p><h4>clr value class</h4><ul><li>boolean</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>file</em> version 2.33.856.6961 <a
+                href="../file.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

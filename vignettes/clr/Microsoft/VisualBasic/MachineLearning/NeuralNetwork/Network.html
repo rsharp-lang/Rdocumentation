@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.NeuralNetwork.Network</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Network {Microsoft.VisualBasic.MachineLearning.NeuralNetwork}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Network</h2>
+
+        <h3>Description</h3>
+
+        人工神经网络计算用的对象模型
+ 
+ > https://github.com/trentsartain/Neural-Network
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.NeuralNetwork
+export class Network {
+   LearnRate: double;
+   Momentum: double;
+   Truncate: double;
+   # 通过这个属性可以枚举出所有的输入层的神经元节点
+   InputLayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a>;
+   # 通过这个属性可以枚举出所有的隐藏层，然后对每一层隐藏层可以枚举出该隐藏层之中的所有的神经元节点
+   HiddenLayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/HiddenLayers.html">HiddenLayers</a>;
+   # 通过这个属性可以枚举出所有的输出层的神经元节点
+   OutputLayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a>;
+   # 学习率的衰减速率
+   LearnRateDecay: double;
+   # 激活函数
+   Activations: <a href="/vignettes/clr/System/Collections/Generic/IReadOnlyDictionary`2.html">IReadOnlyDictionary`2</a>;
+}
+</code>
+        </pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

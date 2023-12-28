@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>dir.create creates the last element of the path, unless recursive = TRUE.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>dir.create {file}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>dir.create creates the last element of the path, unless recursive = TRUE.</h2>
+
+        <h3>Description</h3>
+
+        <p>Trailing path separators are discarded. On Windows drives are allowed in <br /> the path specification and unless the path is rooted, it will be interpreted <br /> relative to the current directory on that drive. mode is ignored on Windows.<br /> <br /> One of the idiosyncrasies of Windows Is that directory creation may report <br /> success but create a directory with a different name, for example dir.create("G.S.") <br /> creates '"G.S"’. This is undocumented, and what are the precise circumstances <br /> is unknown (and might depend on the version of Windows). Also avoid directory <br /> names with a trailing space.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>dir.create</strong>(<i>path</i>,
+    <i>showWarnings</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>recursive</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>mode</i> = <span style='color: #090300;'><strong>"0777"</strong></span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>path</dt>
+<dd><p><p>a character vector containing a single path name.</p></p></dd>
+
+
+<dt>showWarnings</dt>
+<dd><p><p>logical; should the warnings on failure be shown?</p></p></dd>
+
+
+<dt>recursive</dt>
+<dd><p><p>logical. Should elements of the path other than the last be created? <br />
+ If true, Like the Unix command mkdir -p.</p></p></dd>
+
+
+<dt>mode</dt>
+<dd><p><p>the mode To be used On Unix-alikes: it will be coerced by as.octmode. <br />
+ For Sys.chmod it Is recycled along paths.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>There is no guarantee that these functions will handle Windows relative paths <br />
+ of the form ‘d:path’: try ‘d:./path’ instead. In particular, ‘d:’ is <br />
+ not recognized as a directory. Nor are \?\ prefixes (and similar) supported.</p>
+
+<p>UTF-8-encoded dirnames Not valid in the current locale can be used.</p>
+
+
+        <h3>Value</h3>
+
+        <p>dir.create and Sys.chmod return invisibly a logical vector indicating if <br />
+ the operation succeeded for each of the files attempted. Using a missing <br />
+ value for a path name will always be regarded as a failure. dir.create <br />
+ indicates failure if the directory already exists. If showWarnings = TRUE, <br />
+ dir.create will give a warning for an unexpected failure (e.g., not for a <br />
+ missing value nor for an already existing component for recursive = TRUE).</p><h4>clr value class</h4><ul><li>boolean</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>file</em> version 2.33.856.6961 <a
+                href="../file.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

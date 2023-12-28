@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>linq</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; linq; REnv" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="Provides a set of static (Shared in Visual Basic) methods for qu..." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {linq}">
+      <tbody>
+        <tr>
+          <td>{linq}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>linq</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' Provides a set of static (Shared in Visual Basic) methods for querying objects</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "linq"</span><span style="color: blue;"> from</span><span style="color: brown"> "REnv"</span>;
+                           </code>
+    </p>
+    <p><p>Provides a set of static (Shared in Visual Basic) methods for querying objects<br />
+ that implement System.Collections.Generic.IEnumerable`1.</p></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line">
+        <tbody><tr>
+  <td id="left_join">
+    <a href="./linq/left_join.html">left_join</a>
+  </td>
+  <td><p>A left join is a type of relational join operation that combines <br />
+ two datasets based on a common column or variable. The result of <br />
+ a left join includes all the rows from the left dataset and any <br />
+ matching rows from the right dataset.</p></td>
+</tr>
+<tr>
+  <td id="progress">
+    <a href="./linq/progress.html">progress</a>
+  </td>
+  <td><p>apply for the pipeline progress report</p></td>
+</tr>
+<tr>
+  <td id="as.index">
+    <a href="./linq/as.index.html">as.index</a>
+  </td>
+  <td><p>create data index for the given input data sequence</p></td>
+</tr>
+<tr>
+  <td id="take">
+    <a href="./linq/take.html">take</a>
+  </td>
+  <td><p>take the first n items from the given input sequence data</p></td>
+</tr>
+<tr>
+  <td id="match">
+    <a href="./linq/match.html">match</a>
+  </td>
+  <td><h3>Value Matching</h3>
+
+<p>match returns a vector of the positions of <br />
+ (first) matches of its first argument in <br />
+ its second.</p>
+
+<p>find the index of the elements in input sequence<br />
+ <strong><code>x</code></strong> in the source target sequence<br />
+ <strong><code>table</code></strong></p>
+
+<p>find the index of (where x in table)</p></td>
+</tr>
+<tr>
+  <td id="skip">
+    <a href="./linq/skip.html">skip</a>
+  </td>
+  <td><p>Bypasses a specified number of elements in a sequence and then <br />
+ returns the remaining elements.</p></td>
+</tr>
+<tr>
+  <td id="which.max">
+    <a href="./linq/which.max.html">which.max</a>
+  </td>
+  <td><p>Where is the Min() or Max() or first TRUE or FALSE ?</p>
+
+<p>Determines the location, i.e., index of the (first) minimum or maximum of a <br />
+ numeric (or logical) vector.</p></td>
+</tr>
+<tr>
+  <td id="which.min">
+    <a href="./linq/which.min.html">which.min</a>
+  </td>
+  <td><p>Where is the Min() or Max() or first TRUE or FALSE ?</p>
+
+<p>Determines the location, i.e., index of the (first) minimum or maximum of a <br />
+ numeric (or logical) vector.</p></td>
+</tr>
+<tr>
+  <td id="last">
+    <a href="./linq/last.html">last</a>
+  </td>
+  <td><p>get the last element in the sequence</p></td>
+</tr>
+<tr>
+  <td id="sort">
+    <a href="./linq/sort.html">sort</a>
+  </td>
+  <td><h3>Sorting or Ordering Vectors</h3>
+
+<p>Sort (or order) a vector or factor (partially) into ascending <br />
+ or descending order. For ordering along more than one variable, <br />
+ e.g., for sorting data frames, see order.</p></td>
+</tr>
+<tr>
+  <td id="orderBy">
+    <a href="./linq/orderBy.html">orderBy</a>
+  </td>
+  <td><p>Sorts the elements of a sequence in ascending order according to a key.</p></td>
+</tr>
+<tr>
+  <td id="reverse">
+    <a href="./linq/reverse.html">reverse</a>
+  </td>
+  <td><p>reverse a given sequence</p></td>
+</tr>
+<tr>
+  <td id="any">
+    <a href="./linq/any.html">any</a>
+  </td>
+  <td><h1>Are Some Values True?</h1>
+
+<p>Given a set of logical vectors, is at least one of the values true?</p></td>
+</tr>
+<tr>
+  <td id="all">
+    <a href="./linq/all.html">all</a>
+  </td>
+  <td><h1>Are All Values True?</h1>
+
+<p>Given a set of logical vectors, are all of the values true?</p></td>
+</tr>
+<tr>
+  <td id="while">
+    <a href="./linq/while.html">while</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="split">
+    <a href="./linq/split.html">split</a>
+  </td>
+  <td><p>split content sequence with a given condition as element delimiter.</p></td>
+</tr>
+<tr>
+  <td id="rotate_right">
+    <a href="./linq/rotate_right.html">rotate_right</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="rotate_left">
+    <a href="./linq/rotate_left.html">rotate_left</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="select">
+    <a href="./linq/select.html">select</a>
+  </td>
+  <td><h3>Keep or drop columns using their names and types</h3>
+
+<p>Select (and optionally rename) variables in a data frame, using a <br />
+ concise mini-language that makes it easy to refer to variables <br />
+ based on their name (e.g. a:f selects all columns from a on the <br />
+ left to f on the right) or type (e.g. where(is.numeric) selects all<br />
+ numeric columns).</p></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

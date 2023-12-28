@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ransfer Binary Data To and From Connections</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>readBin {file}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>ransfer Binary Data To and From Connections</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Read binary data from or write binary data to a connection<br /> or raw vector.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>readBin</strong>(<i>con</i>, <i>what</i>,
+    <i>n</i> = <span style='color: green;'>1</span>,
+    <i>size</i> = <span style='color: green;'>-2147483648</span>,
+    <i>signed</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>endian</i> = big);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>con</dt>
+<dd><p><p>A connection Object Or a character <br />
+ String naming a file Or a raw vector.</p></p></dd>
+
+
+<dt>n</dt>
+<dd><p><p>numeric. The (maximal) number of records to be read. <br />
+ You can use an over-estimate here, but not too large <br />
+ as storage is reserved for n items.</p></p></dd>
+
+
+<dt>size</dt>
+<dd><p><p>Integer.The number Of bytes per element In the Byte <br />
+ stream. The Default, NA_integer_, uses the natural <br />
+ size. Size changing Is Not supported For raw And <br />
+ complex vectors.</p></p></dd>
+
+
+<dt>signed</dt>
+<dd><p><p>logical. Only used for integers of sizes 1 and 2, when <br />
+ it determines if the quantity on file should be regarded<br />
+ as a signed or unsigned integer.</p></p></dd>
+
+
+<dt>endian</dt>
+<dd><p><p>The endian-ness ("big" Or "little") <br />
+ Of the target system For the file. Using "swap" will force <br />
+ swapping endian-ness.</p></p></dd>
+
+
+<dt>what</dt>
+<dd><p><p>Either an object whose mode will give the mode of the <br />
+ vector to be read, or a character vector of length one <br />
+ describing the mode: one of "numeric", "double", <br />
+ "integer", "int", "logical", "complex", "character", <br />
+ "raw".</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>file</em> version 2.33.856.6961 <a
+                href="../file.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

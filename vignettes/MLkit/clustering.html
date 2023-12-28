@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>clustering</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; clustering; MLkit" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="R# data clustering tools..." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {clustering}">
+      <tbody>
+        <tr>
+          <td>{clustering}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>clustering</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' R# data clustering tools</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "clustering"</span><span style="color: blue;"> from</span><span style="color: brown"> "MLkit"</span>;
+                           </code>
+    </p>
+    <p><p>R# data clustering tools</p></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           <p>R# data clustering tools</p>
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line">
+        <tbody><tr>
+  <td id="gmm">
+    <a href="./clustering/gmm.html">gmm</a>
+  </td>
+  <td><p>Construct a Gaussian Mixture Model with specific n components</p></td>
+</tr>
+<tr>
+  <td id="gmm.predict">
+    <a href="./clustering/gmm.predict.html">gmm.predict</a>
+  </td>
+  <td><p>Get cluster assign result</p></td>
+</tr>
+<tr>
+  <td id="gmm.components">
+    <a href="./clustering/gmm.components.html">gmm.components</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="gmm.predict_proba">
+    <a href="./clustering/gmm.predict_proba.html">gmm.predict_proba</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="cmeans">
+    <a href="./clustering/cmeans.html">cmeans</a>
+  </td>
+  <td><h3>the cmeans algorithm module</h3>
+
+<p><strong>Fuzzy clustering</strong> (also referred to as <strong>soft clustering</strong>) is a form of clustering in which <br />
+ each data point can belong to more than one cluster.</p>
+
+<p>Clustering Or cluster analysis involves assigning data points to clusters (also called buckets, <br />
+ bins, Or classes), Or homogeneous classes, such that items in the same class Or cluster are as <br />
+ similar as possible, while items belonging to different classes are as dissimilar as possible. <br />
+ Clusters are identified via similarity measures. These similarity measures include distance, <br />
+ connectivity, And intensity. Different similarity measures may be chosen based on the data Or <br />
+ the application.</p>
+
+<blockquote>
+  <p><a href="https://en.wikipedia.org/wiki/Fuzzy_clustering">https://en.wikipedia.org/wiki/Fuzzy_clustering</a></p>
+</blockquote></td>
+</tr>
+<tr>
+  <td id="getTraceback">
+    <a href="./clustering/getTraceback.html">getTraceback</a>
+  </td>
+  <td><p>get the clustering traceback</p></td>
+</tr>
+<tr>
+  <td id="kmeans">
+    <a href="./clustering/kmeans.html">kmeans</a>
+  </td>
+  <td><p>K-Means Clustering</p></td>
+</tr>
+<tr>
+  <td id="lloyds">
+    <a href="./clustering/lloyds.html">lloyds</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="silhouette_score">
+    <a href="./clustering/silhouette_score.html">silhouette_score</a>
+  </td>
+  <td><p>Silhouette Coefficient</p></td>
+</tr>
+<tr>
+  <td id="hclust">
+    <a href="./clustering/hclust.html">hclust</a>
+  </td>
+  <td><p>Hierarchical Clustering</p>
+
+<p>Hierarchical cluster analysis on a set of dissimilarities and methods for analyzing it.</p></td>
+</tr>
+<tr>
+  <td id="btree">
+    <a href="./clustering/btree.html">btree</a>
+  </td>
+  <td><p>do clustering via binary tree</p></td>
+</tr>
+<tr>
+  <td id="density">
+    <a href="./clustering/density.html">density</a>
+  </td>
+  <td><p>evaluate density of the raw data</p></td>
+</tr>
+<tr>
+  <td id="cluster.groups">
+    <a href="./clustering/cluster.groups.html">cluster.groups</a>
+  </td>
+  <td><h3>get cluster result data</h3></td>
+</tr>
+<tr>
+  <td id="dbscan_objects">
+    <a href="./clustering/dbscan_objects.html">dbscan_objects</a>
+  </td>
+  <td><p>find objects from a given set of 2d points</p></td>
+</tr>
+<tr>
+  <td id="hdbscan">
+    <a href="./clustering/hdbscan.html">hdbscan</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="knn">
+    <a href="./clustering/knn.html">knn</a>
+  </td>
+  <td><h3>K-NN Classifier in R Programming</h3>
+
+<p>K-Nearest Neighbor or K-NN is a Supervised Non-linear classification <br />
+ algorithm. K-NN is a Non-parametric algorithm i.e it doesn’t make any <br />
+ assumption about underlying data or its distribution. It is one of <br />
+ the simplest and widely used algorithm which depends on it’s k value<br />
+ (Neighbors) and finds it’s applications in many industries like <br />
+ finance industry, healthcare industry etc.</p></td>
+</tr>
+<tr>
+  <td id="dbscan">
+    <a href="./clustering/dbscan.html">dbscan</a>
+  </td>
+  <td><h3>DBSCAN density reachability and connectivity clustering</h3>
+
+<p>Generates a density based clustering of arbitrary shape as <br />
+ introduced in Ester et al. (1996).</p>
+
+<p>Clusters require a minimum no of points (MinPts) within a maximum <br />
+ distance (eps) around one of its members (the seed). Any point <br />
+ within eps around any point which satisfies the seed condition <br />
+ is a cluster member (recursively). Some points may not belong to <br />
+ any clusters (noise).</p></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

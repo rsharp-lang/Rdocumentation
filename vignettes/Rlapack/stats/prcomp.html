@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Principal Components Analysis</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>prcomp {stats}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Principal Components Analysis</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Performs a principal components analysis on the given data matrix <br /> and returns the results as an object of class <code>prcomp</code>.<br /> <br /> The calculation is done by a singular value decomposition of the <br /> (centered and possibly scaled) data matrix, not by using eigen on <br /> the covariance matrix. This is generally the preferred method for <br /> numerical accuracy. The print method for these objects prints the <br /> results in a nice format and the plot method produces a scree <br /> plot.<br /><br /> Unlike princomp, variances are computed With the usual divisor N - 1.<br /> Note that scale = True cannot be used If there are zero Or constant <br /> (For center = True) variables.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>prcomp</strong>(<i>x</i>,
+    <i>scale</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>center</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>pc</i> = <span style='color: green;'>5</span>,
+    <i>list</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>threshold</i> = <span style='color: green;'>1E-07</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>a numeric or complex matrix (or data frame) which provides the <br />
+ data for the principal components analysis.</p></p></dd>
+
+
+<dt>center</dt>
+<dd><p><p>a logical value indicating whether the variables should be shifted <br />
+ to be zero centered. Alternately, a vector of length equal the <br />
+ number of columns of x can be supplied. The value is passed to scale.</p></p></dd>
+
+
+<dt>scale</dt>
+<dd><p><p>a logical value indicating whether the variables should be scaled to <br />
+ have unit variance before the analysis takes place. The default is <br />
+ FALSE for consistency with S, but in general scaling is advisable. <br />
+ Alternatively, a vector of length equal the number of columns of x <br />
+ can be supplied. The value is passed to scale.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The signs of the columns of the rotation matrix are arbitrary, and <br />
+ so may differ between different programs for PCA, and even between <br />
+ different builds of R.</p>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/ANOVA/MultivariateAnalysisResult.html">MultivariateAnalysisResult</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/ANOVA/MultivariateAnalysisResult.html">MultivariateAnalysisResult</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stats</em> version 5.0.1.2389 <a
+                href="../stats.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

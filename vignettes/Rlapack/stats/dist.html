@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Distance Matrix Computation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>dist {stats}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Distance Matrix Computation</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> This function computes and returns the distance matrix computed by using <br /> the specified distance measure to compute the distances between the rows <br /> of a data matrix.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>dist</strong>(<i>x</i>,
+    <i>method</i> = <span style='color: brown;'><strong>"euclidean"</strong></span>,
+    <i>diag</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>upper</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>p</i> = <span style='color: green;'>2</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>a numeric matrix, data frame or "dist" object.</p></p></dd>
+
+
+<dt>method</dt>
+<dd><p><p>the distance measure to be used. This must be one of "euclidean", "maximum", <br />
+ "manhattan", "canberra", "binary" or "minkowski". Any unambiguous substring <br />
+ can be given.</p></p></dd>
+
+
+<dt>diag</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>upper</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>p%</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>Available distance measures are (written for two vectors x and y):</p>
+
+<ul>
+<li><p>euclidean:<br />
+Usual distance between the two vectors (2 norm aka L_2), sqrt(sum((x_i - y_i)^2)).</p></li>
+<li><p>maximum:<br />
+Maximum distance between two components Of x And y (supremum norm)</p></li>
+<li><p>manhattan:<br />
+Absolute distance between the two vectors (1 norm aka L_1).</p></li>
+<li><p>canberra:<br />
+<code>sum(|x_i - y_i| / (|x_i| + |y_i|))</code>. Terms with zero numerator And <br />
+denominator are omitted from the sum And treated as if the values were <br />
+missing.</p>
+
+<p>This Is intended for non-negative values (e.g., counts), in which case the <br />
+denominator can be written in various equivalent ways; Originally, R used <br />
+<code>x_i + y_i</code>, then from 1998 to 2017, |x_i + y_i|, And then the correct <br />
+<code>|x_i| + |y_i|</code>.</p></li>
+<li><p>binary:<br />
+(aka asymmetric binary): The vectors are regarded As binary bits, so non-zero <br />
+elements are 'on’ and zero elements are ‘off’. The distance is the proportion <br />
+of bits in which only one is on amongst those in which at least one is on.</p></li>
+<li><p>minkowski:<br />
+The p norm, the pth root Of the sum Of the pth powers Of the differences <br />
+Of the components.</p>
+
+<p>Missing values are allowed, And are excluded from all computations involving <br />
+the rows within which they occur. Further, When Inf values are involved, <br />
+all pairs Of values are excluded When their contribution To the distance gave <br />
+NaN Or NA. If some columns are excluded In calculating a Euclidean, Manhattan, <br />
+Canberra Or Minkowski distance, the sum Is scaled up proportionally To the <br />
+number Of columns used. If all pairs are excluded When calculating a <br />
+particular distance, the value Is NA.</p>
+
+<p>The "dist" method of as.matrix() And as.dist() can be used for conversion <br />
+between objects of class "dist" And conventional distance matrices.</p>
+
+<p><code>as.dist()</code> Is a generic function. Its default method handles objects inheriting <br />
+from class "dist", Or coercible to matrices using as.matrix(). Support for <br />
+classes representing distances (also known as dissimilarities) can be added <br />
+by providing an as.matrix() Or, more directly, an as.dist method for such <br />
+a class.</p></li>
+</ul>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <a href="/vignettes/clr/Microsoft/VisualBasic/Math/DataFrame/DistanceMatrix.html">DistanceMatrix</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/Microsoft/VisualBasic/Math/DataFrame/DistanceMatrix.html">DistanceMatrix</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stats</em> version 5.0.1.2389 <a
+                href="../stats.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

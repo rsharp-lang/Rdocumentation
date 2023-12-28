@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Value Matching</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>match {linq}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Value Matching</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> match returns a vector of the positions of <br /> (first) matches of its first argument in <br /> its second.<br /> <br /> find the index of the elements in input sequence<br /> <strong><code>x</code></strong> in the source target sequence<br /> <strong><code>table</code></strong><br /> <br /> find the index of (where x in table)</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>match</strong>(<i>x</i>, <i>table</i>,
+    <i>nomatch</i> = <span style='color: green;'>-1</span>,
+    <i>incomparables</i> = <span style='color: green;'>0</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>vector or NULL: the values to be matched. Long <br />
+ vectors are supported.</p></p></dd>
+
+
+<dt>table</dt>
+<dd><p><p>vector or NULL: the values to be matched against. <br />
+ Long vectors are not supported. (using as index <br />
+ object.)</p></p></dd>
+
+
+<dt>nomatch</dt>
+<dd><p><p>the value to be returned in the case when no <br />
+ match is found. Note that it is coerced to <br />
+ integer.</p></p></dd>
+
+
+<dt>incomparables</dt>
+<dd><p><p>a vector of values that cannot be matched. <br />
+ Any value in x matching a value in this vector <br />
+ is assigned the nomatch value. For historical <br />
+ reasons, FALSE is equivalent to NULL.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p><a href="https://stackoverflow.com/questions/7530765/get-the-index-of-the-values-of-one-vector-in-another">https://stackoverflow.com/questions/7530765/get-the-index-of-the-values-of-one-vector-in-another</a></p>
+
+<p></p>
+
+<pre><code class="r">first  = c("a", "c", "b");
+second = c("c", "b", "a");
+match(second, first);
+
+&#35;   c b a  &lt;-second 
+[1] 2 3 1
+</code></pre>
+
+
+        <h3>Value</h3>
+
+        <p>A vector of the same length as x.<br />
+ An integer vector giving the position in table of <br />
+ the first match if there Is a match, otherwise <br />
+ nomatch.<br />
+ If x[i] Is found To equal table[j] Then the value <br />
+ returned In the i-th position Of the Return value <br />
+ Is j, For the smallest possible j. If no match Is <br />
+ found, the value Is nomatch.</p><h4>clr value class</h4><ul><li>integer</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>linq</em> version 2.33.856.6961 <a
+                href="../linq.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

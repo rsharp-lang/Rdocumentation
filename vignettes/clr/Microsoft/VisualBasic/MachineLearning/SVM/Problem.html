@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.SVM.Problem</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Problem {Microsoft.VisualBasic.MachineLearning.SVM}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Problem</h2>
+
+        <h3>Description</h3>
+
+        Encapsulates a problem, or set of vectors which must be classified.
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.SVM
+export class Problem {
+   # Number of vectors.
+   count: integer;
+   # Class labels.
+   Y: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Encoder/ColorClass.html">ColorClass[]</a>;
+   # Vector data.
+   X: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Node[].html">Node[][]</a>;
+   # Maximum index for a vector. this value is the width of each 
+   #  row in @``P:Microsoft.VisualBasic.MachineLearning.SVM.Problem.X`` and equals to the length of vector 
+   #  @``P:Microsoft.VisualBasic.MachineLearning.SVM.Problem.dimensionNames``
+   maxIndex: integer;
+   # the width of each row in @``P:Microsoft.VisualBasic.MachineLearning.SVM.Problem.X``
+   dimensionNames: string;
+}
+</code>
+        </pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

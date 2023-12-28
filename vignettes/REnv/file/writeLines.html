@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Write Lines to a Connection</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>writeLines {file}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Write Lines to a Connection</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Write text lines to a connection.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>writeLines</strong>(<i>text</i>,
+    <i>con</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>sep</i> = <span style='color: brown;'><strong>"
+"</strong></span>,
+    <i>fs</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>text</dt>
+<dd><p><p>A character vector, or a serials of compatible interface for get text contents.</p></p></dd>
+
+
+<dt>con</dt>
+<dd><p><p>A connection Object Or a character String.</p></p></dd>
+
+
+<dt>sep</dt>
+<dd><p><p>character string. A string to be written to the connection after each line of text.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>If the con is a character string, the function calls file to obtain a file connection<br />
+ which is opened for the duration of the function call.</p>
+
+<p>If the connection Is open it Is written from its current position. If it Is Not open, <br />
+ it Is opened For the duration Of the Call In "wt" mode And Then closed again.</p>
+
+<p>Normally writeLines Is used With a text-mode connection, And the Default separator Is <br />
+ converted To the normal separator For that platform (LF On Unix/Linux, CRLF On Windows). <br />
+ For more control, open a binary connection And specify the precise value you want <br />
+ written To the file In sep. For even more control, use writeChar On a binary connection.</p>
+
+<p>useBytes Is for expert use. Normally (when false) character strings with marked <br />
+ encodings are converted to the current encoding before being passed to the connection <br />
+ (which might do further re-encoding). useBytes = TRUE suppresses the re-encoding of <br />
+ marked strings so they are passed byte-by-byte to the connection: this can be useful <br />
+ When strings have already been re-encoded by e.g. iconv. (It Is invoked automatically <br />
+ For strings With marked encoding "bytes".)</p>
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>file</em> version 2.33.856.6961 <a
+                href="../file.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

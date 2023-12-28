@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Construct xgb.DMatrix object</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>xgb.DMatrix {xgboost}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Construct xgb.DMatrix object</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Construct xgb.DMatrix object from either a dense matrix, <br /> a sparse matrix, or a local file. Supported input file <br /> formats are either a libsvm text file or a binary file <br /> that was created previously by xgb.DMatrix.save).</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>xgb.DMatrix</strong>(<i>data</i>,
+    <i>label</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>validate.set</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>categorical.features</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>feature.names</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>data</dt>
+<dd><p><p>a matrix object (either numeric or integer), a dgCMatrix <br />
+ object, or a character string representing a filename.</p></p></dd>
+
+
+<dt>label</dt>
+<dd><p><p>labels for training data should be integer value</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        this function returns data object in these one of the listed data types: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/XGBoost/train/TrainData.html">TrainData</a>, <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/XGBoost/train/TestData.html">TestData</a>, <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/XGBoost/train/ValidationData.html">ValidationData</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/XGBoost/train/TrainData.html">TrainData</a></li><li><a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/XGBoost/train/TestData.html">TestData</a></li><li><a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/XGBoost/train/ValidationData.html">ValidationData</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>xgboost</em> version 1.0.0.0 <a
+                href="../xgboost.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

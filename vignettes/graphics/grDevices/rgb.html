@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RGB Color Specification</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>rgb {grDevices}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>RGB Color Specification</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> This function creates colors corresponding to the given intensities (between 0 and max) of the red, <br /> green and blue primaries. The colour specification refers to the standard sRGB colorspace <br /> (IEC standard 61966).<br /> <br /> An alpha transparency value can also be specified (As an opacity, so 0 means fully transparent And <br /> max means opaque). If alpha Is Not specified, an opaque colour Is generated.<br /> <br /> The names argument may be used To provide names For the colors.<br /> <br /> The values returned by these functions can be used With a col= specification In graphics functions <br /> Or In par.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>rgb</strong>(<i>red</i>, <i>green</i>, <i>blue</i>,
+    <i>alpha</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>names</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>maxColorValue</i> = <span style='color: green;'>1</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>red</dt>
+<dd><p><p>numeric vectors with values in [0, M] where M is maxColorValue. When this is 255, <br />
+ the red, blue, green, and alpha values are coerced to integers in 0:255 and the result is computed <br />
+ most efficiently.</p></p></dd>
+
+
+<dt>green</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>blue</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>alpha</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>names</dt>
+<dd><p><p>character vector. The names for the resulting vector.</p></p></dd>
+
+
+<dt>maxColorValue</dt>
+<dd><p><p>number giving the maximum of the color values range, see above.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The colors may be specified by passing a matrix or data frame as argument red, and leaving blue and <br />
+ green missing. In this case the first three columns of red are taken to be the red, green and blue <br />
+ values.</p>
+
+<p>Semi-transparent colors (0 &lt; alpha &lt; 1) are supported only on some devices: at the time Of <br />
+ writing On the pdf, windows, quartz And X11(type = "cairo") devices And associated bitmap devices <br />
+ (jpeg, png, bmp, tiff And bitmap). They are supported by several third-party devices such As those <br />
+ In packages Cairo, cairoDevice And JavaGD. Only some Of these devices support semi-transparent <br />
+ backgrounds.</p>
+
+<p>Most other graphics devices plot semi-transparent colors As fully transparent, usually With a <br />
+ warning When first encountered.</p>
+
+<p>NA values are Not allowed For any Of red, blue, green Or alpha.</p>
+
+
+        <h3>Value</h3>
+
+        <p>A character vector with elements of 7 or 9 characters, "#" followed by the red, blue, green and <br />
+ optionally alpha values in hexadecimal (after rescaling to 0 ... 255). The optional alpha values <br />
+ range from 0 (fully transparent) to 255 (opaque).</p>
+
+<p>R does Not use 'premultiplied alpha’.</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/vector.html">vector</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>grDevices</em> version 1.0.0.0 <a
+                href="../grDevices.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

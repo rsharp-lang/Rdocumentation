@@ -1,0 +1,415 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>file</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; file; REnv" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="File Manipulation These functions provide a low-level interface ..." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {file}">
+      <tbody>
+        <tr>
+          <td>{file}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>file</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' File Manipulation</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "file"</span><span style="color: blue;"> from</span><span style="color: brown"> "REnv"</span>;
+                           </code>
+    </p>
+    <p><h4>File Manipulation</h4>
+
+<p>These functions provide a low-level interface to the computer's file system.</p></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line">
+        <tbody><tr>
+  <td id="fileSha1">
+    <a href="./file/fileSha1.html">fileSha1</a>
+  </td>
+  <td><h1>Generate SHA1 checksum of a file</h1></td>
+</tr>
+<tr>
+  <td id="getRelativePath">
+    <a href="./file/getRelativePath.html">getRelativePath</a>
+  </td>
+  <td><p>Gets the relative pathname relative to a directory.</p></td>
+</tr>
+<tr>
+  <td id="file.size">
+    <a href="./file/file.size.html">file.size</a>
+  </td>
+  <td><h2>Extract File Information</h2>
+
+<p>Utility function to extract information about files on the user's file systems.</p></td>
+</tr>
+<tr>
+  <td id="file.path">
+    <a href="./file/file.path.html">file.path</a>
+  </td>
+  <td><p>Construct Path to File</p>
+
+<p>Construct the path to a file from components in a<br />
+ platform-independent way.</p></td>
+</tr>
+<tr>
+  <td id="file.info">
+    <a href="./file/file.info.html">file.info</a>
+  </td>
+  <td><p>Extract File Information</p>
+
+<p>Utility function to extract information about files on the user's file systems.</p></td>
+</tr>
+<tr>
+  <td id="file.copy">
+    <a href="./file/file.copy.html">file.copy</a>
+  </td>
+  <td><p><code>file.copy</code> works in a similar way to <code>file.append</code> but with the arguments <br />
+ in the natural order for copying. Copying to existing destination files is <br />
+ skipped unless overwrite = TRUE. The to argument can specify a single existing <br />
+ directory. If copy.mode = TRUE file read/write/execute permissions are copied <br />
+ where possible, restricted by ‘umask’. (On Windows this applies only to files.<br />
+ ) Other security attributes such as ACLs are not copied. On a POSIX filesystem <br />
+ the targets of symbolic links will be copied rather than the links themselves, <br />
+ and hard links are copied separately. Using copy.date = TRUE may or may not <br />
+ copy the timestamp exactly (for example, fractional seconds may be omitted), <br />
+ but is more likely to do so as from R 3.4.0.</p></td>
+</tr>
+<tr>
+  <td id="file.ext">
+    <a href="./file/file.ext.html">file.ext</a>
+  </td>
+  <td><p>Get file extension name</p></td>
+</tr>
+<tr>
+  <td id="dir.copy">
+    <a href="./file/dir.copy.html">dir.copy</a>
+  </td>
+  <td><p>copy file contents in one dir to another dir</p></td>
+</tr>
+<tr>
+  <td id="dir.open">
+    <a href="./file/dir.open.html">dir.open</a>
+  </td>
+  <td><p>Open an interface to a specific local filesystem location</p></td>
+</tr>
+<tr>
+  <td id="normalizePath">
+    <a href="./file/normalizePath.html">normalizePath</a>
+  </td>
+  <td><p>Express File Paths in Canonical Form</p>
+
+<p>Convert file paths to canonical form for the platform, to display them in a <br />
+ user-understandable form and so that relative and absolute paths can be <br />
+ compared.</p></td>
+</tr>
+<tr>
+  <td id="R.home">
+    <a href="./file/R.home.html">R.home</a>
+  </td>
+  <td><p>Return the R Home Directory</p>
+
+<p>Return the R home directory, or the full path to a <br />
+ component of the R installation.</p>
+
+<p>The R home directory is the top-level directory of the R installation being run.</p>
+
+<p>The R home directory Is often referred To As R_HOME, And Is the value Of an <br />
+ environment variable Of that name In an R session. It can be found outside <br />
+ an R session by R RHOME.</p></td>
+</tr>
+<tr>
+  <td id="dirname">
+    <a href="./file/dirname.html">dirname</a>
+  </td>
+  <td><p><code>dirname</code> returns the part of the <code>path</code> up to but excluding the last path separator, <br />
+ or "." if there is no path separator.</p></td>
+</tr>
+<tr>
+  <td id="list.files">
+    <a href="./file/list.files.html">list.files</a>
+  </td>
+  <td><p>List the Files in a Directory/Folder</p></td>
+</tr>
+<tr>
+  <td id="list.dirs">
+    <a href="./file/list.dirs.html">list.dirs</a>
+  </td>
+  <td><p>List the Files in a Directory/Folder</p></td>
+</tr>
+<tr>
+  <td id="file_ext">
+    <a href="./file/file_ext.html">file_ext</a>
+  </td>
+  <td><h2>File Utilities</h2></td>
+</tr>
+<tr>
+  <td id="basename">
+    <a href="./file/basename.html">basename</a>
+  </td>
+  <td><p>removes all of the path up to and including the last path separator (if any).</p></td>
+</tr>
+<tr>
+  <td id="normalizeFileName">
+    <a href="./file/normalizeFileName.html">normalizeFileName</a>
+  </td>
+  <td><p>removes all of the invalid character for the windows file name</p></td>
+</tr>
+<tr>
+  <td id="file.exists">
+    <a href="./file/file.exists.html">file.exists</a>
+  </td>
+  <td><p><code>file.exists</code> returns a logical vector indicating whether the files named by its <br />
+ argument exist. (Here ‘exists’ is in the sense of the system's stat call: a file <br />
+ will be reported as existing only if you have the permissions needed by stat. <br />
+ Existence can also be checked by file.access, which might use different permissions <br />
+ and so obtain a different result. Note that the existence of a file does not <br />
+ imply that it is readable: for that use file.access.) What constitutes a ‘file’ <br />
+ is system-dependent, but should include directories. (However, directory names <br />
+ must not include a trailing backslash or slash on Windows.) Note that if the file <br />
+ is a symbolic link on a Unix-alike, the result indicates if the link points to <br />
+ an actual file, not just if the link exists. Lastly, note the different function <br />
+ exists which checks for existence of R objects.</p></td>
+</tr>
+<tr>
+  <td id="file.allocate">
+    <a href="./file/file.allocate.html">file.allocate</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="dir.create">
+    <a href="./file/dir.create.html">dir.create</a>
+  </td>
+  <td><p>dir.create creates the last element of the path, unless recursive = TRUE. <br />
+ Trailing path separators are discarded. On Windows drives are allowed in <br />
+ the path specification and unless the path is rooted, it will be interpreted <br />
+ relative to the current directory on that drive. mode is ignored on Windows.</p>
+
+<p>One of the idiosyncrasies of Windows Is that directory creation may report <br />
+ success but create a directory with a different name, for example dir.create("G.S.") <br />
+ creates '"G.S"’. This is undocumented, and what are the precise circumstances <br />
+ is unknown (and might depend on the version of Windows). Also avoid directory <br />
+ names with a trailing space.</p></td>
+</tr>
+<tr>
+  <td id="dir.exists">
+    <a href="./file/dir.exists.html">dir.exists</a>
+  </td>
+  <td><p>dir.exists returns a logical vector of TRUE or FALSE values (without names).</p></td>
+</tr>
+<tr>
+  <td id="readLines">
+    <a href="./file/readLines.html">readLines</a>
+  </td>
+  <td><p>Read Text Lines from a Connection</p>
+
+<p>Read some or all text lines from a connection.</p></td>
+</tr>
+<tr>
+  <td id="readText">
+    <a href="./file/readText.html">readText</a>
+  </td>
+  <td><p>Reads all characters from the current position to the end of the given stream.</p></td>
+</tr>
+<tr>
+  <td id="writeLines">
+    <a href="./file/writeLines.html">writeLines</a>
+  </td>
+  <td><h3>Write Lines to a Connection</h3>
+
+<p>Write text lines to a connection.</p></td>
+</tr>
+<tr>
+  <td id="getwd">
+    <a href="./file/getwd.html">getwd</a>
+  </td>
+  <td><p>getwd returns an absolute filepath representing the current working directory of the R process;</p></td>
+</tr>
+<tr>
+  <td id="setwd">
+    <a href="./file/setwd.html">setwd</a>
+  </td>
+  <td><p>setwd(dir) is used to set the working directory to dir.</p></td>
+</tr>
+<tr>
+  <td id="save.list">
+    <a href="./file/save.list.html">save.list</a>
+  </td>
+  <td><p>Save a R# object list in json file format</p></td>
+</tr>
+<tr>
+  <td id="read.list">
+    <a href="./file/read.list.html">read.list</a>
+  </td>
+  <td><p>read list from a given json file</p></td>
+</tr>
+<tr>
+  <td id="file">
+    <a href="./file/file.html">file</a>
+  </td>
+  <td><p>Functions to create, open and close connections, i.e., <br />
+ "generalized files", such as possibly compressed files, <br />
+ URLs, pipes, etc.</p></td>
+</tr>
+<tr>
+  <td id="readBin">
+    <a href="./file/readBin.html">readBin</a>
+  </td>
+  <td><h3>ransfer Binary Data To and From Connections</h3>
+
+<p>Read binary data from or write binary data to a connection<br />
+ or raw vector.</p></td>
+</tr>
+<tr>
+  <td id="writeBin">
+    <a href="./file/writeBin.html">writeBin</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="close">
+    <a href="./file/close.html">close</a>
+  </td>
+  <td><p>close connections, i.e., “generalized files”, such as possibly compressed files, URLs, pipes, etc.</p></td>
+</tr>
+<tr>
+  <td id="open.zip">
+    <a href="./file/open.zip.html">open.zip</a>
+  </td>
+  <td><p>open a zip file</p></td>
+</tr>
+<tr>
+  <td id="open.gzip">
+    <a href="./file/open.gzip.html">open.gzip</a>
+  </td>
+  <td><p>decompression of a gzip file and get the deflate file data stream.</p></td>
+</tr>
+<tr>
+  <td id="buffer">
+    <a href="./file/buffer.html">buffer</a>
+  </td>
+  <td><p>create a new buffer object</p></td>
+</tr>
+<tr>
+  <td id="tempfile">
+    <a href="./file/tempfile.html">tempfile</a>
+  </td>
+  <td><h3>Create Names for Temporary Files</h3>
+
+<p><code>tempfile</code> returns a vector of character strings <br />
+ which can be used as names for temporary files.</p></td>
+</tr>
+<tr>
+  <td id="tempdir">
+    <a href="./file/tempdir.html">tempdir</a>
+  </td>
+  <td><h3>Create Names For Temporary Files</h3></td>
+</tr>
+<tr>
+  <td id="file.rename">
+    <a href="./file/file.rename.html">file.rename</a>
+  </td>
+  <td><p>File renames</p></td>
+</tr>
+<tr>
+  <td id="file.remove">
+    <a href="./file/file.remove.html">file.remove</a>
+  </td>
+  <td><h2>Delete files or directories</h2>
+
+<p><code>file.remove</code> attempts to remove the files named <br />
+ in its argument. On most Unix platforms ‘file’ <br />
+ includes empty directories, symbolic links, fifos <br />
+ and sockets. On Windows, ‘file’ means a regular file <br />
+ and not, say, an empty directory.</p></td>
+</tr>
+<tr>
+  <td id="unlink">
+    <a href="./file/unlink.html">unlink</a>
+  </td>
+  <td><p>Delete files or directories</p></td>
+</tr>
+<tr>
+  <td id="erase">
+    <a href="./file/erase.html">erase</a>
+  </td>
+  <td><p>delete all contents in target directory</p></td>
+</tr>
+<tr>
+  <td id="is.sysdir">
+    <a href="./file/is.sysdir.html">is.sysdir</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="dataUri">
+    <a href="./file/dataUri.html">dataUri</a>
+  </td>
+  <td><p>read file as data URI string</p></td>
+</tr>
+<tr>
+  <td id="bytes">
+    <a href="./file/bytes.html">bytes</a>
+  </td>
+  <td><p>create a in-memory byte stream object</p></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

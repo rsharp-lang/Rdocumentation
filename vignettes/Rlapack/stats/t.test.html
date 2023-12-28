@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student's t-Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>t.test {stats}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Student's t-Test</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Performs one and two sample t-tests on vectors of data.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>t.test</strong>(<i>x</i>,
+    <i>y</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>alternative</i> = TwoSided,
+    <i>mu</i> = <span style='color: green;'>0</span>,
+    <i>paired</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>var.equal</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>conf.level</i> = <span style='color: green;'>0.95</span>,
+    <i>t</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>a (non-empty) numeric vector of data values.</p></p></dd>
+
+
+<dt>y</dt>
+<dd><p><p>an optional (non-empty) numeric vector of data values.</p></p></dd>
+
+
+<dt>alternative</dt>
+<dd><p><p>a character string specifying the alternative hypothesis, must be one of <br />
+ "two.sided" (default), "greater" or "less". You can specify just the initial <br />
+ letter.</p></p></dd>
+
+
+<dt>mu</dt>
+<dd><p><p>a number indicating the true value of the mean (or difference in means if you <br />
+ are performing a two sample test).</p></p></dd>
+
+
+<dt>paired</dt>
+<dd><p><p>a logical indicating whether you want a paired t-test.</p></p></dd>
+
+
+<dt>var.equal</dt>
+<dd><p><p>a logical variable indicating whether to treat the two variances as being equal. <br />
+ If TRUE then the pooled variance is used to estimate the variance otherwise the <br />
+ Welch (or Satterthwaite) approximation to the degrees of freedom is used.</p></p></dd>
+
+
+<dt>conf.level</dt>
+<dd><p><p>confidence level of the interval.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        this function returns data object in these one of the listed data types: <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/TwoSampleResult.html">TwoSampleResult</a>, <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/TtestResult.html">TtestResult</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/TwoSampleResult.html">TwoSampleResult</a></li><li><a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/TtestResult.html">TtestResult</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stats</em> version 5.0.1.2389 <a
+                href="../stats.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

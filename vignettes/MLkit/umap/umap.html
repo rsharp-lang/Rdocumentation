@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>umap {umap}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>umap</strong>(<i>data</i>,
+    <i>dimension</i> = <span style='color: green;'>2</span>,
+    <i>numberOfNeighbors</i> = <span style='color: green;'>15</span>,
+    <i>localConnectivity</i> = <span style='color: green;'>1</span>,
+    <i>KnnIter</i> = <span style='color: green;'>64</span>,
+    <i>bandwidth</i> = <span style='color: green;'>1</span>,
+    <i>customNumberOfEpochs</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>customMapCutoff</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>debug</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>KDsearch</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>spectral.cos</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>setOpMixRatio</i> = <span style='color: green;'>1</span>,
+    <i>minDist</i> = <span style='color: green;'>0.10000000149011612</span>,
+    <i>spread</i> = <span style='color: green;'>1</span>,
+    <i>repulsionStrength</i> = <span style='color: green;'>1</span>,
+    <i>learningRate</i> = <span style='color: green;'>1</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>data</dt>
+<dd><p><p>data must be normalized!</p></p></dd>
+
+
+<dt>dimension</dt>
+<dd><p><p>default 2, The dimension of the space to embed into.</p></p></dd>
+
+
+<dt>numberOfNeighbors</dt>
+<dd><p><p>default 15, The size of local neighborhood (in terms of number of neighboring sample points) used for manifold approximation.</p></p></dd>
+
+
+<dt>customMapCutoff</dt>
+<dd><p><p>cutoff value in range <code>[0,1]</code></p></p></dd>
+
+
+<dt>customNumberOfEpochs</dt>
+<dd><p><p>default None, The number of training epochs to be used in optimizing the low dimensional embedding. <br />
+ Larger values result in more accurate embeddings.</p></p></dd>
+
+
+<dt>KDsearch</dt>
+<dd><p><p>knn search via KD-tree?</p></p></dd>
+
+
+<dt>localConnectivity</dt>
+<dd><p><p>default 1, The local connectivity required -- i.e. the number of nearest neighbors that should be assumed to be connected at a local level.</p></p></dd>
+
+
+<dt>setOpMixRatio</dt>
+<dd><p><p>default 1.0, The value of this parameter should be between 0.0 and 1.0; a value of 1.0 will use a pure fuzzy union, while 0.0 will use a pure fuzzy intersection.</p></p></dd>
+
+
+<dt>minDist</dt>
+<dd><p><p>default 0.1, The effective minimum distance between embedded points.</p></p></dd>
+
+
+<dt>spread</dt>
+<dd><p><p>default 1.0, The effective scale of embedded points. In combination with <code>min_dist</code> this determines how clustered/clumped the embedded points are.</p></p></dd>
+
+
+<dt>learningRate</dt>
+<dd><p><p>default 1.0, The initial learning rate for the embedding optimization.</p></p></dd>
+
+
+<dt>repulsionStrength</dt>
+<dd><p><p>default 1.0, Weighting applied to negative samples in low dimensional embedding optimization.</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        this function returns data object of type list. the list data also has some specificied data fields: <code>list(labels, umap)</code>.<h4>clr value class</h4><ul><li>list</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>umap</em> version 1.0.0.0 <a
+                href="../umap.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

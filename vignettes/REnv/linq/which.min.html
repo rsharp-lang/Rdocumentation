@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Where is the Min() or Max() or first TRUE or FALSE ?</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>which.min {linq}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Where is the Min() or Max() or first TRUE or FALSE ?</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Determines the location, i.e., index of the (first) minimum or maximum of a <br /> numeric (or logical) vector.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>which.min</strong>(<i>x</i>,
+    <i>eval</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>numeric (logical, integer or double) vector or an R object for which the internal <br />
+ coercion to double works whose min or max is searched for.</p></p></dd>
+
+
+<dt>eval</dt>
+<dd><p><p>-</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+
+        <h3>Value</h3>
+
+        <p>Missing and NaN values are discarded.</p>
+
+<p>an integer Or on 64-bit platforms, if length(x) = n>= 2^31 an integer valued <br />
+ double of length 1 Or 0 (iff x has no non-NAs), giving the index of the first <br />
+ minimum Or maximum respectively of x.</p>
+
+<p>If this extremum Is unique (Or empty), the results are the same As (but more <br />
+ efficient than) which(x == min(x, na.rm = True)) Or which(x == max(x, na.rm = True)) <br />
+ respectively.</p>
+
+<p>Logical x – First True Or False</p>
+
+<p>For a logical vector x with both FALSE And TRUE values, which.min(x) And <br />
+ which.max(x) return the index of the first FALSE Or TRUE, respectively, as <br />
+ FALSE &lt; TRUE. However, match(FALSE, x) Or match(TRUE, x) are typically <br />
+ preferred, as they do indicate mismatches.</p><h4>clr value class</h4><ul><li>integer</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>linq</em> version 2.33.856.6961 <a
+                href="../linq.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

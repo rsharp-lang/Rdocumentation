@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Non-Parametric Bootstrapping</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>bootstrap {math}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Non-Parametric Bootstrapping</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> See Efron and Tibshirani (1993) for details on this function.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>bootstrap</strong>(<i>x</i>, <i>nboot</i>,
+    <i>theta</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>func</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>...</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>a vector or a dataframe that containing the data. <br />
+ To bootstrap more complex data structures (e.g. bivariate data) <br />
+ see the last example below.</p></p></dd>
+
+
+<dt>nboot</dt>
+<dd><p><p>The number of bootstrap samples desired.</p></p></dd>
+
+
+<dt>theta</dt>
+<dd><p><p>function to be bootstrapped. Takes x as an <br />
+ argument, and may take additional arguments (see below and last <br />
+ example).</p></p></dd>
+
+
+<dt>func</dt>
+<dd><p><p>(optional) argument specifying the functional <br />
+ the distribution of thetahat that is desired. If func is <br />
+ specified, the jackknife after-bootstrap estimate of its standard<br />
+ error is also returned. See example below.</p></p></dd>
+
+
+<dt>args</dt>
+<dd><p><p>any additional arguments to be passed to theta</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>Efron, B. and Tibshirani, R. (1986). The bootstrap method for <br />
+ standard errors, confidence intervals, and other measures of <br />
+ statistical accuracy. Statistical Science, Vol 1., No. 1, pp 1-35.</p>
+
+<p>Efron, B. (1992) Jackknife-after-bootstrap standard errors And <br />
+ influence functions. J. Roy. Stat. Soc. B, vol 54, pages 83-127</p>
+
+<p>Efron, B. And Tibshirani, R. (1993) An Introduction to the <br />
+ Bootstrap. Chapman And Hall, New York, London.</p>
+
+
+        <h3>Value</h3>
+
+        <p>list with the following components:</p>
+
+<ol>
+<li>thetastar       the nboot bootstrap values Of theta</li>
+<li>func.thetastar  the functional func Of the bootstrap distribution Of thetastar, If func was specified</li>
+<li>jack.boot.val   the jackknife-after-bootstrap values For func, If func was specified</li>
+<li>jack.boot.se    the jackknife-after-bootstrap standard Error estimate Of func, If func was specified</li>
+<li><p>call            the deparsed call</p>
+
+<p>and this function will returns the bootstrap data collection if the<br />
+<strong><code>theta</code></strong> function is not specificed.</p></li>
+</ol> the list data also has some specificied data fields: <code>list(thetastar, func.thetastar, jack.boot.val, jack.boot.se, call)</code>.<h4>clr value class</h4><ul><li>list</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>math</em> version 5.0.1.2389 <a
+                href="../math.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

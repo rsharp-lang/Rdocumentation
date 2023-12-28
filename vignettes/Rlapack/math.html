@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>math</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; math; Rlapack" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="the R# math module..." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {math}">
+      <tbody>
+        <tr>
+          <td>{math}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>math</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' the R# math module</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "math"</span><span style="color: blue;"> from</span><span style="color: brown"> "Rlapack"</span>;
+                           </code>
+    </p>
+    <p><p>the R# math module</p></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           <p>the R# math module</p>
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line">
+        <tbody><tr>
+  <td id="diff_entropy">
+    <a href="./math/diff_entropy.html">diff_entropy</a>
+  </td>
+  <td><p>measure similarity between two data vector via entropy difference</p></td>
+</tr>
+<tr>
+  <td id="solve.RK4">
+    <a href="./math/solve.RK4.html">solve.RK4</a>
+  </td>
+  <td><p>solve a given ODE system</p></td>
+</tr>
+<tr>
+  <td id="deSolve">
+    <a href="./math/deSolve.html">deSolve</a>
+  </td>
+  <td><p>solve a given ODE system</p></td>
+</tr>
+<tr>
+  <td id="hist">
+    <a href="./math/hist.html">hist</a>
+  </td>
+  <td><p>Do fixed width cut bins</p></td>
+</tr>
+<tr>
+  <td id="gini">
+    <a href="./math/gini.html">gini</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="bootstrap">
+    <a href="./math/bootstrap.html">bootstrap</a>
+  </td>
+  <td><h3>Non-Parametric Bootstrapping</h3>
+
+<p>See Efron and Tibshirani (1993) for details on this function.</p></td>
+</tr>
+<tr>
+  <td id="loess">
+    <a href="./math/loess.html">loess</a>
+  </td>
+  <td><p>loess fit</p></td>
+</tr>
+<tr>
+  <td id="glm">
+    <a href="./math/glm.html">glm</a>
+  </td>
+  <td><h2>Fitting Generalized Linear Models</h2>
+
+<p>glm is used to fit generalized linear models, specified by <br />
+ giving a symbolic description of the linear predictor and<br />
+ a description of the error distribution.</p></td>
+</tr>
+<tr>
+  <td id="binomial">
+    <a href="./math/binomial.html">binomial</a>
+  </td>
+  <td><h2>Family Objects for Models</h2>
+
+<p>Family objects provide a convenient way to specify the <br />
+ details of the models used by functions such as glm. <br />
+ See the documentation for glm for the details on how <br />
+ such model fitting takes place.</p></td>
+</tr>
+<tr>
+  <td id="as.lm_call">
+    <a href="./math/as.lm_call.html">as.lm_call</a>
+  </td>
+  <td><p>cast the list data dump from the R <code>lm</code> result</p></td>
+</tr>
+<tr>
+  <td id="lm">
+    <a href="./math/lm.html">lm</a>
+  </td>
+  <td><h3>Fitting Linear Models</h3>
+
+<p>do linear modelling, lm is used to fit linear models. It can be used <br />
+ to carry out regression, single stratum analysis of variance and <br />
+ analysis of covariance (although aov may provide a more convenient <br />
+ interface for these).</p></td>
+</tr>
+<tr>
+  <td id="as.formula">
+    <a href="./math/as.formula.html">as.formula</a>
+  </td>
+  <td><p>create a lambda function based on the <code>lm</code> result.</p></td>
+</tr>
+<tr>
+  <td id="predict">
+    <a href="./math/predict.html">predict</a>
+  </td>
+  <td><h3>Model Predictions</h3>
+
+<p>predict is a generic function for predictions from the results of <br />
+ various model fitting functions. The function invokes particular <br />
+ methods which depend on the class of the first argument.</p></td>
+</tr>
+<tr>
+  <td id="cosine">
+    <a href="./math/cosine.html">cosine</a>
+  </td>
+  <td><p>Evaluate cos similarity of two vector</p>
+
+<p>the given vector x and y should be contains the elements in the same length.</p></td>
+</tr>
+<tr>
+  <td id="sim">
+    <a href="./math/sim.html">sim</a>
+  </td>
+  <td><p>Create a similarity matrix</p></td>
+</tr>
+<tr>
+  <td id="RamerDouglasPeucker">
+    <a href="./math/RamerDouglasPeucker.html">RamerDouglasPeucker</a>
+  </td>
+  <td><h3>Ramer-Douglas-Peucker algorithm for curve fitting with a PolyLine</h3>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Ramer-Douglas-Peucker_algorithm">Ramer-Douglas-Peucker algorithm</a> <br />
+ for reducing the number of points on a curve.</p>
+
+<p>If there are no more than two points it does not make sense to simplify.<br />
+ In this case the input is returned without further checks of <code>x</code> and <code>y</code>.<br />
+ In particular, the input is not checked for <code>NA</code> values.</p>
+
+<p></p>
+
+<pre><code class="r">RamerDouglasPeucker(x = c(0, 1, 3, 5), y = c(2, 1, 0, 1), epsilon = 0.5)
+</code></pre></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

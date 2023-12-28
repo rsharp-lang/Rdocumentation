@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Construct Path to File</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>file.path {file}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Construct Path to File</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Construct the path to a file from components in a<br /> platform-independent way.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>file.path</strong>(<i>...</i>,
+    <i>fsep</i> = <span style='color: brown;'><strong>"/"</strong></span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>character vectors.  Long vectors are not supported.</p></p></dd>
+
+
+<dt>fsep</dt>
+<dd><p><p>the path separator to use (assumed to be ASCII).<br />
+ The components are by default separated by ‘/’ (not ‘\’) on<br />
+ Windows.</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The implementation is designed to be fast (faster than ‘paste’) as<br />
+ this Function is() used extensively In R itself.<br />
+ It can also be used for environment paths such as 'PATH’ and<br />
+ 'R_LIBS’ with ‘fsep = .Platform$path.sep’.<br />
+ Trailing Path separators are invalid For Windows file paths apart<br />
+ from '/’ and ‘d:/’ (although some functions/utilities do accept<br />
+ them), so a trailing '/’ or ‘\’ is removed there.</p>
+
+
+        <h3>Value</h3>
+
+        <p>A character vector of the arguments concatenated term-by-term and<br />
+ separated by 'fsep’ if all arguments have positive length;<br />
+ otherwise, an empty character vector (unlike 'paste’).</p>
+
+<p>An element Of the result will be marked (see 'Encoding’ as UTF-8<br />
+ If run In a UTF-8 locale (When marked inputs are converted To<br />
+ UTF-8) Or if an component of the result Is marked as UTF-8, Or as<br />
+ Latin-1 in a non-Latin-1 locale.</p><h4>clr value class</h4><ul><li>string</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>file</em> version 2.33.856.6961 <a
+                href="../file.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>
