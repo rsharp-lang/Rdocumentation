@@ -2,6 +2,8 @@ imports "package_utils" from "devkit";
 
 require(REnv);
 
+options(r_syntax.js = "https://rdocumentation.rsharp.net/assets/R_syntax.js");
+
 # set input/export
 const vignettes   = `${dirname(@dir)}/vignettes`;
 const app_dir     = @HOME;
