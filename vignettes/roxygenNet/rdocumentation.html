@@ -10,7 +10,7 @@
     <meta name="keywords" content="R#; rdocumentation; roxygenNet" />
     <meta name="generator" content="https://github.com/rsharp-lang" />
     <meta name="theme-color" content="#333" />
-    <meta name="description" content="..." />
+    <meta name="description" content="Make documents for R# symbol object..." />
     <meta class="foundation-data-attribute-namespace" />
     <meta class="foundation-mq-xxlarge" />
     <meta class="foundation-mq-xlarge" />
@@ -63,34 +63,41 @@ table caption {font-size:14px;font-weight:bolder;}
     <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
       <code>
         <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
-                               <br /><br /><span style="color: green;">{$desc_comments}</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "rdocumentation"</span><span style="color: blue;"> from</span><span style="color: brown"> "roxygenNet"</span>;
+                               <br /><br /><span style="color: green;">#' Make documents for R# symbol object</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "rdocumentation"</span><span style="color: blue;"> from</span><span style="color: brown"> "roxygenNet"</span>;
                            </code>
     </p>
-    <p></p>
+    <p><p>Make documents for R# symbol object</p></p>
     <blockquote>
       <p style="font-style: italic; font-size: 0.9em;">
                            
                            </p>
     </blockquote>
     <div id="main-wrapper">
+      <table class="table-three-line" style="display: none">
+        <caption>.NET clr type export</caption>
+        <tbody></tbody>
+      </table>
+      <br />
+      <br />
       <table class="table-three-line">
+        <caption>.NET clr function exports</caption>
         <tbody><tr>
   <td id="documentation">
     <a href="./rdocumentation/documentation.html">documentation</a>
   </td>
-  <td></td>
+  <td><p>make documentation for a R# function or symbol</p></td>
 </tr>
 <tr>
   <td id="pull_clr_types">
     <a href="./rdocumentation/pull_clr_types.html">pull_clr_types</a>
   </td>
-  <td></td>
+  <td><p>pull all clr type in the cache and then clear up the cache</p></td>
 </tr>
 <tr>
   <td id="clr_docs">
     <a href="./rdocumentation/clr_docs.html">clr_docs</a>
   </td>
-  <td><p>make documents based on a given clr type meta data</p></td>
+  <td><p>make documents based on a given clr @<code>T:System.Type</code> meta data</p></td>
 </tr>
 <tr>
   <td id="getFunctions">

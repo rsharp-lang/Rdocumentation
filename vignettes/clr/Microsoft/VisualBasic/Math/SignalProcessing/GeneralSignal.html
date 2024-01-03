@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        
+        <p>a tuple of the signal vector data <a href="/vignettes/clr/Microsoft/VisualBasic/Math/SignalProcessing/GeneralSignal.html">GeneralSignal</a>.<a href="#">Measures</a> and <a href="/vignettes/clr/Microsoft/VisualBasic/Math/SignalProcessing/GeneralSignal.html">GeneralSignal</a>.<a href="#">Strength</a></p>
 
         <h3>Declare</h3>        
 
@@ -30,15 +30,15 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.Math.SignalProcessing
 export class GeneralSignal {
+   meta: list;
+   # the unique reference id, or the variable name
+   reference: string;
    # usually is the time in unit second.(x axis)
    Measures: double;
    # the signal strength.(y axis)
    Strength: double;
-   # the unique reference id, or the variable name
-   reference: string;
    measureUnit: string;
    description: string;
-   meta: list;
    weight: double;
    MeasureRange: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Ranges/Model/DoubleRange.html">DoubleRange</a>;
 }

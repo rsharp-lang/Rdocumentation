@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        The wav file model
+        <p>The wav file model</p>
 
         <h3>Declare</h3>        
 
@@ -33,13 +33,14 @@ export class WaveFile {
    # Contains the letters "RIFF" in ASCII form (0x52494646 big-endian form).
    #  Resource Interchange File Format.
    magic: string;
-   # ``36 + SubChunk2Size``, or more precisely:
-   #  
-   #  ```
-   #  4 + (8 + SubChunk1Size) + (8 + SubChunk2Size)
-   #  ```
-   #  
-   #  This Is the size of the rest of the chunk 
+   # <code>36 + SubChunk2Size</code>, or more precisely:
+   # 
+   # 
+   # 
+   # <pre><code class="">4 + (8 + SubChunk1Size) + (8 + SubChunk2Size)
+   # </code></pre>
+   # 
+   # This Is the size of the rest of the chunk 
    #  following this number.  This Is the size Of the 
    #  entire file In bytes minus 8 bytes For the
    #  two fields Not included In this count:

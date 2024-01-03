@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SMRUCC.Rsharp.Runtime.Interop.RTypeExportAttribute</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>RTypeExportAttribute {SMRUCC.Rsharp.Runtime.Interop}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>RTypeExportAttribute</h2>
+
+        <h3>Description</h3>
+
+        <p>export data type to <code>R&#35;</code> runtime environment</p>
+
+<p>type information will be imports into current runtime <br />
+ context environment when do package module imports at <br />
+ function invoke <br />
+ @<code>M:SMRUCC.Rsharp.Development.Package.ImportsPackage.ImportsStaticInternalImpl(SMRUCC.Rsharp.Runtime.Environment,System.Type,System.Boolean)</code></p>
+
+<p>the type export information usually be used for the .NET clr de-serilization<br />
+ operation, example as:</p>
+
+<ol>
+<li>xml de-serialization:  loadXml("...", typeof = "type_export_name")</li>
+</ol><br /><p>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Interop/RInteropAttribute.html">RInteropAttribute</a> class.</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace SMRUCC.Rsharp.Runtime.Interop
+export class RTypeExportAttribute extends <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Interop/RInteropAttribute.html">RInteropAttribute</a> {
+   # type name
+   name: string;
+   model: <a href="/vignettes/clr/System/Type.html">Type</a>;
+   TypeId: <i>any</i> kind;
+}
+</code>
+        </pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

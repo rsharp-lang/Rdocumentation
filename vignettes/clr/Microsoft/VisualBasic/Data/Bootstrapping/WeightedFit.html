@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.Data.Bootstrapping.WeightedFit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>WeightedFit {Microsoft.VisualBasic.Data.Bootstrapping}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>WeightedFit</h2>
+
+        <h3>Description</h3>
+
+        <p>加权拟合的结果</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.Data.Bootstrapping
+export class WeightedFit {
+   # FReg: Fisher F statistic for regression
+   FisherF: double;
+   # RYSQ: Multiple correlation coefficient (R2，相关系数)
+   CorrelationCoefficient: double;
+   # SDV: Standard deviation of errors
+   StandardDeviation: double;
+   # DY: Residual values of Y
+   Residuals: double;
+   # SEC: Std Error of coefficients
+   CoefficientsStandardError: double;
+   # V: Least squares and var/covar matrix
+   VarianceMatrix: <a href="/vignettes/clr/System/Double.html">Double[,]</a>;
+   # 一元多项式的数据模型
+   Polynomial: <a href="/vignettes/clr/Microsoft/VisualBasic/Math/LinearAlgebra/Formula.html">Formula</a>;
+   # Ycalc: Calculated values of Y.(根据所拟合的公式所计算出来的预测值)
+   ErrorTest: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/Bootstrapping/IFitError.html">IFitError[]</a>;
+}
+</code>
+        </pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

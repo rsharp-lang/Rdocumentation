@@ -30,7 +30,9 @@
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>gaussian_fit</strong>(<i>sig</i>,
     <i>max.peaks</i> = <span style='color: green;'>100</span>,
     <i>max.loops</i> = <span style='color: green;'>10000</span>,
-    <i>eps</i> = <span style='color: green;'>1E-05</span>);</code></pre>
+    <i>eps</i> = <span style='color: green;'>1E-05</span>,
+    <i>gauss.clr</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>sine.kernel</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -53,6 +55,10 @@
 <dd><p><p>-</p></p></dd>
 
 
+<dt>gauss.clr</dt>
+<dd><p><p>returns the clr raw object of the gauss peaks</p></p></dd>
+
+
 <dt>env</dt>
 <dd><p><p>-</p></p></dd>
 
@@ -66,7 +72,7 @@
 
         <h3>Value</h3>
 
-        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+        this function returns data object in these one of the listed data types: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a>, <a href="/vignettes/clr/Microsoft/VisualBasic/Math/SignalProcessing/EmGaussian/Variable.html">Variable</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a></li><li><a href="/vignettes/clr/Microsoft/VisualBasic/Math/SignalProcessing/EmGaussian/Variable.html">Variable</a></li></ul>
 
         <h3 style="display: none;">Examples</h3>
 

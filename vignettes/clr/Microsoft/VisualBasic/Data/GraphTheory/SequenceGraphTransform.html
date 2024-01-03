@@ -22,14 +22,30 @@
 
         <h3>Description</h3>
 
-        Sequence Graph Transform (SGT) — Sequence Embedding for Clustering, Classification, and Search
- 
- Sequence Graph Transform (SGT) is a sequence embedding function. SGT extracts 
- the short- and long-term sequence features and embeds them in a finite-dimensional 
- feature space. The long and short term patterns embedded in SGT can be tuned 
- without any increase in the computation.
- 
- > https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py
+        <p>Sequence Graph Transform (SGT) — Sequence Embedding for Clustering, Classification, and Search</p>
+
+<p>Sequence Graph Transform (SGT) is a sequence embedding function. SGT extracts <br />
+ the short- and long-term sequence features and embeds them in a finite-dimensional <br />
+ feature space. The long and short term patterns embedded in SGT can be tuned <br />
+ without any increase in the computation.</p>
+
+<blockquote>
+  <p><a href="https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py">https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py</a></p>
+</blockquote>
+
+<p>Compute embedding of a single or a collection of discrete item<br />
+ sequences. A discrete item sequence is a sequence made from a set<br />
+ discrete elements, also known as alphabet set. For example,<br />
+ suppose the alphabet set is the set of roman letters,<br />
+ {A, B, ..., Z}. This set is made of discrete elements. Examples of<br />
+ sequences from such a set are AABADDSA, UADSFJPFFFOIHOUGD, etc.<br />
+ Such sequence datasets are commonly found in online industry,<br />
+ for example, item purchase history, where the alphabet set is<br />
+ the set of all product items. Sequence datasets are abundant in<br />
+ bioinformatics as protein sequences.<br />
+ Using the embeddings created here, classification and clustering<br />
+ models can be built for sequence datasets.<br />
+ Read more in <a href="https://arxiv.org/pdf/1608.03533.pdf">https://arxiv.org/pdf/1608.03533.pdf</a></p>
 
         <h3>Declare</h3>        
 
@@ -38,7 +54,7 @@
 # namespace Microsoft.VisualBasic.Data.GraphTheory
 export class SequenceGraphTransform {
    alphabets: string;
-   # the feature name is the combination of @``P:Microsoft.VisualBasic.Data.GraphTheory.SequenceGraphTransform.alphabets``
+   # the feature name is the combination of <a href="/vignettes/clr/Microsoft/VisualBasic/Data/GraphTheory/SequenceGraphTransform.html">SequenceGraphTransform</a>.<a href="#">alphabets</a>
    feature_names: string;
 }
 </code>

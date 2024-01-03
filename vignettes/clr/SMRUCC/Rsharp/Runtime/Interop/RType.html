@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        The type wrapper for .NET type to R# language runtime
+        <p>The type wrapper for .NET type to R# language runtime</p>
 
         <h3>Declare</h3>        
 
@@ -30,7 +30,7 @@
             <code id="clr_ts">
 # namespace SMRUCC.Rsharp.Runtime.Interop
 export class RType {
-   # the raw CLR @``P:System.Type.FullName``
+   # the raw CLR <a href="/vignettes/clr/System/Type.html">Type</a>.<a href="#">FullName</a>
    fullName: string;
    # the raw CLR type name
    name: string;
@@ -42,9 +42,9 @@ export class RType {
    isGenericListObject: boolean;
    # based .NET CLR type
    raw: <a href="/vignettes/clr/System/Type.html">Type</a>;
-   # implements interface of @``T:Microsoft.VisualBasic.ComponentModel.DataSourceModel.IDynamicsObject``?
+   # implements interface of <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/DataSourceModel/IDynamicsObject.html">IDynamicsObject</a>?
    haveDynamicsProperty: boolean;
-   # is an @``T:SMRUCC.Rsharp.Runtime.Environment`` object?
+   # is an <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a> object?
    isEnvironment: boolean;
    getCount: <a href="/vignettes/clr/System/Reflection/PropertyInfo.html">PropertyInfo</a>;
    getItem: <a href="/vignettes/clr/System/Reflection/PropertyInfo.html">PropertyInfo</a>;

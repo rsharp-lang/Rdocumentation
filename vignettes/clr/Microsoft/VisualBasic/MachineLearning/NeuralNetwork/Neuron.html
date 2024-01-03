@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.NeuralNetwork.Neuron</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Neuron {Microsoft.VisualBasic.MachineLearning.NeuralNetwork}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Neuron</h2>
+
+        <h3>Description</h3>
+
+        <p>神经元对象模型</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.NeuralNetwork
+export class Neuron {
+   Gradient: double;
+   # 这个神经元对象和上一层神经元之间的突触链接列表
+   InputSynapses: <a href="/vignettes/clr/Microsoft/VisualBasic/Language/List`1.html">List`1</a>;
+   # 这个神经元对象和下一层神经元之间的突触链接列表
+   OutputSynapses: <a href="/vignettes/clr/Microsoft/VisualBasic/Language/List`1.html">List`1</a>;
+   Bias: double;
+   BiasDelta: double;
+   # 神经元之间传递的值，即预测的输出结果
+   Value: double;
+   # 当前的这个神经元节点是否是被随机失活的一个节点?
+   isDroppedOut: boolean;
+   # 当前的这个神经元对象的唯一标识符
+   Guid: string;
+}
+</code>
+        </pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

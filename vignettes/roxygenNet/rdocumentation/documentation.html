@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>documentation</title>
+    <title>make documentation for a R# function or symbol</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
@@ -18,22 +18,41 @@
             </tr>
         </table>
 
-        <h2>documentation</h2>
+        <h2>make documentation for a R# function or symbol</h2>
 
         <h3>Description</h3>
 
-        documentation
+        
 
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>documentation</strong>(<i>func</i>, <i>template</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>documentation</strong>(<i>func</i>,
+    <i>template</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>desc</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
 
         <table>
             
+<dt>func</dt>
+<dd><p><p>the specific R# function or symbol</p></p></dd>
+
+
+<dt>template</dt>
+<dd><p><p>the html template string</p></p></dd>
+
+
+<dt>desc</dt>
+<dd><p><p>the package <a href="/vignettes/clr/SMRUCC/Rsharp/Development/Package/File/DESCRIPTION.html">DESCRIPTION</a> metadata for the R# symbol if <br />
+ the given <strong><code>func</code></strong> object is a kind of the R source code <a href="/vignettes/clr/SMRUCC/Rsharp/Development/Document.html">Document</a> <br />
+ object.</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
         </table>
 
 

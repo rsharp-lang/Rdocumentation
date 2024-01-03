@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object Attributes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>attr {reflections}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Object Attributes</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Get or set specific attributes of an object.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>attr</strong>(<i>x</i>, <i>which</i>,
+    <i>exact</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>value</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p><p>an object whose attributes are to be accessed.</p></p></dd>
+
+
+<dt>which</dt>
+<dd><p><p>a non-empty character string specifying which attribute is to be accessed.</p></p></dd>
+
+
+<dt>exact</dt>
+<dd><p><p>logical: should which be matched exactly?</p></p></dd>
+
+
+<dt>value</dt>
+<dd><p><p>an object, the new value of the attribute, or NULL to remove the attribute.</p></p></dd>
+
+
+<dt>env</dt>
+<dd><p><p>-</p></p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>These functions provide access to a single attribute of an object. The replacement <br />
+ form causes the named attribute to take the value specified (or create a new attribute<br />
+ with the value given).</p>
+
+<p>The extraction Function first looks For an exact match To which amongst the attributes <br />
+ Of x, Then (unless exact = True) a unique Partial match. (Setting options(warnPartialMatchAttr = True) <br />
+ causes Partial matches To give warnings.)</p>
+
+<p>The replacement Function only uses exact matches.</p>
+
+<p>Note that some attributes (namely Class, comment, Dim, dimnames, names, row.names And tsp) <br />
+ are treated specially And have restrictions On the values which can be Set. (Note that <br />
+ this Is Not True Of levels which should be Set For factors via the levels replacement <br />
+ Function.)</p>
+
+<p>The extractor Function allows (And does Not match) empty And missing values Of which: the <br />
+ replacement Function does Not.</p>
+
+<p>NULL objects cannot have attributes And attempting To assign one by attr gives an Error.</p>
+
+<p>Both are primitive functions.</p>
+
+
+        <h3>Value</h3>
+
+        <p>For the extractor, the value of the attribute matched, or NULL if no exact <br />
+ match is found and no or more than one partial match is found.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: block;">Examples</h3>
+
+        <pre><code id="example_r"> # create a 2 by 5 matrix
+ x <- 110
+ attr(x,"dim") <- c(2, 5)</code></pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>reflections</em> version 2.33.856.6961 <a
+                href="../reflections.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../_assets/R_syntax.js"></script>
+<script type="text/javascript" src="../../_assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

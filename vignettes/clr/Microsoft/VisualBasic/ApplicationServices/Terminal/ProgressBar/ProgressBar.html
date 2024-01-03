@@ -22,14 +22,16 @@
 
         <h3>Description</h3>
 
-        Progress bar for the @``T:System.Console`` Screen.
+        <p>Progress bar for the <a href="/vignettes/clr/System/Console.html">Console</a> Screen.</p>
+
+<p><a href="http://www.cnblogs.com/masonlu/p/4668232.html">http://www.cnblogs.com/masonlu/p/4668232.html</a></p><br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Terminal/ProgressBar/AbstractBar.html">AbstractBar</a> class.</p>
 
         <h3>Declare</h3>        
 
         <pre>
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.ApplicationServices.Terminal.ProgressBar
-export class ProgressBar {
+export class ProgressBar extends <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Terminal/ProgressBar/AbstractBar.html">AbstractBar</a> {
    # 获取当前实例测量得出的总运行时间（以毫秒为单位）。
    ElapsedMilliseconds: integer;
 }
