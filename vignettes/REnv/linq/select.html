@@ -37,32 +37,30 @@
         <table>
             
 <dt>.data</dt>
-<dd><p><p>A data frame, data frame extension (e.g. a tibble), or a lazy data <br />
- frame (e.g. from dbplyr or dtplyr). See Methods, below, for more <br />
- details.</p></p></dd>
+<dd><p>A data frame, data frame extension (e.g. a tibble), or a lazy data 
+ frame (e.g. from dbplyr or dtplyr). See Methods, below, for more 
+ details. [as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a>]</p></dd>
 
 
 <dt>selectors</dt>
-<dd><p><p><tidy-select> One or more unquoted expressions separated by commas. <br />
- Variable names can be used as if they were positions in the data frame, <br />
- so expressions like x:y can be used to select a range of variables.</p>
-
-<p>syntax for the selectors:</p>
-
-<ol>
-<li>select by name: <code>select(name1, name2)</code></li>
-<li>field renames: <code>select(name1 -&gt; data1)</code></li>
-</ol></p></dd>
+<dd><p><tidy-select> One or more unquoted expressions separated by commas. 
+ Variable names can be used as if they were positions in the data frame, 
+ so expressions like x:y can be used to select a range of variables.
+ 
+ syntax for the selectors:
+ 
+ 1. select by name: <code>select(name1, name2)</code>
+ 2. field renames: <code>select(name1 -> data1)</code>. [as list]</p></dd>
 
 
 <dt>strict</dt>
-<dd><p><p>By default when this function running in strict mode, an error message <br />
- will be returned if there is a missing data fields exists in the selector<br />
- list</p></p></dd>
+<dd><p>By default when this function running in strict mode, an error message 
+ will be returned if there is a missing data fields exists in the selector
+ list. [as boolean]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
@@ -71,19 +69,20 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
         <p>An object of the same type as .data. The output has the following properties:</p>
 
-<ol>
-<li>Rows are Not affected.</li>
-<li>Output columns are a subset Of input columns, potentially With a <br />
-different order. Columns will be renamed If new_name = old_name <br />
-form Is used.</li>
-<li>Data frame attributes are preserved.</li>
-<li>Groups are maintained; you can't select off grouping variables.</li>
-</ol><h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a></li></ul>
+<p>1. Rows are Not affected.
+ 2. Output columns are a subset Of input columns, potentially With a 
+    different order. Columns will be renamed If new<em>name = old</em>name 
+    form Is used.
+ 3. Data frame attributes are preserved.
+ 4. Groups are maintained; you can't select off grouping variables.</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a></li></ul>
 
         <h3 style="display: none;">Examples</h3>
 

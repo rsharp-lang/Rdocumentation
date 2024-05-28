@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>apply for batch text grep/trimming/strip</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>text_grep {stringr}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>apply for batch text grep/trimming/strip</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>text_grep</strong>(<i>grep.regexp</i>,
+    <i>x</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>grep.regexp</dt>
+<dd><p>a regular expression value for produce new text value. [as string]</p></dd>
+
+
+<dt>x</dt>
+<dd><p>should be a character vector for apply such operation. omit this parameter value will create a lambda function for grep text.</p></dd>
+
+
+<dt>env</dt>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>the text grep regexp pattern token should be wrapped inside a bracket: <code>$(regexp_token)</code>, 
+ any text outside this bracket will be treated as an regular string.
+ 
+ example as the token parser string: <code>$(\d+)_$(\[\d*M.*\]\d*[+-])</code> will be split into
+ 3 tokens: <code>$(\d+)</code> for matches integer string token, <code>_</code> will always produce a regular string token <code>_</code>,
+ <code>$(\[\d*M.*\]\d*[+-])</code> for matches another string token that wrapped with bracket [] and 
+ ends with signed integer number as suffix.</p>
+
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
+
+        <h3>Value</h3>
+
+        this function returns data object in these one of the listed data types: string, <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Invokes/TextGrepLambda.html">TextGrepLambda</a>.<h4>clr value class</h4><ul><li>string</li><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Invokes/TextGrepLambda.html">TextGrepLambda</a></li></ul>
+
+        <h3 style="display: block;">Examples</h3>
+
+        <pre><code id="example_r"> let names = ["258_Herniarin_[M+H2O+H]+" "993_Geranyl acetate_[M+H2O+H]+" "3229_Glycerol_[M+NH4]+" "398587_Cytidine_[M+H]+" "398007_Adenosine_[M+H]+"];
+ let grep = "$(\d+)_$(\[\d*M.*\]\d*[+-])";
+ 
+ print(text_grep(grep, names));
+ # [1] "258_[M+H2O+H]+" "993_[M+H2O+H]+" "3229_[M+NH4]+" "398587_[M+H]+" "398007_[M+H]+"</code></pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stringr</em> version 2.33.856.6961 <a
+                href="../stringr.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

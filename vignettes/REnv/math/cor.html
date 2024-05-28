@@ -30,7 +30,7 @@
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>cor</strong>(<i>x</i>,
     <i>y</i> = <span style='color: blue !important;'>NULL</span>,
     <i>use</i> = <span style='color: brown;'><strong>"everything"</strong></span>,
-    <i>method</i> = ["pearson","kendall","spearman"]);</code></pre>
+    <i>method</i> = [<span style='color: brown;'><strong>'kendall'</strong></span>,<span style='color: brown;'><strong>'spearman'</strong></span>]);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -38,99 +38,102 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>a numeric vector, matrix or data frame.</p></p></dd>
+<dd><p>a numeric vector, matrix or data frame.</p></dd>
 
 
 <dt>y</dt>
-<dd><p><p>NULL (default) or a vector, matrix or data frame <br />
- with compatible dimensions to x. The default is equivalent to <br />
- y = x (but more efficient).</p></p></dd>
+<dd><p>NULL (default) or a vector, matrix or data frame 
+ with compatible dimensions to x. The default is equivalent to 
+ y = x (but more efficient).</p></dd>
 
 
 <dt>use</dt>
-<dd><p><p>an optional character string giving a method for<br />
- computing covariances in the presence of missing values. This must<br />
- be (an abbreviation of) one of the strings "everything", "all.obs",<br />
- "complete.obs", "na.or.complete", or "pairwise.complete.obs".</p></p></dd>
+<dd><p>an optional character string giving a method for
+ computing covariances in the presence of missing values. This must
+ be (an abbreviation of) one of the strings "everything", "all.obs",
+ "complete.obs", "na.or.complete", or "pairwise.complete.obs".</p></dd>
 
 
 <dt>method</dt>
-<dd><p><p>a character string indicating which correlation <br />
- coefficient (or covariance) is to be computed. One of "pearson" <br />
- (default), "kendall", or "spearman": can be abbreviated.</p></p></dd>
+<dd><p>a character string indicating which correlation 
+ coefficient (or covariance) is to be computed. One of "pearson" 
+ (default), "kendall", or "spearman": can be abbreviated.</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>For cov and cor one must either give a matrix or data frame for x <br />
- or give both x and y.</p>
-
-<p>The inputs must be numeric (as determined by is.numeric: logical <br />
- values are also allowed for historical compatibility): the "kendall" <br />
- and "spearman" methods make sense for ordered inputs but xtfrm can <br />
+        <p>For cov and cor one must either give a matrix or data frame for x 
+ or give both x and y.
+ 
+ The inputs must be numeric (as determined by is.numeric: logical 
+ values are also allowed for historical compatibility): the "kendall" 
+ and "spearman" methods make sense for ordered inputs but xtfrm can 
  be used to find a suitable prior transformation to numbers.</p>
 
-<p>var is just another interface to cov, where na.rm is used to determine <br />
- the default for use when that is unspecified. If na.rm is TRUE then <br />
- the complete observations (rows) are used (use = "na.or.complete") to <br />
+<p>var is just another interface to cov, where na.rm is used to determine 
+ the default for use when that is unspecified. If na.rm is TRUE then 
+ the complete observations (rows) are used (use = "na.or.complete") to 
  compute the variance. Otherwise, by default use = "everything".</p>
 
-<p>If use is "everything", NAs will propagate conceptually, i.e., a <br />
- resulting value will be NA whenever one of its contributing observations <br />
+<p>If use is "everything", NAs will propagate conceptually, i.e., a 
+ resulting value will be NA whenever one of its contributing observations 
  is NA.</p>
 
-<p>If use is "all.obs", then the presence of missing observations will <br />
- produce an error. If use is "complete.obs" then missing values are <br />
- handled by casewise deletion (and if there are no complete cases, <br />
- that gives an error).</p>
-
-<p>"na.or.complete" is the same unless there are no complete cases, that gives<br />
- NA. Finally, if use has the value "pairwise.complete.obs" then the <br />
- correlation or covariance between each pair of variables is computed <br />
- using all complete pairs of observations on those variables. This can <br />
- result in covariance or correlation matrices which are not positive <br />
- semi-definite, as well as NA entries if there are no complete pairs <br />
- for that pair of variables. For cov and var, "pairwise.complete.obs" <br />
- only works with the "pearson" method. Note that (the equivalent of) <br />
- var(double(0), use = *) gives NA for use = "everything" and "na.or.complete", <br />
+<p>If use is "all.obs", then the presence of missing observations will 
+ produce an error. If use is "complete.obs" then missing values are 
+ handled by casewise deletion (and if there are no complete cases, 
+ that gives an error).
+ 
+ "na.or.complete" is the same unless there are no complete cases, that gives
+ NA. Finally, if use has the value "pairwise.complete.obs" then the 
+ correlation or covariance between each pair of variables is computed 
+ using all complete pairs of observations on those variables. This can 
+ result in covariance or correlation matrices which are not positive 
+ semi-definite, as well as NA entries if there are no complete pairs 
+ for that pair of variables. For cov and var, "pairwise.complete.obs" 
+ only works with the "pearson" method. Note that (the equivalent of) 
+ var(double(0), use = *) gives NA for use = "everything" and "na.or.complete", 
  and gives an error in the other cases.</p>
 
-<p>The denominator n - 1n−1 is used which gives an unbiased estimator of <br />
- the (co)variance for i.i.d. observations. These functions return NA <br />
- when there is only one observation (whereas S-PLUS has been returning <br />
+<p>The denominator n - 1n−1 is used which gives an unbiased estimator of 
+ the (co)variance for i.i.d. observations. These functions return NA 
+ when there is only one observation (whereas S-PLUS has been returning 
  NaN).</p>
 
-<p>For cor(), if method is "kendall" or "spearman", Kendall's \tauτ or Spearman's <br />
- \rhoρ statistic is used to estimate a rank-based measure of association. <br />
- These are more robust and have been recommended if the data do not <br />
- necessarily come from a bivariate normal distribution.</p>
-
-<p>For cov(), a non-Pearson method is unusual but available for the sake of <br />
- completeness. Note that "spearman" basically computes cor(R(x), R(y)) (or <br />
- cov(., .)) where R(u) := rank(u, na.last = "keep"). In the case of missing <br />
- values, the ranks are calculated depending on the value of use, either <br />
- based on complete observations, or based on pairwise completeness with <br />
+<p>For cor(), if method is "kendall" or "spearman", Kendall's \tauτ or Spearman's 
+ \rhoρ statistic is used to estimate a rank-based measure of association. 
+ These are more robust and have been recommended if the data do not 
+ necessarily come from a bivariate normal distribution.
+ 
+ For cov(), a non-Pearson method is unusual but available for the sake of 
+ completeness. Note that "spearman" basically computes cor(R(x), R(y)) (or 
+ cov(., .)) where R(u) := rank(u, na.last = "keep"). In the case of missing 
+ values, the ranks are calculated depending on the value of use, either 
+ based on complete observations, or based on pairwise completeness with 
  reranking for each pair.</p>
 
-<p>When there are ties, Kendall's \tau_bτ b<br />
+<p>When there are ties, Kendall's \tau_bτ b
  is computed, as proposed by Kendall (1945).</p>
 
-<p>Scaling a covariance matrix into a correlation one can be achieved in <br />
- many ways, mathematically most appealing by multiplication with a <br />
- diagonal matrix from left and right, or more efficiently by using <br />
- sweep(.., FUN = "/") twice. The cov2cor function is even a bit more <br />
+<p>Scaling a covariance matrix into a correlation one can be achieved in 
+ many ways, mathematically most appealing by multiplication with a 
+ diagonal matrix from left and right, or more efficiently by using 
+ sweep(.., FUN = "/") twice. The cov2cor function is even a bit more 
  efficient, and provided mostly for didactical reasons.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>For r &lt;- cor(*, use = "all.obs"), it is now guaranteed that all(abs(r) &lt;= 1).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+        <p>For r <- cor(*, use = "all.obs"), it is now guaranteed that all(abs(r) <= 1).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>
 

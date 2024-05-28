@@ -35,63 +35,66 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>a vector Or a data frame Or an array Or NULL.</p></p></dd>
+<dd><p>a vector Or a data frame Or an array Or NULL.</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>These are generic functions with methods for vectors (including lists), data frames <br />
+        <p>These are generic functions with methods for vectors (including lists), data frames 
  and arrays (including matrices).</p>
 
-<p>For the default methods, And whenever there are equivalent method definitions for <br />
- duplicated And anyDuplicated, anyDuplicated(x, ...) Is a “generalized” shortcut <br />
- for any(duplicated(x, ...)), in the sense that it returns the index i of the first <br />
- duplicated entry x[i] if there Is one, And 0 otherwise. Their behaviours may be <br />
+<p>For the default methods, And whenever there are equivalent method definitions for 
+ duplicated And anyDuplicated, anyDuplicated(x, ...) Is a “generalized” shortcut 
+ for any(duplicated(x, ...)), in the sense that it returns the index i of the first 
+ duplicated entry x[i] if there Is one, And 0 otherwise. Their behaviours may be 
  different when at least one of duplicated And anyDuplicated has a relevant method.</p>
 
 <p>duplicated(x, fromLast = TRUE) Is equivalent to but faster than rev(duplicated(rev(x))).</p>
 
-<p>The data frame method works by pasting together a character representation Of the <br />
- rows separated by \r, so may be imperfect If the data frame has characters With <br />
+<p>The data frame method works by pasting together a character representation Of the 
+ rows separated by \r, so may be imperfect If the data frame has characters With 
  embedded carriage returns Or columns which Do Not reliably map To characters.</p>
 
-<p>The array method calculates For Each element Of the Sub-array specified by MARGIN <br />
- If the remaining dimensions are identical To those For an earlier (Or later, When <br />
- fromLast = True) element (In row-major order). This would most commonly be used <br />
- To find duplicated rows (the Default) Or columns (With MARGIN = 2). Note that <br />
+<p>The array method calculates For Each element Of the Sub-array specified by MARGIN 
+ If the remaining dimensions are identical To those For an earlier (Or later, When 
+ fromLast = True) element (In row-major order). This would most commonly be used 
+ To find duplicated rows (the Default) Or columns (With MARGIN = 2). Note that 
  MARGIN = 0 returns an array Of the same dimensionality attributes As x.</p>
 
-<p>Missing values("NA") are regarded As equal, numeric And complex ones differing from <br />
- NaN; character strings will be compared In a “common encoding”; For details, see <br />
+<p>Missing values("NA") are regarded As equal, numeric And complex ones differing from 
+ NaN; character strings will be compared In a “common encoding”; For details, see 
  match (And unique) which use the same concept.</p>
 
-<p>Values in incomparables will never be marked as duplicated. This Is intended to be <br />
- used for a fairly small set of values And will Not be efficient for a very large <br />
+<p>Values in incomparables will never be marked as duplicated. This Is intended to be 
+ used for a fairly small set of values And will Not be efficient for a very large 
  set.</p>
 
-<p>When used on a data frame with more than one column, Or an array Or matrix when <br />
- comparing dimensions of length greater than one, this tests for identity of character <br />
- representations. This will catch people who unwisely rely on exact equality of <br />
+<p>When used on a data frame with more than one column, Or an array Or matrix when 
+ comparing dimensions of length greater than one, this tests for identity of character 
+ representations. This will catch people who unwisely rely on exact equality of 
  floating-point numbers!</p>
 
-<p>Except for factors, logical And raw vectors the default nmax = NA Is equivalent <br />
- to nmax = length(x). Since a hash table of size 8*nmax bytes Is allocated, setting <br />
- nmax suitably can save large amounts of memory. For factors it Is automatically <br />
- set to the smaller of length(x) And the number of levels plus one (for NA). <br />
- If nmax Is set too small there Is liable to be an error nmax = 1 Is silently <br />
+<p>Except for factors, logical And raw vectors the default nmax = NA Is equivalent 
+ to nmax = length(x). Since a hash table of size 8*nmax bytes Is allocated, setting 
+ nmax suitably can save large amounts of memory. For factors it Is automatically 
+ set to the smaller of length(x) And the number of levels plus one (for NA). 
+ If nmax Is set too small there Is liable to be an error nmax = 1 Is silently 
  ignored.</p>
 
-<p>Long vectors are supported For the Default method Of duplicated, but may only be <br />
+<p>Long vectors are supported For the Default method Of duplicated, but may only be 
  usable if nmax Is supplied.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>duplicated(): For a vector input, a logical vector of the <br />
- same length as x. For a data frame, a logical vector with one element <br />
- for each row. For a matrix or array, and when MARGIN = 0, a logical <br />
+        <p>duplicated(): For a vector input, a logical vector of the 
+ same length as x. For a data frame, a logical vector with one element 
+ for each row. For a matrix or array, and when MARGIN = 0, a logical 
  array with the same dimensions and dimnames.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

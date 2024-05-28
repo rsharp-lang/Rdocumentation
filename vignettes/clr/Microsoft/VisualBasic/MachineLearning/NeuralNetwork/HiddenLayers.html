@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.NeuralNetwork.HiddenLayers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>HiddenLayers {Microsoft.VisualBasic.MachineLearning.NeuralNetwork}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>HiddenLayers</h2>
+
+        <h3>Description</h3>
+
+        <p>隐藏层,由多个神经元层所构成的
+ 
+ ##### 20181212
+ 
+ 请注意,这个隐藏层的大小虽然可以是任意规模的,但是并不是越大越好的
+ 当隐藏层越大的话,会导致训练的效率降低,并且预测能力也会下降
+ 如果问题比较简单的话,三层隐藏层已经足够了
+ 
+ 一般来说,隐藏层之中每一层的神经元的数量应该要大于输入和输出的节点数的最大值.</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.NeuralNetwork
+export class HiddenLayers {
+   Layers: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer[]</a>;
+   # 使用最后一层作为输出层
+   Output: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a>;
+   Size: integer;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>Layers</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a></li>
+<li>use by <i>property</i> member <code>Output</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

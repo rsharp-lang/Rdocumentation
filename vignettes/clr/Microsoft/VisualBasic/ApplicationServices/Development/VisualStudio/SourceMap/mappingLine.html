@@ -30,19 +30,24 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.ApplicationServices.Development.VisualStudio.SourceMap
 export class mappingLine {
-   # 第一位，表示这个位置在（转换后的代码的）的第几列。
-   targetCol: integer;
    # 第二位，表示这个位置属于sources属性中的哪一个文件。
    fileIndex: integer;
-   # 第三位，表示这个位置属于转换前代码的第几行。
-   sourceLine: integer;
-   # 第四位，表示这个位置属于转换前代码的第几列。
-   sourceCol: integer;
    # 第五位，表示这个位置属于names属性中的哪一个变量。
    nameIndex: integer;
+   # 第四位，表示这个位置属于转换前代码的第几列。
+   sourceCol: integer;
+   # 第三位，表示这个位置属于转换前代码的第几行。
+   sourceLine: integer;
+   # 第一位，表示这个位置在（转换后的代码的）的第几列。
+   targetCol: integer;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        this clr type has no other .net clr type reference.
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

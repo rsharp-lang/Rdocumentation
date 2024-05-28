@@ -30,31 +30,39 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.Data.Wave
 export class WaveFile {
-   # Contains the letters "RIFF" in ASCII form (0x52494646 big-endian form).
-   #  Resource Interchange File Format.
-   magic: string;
+   # Subchunk2
+   data: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/Wave/SampleDataChunk.html">SampleDataChunk</a>;
    # <code>36 + SubChunk2Size</code>, or more precisely:
    # 
-   # 
-   # 
-   # <pre><code class="">4 + (8 + SubChunk1Size) + (8 + SubChunk2Size)
+   # <pre><code class=""> 4 + (8 + SubChunk1Size) + (8 + SubChunk2Size)
    # </code></pre>
    # 
-   # This Is the size of the rest of the chunk 
+   # 
+   #  
+   #  This Is the size of the rest of the chunk 
    #  following this number.  This Is the size Of the 
    #  entire file In bytes minus 8 bytes For the
    #  two fields Not included In this count:
    #  ChunkID And ChunkSize.
    fileSize: integer;
-   # Contains the letters "WAVE" (0x57415645 big-endian form).
-   format: string;
    # Subchunk1
    fmt: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/Wave/FMTSubChunk.html">FMTSubChunk</a>;
-   # Subchunk2
-   data: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/Wave/SampleDataChunk.html">SampleDataChunk</a>;
+   # Contains the letters "WAVE" (0x57415645 big-endian form).
+   format: string;
+   # Contains the letters "RIFF" in ASCII form (0x52494646 big-endian form).
+   #  Resource Interchange File Format.
+   magic: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>data</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/Wave/SampleDataChunk.html">SampleDataChunk</a></li>
+<li>use by <i>property</i> member <code>fmt</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/Wave/FMTSubChunk.html">FMTSubChunk</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

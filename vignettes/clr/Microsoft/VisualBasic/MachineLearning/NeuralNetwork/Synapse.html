@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.NeuralNetwork.Synapse</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Synapse {Microsoft.VisualBasic.MachineLearning.NeuralNetwork}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Synapse</h2>
+
+        <h3>Description</h3>
+
+        <p>（神经元的）突触 a connection between two nerve cells</p>
+
+<p>可以将这个对象看作为网络节点之间的边链接</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.NeuralNetwork
+export class Synapse {
+   # <code>a.OutputNeuron.Gradient * a.Weight</code>
+   Gradient: double;
+   InputNeuron: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Neuron.html">Neuron</a>;
+   OutputNeuron: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Neuron.html">Neuron</a>;
+   # <code>a.Weight * a.InputNeuron.Value</code>
+   Value: double;
+   # 两个神经元之间的连接强度
+   Weight: double;
+   WeightDelta: double;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>InputNeuron</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Neuron.html">Neuron</a></li>
+<li>use by <i>property</i> member <code>OutputNeuron</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Neuron.html">Neuron</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

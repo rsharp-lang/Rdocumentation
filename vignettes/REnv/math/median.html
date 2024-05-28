@@ -36,35 +36,38 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>an object for which a method has been defined, <br />
- or a numeric vector containing the values whose median is to <br />
- be computed.</p></p></dd>
+<dd><p>an object for which a method has been defined, 
+ or a numeric vector containing the values whose median is to 
+ be computed.</p></dd>
 
 
 <dt>na.rm</dt>
-<dd><p><p>a logical value indicating whether NA values should be stripped <br />
- before the computation proceeds.</p></p></dd>
+<dd><p>a logical value indicating whether NA values should be stripped 
+ before the computation proceeds. [as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>This is a generic function for which methods can be written. <br />
- However, the default method makes use of is.na, sort and mean <br />
- from package base all of which are generic, and so the default <br />
- method will work for most classes (e.g., "Date") for which <br />
+        <p>This is a generic function for which methods can be written. 
+ However, the default method makes use of is.na, sort and mean 
+ from package base all of which are generic, and so the default 
+ method will work for most classes (e.g., "Date") for which 
  a median is a reasonable concept.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>The default method returns a length-one object of the same type <br />
- as x, except when x is logical or integer of even length, when <br />
- the result will be double.</p>
-
-<p>If there are no values Or If na.rm = False And there are NA <br />
- values the result Is NA Of the same type As x (Or more generally <br />
+        <p>The default method returns a length-one object of the same type 
+ as x, except when x is logical or integer of even length, when 
+ the result will be double.
+ 
+ If there are no values Or If na.rm = False And there are NA 
+ values the result Is NA Of the same type As x (Or more generally 
  the result Of x[FALSE][NA]).</p><h4>clr value class</h4><ul><li>double</li></ul>
 
         <h3 style="display: none;">Examples</h3>

@@ -38,61 +38,64 @@
         <table>
             
 <dt>file</dt>
-<dd><p><p>a writable connection Or a character String naming <br />
- the file To write To, Or NULL To Stop sink-ing.</p></p></dd>
+<dd><p>a writable connection Or a character String naming 
+ the file To write To, Or NULL To Stop sink-ing. [as string]</p></dd>
 
 
 <dt>append</dt>
-<dd><p><p>logical. If TRUE, output will be appended to file; <br />
- otherwise, it will overwrite the contents of file.</p></p></dd>
+<dd><p>logical. If TRUE, output will be appended to file; 
+ otherwise, it will overwrite the contents of file. [as boolean]</p></dd>
 
 
 <dt>split</dt>
-<dd><p><p>logical: if TRUE, output will be sent to the new sink <br />
- and to the current output stream, like the Unix <br />
- program <code>tee</code>.</p></p></dd>
+<dd><p>logical: if TRUE, output will be sent to the new sink 
+ and to the current output stream, like the Unix 
+ program <code>tee</code>. [as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>sink diverts R output to a connection (and must be used <br />
- again to finish such a diversion, see below!). If file <br />
- is a character string, a file connection with that name <br />
+        <p>sink diverts R output to a connection (and must be used 
+ again to finish such a diversion, see below!). If file 
+ is a character string, a file connection with that name 
  will be established for the duration of the diversion.</p>
 
-<p>Normal R output (To connection stdout) Is diverted by the <br />
- Default type = "output". Only prompts And (most) messages <br />
- Continue To appear On the console. Messages sent To <br />
- stderr() (including those from message, warning And Stop) <br />
+<p>Normal R output (To connection stdout) Is diverted by the 
+ Default type = "output". Only prompts And (most) messages 
+ Continue To appear On the console. Messages sent To 
+ stderr() (including those from message, warning And Stop) 
  can be diverted by sink(type = "message") (see below).</p>
 
-<p>sink() Or sink(file = NULL) ends the last diversion (of <br />
- the specified type). There Is a stack of diversions for <br />
- normal output, so output reverts to the previous diversion <br />
- (if there was one). The stack Is of up to 21 connections <br />
+<p>sink() Or sink(file = NULL) ends the last diversion (of 
+ the specified type). There Is a stack of diversions for 
+ normal output, so output reverts to the previous diversion 
+ (if there was one). The stack Is of up to 21 connections 
  (20 diversions).</p>
 
-<p>If file Is a connection it will be opened If necessary <br />
- (In "wt" mode) And closed once it Is removed from the <br />
+<p>If file Is a connection it will be opened If necessary 
+ (In "wt" mode) And closed once it Is removed from the 
  stack Of diversions.</p>
 
-<p>split = TRUE only splits R output (via Rvprintf) And the <br />
- default output from writeLines: it does Not split all <br />
+<p>split = TRUE only splits R output (via Rvprintf) And the 
+ default output from writeLines: it does Not split all 
  output that might be sent To stdout().</p>
 
-<p>Sink-ing the messages stream should be done only with <br />
- great care. For that stream file must be an already open <br />
+<p>Sink-ing the messages stream should be done only with 
+ great care. For that stream file must be an already open 
  connection, And there Is no stack of connections.</p>
 
-<p>If file Is a character String, the file will be opened <br />
- Using the current encoding. If you want a different <br />
- encoding (e.g., To represent strings which have been <br />
- stored In UTF-8), use a file connection — but some <br />
- ways To produce R output will already have converted <br />
+<p>If file Is a character String, the file will be opened 
+ Using the current encoding. If you want a different 
+ encoding (e.g., To represent strings which have been 
+ stored In UTF-8), use a file connection — but some 
+ ways To produce R output will already have converted 
  such strings To the current encoding.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

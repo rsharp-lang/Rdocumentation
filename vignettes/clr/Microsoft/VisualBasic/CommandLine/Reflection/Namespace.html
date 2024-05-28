@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>(<a href="/vignettes/clr/Microsoft/VisualBasic/CommandLine/Interpreter.html">Interpreter</a>[CommandLine interpreter] executation Entry and the ShellScript software packages namespace.)这是一个命令行解释器所使用的执行入口点的集合</p><br /><p>this class extends from <a href="/vignettes/clr/System/Attribute.html">Attribute</a> class.</p>
+        <p>(<a href="/vignettes/clr/Microsoft/VisualBasic/CommandLine/Interpreter.html">Interpreter</a>[CommandLine interpreter] executation Entry and the ShellScript software packages namespace.)这是一个命令行解释器所使用的执行入口点的集合</p>
 
         <h3>Declare</h3>        
 
@@ -30,16 +30,24 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.CommandLine.Reflection
 export class Namespace extends <a href="/vignettes/clr/System/Attribute.html">Attribute</a> {
+   # Readonly
+   AutoExtract: boolean;
    # A brief description text about the function of this namespace.(关于本模块之中的描述性的摘要文本)
    Description: string;
    # The name value of this namespace module.(本命名空间模块的名称值)
    Namespace: string;
-   # Readonly
-   AutoExtract: boolean;
    TypeId: <i>any</i> kind;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/System/Attribute.html">Attribute</a> class: <a href="/vignettes/clr/System/Attribute.html">Attribute</a></li>
+<li>use by <i>property</i> member <code>TypeId</code>: <i>any</i> kind</li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

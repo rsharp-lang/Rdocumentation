@@ -30,24 +30,33 @@
             <code id="clr_ts">
 # namespace System.Text
 export class Encoding {
-   Preamble: <a href="/vignettes/clr/System/ReadOnlySpan`1.html">ReadOnlySpan`1</a>;
    BodyName: string;
+   CodePage: integer;
+   DecoderFallback: <a href="/vignettes/clr/System/Text/DecoderFallback.html">DecoderFallback</a>;
+   EncoderFallback: <a href="/vignettes/clr/System/Text/EncoderFallback.html">EncoderFallback</a>;
    EncodingName: string;
    HeaderName: string;
-   WebName: string;
-   WindowsCodePage: integer;
    IsBrowserDisplay: boolean;
    IsBrowserSave: boolean;
    IsMailNewsDisplay: boolean;
    IsMailNewsSave: boolean;
-   IsSingleByte: boolean;
-   EncoderFallback: <a href="/vignettes/clr/System/Text/EncoderFallback.html">EncoderFallback</a>;
-   DecoderFallback: <a href="/vignettes/clr/System/Text/DecoderFallback.html">DecoderFallback</a>;
    IsReadOnly: boolean;
-   CodePage: integer;
+   IsSingleByte: boolean;
+   Preamble: <a href="/vignettes/clr/System/ReadOnlySpan`1.html">ReadOnlySpan`1</a>;
+   WebName: string;
+   WindowsCodePage: integer;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>DecoderFallback</code>: <a href="/vignettes/clr/System/Text/DecoderFallback.html">DecoderFallback</a></li>
+<li>use by <i>property</i> member <code>EncoderFallback</code>: <a href="/vignettes/clr/System/Text/EncoderFallback.html">EncoderFallback</a></li>
+<li>use by <i>property</i> member <code>Preamble</code>: <a href="/vignettes/clr/System/ReadOnlySpan`1.html">ReadOnlySpan`1</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

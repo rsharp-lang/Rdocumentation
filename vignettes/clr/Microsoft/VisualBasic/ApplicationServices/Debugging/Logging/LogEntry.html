@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>一条记录日志对象</p><br /><p>this class extends from <a href="/vignettes/clr/System/ValueType.html">ValueType</a> class.</p>
+        <p>一条记录日志对象</p>
 
         <h3>Declare</h3>        
 
@@ -30,13 +30,22 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.ApplicationServices.Debugging.Logging
 export class LogEntry extends <a href="/vignettes/clr/System/ValueType.html">ValueType</a> {
+   level: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Logging/MSG_TYPES.html">MSG_TYPES</a>;
    message: string;
    object: string;
-   level: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Logging/MSG_TYPES.html">MSG_TYPES</a>;
    time: <a href="/vignettes/clr/System/DateTime.html">DateTime</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/System/ValueType.html">ValueType</a> class: <a href="/vignettes/clr/System/ValueType.html">ValueType</a></li>
+<li>use by <i>property</i> member <code>level</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Logging/MSG_TYPES.html">MSG_TYPES</a></li>
+<li>use by <i>property</i> member <code>time</code>: <a href="/vignettes/clr/System/DateTime.html">DateTime</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

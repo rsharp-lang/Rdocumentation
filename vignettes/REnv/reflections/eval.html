@@ -27,7 +27,8 @@
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>eval</strong>(<i>expr</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>eval</strong>(<i>expr</i>,
+    <i>x</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -35,33 +36,36 @@
         <table>
             
 <dt>expr</dt>
-<dd><p><p>an object to be evaluated. See 'Details’.</p></p></dd>
+<dd><p>an object to be evaluated. See 'Details’.</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>the environment In which expr Is To be evaluated. <br />
- May also be NULL, a list, a data frame, a pairlist Or an Integer <br />
- As specified To sys.Call.</p></p></dd>
+<dd><p>the environment In which expr Is To be evaluated. 
+ May also be NULL, a list, a data frame, a pairlist Or an Integer 
+ As specified To sys.Call. [as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>eval evaluates the expr argument in the environment specified by envir <br />
- and returns the computed value. If envir is not specified, then the <br />
- default is parent.frame() (the environment where the call to eval was <br />
- made).</p>
-
-<p>Objects to be evaluated can be of types call Or expression Or name <br />
- (when the name Is looked up in the current scope And its binding Is <br />
- evaluated), a promise Or any of the basic types such as vectors, <br />
+        <p>eval evaluates the expr argument in the environment specified by envir 
+ and returns the computed value. If envir is not specified, then the 
+ default is parent.frame() (the environment where the call to eval was 
+ made).
+ 
+ Objects to be evaluated can be of types call Or expression Or name 
+ (when the name Is looked up in the current scope And its binding Is 
+ evaluated), a promise Or any of the basic types such as vectors, 
  functions And environments (which are returned unchanged).</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>The result of evaluating the object: for an expression vector this is <br />
+        <p>The result of evaluating the object: for an expression vector this is 
  the result of evaluating the last element.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

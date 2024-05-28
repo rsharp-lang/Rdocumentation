@@ -24,14 +24,12 @@
 
         <p>An expression that will create a new symbol in R# environment</p>
 
-<p>the base type of </p>
-
-<ol>
-<li><a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/ExpressionSymbols/Closure/DeclareNewSymbol.html">DeclareNewSymbol</a></li>
-<li><a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/ExpressionSymbols/Closure/DeclareLambdaFunction.html">DeclareLambdaFunction</a></li>
-<li><a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/ExpressionSymbols/Closure/DeclareNewFunction.html">DeclareNewFunction</a></li>
-<li><a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/ExpressionSymbols/Closure/UsingClosure.html">UsingClosure</a></li>
-</ol><br /><p>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/Expression.html">Expression</a> class.</p>
+<p>the base type of 
+ 
+ 1. <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/ExpressionSymbols/Closure/DeclareNewSymbol.html">DeclareNewSymbol</a>
+ 2. <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/ExpressionSymbols/Closure/DeclareLambdaFunction.html">DeclareLambdaFunction</a>
+ 3. <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/ExpressionSymbols/Closure/DeclareNewFunction.html">DeclareNewFunction</a>
+ 4. <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/ExpressionSymbols/Closure/UsingClosure.html">UsingClosure</a></p>
 
         <h3>Declare</h3>        
 
@@ -39,12 +37,21 @@
             <code id="clr_ts">
 # namespace SMRUCC.Rsharp.Interpreter.ExecuteEngine
 export class SymbolExpression extends <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/Expression.html">Expression</a> {
-   type: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/TypeCodes.html">TypeCodes</a>;
    expressionName: <a href="/vignettes/clr/SMRUCC/Rsharp/Development/Package/File/ExpressionTypes.html">ExpressionTypes</a>;
    isCallable: boolean;
+   type: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/TypeCodes.html">TypeCodes</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/Expression.html">Expression</a> class: <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/Expression.html">Expression</a></li>
+<li>use by <i>property</i> member <code>expressionName</code>: <a href="/vignettes/clr/SMRUCC/Rsharp/Development/Package/File/ExpressionTypes.html">ExpressionTypes</a></li>
+<li>use by <i>property</i> member <code>type</code>: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/TypeCodes.html">TypeCodes</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

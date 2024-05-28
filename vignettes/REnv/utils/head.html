@@ -36,36 +36,39 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>an object</p></p></dd>
+<dd><p>an object</p></dd>
 
 
 <dt>n</dt>
-<dd><p><p>a single integer. If positive or zero, size for the resulting object: number of <br />
- elements for a vector (including lists), rows for a matrix or data frame or lines <br />
- for a function. If negative, all but the n last/first number of elements of x.</p></p></dd>
+<dd><p>a single integer. If positive or zero, size for the resulting object: number of 
+ elements for a vector (including lists), rows for a matrix or data frame or lines 
+ for a function. If negative, all but the n last/first number of elements of x. [as integer]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>For matrices, 2-dim tables and data frames, head() (tail()) returns the first (last) <br />
- n rows when n >= 0 or all but the last (first) n rows when n &lt; 0. head.matrix() <br />
- and tail.matrix() are exported. For functions, the lines of the deparsed function <br />
+        <p>For matrices, 2-dim tables and data frames, head() (tail()) returns the first (last) 
+ n rows when n >= 0 or all but the last (first) n rows when n < 0. head.matrix() 
+ and tail.matrix() are exported. For functions, the lines of the deparsed function 
  are returned as character strings.</p>
 
-<p>If a matrix has no row names, Then tail() will add row names Of the form "[n,]" <br />
- To the result, so that it looks similar To the last lines Of x When printed. <br />
+<p>If a matrix has no row names, Then tail() will add row names Of the form "[n,]" 
+ To the result, so that it looks similar To the last lines Of x When printed. 
  Setting addrownums = False suppresses this behaviour.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>An object (usually) like x but generally smaller. For ftable objects x, <br />
+        <p>An object (usually) like x but generally smaller. For ftable objects x, 
  a transformed format(x).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

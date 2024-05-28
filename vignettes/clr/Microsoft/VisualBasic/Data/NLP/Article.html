@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>文章正文数据模型</p><br /><p>this class extends from <a href="/vignettes/clr/System/ValueType.html">ValueType</a> class.</p>
+        <p>文章正文数据模型</p>
 
         <h3>Declare</h3>        
 
@@ -30,17 +30,25 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.Data.NLP
 export class Article extends <a href="/vignettes/clr/System/ValueType.html">ValueType</a> {
-   # 文章标题
-   title: string;
    # 正文文本
    content: string;
    # 带标签正文
    contentWithTags: string;
    # 文章发布时间
    publishDate: <a href="/vignettes/clr/System/DateTime.html">DateTime</a>;
+   # 文章标题
+   title: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/System/ValueType.html">ValueType</a> class: <a href="/vignettes/clr/System/ValueType.html">ValueType</a></li>
+<li>use by <i>property</i> member <code>publishDate</code>: <a href="/vignettes/clr/System/DateTime.html">DateTime</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

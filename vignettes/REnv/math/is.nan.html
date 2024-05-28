@@ -35,40 +35,43 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>R object to be tested: the default methods handle atomic <br />
- vectors.</p></p></dd>
+<dd><p>R object to be tested: the default methods handle atomic 
+ vectors.</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>is.nan tests if a numeric value is NaN. Do not test equality <br />
- to NaN, or even use identical, since systems typically have<br />
- many different NaN values. One of these is used for the <br />
- numeric missing value NA, and is.nan is false for that value. <br />
- A complex number is regarded as NaN if either the real or <br />
- imaginary part is NaN but not NA. All elements of logical, <br />
+        <p>is.nan tests if a numeric value is NaN. Do not test equality 
+ to NaN, or even use identical, since systems typically have
+ many different NaN values. One of these is used for the 
+ numeric missing value NA, and is.nan is false for that value. 
+ A complex number is regarded as NaN if either the real or 
+ imaginary part is NaN but not NA. All elements of logical, 
  integer and raw vectors are considered not to be NaN.</p>
 
-<p>All three functions accept NULL As input And Return a length <br />
- zero result. The Default methods accept character And raw vectors, <br />
- And Return False For all entries. Prior To R version 2.14.0 <br />
- they accepted all input, returning False For most non-numeric <br />
- values; cases which are Not atomic vectors are now signalled <br />
+<p>All three functions accept NULL As input And Return a length 
+ zero result. The Default methods accept character And raw vectors, 
+ And Return False For all entries. Prior To R version 2.14.0 
+ they accepted all input, returning False For most non-numeric 
+ values; cases which are Not atomic vectors are now signalled 
  As errors.</p>
 
-<p>All three functions are generic: you can write methods To handle <br />
+<p>All three functions are generic: you can write methods To handle 
  specific classes Of objects, see InternalMethods.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>A logical vector of the same length as x: dim, dimnames <br />
+        <p>A logical vector of the same length as x: dim, dimnames 
  and names attributes are preserved.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

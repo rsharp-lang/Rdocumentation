@@ -28,7 +28,7 @@
 
         <div style="width: 100%; padding-left: 3%; color: black;">
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>quantile</strong>(<i>x</i>,
-    <i>probs</i> = [0,0.25,0.5,0.75,1]);</code></pre>
+    <i>probs</i> = [<span style='color: green;'>0.25</span>,<span style='color: green;'>0.5</span>,<span style='color: green;'>0.75</span>,<span style='color: green;'>1</span>]);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -36,18 +36,18 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>numeric vector whose sample quantiles are wanted, or an object of a class <br />
- for which a method has been defined (see also ‘details’). NA and NaN <br />
- values are not allowed in numeric vectors unless na.rm is TRUE.</p></p></dd>
+<dd><p>numeric vector whose sample quantiles are wanted, or an object of a class 
+ for which a method has been defined (see also ‘details’). NA and NaN 
+ values are not allowed in numeric vectors unless na.rm is TRUE. [as double]</p></dd>
 
 
 <dt>probs</dt>
-<dd><p><p>numeric vector of probabilities with values in [0,1]. (Values up to 2e-14 <br />
- outside that range are accepted and moved to the nearby endpoint.)</p></p></dd>
+<dd><p>numeric vector of probabilities with values in [0,1]. (Values up to 2e-14 
+ outside that range are accepted and moved to the nearby endpoint.)</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
@@ -56,22 +56,25 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
 
         <h3>Value</h3>
 
-        <p>A vector of length length(probs) is returned; if names = TRUE, it has a <br />
- names attribute.</p>
-
-<p>NA And NaN values in probs are propagated to the result.<br />
- The Default method works With classed objects sufficiently Like numeric <br />
- vectors that sort And (Not needed by types 1 And 3) addition Of elements <br />
- And multiplication by a number work correctly. Note that As this Is In a <br />
- Namespace, the copy Of sort In base will be used, Not some S4 generic <br />
- Of that name. Also note that that Is no check On the 'correctly’, and <br />
- so e.g. quantile can be applied to complex vectors which (apart from ties) <br />
- will be ordered on their real parts.</p>
-
-<p>There Is a method for the date-time classes (see "POSIXt"). Types 1 And 3 <br />
+        <p>A vector of length length(probs) is returned; if names = TRUE, it has a 
+ names attribute.
+ 
+ NA And NaN values in probs are propagated to the result.
+ The Default method works With classed objects sufficiently Like numeric 
+ vectors that sort And (Not needed by types 1 And 3) addition Of elements 
+ And multiplication by a number work correctly. Note that As this Is In a 
+ Namespace, the copy Of sort In base will be used, Not some S4 generic 
+ Of that name. Also note that that Is no check On the 'correctly’, and 
+ so e.g. quantile can be applied to complex vectors which (apart from ties) 
+ will be ordered on their real parts.
+ 
+ There Is a method for the date-time classes (see "POSIXt"). Types 1 And 3 
  can be used for class "Date" And for ordered factors.</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/Microsoft/VisualBasic/Math/Quantile/QuantileEstimationGK.html">QuantileEstimationGK</a></li><li>list</li></ul>
 
         <h3 style="display: none;">Examples</h3>

@@ -10,7 +10,8 @@ const app_dir     = @HOME;
 const clr_modules = ["REnv.dll" "Rlapack.dll" "roxygenNet.dll" "Rserve.dll" "Rserver.dll"
                      "Rstudio.dll" "signalKit.dll" "snowFall.dll" "webKit.dll" "base.dll"
                      "devkit.dll" "graphics.dll" "igraph.dll" "MLkit.dll" "njl.dll"
-                     "npy.dll" "nts.dll" "Parallel.dll" "RData.dll"];
+                     "npy.dll" # "nts.dll" 
+                     "Parallel.dll" "RData.dll"];
 
 const index = list();
 

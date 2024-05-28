@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.DataStorage.netCDF.Components.variable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>variable {Microsoft.VisualBasic.DataStorage.netCDF.Components}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>variable</h2>
+
+        <h3>Description</h3>
+
+        <p>变量对象,CDF文件之中的实验数据之类的数据都是保存于这个对象之中的</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.DataStorage.netCDF.Components
+export class variable {
+   # Array with the attributes of the variable
+   attributes: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/attribute.html">attribute[]</a>;
+   dimensionality: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/dimensionality.html">dimensionality</a>;
+   # Array with the dimension IDs of the variable.
+   #  (<a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/Header.html">Header</a>.<a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/Dimension.html">dimensions</a>)
+   dimensions: integer;
+   # String with the name of the variable
+   name: string;
+   # Number with the offset where of the variable begins
+   offset: integer;
+   # True if Is a record variable, false otherwise
+   record: boolean;
+   # Number with the size of the variable.(在文件之中的数据字节大小)
+   size: integer;
+   # String with the type of the variable
+   type: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a>;
+   # 惰性求值的属性
+   value: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/ICDFDataVector.html">ICDFDataVector</a>;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>attributes</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/attribute.html">attribute</a></li>
+<li>use by <i>property</i> member <code>dimensionality</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/dimensionality.html">dimensionality</a></li>
+<li>use by <i>property</i> member <code>type</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>property</i> member <code>value</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/ICDFDataVector.html">ICDFDataVector</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

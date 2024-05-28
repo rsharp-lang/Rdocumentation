@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>This attribute provides a more details information about a namepace package module in your scripting plugins.</p><br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/CommandLine/Reflection/Namespace.html">Namespace</a> class.</p>
+        <p>This attribute provides a more details information about a namepace package module in your scripting plugins.</p>
 
         <h3>Declare</h3>        
 
@@ -30,21 +30,30 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.Scripting.MetaData
 export class PackageAttribute extends <a href="/vignettes/clr/Microsoft/VisualBasic/CommandLine/Reflection/Namespace.html">Namespace</a> {
-   # This plugins project's home page url.
-   Url: string;
+   AutoExtract: boolean;
+   Category: <a href="/vignettes/clr/Microsoft/VisualBasic/Scripting/MetaData/APICategories.html">APICategories</a>;
+   # 这个脚本模块包的文献引用列表
+   Cites: string;
+   Description: string;
+   Namespace: string;
    # Your name or E-Mail
    Publisher: string;
    Revision: integer;
-   # 这个脚本模块包的文献引用列表
-   Cites: string;
-   Category: <a href="/vignettes/clr/Microsoft/VisualBasic/Scripting/MetaData/APICategories.html">APICategories</a>;
-   Description: string;
-   Namespace: string;
-   AutoExtract: boolean;
    TypeId: <i>any</i> kind;
+   # This plugins project's home page url.
+   Url: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/CommandLine/Reflection/Namespace.html">Namespace</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/CommandLine/Reflection/Namespace.html">Namespace</a></li>
+<li>use by <i>property</i> member <code>Category</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/Scripting/MetaData/APICategories.html">APICategories</a></li>
+<li>use by <i>property</i> member <code>TypeId</code>: <i>any</i> kind</li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

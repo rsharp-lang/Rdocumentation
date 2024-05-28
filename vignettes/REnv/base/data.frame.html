@@ -35,12 +35,12 @@
         <table>
             
 <dt>columns</dt>
-<dd><p><p>these arguments are of either the form value or <code>tag = value</code>. Component names <br />
- are created based on the tag (if present) or the deparsed argument itself.</p></p></dd>
+<dd><p>these arguments are of either the form value or <code>tag = value</code>. Component names 
+ are created based on the tag (if present) or the deparsed argument itself.</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
@@ -49,24 +49,27 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>A data frame, a matrix-like structure whose columns may be of differing types <br />
+        <p>A data frame, a matrix-like structure whose columns may be of differing types 
  (<code>numeric</code>, <code>logical</code>, <code>factor</code> and <code>character</code> and so on).</p>
 
-<p>How the names Of the data frame are created Is complex, And the rest Of this <br />
- paragraph Is only the basic story. If the arguments are all named And simple <br />
- objects (Not lists, matrices Of data frames) Then the argument names give the <br />
- column names. For an unnamed simple argument, a deparsed version Of the <br />
- argument Is used As the name (With an enclosing <code>I(...)</code> removed). For a named <br />
- <code>matrix</code>/<code>list</code>/<code>dataframe</code> argument With more than one named column, the names Of <br />
- the columns are the name Of the argument followed by a dot And the column name <br />
- inside the argument: If the argument Is unnamed, the argument's column names <br />
- are used. For a named or unnamed matrix/list/data frame argument that contains <br />
- a single column, the column name in the result is the column name in the <br />
- argument. <br />
- Finally, the names are adjusted to be unique and syntactically valid unless <br />
+<p>How the names Of the data frame are created Is complex, And the rest Of this 
+ paragraph Is only the basic story. If the arguments are all named And simple 
+ objects (Not lists, matrices Of data frames) Then the argument names give the 
+ column names. For an unnamed simple argument, a deparsed version Of the 
+ argument Is used As the name (With an enclosing <code>I(...)</code> removed). For a named 
+ <code>matrix</code>/<code>list</code>/<code>dataframe</code> argument With more than one named column, the names Of 
+ the columns are the name Of the argument followed by a dot And the column name 
+ inside the argument: If the argument Is unnamed, the argument's column names 
+ are used. For a named or unnamed matrix/list/data frame argument that contains 
+ a single column, the column name in the result is the column name in the 
+ argument. 
+ Finally, the names are adjusted to be unique and syntactically valid unless 
  <code>check.names = FALSE</code>.</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a></li></ul>
 
         <h3 style="display: none;">Examples</h3>

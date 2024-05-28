@@ -26,18 +26,14 @@
 
 <p>在选择器里：</p>
 
-<ul>
-<li>ID 和 类 选择器 区分 大小写</li>
-<li><p>标签选择器、属性选择器不区分大小写</p>
-
-<blockquote>
-  <p>类选择器和 ID 选择器可能是区分大小写的。这取决于文档的语言。<br />
-  HTML 和 XHTML 将类和 ID 值定义为区分大小写，所以类和 ID <br />
-  值的大小写必须与文档中的相应值匹配。</p>
-  
-  <p>—— W3C</p>
-</blockquote></li>
-</ul><br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Html/Document/InnerPlantText.html">InnerPlantText</a> class.</p>
+<p>+ ID 和 类 选择器 区分 大小写
+ + 标签选择器、属性选择器不区分大小写
+ 
+ > 类选择器和 ID 选择器可能是区分大小写的。这取决于文档的语言。
+ > HTML 和 XHTML 将类和 ID 值定义为区分大小写，所以类和 ID 
+ > 值的大小写必须与文档中的相应值匹配。
+ > 
+ > —— W3C</p>
 
         <h3>Declare</h3>        
 
@@ -45,22 +41,31 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.MIME.Html.Document
 export class HtmlElement extends <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Html/Document/InnerPlantText.html">InnerPlantText</a> {
-   # 标签名
-   TagName: string;
    # 标签的属性列表
    Attributes: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Html/Document/ValueAttribute.html">ValueAttribute[]</a>;
+   class: string;
    HtmlElements: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Html/Document/InnerPlantText.html">InnerPlantText[]</a>;
-   IsPlantText: boolean;
    # 唯一编号是区分大小写的
    id: string;
-   name: string;
-   class: string;
-   OnlyInnerText: boolean;
-   IsEmpty: boolean;
    InnerText: string;
+   IsEmpty: boolean;
+   IsPlantText: boolean;
+   name: string;
+   OnlyInnerText: boolean;
+   # 标签名
+   TagName: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Html/Document/InnerPlantText.html">InnerPlantText</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Html/Document/InnerPlantText.html">InnerPlantText</a></li>
+<li>use by <i>property</i> member <code>Attributes</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Html/Document/ValueAttribute.html">ValueAttribute</a></li>
+<li>use by <i>property</i> member <code>HtmlElements</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Html/Document/InnerPlantText.html">InnerPlantText</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

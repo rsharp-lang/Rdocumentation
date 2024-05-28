@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        
+        <p>Hierarchical Data Stream Pack, A hdf5 liked file format</p>
 
         <h3>Declare</h3>        
 
@@ -30,13 +30,24 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.DataStorage.HDSPack.FileSystem
 export class StreamPack {
-   superBlock: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/HDSPack/FileSystem/StreamGroup.html">StreamGroup</a>;
+   # get all data files inside this hds data 
+   #  pack, not includes directory.
+   files: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/HDSPack/FileSystem/StreamBlock.html">StreamBlock[]</a>;
    globalAttributes: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/HDSPack/LazyAttribute.html">LazyAttribute</a>;
    is_readonly: boolean;
-   files: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/HDSPack/FileSystem/StreamBlock.html">StreamBlock[]</a>;
+   superBlock: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/HDSPack/FileSystem/StreamGroup.html">StreamGroup</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>files</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/HDSPack/FileSystem/StreamBlock.html">StreamBlock</a></li>
+<li>use by <i>property</i> member <code>globalAttributes</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/HDSPack/LazyAttribute.html">LazyAttribute</a></li>
+<li>use by <i>property</i> member <code>superBlock</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/HDSPack/FileSystem/StreamGroup.html">StreamGroup</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

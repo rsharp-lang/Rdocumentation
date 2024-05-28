@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p><br /> isTRUE(x) is the same as { is.logical(x) &amp;&amp; length(x) == 1 &amp;&amp; !is.na(x) &amp;&amp; x }; <br /> isFALSE() is defined analogously. Consequently, if(isTRUE(cond)) may be preferable to if(cond) because <br /> of NAs.<br /> <br /> In earlier R versions, isTRUE &lt;- function(x) identical(x, TRUE), had the drawback to be false e.g., <br /> for x &lt;- c(val = TRUE).</p>
+        <p><br /> isTRUE(x) is the same as { is.logical(x) && length(x) == 1 && !is.na(x) && x }; <br /> isFALSE() is defined analogously. Consequently, if(isTRUE(cond)) may be preferable to if(cond) because <br /> of NAs.<br /> <br /> In earlier R versions, isTRUE <- function(x) identical(x, TRUE), had the drawback to be false e.g., <br /> for x <- c(val = TRUE).</p>
 
         <h3>Usage</h3>
 
@@ -35,7 +35,7 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
         </table>
 
@@ -44,14 +44,27 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
         this function returns data object of type boolean.<h4>clr value class</h4><ul><li>boolean</li></ul>
 
-        <h3 style="display: none;">Examples</h3>
+        <h3 style="display: block;">Examples</h3>
 
-        
+        <pre><code id="example_r"> # TRUE
+ isTRUE(TRUE);
+ 
+ # FALSE
+ isTRUE("TRUE");
+ 
+ # FALSE
+ isTRUE(FALSE);
+ 
+ # FALSE
+ isTRUE([TRUE TRUE]);</code></pre>
 
         <hr />
         <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a

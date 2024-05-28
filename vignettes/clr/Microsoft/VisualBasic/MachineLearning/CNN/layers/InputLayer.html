@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.CNN.layers.InputLayer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>InputLayer {Microsoft.VisualBasic.MachineLearning.CNN.layers}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>InputLayer</h2>
+
+        <h3>Description</h3>
+
+        <p>The input layer is a simple layer that will pass the data though and
+ create a window into the full training data set. So for instance if
+ we have an image of size 28x28x1 which means that we have 28 pixels
+ in the x axle and 28 pixels in the y axle and one color (gray scale),
+ then this layer might give you a window of another size example 24x24x1
+ that is randomly chosen in order to create some distortion into the
+ dataset so the algorithm don't over-fit the training.
+ 
+ @author Daniel Persson (mailto.woden@gmail.com)</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.CNN.layers
+export class InputLayer extends <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/DataLink.html">DataLink</a> {
+   BackPropagationResult: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/data/BackPropResult.html">iterates(BackPropResult)</a>;
+   # the image data size dimension [width, height]
+   dims: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/Dimension.html">Dimension</a>;
+   # the image data channels, example as color rgb channels, brightness, etc
+   out_depth: integer;
+   Type: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/LayerTypes.html">LayerTypes</a>;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/DataLink.html">DataLink</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/DataLink.html">DataLink</a></li>
+<li>use by <i>property</i> member <code>BackPropagationResult</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/data/BackPropResult.html">iterates(BackPropResult)</a></li>
+<li>use by <i>property</i> member <code>dims</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/Dimension.html">Dimension</a></li>
+<li>use by <i>property</i> member <code>Type</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/LayerTypes.html">LayerTypes</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

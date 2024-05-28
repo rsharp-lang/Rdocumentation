@@ -82,28 +82,34 @@ table caption {font-size:14px;font-weight:bolder;}
       <table class="table-three-line">
         <caption>.NET clr function exports</caption>
         <tbody><tr>
+  <td id="tqdm">
+    <a href="./utils/tqdm.html">tqdm</a>
+  </td>
+  <td><p>Wraps a collection with a progress bar for iteration, providing visual feedback on progress.</p></td>
+</tr>
+<tr>
   <td id="install.packages">
     <a href="./utils/install.packages.html">install.packages</a>
   </td>
   <td><h1>Install Packages from Repositories or Local Files</h1>
 
-<p>Download and install packages from CRAN-like repositories or from local files.</p>
-
-<p>This is the main function to install packages. It takes a vector of names and <br />
- a destination library, downloads the packages from the repositories and installs <br />
- them. (If the library is omitted it defaults to the first directory in <br />
- .libPaths(), with a message if there is more than one.) If lib is omitted or <br />
- is of length one and is not a (group) writable directory, in interactive use <br />
- the code offers to create a personal library tree (the first element of <br />
- Sys.getenv("R_LIBS_USER")) and install there. Detection of a writable <br />
+<p>Download and install packages from CRAN-like repositories or from local files.
+ 
+ This is the main function to install packages. It takes a vector of names and 
+ a destination library, downloads the packages from the repositories and installs 
+ them. (If the library is omitted it defaults to the first directory in 
+ .libPaths(), with a message if there is more than one.) If lib is omitted or 
+ is of length one and is not a (group) writable directory, in interactive use 
+ the code offers to create a personal library tree (the first element of 
+ Sys.getenv("R<em>LIBS</em>USER")) and install there. Detection of a writable 
  directory is problematic on Windows: see the ‘Note’ section.</p>
 
-<p>For installs from a repository an attempt Is made To install the packages In <br />
- an order that respects their dependencies. This does assume that all the <br />
- entries In Lib are On the Default library path For installs (Set by <br />
+<p>For installs from a repository an attempt Is made To install the packages In 
+ an order that respects their dependencies. This does assume that all the 
+ entries In Lib are On the Default library path For installs (Set by 
  environment variable R_LIBS).</p>
 
-<p>You are advised To run update.packages before install.packages To ensure that <br />
+<p>You are advised To run update.packages before install.packages To ensure that 
  any already installed dependencies have their latest versions.</p></td>
 </tr>
 <tr>
@@ -112,14 +118,14 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h2>Find Installed Packages</h2>
 
-<p>Find (or retrieve) details of all packages installed in the specified libraries.</p>
-
-<p><code>installed.packages</code> scans the ‘DESCRIPTION’ files of each package found along <br />
+<p>Find (or retrieve) details of all packages installed in the specified libraries.
+ 
+ <code>installed.packages</code> scans the ‘DESCRIPTION’ files of each package found along 
  <code>lib.loc</code> and returns a matrix of package names, library paths and version numbers.</p>
 
-<p>The information found Is cached (by library) For the R session And specified fields argument, <br />
- And updated only If the top-level library directory has been altered, <br />
- For example by installing Or removing a package. If the cached information becomes confused, <br />
+<p>The information found Is cached (by library) For the R session And specified fields argument, 
+ And updated only If the top-level library directory has been altered, 
+ For example by installing Or removing a package. If the cached information becomes confused, 
  it can be refreshed by running <code>installed.packages(noCache = True)</code>.</p></td>
 </tr>
 <tr>
@@ -144,10 +150,10 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="head">
     <a href="./utils/head.html">head</a>
   </td>
-  <td><p>Return the First or Last Part of an Object</p>
-
-<p>Returns the first or last parts of a vector, matrix, table, data frame or function. <br />
- Since head() and tail() are generic functions, they may also have been extended <br />
+  <td><p>Return the First or Last Part of an Object
+ 
+ Returns the first or last parts of a vector, matrix, table, data frame or function. 
+ Since head() and tail() are generic functions, they may also have been extended 
  to other classes.</p></td>
 </tr>
 <tr>
@@ -156,7 +162,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Report on Memory Allocation</h3>
 
-<p><code>memory.size</code> reports the current or maximum memory allocation <br />
+<p><code>memory.size</code> reports the current or maximum memory allocation 
  of the malloc function used in this version of R.</p></td>
 </tr>
 <tr>
@@ -239,10 +245,10 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Create a Skeleton for a New Source Package</h3>
 
-<p>package.skeleton automates some of the setup for a new source <br />
- package. It creates directories, saves functions, data, and <br />
- R code files to appropriate places, and creates skeleton help<br />
- files and a ‘Read-and-delete-me’ file describing further steps <br />
+<p>package.skeleton automates some of the setup for a new source 
+ package. It creates directories, saves functions, data, and 
+ R code files to appropriate places, and creates skeleton help
+ files and a ‘Read-and-delete-me’ file describing further steps 
  in packaging.</p></td>
 </tr>
 <tr>
@@ -257,9 +263,9 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="zip">
     <a href="./utils/zip.html">zip</a>
   </td>
-  <td><p>Create Zip Archives</p>
-
-<p>A wrapper for an external zip command to create zip archives.</p></td>
+  <td><p>Create Zip Archives
+ 
+ A wrapper for an external zip command to create zip archives.</p></td>
 </tr>
 <tr>
   <td id="sendMessage">

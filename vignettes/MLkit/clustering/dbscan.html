@@ -43,38 +43,38 @@
         <table>
             
 <dt>data</dt>
-<dd><p><p>data matrix, data.frame, dissimilarity matrix <br />
- or dist-object. Specify method="dist" if the data should be <br />
- interpreted as dissimilarity matrix or object. Otherwise Euclidean <br />
- distances will be used.</p></p></dd>
+<dd><p>data matrix, data.frame, dissimilarity matrix 
+ or dist-object. Specify method="dist" if the data should be 
+ interpreted as dissimilarity matrix or object. Otherwise Euclidean 
+ distances will be used.</p></dd>
 
 
 <dt>eps</dt>
-<dd><p><p>Reachability distance, see Ester et al. (1996).</p></p></dd>
+<dd><p>Reachability distance, see Ester et al. (1996). [as double]</p></dd>
 
 
 <dt>minPts</dt>
-<dd><p><p>Reachability minimum no. Of points, see Ester et al. (1996).</p></p></dd>
+<dd><p>Reachability minimum no. Of points, see Ester et al. (1996). [as integer]</p></dd>
 
 
 <dt>scale</dt>
-<dd><p><p>scale the data if TRUE.</p></p></dd>
+<dd><p>scale the data if TRUE. [as boolean]</p></dd>
 
 
 <dt>method</dt>
-<dd><p><p>"dist" treats data as distance matrix (relatively fast but memory <br />
- expensive), "raw" treats data as raw data and avoids calculating a <br />
- distance matrix (saves memory but may be slow), "hybrid" expects <br />
- also raw data, but calculates partial distance matrices (very fast <br />
- with moderate memory requirements).</p></p></dd>
+<dd><p>"dist" treats data as distance matrix (relatively fast but memory 
+ expensive), "raw" treats data as raw data and avoids calculating a 
+ distance matrix (saves memory but may be slow), "hybrid" expects 
+ also raw data, but calculates partial distance matrices (very fast 
+ with moderate memory requirements). [as <a href="/vignettes/clr/MLkit/dbScanMethods.html">dbScanMethods</a>]</p></dd>
 
 
 <dt>seeds</dt>
-<dd><p><p>FALSE to not include the isseed-vector in the dbscan-object.</p></p></dd>
+<dd><p>FALSE to not include the isseed-vector in the dbscan-object. [as boolean]</p></dd>
 
 
 <dt>countmode</dt>
-<dd><p><p>NULL or vector of point numbers at which to report progress.</p></p></dd>
+<dd><p>NULL or vector of point numbers at which to report progress.</p></dd>
 
         </table>
 
@@ -83,6 +83,9 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        MLkit
 
         <h3>Value</h3>
 

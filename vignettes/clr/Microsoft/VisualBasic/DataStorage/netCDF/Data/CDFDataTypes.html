@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.DataStorage.netCDF.Data.CDFDataTypes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>CDFDataTypes {Microsoft.VisualBasic.DataStorage.netCDF.Data}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>CDFDataTypes</h2>
+
+        <h3>Description</h3>
+
+        <p>The enum values of the CDF data types.
+ 
+ nc_type
+ The netcdf external data types
+ 
+ ><a href='https://github.com/Unidata/netcdf-java/blob/a2bfa6b5e817d06ee317d223f9834ca9362b5da0/netcdf4/src/main/java/ucar/nc2/jni/netcdf/Nc4prototypes.java#L67' title='https://github.com/Unidata/netcdf-java/blob/a2bfa6b5e817d06ee317d223f9834ca9362b5da0/netcdf4/src/main/java/ucar/nc2/jni/netcdf/Nc4prototypes.java#L67'>https://github.com/Unidata/netcdf-java/blob/a2bfa6b5e817d06ee317d223f9834ca9362b5da0/netcdf4/src/main/java/ucar/nc2/jni/netcdf/Nc4prototypes.java#L67</a>
+这个枚举值是直接可以和CDF文件之中读取出来的值之间相互转换的</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.DataStorage.netCDF.Data
+export class CDFDataTypes extends <a href="/vignettes/clr/System/Enum.html">Enum</a> {
+   # int NC_NAT = 0; /<em> Not-A-Type </em>/
+   [@desc "undefined"]
+   undefined: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 0;
+
+   # 8-bit signed integers, signed 1 byte integer
+   [@desc "byte"]
+   NC_BYTE: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 1;
+
+   # text characters, ISO/ASCII character
+   [@desc "char"]
+   NC_CHAR: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 2;
+
+   # 16-bit signed integers
+   [@desc "short"]
+   NC_SHORT: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 3;
+
+   # 32-bit signed integers
+   [@desc "int"]
+   NC_INT: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 4;
+
+   # IEEE single precision floats
+   [@desc "float"]
+   NC_FLOAT: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 5;
+
+   # IEEE double precision floats
+   [@desc "double"]
+   NC_DOUBLE: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 6;
+
+   NC_UBYTE: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 7;
+
+   NC_USHORT: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 8;
+
+   NC_UINT: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 9;
+
+   # <h1>define NC_INT64   10</h1>
+   # 
+   # probably not supports by the standard netCDF4 library on linux and NASA Panoply software...
+   [@desc "long"]
+   NC_INT64: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 10;
+
+   # unsigned 8-byte int
+   NC_UINT64: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 11;
+
+   # string
+   NC_STRING: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 12;
+
+   # used internally for vlen types
+   NC_VLEN: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 13;
+
+   # used internally for opaque types
+   NC_OPAQUE: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 14;
+
+   # used internally for enum types
+   NC_ENUM: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 15;
+
+   # used internally for compound types
+   NC_COMPOUND: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 16;
+
+   # probably not supports by the standard netCDF4 library on linux and NASA Panoply software...
+   [@desc "boolean"]
+   BOOLEAN: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a> = 25;
+
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/System/Enum.html">Enum</a> class: <a href="/vignettes/clr/System/Enum.html">Enum</a></li>
+<li>use by <i>field</i> member <code>undefined</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_BYTE</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_CHAR</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_SHORT</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_INT</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_FLOAT</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_DOUBLE</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_UBYTE</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_USHORT</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_UINT</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_INT64</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_UINT64</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_STRING</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_VLEN</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_OPAQUE</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_ENUM</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>NC_COMPOUND</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+<li>use by <i>field</i> member <code>BOOLEAN</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Data/CDFDataTypes.html">CDFDataTypes</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

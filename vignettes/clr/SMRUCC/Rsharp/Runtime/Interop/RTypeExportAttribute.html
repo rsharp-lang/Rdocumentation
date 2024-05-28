@@ -22,19 +22,17 @@
 
         <h3>Description</h3>
 
-        <p>export data type to <code>R&#35;</code> runtime environment</p>
+        <p>export data type to <code>R#</code> runtime environment</p>
 
-<p>type information will be imports into current runtime <br />
- context environment when do package module imports at <br />
- function invoke <br />
- @<code>M:SMRUCC.Rsharp.Development.Package.ImportsPackage.ImportsStaticInternalImpl(SMRUCC.Rsharp.Runtime.Environment,System.Type,System.Boolean)</code></p>
-
-<p>the type export information usually be used for the .NET clr de-serilization<br />
- operation, example as:</p>
-
-<ol>
-<li>xml de-serialization:  loadXml("...", typeof = "type_export_name")</li>
-</ol><br /><p>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Interop/RInteropAttribute.html">RInteropAttribute</a> class.</p>
+<p>type information will be imports into current runtime 
+ context environment when do package module imports at 
+ function invoke 
+ @<code>M:SMRUCC.Rsharp.Development.Package.ImportsPackage.ImportsStaticInternalImpl(SMRUCC.Rsharp.Runtime.Environment,System.Type,System.Boolean)</code>
+ 
+ the type export information usually be used for the .NET clr de-serilization
+ operation, example as:
+ 
+ 1. xml de-serialization:  loadXml("...", typeof = "type<em>export</em>name")</p>
 
         <h3>Declare</h3>        
 
@@ -42,13 +40,22 @@
             <code id="clr_ts">
 # namespace SMRUCC.Rsharp.Runtime.Interop
 export class RTypeExportAttribute extends <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Interop/RInteropAttribute.html">RInteropAttribute</a> {
+   model: <a href="/vignettes/clr/System/Type.html">Type</a>;
    # type name
    name: string;
-   model: <a href="/vignettes/clr/System/Type.html">Type</a>;
    TypeId: <i>any</i> kind;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Interop/RInteropAttribute.html">RInteropAttribute</a> class: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Interop/RInteropAttribute.html">RInteropAttribute</a></li>
+<li>use by <i>property</i> member <code>model</code>: <a href="/vignettes/clr/System/Type.html">Type</a></li>
+<li>use by <i>property</i> member <code>TypeId</code>: <i>any</i> kind</li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

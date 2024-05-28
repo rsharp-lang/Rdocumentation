@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.DataMining.ComponentModel.Normalizer.Methods</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Methods {Microsoft.VisualBasic.DataMining.ComponentModel.Normalizer}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Methods</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.DataMining.ComponentModel.Normalizer
+export class Methods extends <a href="/vignettes/clr/System/Enum.html">Enum</a> {
+   # 归一化到[0, 1]区间内
+   NormalScaler: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Normalizer/Methods.html">Methods</a> = 0;
+
+   # 直接 x / max 进行归一化, 当出现极值的时候, 此方法无效, 根据数据分布,可能会归一化到[0, 1] 或者 [-1, 1]区间内
+   RelativeScaler: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Normalizer/Methods.html">Methods</a> = 1;
+
+   # 通过对数据进行区间离散化来完成归一化
+   RangeDiscretizer: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Normalizer/Methods.html">Methods</a> = 2;
+
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/System/Enum.html">Enum</a> class: <a href="/vignettes/clr/System/Enum.html">Enum</a></li>
+<li>use by <i>field</i> member <code>NormalScaler</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Normalizer/Methods.html">Methods</a></li>
+<li>use by <i>field</i> member <code>RelativeScaler</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Normalizer/Methods.html">Methods</a></li>
+<li>use by <i>field</i> member <code>RangeDiscretizer</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Normalizer/Methods.html">Methods</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

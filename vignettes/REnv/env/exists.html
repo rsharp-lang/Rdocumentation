@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>exists</title>
+    <title>Is an Object Defined?</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
@@ -18,11 +18,11 @@
             </tr>
         </table>
 
-        <h2>exists</h2>
+        <h2>Is an Object Defined?</h2>
 
         <h3>Description</h3>
 
-        exists
+        <p><br /> Look for an R object of the given name and possibly return it</p>
 
         <h3>Usage</h3>
 
@@ -34,6 +34,17 @@
 
         <table>
             
+<dt>name</dt>
+<dd><p>a variable name (given As a character String Or a symbol). [as string]</p></dd>
+
+
+<dt>envir</dt>
+<dd><p>where to look for the object (see the details section);
+ if omitted, the function will search as if the name of the object 
+ appeared unquoted in an expression. an alternative way To specify an 
+ environment To look In, but it Is usually simpler To just use the 
+ where argument. [as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
+
         </table>
 
 
@@ -41,14 +52,22 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        this function returns data object of type boolean.<h4>clr value class</h4><ul><li>boolean</li></ul>
+        <p>Logical, true if and only if an object of the correct name and mode is found.</p><h4>clr value class</h4><ul><li>boolean</li></ul>
 
-        <h3 style="display: none;">Examples</h3>
+        <h3 style="display: block;">Examples</h3>
 
-        
+        <pre><code id="example_r"> const myEnvir = globalenv();
+ 
+ if (exists(myVarName, envir = myEnvir)) {
+    r <- get(myVarName, envir = myEnvir)
+    ## ... deal with r ...
+ }</code></pre>
 
         <hr />
         <div style="text-align: center;">[Package <em>env</em> version 2.33.856.6961 <a

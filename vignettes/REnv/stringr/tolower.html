@@ -35,36 +35,39 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>a character vector, or an object that can be coerced to character by <br />
- <code>as.character</code>.</p></p></dd>
+<dd><p>a character vector, or an object that can be coerced to character by 
+ <code>as.character</code>.</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>chartr translates each character in x that is specified in old <br />
- to the corresponding character specified in new. Ranges are <br />
- supported in the specifications, but character classes and <br />
- repeated characters are not. If old contains more characters than <br />
- new, an error is signaled; if it contains fewer characters, the <br />
- extra characters at the end of new are ignored.</p>
-
-<p><code>tolower</code> And <code>toupper</code> convert upper-case characters in a <br />
- character vector to lower-case, Or vice versa. Non-alphabetic <br />
+        <p>chartr translates each character in x that is specified in old 
+ to the corresponding character specified in new. Ranges are 
+ supported in the specifications, but character classes and 
+ repeated characters are not. If old contains more characters than 
+ new, an error is signaled; if it contains fewer characters, the 
+ extra characters at the end of new are ignored.
+ 
+ <code>tolower</code> And <code>toupper</code> convert upper-case characters in a 
+ character vector to lower-case, Or vice versa. Non-alphabetic 
  characters are left unchanged.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>A character vector of the same length and with the same attributes as <br />
- <code>x</code> (after possible coercion).</p>
-
-<p>Elements of the result will be have the encoding declared as that of <br />
- the current locale (see Encoding) if the corresponding input had a <br />
- declared encoding And the current locale Is either Latin-1 Or UTF-8. <br />
- The result will be in the current locale's encoding unless the <br />
- corresponding input was in UTF-8, when it will be in UTF-8 when the <br />
+        <p>A character vector of the same length and with the same attributes as 
+ <code>x</code> (after possible coercion).
+ 
+ Elements of the result will be have the encoding declared as that of 
+ the current locale (see Encoding) if the corresponding input had a 
+ declared encoding And the current locale Is either Latin-1 Or UTF-8. 
+ The result will be in the current locale's encoding unless the 
+ corresponding input was in UTF-8, when it will be in UTF-8 when the 
  system has Unicode wide characters.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

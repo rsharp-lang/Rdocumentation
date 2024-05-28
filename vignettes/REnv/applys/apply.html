@@ -35,61 +35,64 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>an array, including a matrix.</p></p></dd>
+<dd><p>an array, including a matrix.</p></dd>
 
 
 <dt>margin</dt>
-<dd><p><p>a vector giving the subscripts which the <br />
- function will be applied over. E.g., for a matrix 1 indicates rows, <br />
- 2 indicates columns, c(1, 2) indicates rows and columns. Where X has <br />
- named dimnames, it can be a character vector selecting dimension <br />
- names.</p></p></dd>
+<dd><p>a vector giving the subscripts which the 
+ function will be applied over. E.g., for a matrix 1 indicates rows, 
+ 2 indicates columns, c(1, 2) indicates rows and columns. Where X has 
+ named dimnames, it can be a character vector selecting dimension 
+ names. [as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/margins.html">margins</a>]</p></dd>
 
 
 <dt>FUN</dt>
-<dd><p><p>the function to be applied: see ‘Details’. In the case of functions <br />
- like +, %*%, etc., the function name must be backquoted or quoted.</p></p></dd>
+<dd><p>the function to be applied: see ‘Details’. In the case of functions 
+ like +, %*%, etc., the function name must be backquoted or quoted.</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>If X is not an array but an object of a class with a non-null dim value <br />
- (such as a data frame), apply attempts to coerce it to an array via <br />
- <code>as.matrix</code> if it is two-dimensional (e.g., a data frame) or via <br />
+        <p>If X is not an array but an object of a class with a non-null dim value 
+ (such as a data frame), apply attempts to coerce it to an array via 
+ <code>as.matrix</code> if it is two-dimensional (e.g., a data frame) or via 
  <code>as.array</code>.</p>
 
-<p>FUN Is found by a call to match.fun And typically Is either a function <br />
- Or a symbol (e.g., a backquoted name) Or a character string specifying <br />
+<p>FUN Is found by a call to match.fun And typically Is either a function 
+ Or a symbol (e.g., a backquoted name) Or a character string specifying 
  a function to be searched for from the environment of the call to apply.</p>
 
-<p>Arguments in <code>...</code> cannot have the same name as any of the other <br />
- arguments, And care may be needed to avoid partial matching to MARGIN Or <br />
- FUN. In general-purpose code it Is good practice to name the first three <br />
- arguments if ... Is passed through: this both avoids Partial matching To <br />
- MARGIN Or FUN And ensures that a sensible Error message Is given If <br />
+<p>Arguments in <code>...</code> cannot have the same name as any of the other 
+ arguments, And care may be needed to avoid partial matching to MARGIN Or 
+ FUN. In general-purpose code it Is good practice to name the first three 
+ arguments if ... Is passed through: this both avoids Partial matching To 
+ MARGIN Or FUN And ensures that a sensible Error message Is given If 
  arguments named X, MARGIN Or FUN are passed through <code>...</code>.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>If each call to FUN returns a vector of length n, then apply <br />
- returns an array of dimension c(n, dim(X)[MARGIN]) if <code>n &gt; 1</code>. <br />
- If n equals 1, apply returns a vector if MARGIN has length 1 and an array <br />
- of dimension dim(X)[MARGIN] otherwise. If n is 0, the result has length <br />
+        <p>If each call to FUN returns a vector of length n, then apply 
+ returns an array of dimension c(n, dim(X)[MARGIN]) if <code>n > 1</code>. 
+ If n equals 1, apply returns a vector if MARGIN has length 1 and an array 
+ of dimension dim(X)[MARGIN] otherwise. If n is 0, the result has length 
  0 but not necessarily the ‘correct’ dimension.</p>
 
-<p>If the calls To FUN Return vectors Of different lengths, apply returns <br />
- a list Of length prod(Dim(X)[MARGIN]) With Dim Set To MARGIN If this has <br />
+<p>If the calls To FUN Return vectors Of different lengths, apply returns 
+ a list Of length prod(Dim(X)[MARGIN]) With Dim Set To MARGIN If this has 
  length greater than one.</p>
 
-<p>In all cases the result Is coerced by as.vector to one of the basic <br />
- vector types before the dimensions are set, so that (for example) factor <br />
+<p>In all cases the result Is coerced by as.vector to one of the basic 
+ vector types before the dimensions are set, so that (for example) factor 
  results will be coerced to a character array.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

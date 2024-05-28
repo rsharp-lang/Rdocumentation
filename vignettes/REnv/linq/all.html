@@ -36,13 +36,13 @@
         <table>
             
 <dt>test</dt>
-<dd><p><p>zero or more logical vectors. Other objects of zero <br />
- length are ignored, and the rest are coerced to logical ignoring any <br />
- class.</p></p></dd>
+<dd><p>zero or more logical vectors. Other objects of zero 
+ length are ignored, and the rest are coerced to logical ignoring any 
+ class.</p></dd>
 
 
 <dt>narm</dt>
-<dd><p><p>logical. If true NA values are removed before the result is computed.</p></p></dd>
+<dd><p>logical. If true NA values are removed before the result is computed. [as boolean]</p></dd>
 
         </table>
 
@@ -51,18 +51,21 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
         <p>The value is a logical vector of length one.</p>
 
-<p>Let x denote the concatenation of all the logical vectors in ... <br />
+<p>Let x denote the concatenation of all the logical vectors in ... 
  (after coercion), after removing NAs if requested by na.rm = TRUE.</p>
 
-<p>The value returned Is True If all Of the values In x are True <br />
- (including If there are no values), And False If at least one Of <br />
- the values In x Is False. Otherwise the value Is NA (which can <br />
- only occur If na.rm = False And ... contains no False values And <br />
+<p>The value returned Is True If all Of the values In x are True 
+ (including If there are no values), And False If at least one Of 
+ the values In x Is False. Otherwise the value Is NA (which can 
+ only occur If na.rm = False And ... contains no False values And 
  at least one NA value).</p><h4>clr value class</h4><ul><li>boolean</li></ul>
 
         <h3 style="display: none;">Examples</h3>

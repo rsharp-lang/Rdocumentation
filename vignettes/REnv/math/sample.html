@@ -38,56 +38,59 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>either a vector Of one Or more elements from which To choose, Or a positive Integer. See 'Details.’</p></p></dd>
+<dd><p>either a vector Of one Or more elements from which To choose, Or a positive Integer. See 'Details.’</p></dd>
 
 
 <dt>size</dt>
-<dd><p><p>a non-negative integer giving the number of items to choose.</p></p></dd>
+<dd><p>a non-negative integer giving the number of items to choose.</p></dd>
 
 
 <dt>replace</dt>
-<dd><p><p>should sampling be with replacement?</p></p></dd>
+<dd><p>should sampling be with replacement?. [as boolean]</p></dd>
 
 
 <dt>prob</dt>
-<dd><p><p>a vector Of probability weights For obtaining the elements Of the vector being sampled.</p></p></dd>
+<dd><p>a vector Of probability weights For obtaining the elements Of the vector being sampled.</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>If x has length 1, is numeric (in the sense of is.numeric) and <code>x &gt;= 1</code>, sampling <br />
- via sample takes place from <code>1:x</code>. Note that this convenience feature may lead to <br />
- undesired behaviour when x is of varying length in calls such as sample(x). <br />
+        <p>If x has length 1, is numeric (in the sense of is.numeric) and <code>x >= 1</code>, sampling 
+ via sample takes place from <code>1:x</code>. Note that this convenience feature may lead to 
+ undesired behaviour when x is of varying length in calls such as sample(x). 
  See the examples.</p>
 
-<p>Otherwise x can be any R Object For which length And subsetting by integers make sense: <br />
+<p>Otherwise x can be any R Object For which length And subsetting by integers make sense: 
  S3 Or S4 methods for these operations will be dispatched as appropriate.</p>
 
-<p>For sample the default for size Is the number of items inferred from the first argument, <br />
+<p>For sample the default for size Is the number of items inferred from the first argument, 
  so that sample(x) generates a random permutation of the elements of x (Or 1:x).</p>
 
-<p>It Is allowed to ask for size = 0 samples with n = 0 Or a length-zero x, but otherwise <br />
- <code>n &gt; 0</code> Or positive length(x) Is required.</p>
+<p>It Is allowed to ask for size = 0 samples with n = 0 Or a length-zero x, but otherwise 
+ <code>n > 0</code> Or positive length(x) Is required.</p>
 
-<p>Non-integer positive numerical values of n Or x will be truncated to the next smallest <br />
+<p>Non-integer positive numerical values of n Or x will be truncated to the next smallest 
  integer, which has to be no larger than <code>.Machine$integer.max</code>.</p>
 
-<p>The optional prob argument can be used to give a vector of weights for obtaining the elements <br />
- of the vector being sampled. They need Not sum to one, but they should be non-negative And <br />
- Not all zero. If replace Is true, Walker's alias method (Ripley, 1987) is used when there <br />
- are more than 200 reasonably probable values: this gives results incompatible with those <br />
+<p>The optional prob argument can be used to give a vector of weights for obtaining the elements 
+ of the vector being sampled. They need Not sum to one, but they should be non-negative And 
+ Not all zero. If replace Is true, Walker's alias method (Ripley, 1987) is used when there 
+ are more than 200 reasonably probable values: this gives results incompatible with those 
  from <code>R &lt; 2.2.0</code>.</p>
 
-<p>If replace Is False, these probabilities are applied sequentially, that Is the probability <br />
- Of choosing the Next item Is proportional To the weights amongst the remaining items. The <br />
+<p>If replace Is False, these probabilities are applied sequentially, that Is the probability 
+ Of choosing the Next item Is proportional To the weights amongst the remaining items. The 
  number Of nonzero weights must be at least size In this Case.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>For sample a vector of length size with elements drawn from either <code>x</code> or from the <br />
+        <p>For sample a vector of length size with elements drawn from either <code>x</code> or from the 
  integers <code>1:x</code>.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

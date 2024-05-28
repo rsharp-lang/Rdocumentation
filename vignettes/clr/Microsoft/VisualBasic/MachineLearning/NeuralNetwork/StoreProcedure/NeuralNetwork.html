@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>Xml/json文件存储格式</p><br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a> class.</p>
+        <p>Xml/json文件存储格式</p>
 
         <h3>Declare</h3>        
 
@@ -30,20 +30,34 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.MachineLearning.NeuralNetwork.StoreProcedure
 export class NeuralNetwork extends <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a> {
-   learnRate: double;
-   momentum: double;
+   connections: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/Synapse.html">Synapse[]</a>;
    # 当前的这个模型快照在训练数据集上的预测误差
    errors: double;
-   neurons: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/NeuronNode.html">NeuronNode[]</a>;
-   connections: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/Synapse.html">Synapse[]</a>;
-   inputlayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/NeuronLayer.html">NeuronLayer</a>;
-   outputlayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/NeuronLayer.html">NeuronLayer</a>;
    hiddenlayers: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/HiddenLayer.html">HiddenLayer</a>;
+   inputlayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/NeuronLayer.html">NeuronLayer</a>;
+   learnRate: double;
+   momentum: double;
+   neurons: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/NeuronNode.html">NeuronNode[]</a>;
+   outputlayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/NeuronLayer.html">NeuronLayer</a>;
    Stylesheet: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlStyleProcessor.html">XmlStyleProcessor</a>;
    TypeComment: <a href="/vignettes/clr/System/Xml/XmlComment.html">XmlComment</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a></li>
+<li>use by <i>property</i> member <code>connections</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/Synapse.html">Synapse</a></li>
+<li>use by <i>property</i> member <code>hiddenlayers</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/HiddenLayer.html">HiddenLayer</a></li>
+<li>use by <i>property</i> member <code>inputlayer</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/NeuronLayer.html">NeuronLayer</a></li>
+<li>use by <i>property</i> member <code>neurons</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/NeuronNode.html">NeuronNode</a></li>
+<li>use by <i>property</i> member <code>outputlayer</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/StoreProcedure/NeuronLayer.html">NeuronLayer</a></li>
+<li>use by <i>property</i> member <code>Stylesheet</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlStyleProcessor.html">XmlStyleProcessor</a></li>
+<li>use by <i>property</i> member <code>TypeComment</code>: <a href="/vignettes/clr/System/Xml/XmlComment.html">XmlComment</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

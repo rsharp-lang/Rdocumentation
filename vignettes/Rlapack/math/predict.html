@@ -35,40 +35,43 @@
         <table>
             
 <dt>lm</dt>
-<dd><p><p>a model Object For which prediction Is desired.</p></p></dd>
+<dd><p>a model Object For which prediction Is desired. [as <a href="/vignettes/clr/Rlapack/lmCall.html">lmCall</a>]</p></dd>
 
 
 <dt>x</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>Most prediction methods which are similar to those for linear models <br />
- have an argument newdata specifying the first place to look for <br />
- explanatory variables to be used for prediction. Some considerable <br />
- attempts are made to match up the columns in newdata to those used <br />
- for fitting, for example that they are of comparable types and that <br />
- any factors have the same level set in the same order (or can be <br />
- transformed to be so).</p>
-
-<p>Time series prediction methods In package stats have an argument <br />
- n.ahead specifying how many time steps ahead To predict.</p>
-
-<p>Many methods have a logical argument se.fit saying If standard errors <br />
+        <p>Most prediction methods which are similar to those for linear models 
+ have an argument newdata specifying the first place to look for 
+ explanatory variables to be used for prediction. Some considerable 
+ attempts are made to match up the columns in newdata to those used 
+ for fitting, for example that they are of comparable types and that 
+ any factors have the same level set in the same order (or can be 
+ transformed to be so).
+ 
+ Time series prediction methods In package stats have an argument 
+ n.ahead specifying how many time steps ahead To predict.
+ 
+ Many methods have a logical argument se.fit saying If standard errors 
  are To returned.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
 
         <h3>Value</h3>
 
-        <p>The form of the value returned by predict depends on the class of its argument. <br />
- See the documentation of the particular methods for details of what is <br />
+        <p>The form of the value returned by predict depends on the class of its argument. 
+ See the documentation of the particular methods for details of what is 
  produced by that method.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

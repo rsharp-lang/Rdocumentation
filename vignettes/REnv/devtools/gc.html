@@ -39,34 +39,37 @@
 
         <h3 style="display: block;">Details</h3>
 
-        <p>A call of gc causes a garbage collection to take place. <br />
- This will also take place automatically without user <br />
- intervention, and the primary purpose of calling gc is <br />
- for the report on memory usage. For an accurate report <br />
- full = TRUE should be used.<br />
- It can be useful To Call gc after a large Object has <br />
- been removed, As this may prompt R To Return memory To <br />
- the operating system.<br />
- R allocates space For vectors In multiples Of 8 bytes: <br />
- hence the report Of "Vcells", a relic Of an earlier <br />
- allocator (that used a vector heap).<br />
- When gcinfo(TRUE) Is in force, messages are sent to the <br />
- message connection at each garbage collection of the <br />
- form:</p>
+        <p>A call of gc causes a garbage collection to take place. 
+ This will also take place automatically without user 
+ intervention, and the primary purpose of calling gc is 
+ for the report on memory usage. For an accurate report 
+ full = TRUE should be used.
+ It can be useful To Call gc after a large Object has 
+ been removed, As this may prompt R To Return memory To 
+ the operating system.
+ R allocates space For vectors In multiples Of 8 bytes: 
+ hence the report Of "Vcells", a relic Of an earlier 
+ allocator (that used a vector heap).
+ When gcinfo(TRUE) Is in force, messages are sent to the 
+ message connection at each garbage collection of the 
+ form:
 
-<p></p>
-
-<pre><code class=""> Garbage collection 12 = 10+0+2 (level 0) ...
- 6.4 Mbytes of cons cells used (58%)
- 2.0 Mbytes of vectors used (32%)
+<pre><code class="">     Garbage collection 12 = 10+0+2 (level 0) ...
+     6.4 Mbytes of cons cells used (58%)
+     2.0 Mbytes of vectors used (32%)
 </code></pre>
 
-<p>Here the last two lines give the current memory usage <br />
- rounded up To the Next 0.1Mb And As a percentage Of the <br />
- current trigger value. The first line gives a breakdown <br />
- Of the number Of garbage collections at various levels <br />
+
+ 
+ Here the last two lines give the current memory usage 
+ rounded up To the Next 0.1Mb And As a percentage Of the 
+ current trigger value. The first line gives a breakdown 
+ Of the number Of garbage collections at various levels 
  (For an explanation see the 'R Internals’ manual).</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

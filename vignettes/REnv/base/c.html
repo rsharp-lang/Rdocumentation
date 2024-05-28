@@ -35,11 +35,11 @@
         <table>
             
 <dt>values</dt>
-<dd><p><p>objects to be concatenated.</p></p></dd>
+<dd><p>objects to be concatenated.</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
@@ -48,15 +48,29 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>NULL or an expression or a vector of an appropriate mode. <br />
+        <p>NULL or an expression or a vector of an appropriate mode. 
  (With no arguments the value is NULL.)</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
-        <h3 style="display: none;">Examples</h3>
+        <h3 style="display: block;">Examples</h3>
 
-        
+        <pre><code id="example_r"> # for the vector literal, use the syntax of [] literal is better:
+ 
+ # use c() function
+ c(1,2,3,4,5,6);
+ # is equals to the vector literal syntax
+ [1 2 3 4 5 6];
+ 
+ # create string vector
+ c("a","b","c","d");
+ 
+ # create logical vector
+ c(TRUE, TRUE, FALSE);</code></pre>
 
         <hr />
         <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a

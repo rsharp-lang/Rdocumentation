@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <br /><p>this class extends from <a href="/vignettes/clr/System/MarshalByRefObject.html">MarshalByRefObject</a> class.</p>
+        
 
         <h3>Declare</h3>        
 
@@ -30,25 +30,36 @@
             <code id="clr_ts">
 # namespace System.Drawing
 export class Font extends <a href="/vignettes/clr/System/MarshalByRefObject.html">MarshalByRefObject</a> {
-   Size: double;
-   Style: <a href="/vignettes/clr/System/Drawing/FontStyle.html">FontStyle</a>;
    Bold: boolean;
-   Italic: boolean;
-   Strikeout: boolean;
-   Underline: boolean;
    FontFamily: <a href="/vignettes/clr/System/Drawing/FontFamily.html">FontFamily</a>;
-   Name: string;
-   Unit: <a href="/vignettes/clr/System/Drawing/GraphicsUnit.html">GraphicsUnit</a>;
    GdiCharSet: <a href="/vignettes/clr/System/Byte.html">Byte</a>;
    GdiVerticalFont: boolean;
-   OriginalFontName: string;
-   SystemFontName: string;
-   IsSystemFont: boolean;
    Height: integer;
+   IsSystemFont: boolean;
+   Italic: boolean;
+   Name: string;
+   OriginalFontName: string;
+   Size: double;
    SizeInPoints: double;
+   Strikeout: boolean;
+   Style: <a href="/vignettes/clr/System/Drawing/FontStyle.html">FontStyle</a>;
+   SystemFontName: string;
+   Underline: boolean;
+   Unit: <a href="/vignettes/clr/System/Drawing/GraphicsUnit.html">GraphicsUnit</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/System/MarshalByRefObject.html">MarshalByRefObject</a> class: <a href="/vignettes/clr/System/MarshalByRefObject.html">MarshalByRefObject</a></li>
+<li>use by <i>property</i> member <code>FontFamily</code>: <a href="/vignettes/clr/System/Drawing/FontFamily.html">FontFamily</a></li>
+<li>use by <i>property</i> member <code>GdiCharSet</code>: <a href="/vignettes/clr/System/Byte.html">Byte</a></li>
+<li>use by <i>property</i> member <code>Style</code>: <a href="/vignettes/clr/System/Drawing/FontStyle.html">FontStyle</a></li>
+<li>use by <i>property</i> member <code>Unit</code>: <a href="/vignettes/clr/System/Drawing/GraphicsUnit.html">GraphicsUnit</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

@@ -32,19 +32,27 @@
 export class Problem {
    # Number of vectors.
    count: integer;
-   # Class labels.
-   Y: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Encoder/ColorClass.html">ColorClass[]</a>;
-   # Vector data.
-   X: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Node[].html">Node[][]</a>;
+   # the width of each row in <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Problem.html">Problem</a>.<a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Node[].html">X</a>
+   dimensionNames: string;
    # Maximum index for a vector. this value is the width of each 
    #  row in <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Problem.html">Problem</a>.<a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Node[].html">X</a> and equals to the length of vector 
    #  <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Problem.html">Problem</a>.<a href="#">dimensionNames</a>
    maxIndex: integer;
-   # the width of each row in <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Problem.html">Problem</a>.<a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Node[].html">X</a>
-   dimensionNames: string;
+   # Vector data.
+   X: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Node[].html">Node[][]</a>;
+   # Class labels.
+   Y: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Encoder/ColorClass.html">ColorClass[]</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>X</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Node[].html">Node[]</a></li>
+<li>use by <i>property</i> member <code>Y</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Encoder/ColorClass.html">ColorClass</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

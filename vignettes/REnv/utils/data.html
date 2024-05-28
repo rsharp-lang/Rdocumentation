@@ -37,76 +37,78 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>literal character strings Or names.</p></p></dd>
+<dd><p>literal character strings Or names.</p></dd>
 
 
 <dt>package</dt>
-<dd><p><p>a character vector giving the package(s) to look in for data sets, or NULL.<br />
- By Default, all packages in the search path are used, then the 'data’ <br />
- subdirectory (if present) of the current working directory.</p></p></dd>
+<dd><p>a character vector giving the package(s) to look in for data sets, or NULL.
+ By Default, all packages in the search path are used, then the 'data’ 
+ subdirectory (if present) of the current working directory. [as string]</p></dd>
 
 
 <dt>lib.loc</dt>
-<dd><p><p>a character vector of directory names of R libraries, or NULL. <br />
- The default value of NULL corresponds to all libraries currently <br />
- known.</p></p></dd>
+<dd><p>a character vector of directory names of R libraries, or NULL. 
+ The default value of NULL corresponds to all libraries currently 
+ known. [as string]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>Currently, four formats of data files are supported:</p>
-
-<pre><code>1. files ending ‘.R’ or ‘.r’ are source()d in, with the R working directory changed 
-   temporarily to the directory containing the respective file. (data ensures that the 
-   utils package is attached, in case it had been run via utils::data.)
-2. files ending ‘.RData’ or ‘.rda’ are load()ed.
-3. files ending ‘.tab’, ‘.txt’ or ‘.TXT’ are read using read.table(..., header = TRUE, as.is=FALSE), 
-   and hence result in a data frame.
-4. files ending ‘.csv’ or ‘.CSV’ are read using read.table(..., header = TRUE, sep = ";", as.is=FALSE), 
-   and also result in a data frame.
-</code></pre>
-
-<p>If more than one matching file name is found, the first on this list is used. (Files with <br />
- extensions ‘.txt’, ‘.tab’ or ‘.csv’ can be compressed, with or without further <br />
- extension ‘.gz’, ‘.bz2’ or ‘.xz’.)</p>
-
-<p>The data sets to be loaded can be specified as a set of character strings or names, or as <br />
- the character vector list, or as both.</p>
-
-<p>For each given data set, the first two types (‘.R’ or ‘.r’, and ‘.RData’ or ‘.rda’ <br />
- files) can create several variables in the load environment, which might all be named differently <br />
- from the data set. The third and fourth types will always result in the creation of a single <br />
- variable with the same name (without extension) as the data set.</p>
-
-<p>If no data sets are specified, data lists the available data sets. It looks for a new-style <br />
- data index in the ‘Meta’ or, if this is not found, an old-style ‘00Index’ file in the ‘data’ <br />
- directory of each specified package, and uses these files to prepare a listing. If there is a <br />
- ‘data’ area but no index, available data files for loading are computed and included in the <br />
- listing, and a warning is given: such packages are incomplete. The information about available <br />
- data sets is returned in an object of class "packageIQR". The structure of this class is experimental. <br />
- Where the datasets have a different name from the argument that should be used to retrieve them <br />
- the index will have an entry like beaver1 (beavers) which tells us that dataset beaver1 can be <br />
- retrieved by the call data(beaver).</p>
-
-<p>If lib.loc and package are both NULL (the default), the data sets are searched for in all the <br />
- currently loaded packages then in the ‘data’ directory (if any) of the current working <br />
- directory.</p>
-
-<p>If lib.loc = NULL but package is specified as a character vector, the specified package(s) are <br />
- searched for first amongst loaded packages and then in the default library/ies (see .libPaths).</p>
-
-<p>If lib.loc is specified (and not NULL), packages are searched for in the specified library/ies, <br />
- even if they are already loaded from another library.</p>
-
-<p>To just look in the ‘data’ directory of the current working directory, set package = character(0) <br />
+        <p>Currently, four formats of data files are supported:
+ 
+    1. files ending ‘.R’ or ‘.r’ are source()d in, with the R working directory changed 
+       temporarily to the directory containing the respective file. (data ensures that the 
+       utils package is attached, in case it had been run via utils::data.)
+    2. files ending ‘.RData’ or ‘.rda’ are load()ed.
+    3. files ending ‘.tab’, ‘.txt’ or ‘.TXT’ are read using read.table(..., header = TRUE, as.is=FALSE), 
+       and hence result in a data frame.
+    4. files ending ‘.csv’ or ‘.CSV’ are read using read.table(..., header = TRUE, sep = ";", as.is=FALSE), 
+       and also result in a data frame.
+       
+ If more than one matching file name is found, the first on this list is used. (Files with 
+ extensions ‘.txt’, ‘.tab’ or ‘.csv’ can be compressed, with or without further 
+ extension ‘.gz’, ‘.bz2’ or ‘.xz’.)
+ 
+ The data sets to be loaded can be specified as a set of character strings or names, or as 
+ the character vector list, or as both.
+ 
+ For each given data set, the first two types (‘.R’ or ‘.r’, and ‘.RData’ or ‘.rda’ 
+ files) can create several variables in the load environment, which might all be named differently 
+ from the data set. The third and fourth types will always result in the creation of a single 
+ variable with the same name (without extension) as the data set.
+ 
+ If no data sets are specified, data lists the available data sets. It looks for a new-style 
+ data index in the ‘Meta’ or, if this is not found, an old-style ‘00Index’ file in the ‘data’ 
+ directory of each specified package, and uses these files to prepare a listing. If there is a 
+ ‘data’ area but no index, available data files for loading are computed and included in the 
+ listing, and a warning is given: such packages are incomplete. The information about available 
+ data sets is returned in an object of class "packageIQR". The structure of this class is experimental. 
+ Where the datasets have a different name from the argument that should be used to retrieve them 
+ the index will have an entry like beaver1 (beavers) which tells us that dataset beaver1 can be 
+ retrieved by the call data(beaver).
+ 
+ If lib.loc and package are both NULL (the default), the data sets are searched for in all the 
+ currently loaded packages then in the ‘data’ directory (if any) of the current working 
+ directory.
+ 
+ If lib.loc = NULL but package is specified as a character vector, the specified package(s) are 
+ searched for first amongst loaded packages and then in the default library/ies (see .libPaths).
+ 
+ If lib.loc is specified (and not NULL), packages are searched for in the specified library/ies, 
+ even if they are already loaded from another library.
+ 
+ To just look in the ‘data’ directory of the current working directory, set package = character(0) 
  (and lib.loc = NULL, the default).</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

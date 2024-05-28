@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.ComponentModel.Activations.IActivationFunction</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>IActivationFunction {Microsoft.VisualBasic.MachineLearning.ComponentModel.Activations}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>IActivationFunction</h2>
+
+        <h3>Description</h3>
+
+        <p>Activation function interface.</p>
+
+<p>All activation functions, which are supposed to be used with
+ neurons, which calculate their output as a function of weighted sum of
+ their inputs, should implement this interfaces.</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.ComponentModel.Activations
+export class IActivationFunction {
+   Store: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/ComponentModel/Activations/ActiveFunction.html">ActiveFunction</a>;
+   # 因为激活函数在求导之后,结果值可能会出现无穷大
+   #  所以可以利用这个值来限制求导之后的结果最大值
+   Truncate: double;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>Store</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/ComponentModel/Activations/ActiveFunction.html">ActiveFunction</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

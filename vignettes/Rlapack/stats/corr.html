@@ -29,7 +29,8 @@
         <div style="width: 100%; padding-left: 3%; color: black;">
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>corr</strong>(<i>x</i>,
     <i>y</i> = <span style='color: blue !important;'>NULL</span>,
-    <i>spearman</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+    <i>spearman</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>positive</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -37,7 +38,11 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>evaluate correlation for each row elements</p></p></dd>
+<dd><p>evaluate correlation for each row elements. [as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a>]</p></dd>
+
+
+<dt>positive</dt>
+<dd><p>only takes the positive part of the correlation matrix?. [as boolean]</p></dd>
 
         </table>
 
@@ -46,6 +51,9 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
 
         <h3>Value</h3>
 

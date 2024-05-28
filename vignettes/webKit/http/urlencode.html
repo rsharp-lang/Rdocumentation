@@ -35,34 +35,37 @@
         <table>
             
 <dt>data</dt>
-<dd><p><p>The string to be encoded.</p></p></dd>
+<dd><p>The string to be encoded.</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>Be careful about variables that may match HTML entities. Things like <br />
- <code>&amp;amp</code>, <code>&amp;copy</code> and <code>&amp;pound</code> are parsed by the browser and <br />
- the actual entity is used instead of the desired variable name. </p>
+        <p>Be careful about variables that may match HTML entities. Things like 
+ <code>&amp</code>, <code>&copy</code> and <code>&pound</code> are parsed by the browser and 
+ the actual entity is used instead of the desired variable name. 
+ 
+ This is an obvious hassle that the W3C has been telling people about for 
+ years. The reference is here: 
+<a href='http://www.w3.org/TR/html4/appendix/notes.html#h-B.2.2.' title='http://www.w3.org/TR/html4/appendix/notes.html#h-B.2.2.'>http://www.w3.org/TR/html4/appendix/notes.html#h-B.2.2.</a></p>
 
-<p>This is an obvious hassle that the W3C has been telling people about for <br />
- years. The reference is here: <br />
- <a href="http://www.w3.org/TR/html4/appendix/notes.html#h-B.2.2">http://www.w3.org/TR/html4/appendix/notes.html#h-B.2.2</a>.</p>
+        <h3 style="display: block">Authors</h3>
 
+        webKit
 
         <h3>Value</h3>
 
-        <p>Returns a string in which all non-alphanumeric characters except <code>-_.</code> <br />
- have been replaced with a percent (%) sign followed by two hex digits and <br />
- spaces encoded as plus (+) signs. It is encoded the same way that the <br />
- posted data from a WWW form is encoded, that is the same way as in <br />
- <code>application/x-www-form-urlencoded</code> media type. This differs from the <br />
- RFC 3986 encoding (see rawurlencode()) in that for historical reasons, <br />
+        <p>Returns a string in which all non-alphanumeric characters except <code>-_.</code> 
+ have been replaced with a percent (%) sign followed by two hex digits and 
+ spaces encoded as plus (+) signs. It is encoded the same way that the 
+ posted data from a WWW form is encoded, that is the same way as in 
+ <code>application/x-www-form-urlencoded</code> media type. This differs from the 
+ RFC 3986 encoding (see rawurlencode()) in that for historical reasons, 
  spaces are encoded as plus (+) signs.</p><h4>clr value class</h4><ul><li>string</li></ul>
 
         <h3 style="display: none;">Examples</h3>

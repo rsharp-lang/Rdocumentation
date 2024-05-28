@@ -22,20 +22,20 @@
 
         <h3>Description</h3>
 
-        <p>the default string literal value of the parameter <br />
- can be parsed end evaluated as R expression <br />
+        <p>the default string literal value of the parameter 
+ can be parsed end evaluated as R expression 
  result.</p>
 
-<p>for example, there is an optional argument in package api:</p>
+<p>for example, there is an optional argument in package api:
 
-<p></p>
-
-<pre><code class="">&lt;@``T:SMRUCC.Rsharp.Runtime.Interop.RDefaultExpressionAttribute``&gt; 
-Optional time As @``T:System.Object`` = "~now()"
+<pre><code class=""> &lt;@``T:SMRUCC.Rsharp.Runtime.Interop.RDefaultExpressionAttribute``> 
+ Optional time As @``T:System.Object`` = "~now()"
 </code></pre>
 
-<p>then the default value of the parameter time can be the <br />
- evaluated result of the default expression <code>now()</code>.</p><br /><p>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Interop/RInteropAttribute.html">RInteropAttribute</a> class.</p>
+
+ 
+ then the default value of the parameter time can be the 
+ evaluated result of the default expression <code>now()</code>.</p>
 
         <h3>Declare</h3>        
 
@@ -47,6 +47,14 @@ export class RDefaultExpressionAttribute extends <a href="/vignettes/clr/SMRUCC/
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Interop/RInteropAttribute.html">RInteropAttribute</a> class: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Interop/RInteropAttribute.html">RInteropAttribute</a></li>
+<li>use by <i>property</i> member <code>TypeId</code>: <i>any</i> kind</li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

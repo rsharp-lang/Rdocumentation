@@ -22,24 +22,18 @@
 
         <h3>Description</h3>
 
-        <p>A network class holding the layers and some helper functions<br />
- for training and validation.</p>
+        <p>A network class holding the layers and some helper functions
+ for training and validation.
+ 
+ Convolutional neural network (CNN) is a regularized type of feed-forward 
+ neural network that learns feature engineering by itself via filters
+ (or kernel) optimization. Vanishing gradients and exploding gradients, 
+ seen during backpropagation in earlier neural networks, are prevented by 
+ using regularized weights over fewer connections.
+ 
+ @author Daniel Persson (mailto.woden@gmail.com) and s.chekanov</p>
 
-<p>Convolutional neural network (CNN) is a regularized type of feed-forward <br />
- neural network that learns feature engineering by itself via filters<br />
- (or kernel) optimization. Vanishing gradients and exploding gradients, <br />
- seen during backpropagation in earlier neural networks, are prevented by <br />
- using regularized weights over fewer connections.</p>
-
-<p>@author Daniel Persson (mailto.woden@gmail.com) and s.chekanov</p>
-
-<ul>
-<li><a href="https://github.com/kalaspuffar/JavaCNN">https://github.com/kalaspuffar/JavaCNN</a>
-
-<ul>
-<li><a href="https://github.com/karpathy/convnetjs">https://github.com/karpathy/convnetjs</a></li>
-</ul></li>
-</ul>
+<p>+<a href='https://github.com/kalaspuffar/JavaCNN' title='https://github.com/kalaspuffar/JavaCNN'>https://github.com/kalaspuffar/JavaCNN</a> +<a href='https://github.com/karpathy/convnetjs' title='https://github.com/karpathy/convnetjs'>https://github.com/karpathy/convnetjs</a></p>
 
         <h3>Declare</h3>        
 
@@ -47,17 +41,26 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.MachineLearning.CNN
 export class ConvolutionalNN {
-   LayerNum: integer;
-   input: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/layers/InputLayer.html">InputLayer</a>;
-   output: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/losslayers/LossLayer.html">LossLayer</a>;
    # Accumulate parameters and gradients for the entire network
    BackPropagationResult: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/data/BackPropResult.html">BackPropResult[]</a>;
+   input: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/layers/InputLayer.html">InputLayer</a>;
+   LayerNum: integer;
+   output: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/losslayers/LossLayer.html">LossLayer</a>;
    # This is a convenience function for returning the argmax
    #  prediction, assuming the last layer of the net is a softmax
    Prediction: integer;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>BackPropagationResult</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/data/BackPropResult.html">BackPropResult</a></li>
+<li>use by <i>property</i> member <code>input</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/layers/InputLayer.html">InputLayer</a></li>
+<li>use by <i>property</i> member <code>output</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/losslayers/LossLayer.html">LossLayer</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

@@ -22,12 +22,11 @@
 
         <h3>Description</h3>
 
-        <p>验证结果描述</p>
-
-<p><code>灵敏度 = 真阳性人数 / (真阳性人数 + 假阴性人数) * 100%</code><br />
- <code>特异度 = 真阴性人数 / (真阴性人数 + 假阳性人数) * 100%</code></p>
-
-<p><a href="https://www.jianshu.com/p/f0c7c1ad9091">https://www.jianshu.com/p/f0c7c1ad9091</a></p><br /><p>this class extends from <a href="/vignettes/clr/System/ValueType.html">ValueType</a> class.</p>
+        <p>验证结果描述
+ 
+ <code>灵敏度 = 真阳性人数 / (真阳性人数 + 假阴性人数) * 100%</code>
+ <code>特异度 = 真阴性人数 / (真阴性人数 + 假阳性人数) * 100%</code>
+<a href='https://www.jianshu.com/p/f0c7c1ad9091' title='https://www.jianshu.com/p/f0c7c1ad9091'>https://www.jianshu.com/p/f0c7c1ad9091</a></p>
 
         <h3>Declare</h3>        
 
@@ -35,13 +34,20 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.DataMining.Evaluation
 export class Validation extends <a href="/vignettes/clr/System/ValueType.html">ValueType</a> {
+   F1Score: double;
    FPR: double;
    # Negative predictive value
    NPV: double;
-   F1Score: double;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/System/ValueType.html">ValueType</a> class: <a href="/vignettes/clr/System/ValueType.html">ValueType</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

@@ -38,65 +38,66 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>a vector or a dataframe that containing the data. <br />
- To bootstrap more complex data structures (e.g. bivariate data) <br />
- see the last example below.</p></p></dd>
+<dd><p>a vector or a dataframe that containing the data. 
+ To bootstrap more complex data structures (e.g. bivariate data) 
+ see the last example below.</p></dd>
 
 
 <dt>nboot</dt>
-<dd><p><p>The number of bootstrap samples desired.</p></p></dd>
+<dd><p>The number of bootstrap samples desired. [as integer]</p></dd>
 
 
 <dt>theta</dt>
-<dd><p><p>function to be bootstrapped. Takes x as an <br />
- argument, and may take additional arguments (see below and last <br />
- example).</p></p></dd>
+<dd><p>function to be bootstrapped. Takes x as an 
+ argument, and may take additional arguments (see below and last 
+ example).</p></dd>
 
 
 <dt>func</dt>
-<dd><p><p>(optional) argument specifying the functional <br />
- the distribution of thetahat that is desired. If func is <br />
- specified, the jackknife after-bootstrap estimate of its standard<br />
- error is also returned. See example below.</p></p></dd>
+<dd><p>(optional) argument specifying the functional 
+ the distribution of thetahat that is desired. If func is 
+ specified, the jackknife after-bootstrap estimate of its standard
+ error is also returned. See example below.</p></dd>
 
 
 <dt>args</dt>
-<dd><p><p>any additional arguments to be passed to theta</p></p></dd>
+<dd><p>any additional arguments to be passed to theta. [as list]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>Efron, B. and Tibshirani, R. (1986). The bootstrap method for <br />
- standard errors, confidence intervals, and other measures of <br />
- statistical accuracy. Statistical Science, Vol 1., No. 1, pp 1-35.</p>
-
-<p>Efron, B. (1992) Jackknife-after-bootstrap standard errors And <br />
- influence functions. J. Roy. Stat. Soc. B, vol 54, pages 83-127</p>
-
-<p>Efron, B. And Tibshirani, R. (1993) An Introduction to the <br />
+        <p>Efron, B. and Tibshirani, R. (1986). The bootstrap method for 
+ standard errors, confidence intervals, and other measures of 
+ statistical accuracy. Statistical Science, Vol 1., No. 1, pp 1-35.
+ 
+ Efron, B. (1992) Jackknife-after-bootstrap standard errors And 
+ influence functions. J. Roy. Stat. Soc. B, vol 54, pages 83-127
+ 
+ Efron, B. And Tibshirani, R. (1993) An Introduction to the 
  Bootstrap. Chapman And Hall, New York, London.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
 
         <h3>Value</h3>
 
         <p>list with the following components:</p>
 
-<ol>
-<li>thetastar       the nboot bootstrap values Of theta</li>
-<li>func.thetastar  the functional func Of the bootstrap distribution Of thetastar, If func was specified</li>
-<li>jack.boot.val   the jackknife-after-bootstrap values For func, If func was specified</li>
-<li>jack.boot.se    the jackknife-after-bootstrap standard Error estimate Of func, If func was specified</li>
-<li><p>call            the deparsed call</p>
-
-<p>and this function will returns the bootstrap data collection if the<br />
-<strong><code>theta</code></strong> function is not specificed.</p></li>
-</ol> the list data also has some specificied data fields: <code>list(thetastar, func.thetastar, jack.boot.val, jack.boot.se, call)</code>.<h4>clr value class</h4><ul><li>list</li></ul>
+<p>1. thetastar       the nboot bootstrap values Of theta
+ 2. func.thetastar  the functional func Of the bootstrap distribution Of thetastar, If func was specified
+ 3. jack.boot.val   the jackknife-after-bootstrap values For func, If func was specified
+ 4. jack.boot.se    the jackknife-after-bootstrap standard Error estimate Of func, If func was specified
+ 5. call            the deparsed call
+ 
+ and this function will returns the bootstrap data collection if the
+ <strong>`theta`</strong> function is not specificed.</p> the list data also has some specificied data fields: <code>list(thetastar, func.thetastar, jack.boot.val, jack.boot.se, call)</code>.<h4>clr value class</h4><ul><li>list</li></ul>
 
         <h3 style="display: none;">Examples</h3>
 

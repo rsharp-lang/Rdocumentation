@@ -36,32 +36,35 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>a character string holding an option name.</p></p></dd>
+<dd><p>a character string holding an option name. [as string]</p></dd>
 
 
 <dt>default</dt>
-<dd><p><p>if the specified option is not set in the options list, this <br />
- value is returned. This facilitates retrieving an option and checking whether it is <br />
- set and setting it separately if not.</p></p></dd>
+<dd><p>if the specified option is not set in the options list, this 
+ value is returned. This facilitates retrieving an option and checking whether it is 
+ set and setting it separately if not. [as string]</p></dd>
 
 
 <dt>envir</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>Invoking options() with no arguments returns a list with the current values of the options. <br />
- Note that not all options listed below are set initially. To access the value of a single <br />
- option, one should use, e.g., getOption("width") rather than options("width") which is a <br />
+        <p>Invoking options() with no arguments returns a list with the current values of the options. 
+ Note that not all options listed below are set initially. To access the value of a single 
+ option, one should use, e.g., getOption("width") rather than options("width") which is a 
  list of length one.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>For getOption, the current value set for option x, or default (which defaults <br />
+        <p>For getOption, the current value set for option x, or default (which defaults 
  to NULL) if the option is unset.</p><h4>clr value class</h4><ul><li>string</li></ul>
 
         <h3 style="display: none;">Examples</h3>

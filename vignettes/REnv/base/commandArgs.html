@@ -37,27 +37,30 @@
         <table>
             
 <dt>trailingOnly</dt>
-<dd><p><p>logical. Should only arguments after --args be returned?</p></p></dd>
+<dd><p>logical. Should only arguments after --args be returned?. [as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>These arguments are captured before the standard R command line processing takes place. <br />
- This means that they are the unmodified values. This is especially useful with the --args <br />
+        <p>These arguments are captured before the standard R command line processing takes place. 
+ This means that they are the unmodified values. This is especially useful with the --args 
  command-line flag to R, as all of the command line after that flag is skipped.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>A character vector containing the name of the executable and the user-supplied command <br />
- line arguments. The first element is the name of the executable by which R was invoked. <br />
- The exact form of this element is platform dependent: it may be the fully qualified name,<br />
- or simply the last component (or basename) of the application, or for an embedded R it <br />
- can be anything the programmer supplied.</p>
-
-<p>if <code>trailingOnly = TRUE</code>, a character vector Of those arguments (If any) supplied <br />
+        <p>A character vector containing the name of the executable and the user-supplied command 
+ line arguments. The first element is the name of the executable by which R was invoked. 
+ The exact form of this element is platform dependent: it may be the fully qualified name,
+ or simply the last component (or basename) of the application, or for an embedded R it 
+ can be anything the programmer supplied.
+ 
+ if <code>trailingOnly = TRUE</code>, a character vector Of those arguments (If any) supplied 
  after <code>--args</code>.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

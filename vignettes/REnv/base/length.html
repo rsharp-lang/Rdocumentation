@@ -36,11 +36,11 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>an R object. For replacement, a vector or factor.</p></p></dd>
+<dd><p>an R object. For replacement, a vector or factor.</p></dd>
 
 
 <dt>newSize</dt>
-<dd><p><p>a non-negative integer or double (which will be rounded down).</p></p></dd>
+<dd><p>a non-negative integer or double (which will be rounded down). [as integer]</p></dd>
 
         </table>
 
@@ -49,22 +49,25 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>The default method for length currently returns a non-negative <br />
- integer of length 1, except for vectors of more than 2^31 - 1 <br />
+        <p>The default method for length currently returns a non-negative 
+ integer of length 1, except for vectors of more than 2^31 - 1 
  elements, when it returns a double.</p>
 
-<p>For vectors(including lists) And factors the length Is the <br />
- number of elements. For an environment it Is the number of <br />
- objects in the environment, And NULL has length 0. For expressions <br />
- And pairlists (including language objects And dotlists) it Is the <br />
- length of the pairlist chain. All other objects (including <br />
- functions) have length one: note that For functions this differs <br />
+<p>For vectors(including lists) And factors the length Is the 
+ number of elements. For an environment it Is the number of 
+ objects in the environment, And NULL has length 0. For expressions 
+ And pairlists (including language objects And dotlists) it Is the 
+ length of the pairlist chain. All other objects (including 
+ functions) have length one: note that For functions this differs 
  from S.</p>
 
-<p>The replacement form removes all the attributes Of x except its <br />
+<p>The replacement form removes all the attributes Of x except its 
  names, which are adjusted (And If necessary extended by "").</p><h4>clr value class</h4><ul><li>integer</li></ul>
 
         <h3 style="display: none;">Examples</h3>

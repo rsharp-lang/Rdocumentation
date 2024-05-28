@@ -38,83 +38,86 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>a numeric Or complex matrix whose spectral<br />
- decomposition Is To be computed. Logical matrices <br />
- are coerced To numeric.</p></p></dd>
+<dd><p>a numeric Or complex matrix whose spectral
+ decomposition Is To be computed. Logical matrices 
+ are coerced To numeric.</p></dd>
 
 
 <dt>symmetric</dt>
-<dd><p><p>If True, the matrix Is assumed To be symmetric <br />
- (Or Hermitian If complex) And only its lower<br />
- triangle (diagonal included) Is used. If symmetric<br />
- Is Not specified, isSymmetric(x) Is used.</p></p></dd>
+<dd><p>If True, the matrix Is assumed To be symmetric 
+ (Or Hermitian If complex) And only its lower
+ triangle (diagonal included) Is used. If symmetric
+ Is Not specified, isSymmetric(x) Is used. [as boolean]</p></dd>
 
 
 <dt>only.values</dt>
-<dd><p><p>If True, only the eigenvalues are computed And <br />
- returned, otherwise both eigenvalues And <br />
- eigenvectors are returned.</p></p></dd>
+<dd><p>If True, only the eigenvalues are computed And 
+ returned, otherwise both eigenvalues And 
+ eigenvectors are returned. [as boolean]</p></dd>
 
 
 <dt>EISPACK</dt>
-<dd><p><p>logical. Defunct And ignored.</p></p></dd>
+<dd><p>logical. Defunct And ignored. [as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>If symmetric is unspecified, isSymmetric(x) determines<br />
- if the matrix is symmetric up to plausible numerical <br />
- inaccuracies. It is surer and typically much faster to<br />
- set the value yourself.</p>
-
-<p>Computing the eigenvectors Is the slow part For large <br />
- matrices.</p>
-
-<p>Computing the eigendecomposition Of a matrix Is subject <br />
- To errors On a real-world computer: the definitive <br />
- analysis Is Wilkinson (1965). All you can hope For Is a <br />
- solution To a problem suitably close To x. So even <br />
- though a real asymmetric x may have an algebraic solution<br />
- With repeated real eigenvalues, the computed solution <br />
- may be Of a similar matrix With complex conjugate pairs<br />
- Of eigenvalues.</p>
-
-<p>Unsuccessful results from the underlying LAPACK code will <br />
- result In an Error giving a positive Error code (most <br />
- often 1): these can only be interpreted by detailed study<br />
+        <p>If symmetric is unspecified, isSymmetric(x) determines
+ if the matrix is symmetric up to plausible numerical 
+ inaccuracies. It is surer and typically much faster to
+ set the value yourself.
+ 
+ Computing the eigenvectors Is the slow part For large 
+ matrices.
+ 
+ Computing the eigendecomposition Of a matrix Is subject 
+ To errors On a real-world computer: the definitive 
+ analysis Is Wilkinson (1965). All you can hope For Is a 
+ solution To a problem suitably close To x. So even 
+ though a real asymmetric x may have an algebraic solution
+ With repeated real eigenvalues, the computed solution 
+ may be Of a similar matrix With complex conjugate pairs
+ Of eigenvalues.
+ 
+ Unsuccessful results from the underlying LAPACK code will 
+ result In an Error giving a positive Error code (most 
+ often 1): these can only be interpreted by detailed study
  Of the FORTRAN code.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
 
         <h3>Value</h3>
 
-        <p>The spectral decomposition of x is returned as a list <br />
+        <p>The spectral decomposition of x is returned as a list 
  with components</p>
 
-<ol>
-<li>values: a vector containing the p eigenvalues Of x, sorted<br />
-        In decreasing order, according To Mod(values) In <br />
-        the asymmetric Case When they might be complex (even <br />
-        For real matrices). For real asymmetric matrices <br />
-        the vector will be complex only If complex conjugate<br />
-        pairs Of eigenvalues are detected.</li>
-<li><p>vectors: either a p * p matrix whose columns contain the<br />
-         eigenvectors Of x, Or NULL If only.values Is True. <br />
-         The vectors are normalized To unit length.</p>
+<p>1. values: a vector containing the p eigenvalues Of x, sorted
+            In decreasing order, according To Mod(values) In 
+            the asymmetric Case When they might be complex (even 
+            For real matrices). For real asymmetric matrices 
+            the vector will be complex only If complex conjugate
+            pairs Of eigenvalues are detected.
+ 2. vectors: either a p * p matrix whose columns contain the
+             eigenvectors Of x, Or NULL If only.values Is True. 
+             The vectors are normalized To unit length.</p>
 
-<p>Recall that the eigenvectors are only defined up To a constant: <br />
-even when the length Is specified they are still only defined<br />
-up to a scalar of modulus one (the sign for real matrices).</p>
+<p>Recall that the eigenvectors are only defined up To a constant: 
+ even when the length Is specified they are still only defined
+ up to a scalar of modulus one (the sign for real matrices).</p>
 
-<p>When only.values Is Not true, as by default, the result Is of <br />
-S3 class "eigen".</p>
+<p>When only.values Is Not true, as by default, the result Is of 
+ S3 class "eigen".</p>
 
-<p>If r &lt;- eigen(A), And V &lt;- r$vectors; lam &lt;- r$values, Then</p></li>
-</ol>
+<p>If r <- eigen(A), And V <- r$vectors; lam <- r$values, Then
 
-<pre><code class="">A = V Lmbd V^(-1)
+<pre><code class=""> A = V Lmbd V^(-1)
 </code></pre>
+
+</p>
 
 <p>(up to numerical fuzz), where Lmbd = diag(lam).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 

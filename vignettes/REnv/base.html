@@ -68,8 +68,8 @@ table caption {font-size:14px;font-weight:bolder;}
     </p>
     <p><h4>The R Base Package</h4>
 
-<p>This package contains the basic functions which let R function as a language: <br />
- arithmetic, input/output, basic programming support, etc. Its contents are <br />
+<p>This package contains the basic functions which let R function as a language: 
+ arithmetic, input/output, basic programming support, etc. Its contents are 
  available through inheritance from any environment.</p>
 
 <p>For a complete list of functions, use <code>ls("base")</code>.</p></p>
@@ -77,8 +77,8 @@ table caption {font-size:14px;font-weight:bolder;}
       <p style="font-style: italic; font-size: 0.9em;">
                            <h4>The R Base Package</h4>
 
-<p>This package contains the basic functions which let R function as a language: <br />
- arithmetic, input/output, basic programming support, etc. Its contents are <br />
+<p>This package contains the basic functions which let R function as a language: 
+ arithmetic, input/output, basic programming support, etc. Its contents are 
  available through inheritance from any environment.</p>
 
 <p>For a complete list of functions, use <code>ls("base")</code>.</p>
@@ -94,67 +94,13 @@ table caption {font-size:14px;font-weight:bolder;}
       <table class="table-three-line">
         <caption>.NET clr function exports</caption>
         <tbody><tr>
-  <td id="factors">
-    <a href="./base/factors.html">factors</a>
-  </td>
-  <td></td>
-</tr>
-<tr>
-  <td id="auto">
-    <a href="./base/auto.html">auto</a>
-  </td>
-  <td></td>
-</tr>
-<tr>
-  <td id="library">
-    <a href="./base/library.html">library</a>
-  </td>
-  <td><h1>Loading/Attaching and Listing of Packages</h1>
-
-<p>library and require load and attach add-on packages.</p></td>
-</tr>
-<tr>
-  <td id="load">
-    <a href="./base/load.html">load</a>
-  </td>
-  <td><h3>Reload Saved Datasets</h3>
-
-<p>Reload datasets written with the function <code>save</code>.</p></td>
-</tr>
-<tr>
-  <td id="save">
-    <a href="./base/save.html">save</a>
-  </td>
-  <td><h3>Save R Objects</h3>
-
-<p>writes an external representation of R objects to the specified file. <br />
- The objects can be read back from the file at a later date by using <br />
- the function load or attach (or data in some cases).</p></td>
-</tr>
-<tr>
-  <td id="saveRDS">
-    <a href="./base/saveRDS.html">saveRDS</a>
-  </td>
-  <td><p>Serialization Interface for Single Objects</p>
-
-<p>Functions to write a single R object to a file, and to restore it.</p></td>
-</tr>
-<tr>
-  <td id="readRDS">
-    <a href="./base/readRDS.html">readRDS</a>
-  </td>
-  <td><p>Serialization Interface for Single Objects</p>
-
-<p>Functions to write a single R object to a file, and to restore it.</p></td>
-</tr>
-<tr>
   <td id="save.image">
     <a href="./base/save.image.html">save.image</a>
   </td>
   <td><h3>Save R Objects</h3>
 
-<p><code>save.image()</code> is just a short-cut for ‘save my current workspace’, <br />
- i.e., save(list = ls(all.names = TRUE), file = ".RData", envir = .GlobalEnv). <br />
+<p><code>save.image()</code> is just a short-cut for ‘save my current workspace’, 
+ i.e., save(list = ls(all.names = TRUE), file = ".RData", envir = .GlobalEnv). 
  It is also what happens with q("yes").</p></td>
 </tr>
 <tr>
@@ -163,12 +109,12 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Logical Operators</h3>
 
-<p>isTRUE(x) is the same as { is.logical(x) &amp;&amp; length(x) == 1 &amp;&amp; !is.na(x) &amp;&amp; x }; <br />
- isFALSE() is defined analogously. Consequently, if(isTRUE(cond)) may be preferable to if(cond) because <br />
- of NAs.</p>
-
-<p>In earlier R versions, isTRUE &lt;- function(x) identical(x, TRUE), had the drawback to be false e.g., <br />
- for x &lt;- c(val = TRUE).</p></td>
+<p>isTRUE(x) is the same as { is.logical(x) && length(x) == 1 && !is.na(x) && x }; 
+ isFALSE() is defined analogously. Consequently, if(isTRUE(cond)) may be preferable to if(cond) because 
+ of NAs.
+ 
+ In earlier R versions, isTRUE <- function(x) identical(x, TRUE), had the drawback to be false e.g., 
+ for x <- c(val = TRUE).</p></td>
 </tr>
 <tr>
   <td id="isFALSE">
@@ -176,12 +122,12 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Logical Operators</h3>
 
-<p>isTRUE(x) is the same as { is.logical(x) &amp;&amp; length(x) == 1 &amp;&amp; !is.na(x) &amp;&amp; x }; <br />
- isFALSE() is defined analogously. Consequently, if(isTRUE(cond)) may be preferable to if(cond) because <br />
- of NAs.</p>
-
-<p>In earlier R versions, isTRUE &lt;- function(x) identical(x, TRUE), had the drawback to be false e.g., <br />
- for x &lt;- c(val = TRUE).</p></td>
+<p>isTRUE(x) is the same as { is.logical(x) && length(x) == 1 && !is.na(x) && x }; 
+ isFALSE() is defined analogously. Consequently, if(isTRUE(cond)) may be preferable to if(cond) because 
+ of NAs.
+ 
+ In earlier R versions, isTRUE <- function(x) identical(x, TRUE), had the drawback to be false e.g., 
+ for x <- c(val = TRUE).</p></td>
 </tr>
 <tr>
   <td id="numeric">
@@ -189,8 +135,8 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Numeric Vectors</h3>
 
-<p>Creates or coerces objects of type "numeric". is.numeric <br />
- is a more general test of an object being interpretable <br />
+<p>Creates or coerces objects of type "numeric". is.numeric 
+ is a more general test of an object being interpretable 
  as numbers.</p></td>
 </tr>
 <tr>
@@ -223,7 +169,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Argument List of a Function</h3>
 
-<p>Displays the argument names and corresponding default values of a <br />
+<p>Displays the argument names and corresponding default values of a 
  (non-primitive or primitive) function.</p></td>
 </tr>
 <tr>
@@ -240,7 +186,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h2>Range of Values</h2>
 
-<p>range returns a vector containing the minimum and maximum <br />
+<p>range returns a vector containing the minimum and maximum 
  of all the given arguments.</p></td>
 </tr>
 <tr>
@@ -249,8 +195,8 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Factors</h3>
 
-<p>The function factor is used to encode a vector as a factor <br />
- (the terms ‘category’ and ‘enumerated type’ are also used <br />
+<p>The function factor is used to encode a vector as a factor 
+ (the terms ‘category’ and ‘enumerated type’ are also used 
  for factors).</p></td>
 </tr>
 <tr>
@@ -259,21 +205,15 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Sequence Generation</h3>
 
-<p>Generate regular sequences. seq is a standard generic with a default method. <br />
- seq.int is a primitive which can be much faster but has a few restrictions. <br />
- seq_along and seq_len are very fast primitives for two common cases.</p></td>
+<p>Generate regular sequences. seq is a standard generic with a default method. 
+ seq.int is a primitive which can be much faster but has a few restrictions. 
+ seq<em>along and seq</em>len are very fast primitives for two common cases.</p></td>
 </tr>
 <tr>
   <td id="date">
     <a href="./base/date.html">date</a>
   </td>
   <td><h3>System Date and Time</h3></td>
-</tr>
-<tr>
-  <td id="days">
-    <a href="./base/days.html">days</a>
-  </td>
-  <td><p>create time span from given days value.</p></td>
 </tr>
 <tr>
   <td id="year">
@@ -287,10 +227,10 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Combine Values into a Vector or List</h3>
 
-<p>This is a generic function which combines its arguments.<br />
- The Default method combines its arguments To form a vector. <br />
- All arguments are coerced To a common type which Is the <br />
- type Of the returned value, And all attributes except <br />
+<p>This is a generic function which combines its arguments.
+ The Default method combines its arguments To form a vector. 
+ All arguments are coerced To a common type which Is the 
+ type Of the returned value, And all attributes except 
  names are removed.</p></td>
 </tr>
 <tr>
@@ -299,8 +239,8 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Conditional Element Selection</h3>
 
-<p>ifelse returns a value with the same shape as test which is filled with <br />
- elements selected from either yes or no depending on whether the <br />
+<p>ifelse returns a value with the same shape as test which is filled with 
+ elements selected from either yes or no depending on whether the 
  element of test is <code>TRUE</code> or <code>FALSE</code>.</p></td>
 </tr>
 <tr>
@@ -317,7 +257,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Replicate Elements of Vectors and Lists</h3>
 
-<p>rep replicates the values in x. It is a generic function, <br />
+<p>rep replicates the values in x. It is a generic function, 
  and the (internal) default method is described here.</p></td>
 </tr>
 <tr>
@@ -338,8 +278,8 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Combine R Objects by Rows or Columns</h3>
 
-<p>Take a sequence of vector, matrix or data-frame arguments and combine <br />
- by columns or rows, respectively. These are generic functions with <br />
+<p>Take a sequence of vector, matrix or data-frame arguments and combine 
+ by columns or rows, respectively. These are generic functions with 
  methods for other R classes.</p></td>
 </tr>
 <tr>
@@ -348,8 +288,8 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Combine R Objects by Rows or Columns</h3>
 
-<p>Take a sequence of vector, matrix or data-frame arguments <br />
- and combine by columns or rows, respectively. These are <br />
+<p>Take a sequence of vector, matrix or data-frame arguments 
+ and combine by columns or rows, respectively. These are 
  generic functions with methods for other R classes.</p></td>
 </tr>
 <tr>
@@ -406,8 +346,8 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h4>Data Frames</h4>
 
-<p>The function <code>data.frame()</code> creates data frames, tightly coupled collections <br />
- of variables which share many of the properties of matrices and of lists, <br />
+<p>The function <code>data.frame()</code> creates data frames, tightly coupled collections 
+ of variables which share many of the properties of matrices and of lists, 
  used as the fundamental data structure by most of R's modeling software.</p></td>
 </tr>
 <tr>
@@ -420,17 +360,17 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="nrow">
     <a href="./base/nrow.html">nrow</a>
   </td>
-  <td><p>The Number of Rows/Columns of an Array</p>
-
-<p>nrow and ncol return the number of rows or columns present in x.</p></td>
+  <td><p>The Number of Rows/Columns of an Array
+ 
+ nrow and ncol return the number of rows or columns present in x.</p></td>
 </tr>
 <tr>
   <td id="ncol">
     <a href="./base/ncol.html">ncol</a>
   </td>
-  <td><p>The Number of Rows/Columns of an Array</p>
-
-<p>nrow and ncol return the number of rows or columns present in x.</p></td>
+  <td><p>The Number of Rows/Columns of an Array
+ 
+ nrow and ncol return the number of rows or columns present in x.</p></td>
 </tr>
 <tr>
   <td id="list">
@@ -438,7 +378,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h1>Lists – Generic and Dotted Pairs</h1>
 
-<p>Functions to construct, coerce and check for both kinds of <code>R&#35;</code> lists.</p></td>
+<p>Functions to construct, coerce and check for both kinds of <code>R#</code> lists.</p></td>
 </tr>
 <tr>
   <td id="summary">
@@ -446,9 +386,9 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h1>Object Summaries</h1>
 
-<p>summary is a generic function used to produce result summaries of <br />
- the results of various model fitting functions. The function <br />
- invokes particular methods which depend on the class of the first <br />
+<p>summary is a generic function used to produce result summaries of 
+ the results of various model fitting functions. The function 
+ invokes particular methods which depend on the class of the first 
  argument.</p></td>
 </tr>
 <tr>
@@ -463,11 +403,11 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h1>The Null Object</h1>
 
-<p><code>NULL</code> represents the null object in R: it is a reserved word. <br />
- <code>NULL</code> is often returned by expressions and functions whose <br />
- value is undefined.</p>
-
-<p>is.null is a primitive function.</p></td>
+<p><code>NULL</code> represents the null object in R: it is a reserved word. 
+ <code>NULL</code> is often returned by expressions and functions whose 
+ value is undefined.
+ 
+ <code>is.null</code> is a primitive function.</p></td>
 </tr>
 <tr>
   <td id="is.data.frame">
@@ -475,7 +415,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Coerce to a Data Frame</h3>
 
-<p>Functions to check if an object is a data frame, or coerce it <br />
+<p>Functions to check if an object is a data frame, or coerce it 
  if possible.</p></td>
 </tr>
 <tr>
@@ -498,8 +438,8 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="is.vector">
     <a href="./base/is.vector.html">is.vector</a>
   </td>
-  <td><p>‘is.vector’ returns ‘TRUE’ if ‘x’ is a vector of the specified<br />
- mode having no attributes <em>other than names</em>.  It returns 'FALSE’<br />
+  <td><p>‘is.vector’ returns ‘TRUE’ if ‘x’ is a vector of the specified
+ mode having no attributes <em>other than names</em>.  It returns 'FALSE’
  otherwise.</p></td>
 </tr>
 <tr>
@@ -508,22 +448,22 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>‘Not Available’ / Missing Values</h3>
 
-<p>NA is a logical constant of length 1 which contains a missing value indicator. <br />
- NA can be coerced to any other vector type except raw. There are also constants <br />
- NA_integer_, NA_real_, NA_complex_ and NA_character_ of the other atomic vector <br />
- types which support missing values: all of these are reserved words in the R <br />
- language.</p>
-
-<p>The generic Function Is.na indicates which elements are missing.<br />
- The generic Function Is.na&lt;- sets elements To NA.</p></td>
+<p>NA is a logical constant of length 1 which contains a missing value indicator. 
+ NA can be coerced to any other vector type except raw. There are also constants 
+ NA<em>integer</em>, NA<em>real</em>, NA<em>complex</em> and NA<em>character</em> of the other atomic vector 
+ types which support missing values: all of these are reserved words in the R 
+ language.
+ 
+ The generic Function Is.na indicates which elements are missing.
+ The generic Function Is.na<- sets elements To NA.</p></td>
 </tr>
 <tr>
   <td id="sink">
     <a href="./base/sink.html">sink</a>
   </td>
-  <td><p>Send R Output to a File</p>
-
-<p><code>sink</code> diverts R output to a connection (and stops such diversions).</p></td>
+  <td><p>Send R Output to a File
+ 
+ <code>sink</code> diverts R output to a connection (and stops such diversions).</p></td>
 </tr>
 <tr>
   <td id="length">
@@ -531,7 +471,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h1>Length of an Object</h1>
 
-<p>Get or set the length of vectors (including lists) and factors, <br />
+<p>Get or set the length of vectors (including lists) and factors, 
  and of any other R object for which a method has been defined.</p></td>
 </tr>
 <tr>
@@ -540,8 +480,8 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h2>Run the external R# script. Read R Code from a File, a Connection or Expressions</h2>
 
-<p>causes R to accept its input from the named file or URL or connection or expressions directly. <br />
- Input is read and parsed from that file until the end of the file is reached, then the parsed <br />
+<p>causes R to accept its input from the named file or URL or connection or expressions directly. 
+ Input is read and parsed from that file until the end of the file is reached, then the parsed 
  expressions are evaluated sequentially in the chosen environment.</p></td>
 </tr>
 <tr>
@@ -550,7 +490,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h1>Options Settings</h1>
 
-<p>Allow the user to set and examine a variety of global options which affect the way in <br />
+<p>Allow the user to set and examine a variety of global options which affect the way in 
  which R computes and displays its results.</p></td>
 </tr>
 <tr>
@@ -559,7 +499,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h6>Options Settings</h6>
 
-<p>Allow the user to set and examine a variety of global options which <br />
+<p>Allow the user to set and examine a variety of global options which 
  affect the way in which R computes and displays its results.</p></td>
 </tr>
 <tr>
@@ -620,8 +560,8 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Warning Messages</h3>
 
-<p>Generates a warning message that corresponds to <br />
- its argument(s) and (optionally) the expression <br />
+<p>Generates a warning message that corresponds to 
+ its argument(s) and (optionally) the expression 
  or function from which it was called.</p></td>
 </tr>
 <tr>
@@ -638,7 +578,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Quote Text</h3>
 
-<p>Single or double quote text by combining with appropriate <br />
+<p>Single or double quote text by combining with appropriate 
  single or double left and right quotation marks.</p></td>
 </tr>
 <tr>
@@ -647,7 +587,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Quote Text</h3>
 
-<p>Single or double quote text by combining with appropriate <br />
+<p>Single or double quote text by combining with appropriate 
  single or double left and right quotation marks.</p></td>
 </tr>
 <tr>
@@ -664,23 +604,23 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h1>Concatenate and Print</h1>
 
-<p>Outputs the objects, concatenating the representations. <br />
+<p>Outputs the objects, concatenating the representations. 
  <code>cat</code> performs much less conversion than <code>print</code>.</p></td>
 </tr>
 <tr>
   <td id="str">
     <a href="./base/str.html">str</a>
   </td>
-  <td><h3>Compactly Display the Structure of an Arbitrary <code>R&#35;</code> Object</h3>
+  <td><h3>Compactly Display the Structure of an Arbitrary <code>R#</code> Object</h3>
 
-<p>Compactly display the internal structure of an R object, a diagnostic function <br />
- and an alternative to summary (and to some extent, dput). Ideally, only one <br />
- line for each ‘basic’ structure is displayed. It is especially well suited to <br />
- compactly display the (abbreviated) contents of (possibly nested) lists. The <br />
- idea is to give reasonable output for any R object. It calls args for <br />
- (non-primitive) function objects.</p>
-
-<p><code>strOptions()</code> Is a convenience function for setting <code>options(str = .)</code>, <br />
+<p>Compactly display the internal structure of an R object, a diagnostic function 
+ and an alternative to summary (and to some extent, dput). Ideally, only one 
+ line for each ‘basic’ structure is displayed. It is especially well suited to 
+ compactly display the (abbreviated) contents of (possibly nested) lists. The 
+ idea is to give reasonable output for any R object. It calls args for 
+ (non-primitive) function objects.
+ 
+ <code>strOptions()</code> Is a convenience function for setting <code>options(str = .)</code>, 
  see the examples.</p></td>
 </tr>
 <tr>
@@ -689,9 +629,63 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h1>Print Values</h1>
 
-<p>print prints its argument and returns it invisibly (via invisible(x)). <br />
- It is a generic function which means that new printing methods can be <br />
+<p>print prints its argument and returns it invisibly (via invisible(x)). 
+ It is a generic function which means that new printing methods can be 
  easily added for new classes.</p></td>
+</tr>
+<tr>
+  <td id="factors">
+    <a href="./base/factors.html">factors</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="auto">
+    <a href="./base/auto.html">auto</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="library">
+    <a href="./base/library.html">library</a>
+  </td>
+  <td><h1>Loading/Attaching and Listing of Packages</h1>
+
+<p>library and require load and attach add-on packages.</p></td>
+</tr>
+<tr>
+  <td id="load">
+    <a href="./base/load.html">load</a>
+  </td>
+  <td><h3>Reload Saved Datasets</h3>
+
+<p>Reload datasets written with the function <code>save</code>.</p></td>
+</tr>
+<tr>
+  <td id="save">
+    <a href="./base/save.html">save</a>
+  </td>
+  <td><h3>Save R Objects</h3>
+
+<p>writes an external representation of R objects to the specified file. 
+ The objects can be read back from the file at a later date by using 
+ the function load or attach (or data in some cases).</p></td>
+</tr>
+<tr>
+  <td id="saveRDS">
+    <a href="./base/saveRDS.html">saveRDS</a>
+  </td>
+  <td><p>Serialization Interface for Single Objects
+ 
+ Functions to write a single R object to a file, and to restore it.</p></td>
+</tr>
+<tr>
+  <td id="readRDS">
+    <a href="./base/readRDS.html">readRDS</a>
+  </td>
+  <td><p>Serialization Interface for Single Objects
+ 
+ Functions to write a single R object to a file, and to restore it.</p></td>
 </tr></tbody>
       </table>
     </div>

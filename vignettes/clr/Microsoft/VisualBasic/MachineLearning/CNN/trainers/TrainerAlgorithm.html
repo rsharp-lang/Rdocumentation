@@ -22,11 +22,11 @@
 
         <h3>Description</h3>
 
-        <p>Trainers take the generated output of activations and gradients in<br />
- order to modify the weights in the network to make a better prediction<br />
- the next time the network runs with a data block.</p>
-
-<p>@author Daniel Persson (mailto.woden@gmail.com)</p>
+        <p>Trainers take the generated output of activations and gradients in
+ order to modify the weights in the network to make a better prediction
+ the next time the network runs with a data block.
+ 
+ @author Daniel Persson (mailto.woden@gmail.com)</p>
 
         <h3>Declare</h3>        
 
@@ -34,16 +34,23 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.MachineLearning.CNN.trainers
 export class TrainerAlgorithm {
-   # alpha
-   learning_rate: double;
-   eps: double;
-   momentum: double;
    batch_size: integer;
    conv_net: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/ConvolutionalNN.html">ConvolutionalNN</a>;
+   eps: double;
    get_output: double;
+   # alpha
+   learning_rate: double;
+   momentum: double;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>conv_net</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/ConvolutionalNN.html">ConvolutionalNN</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

@@ -30,39 +30,69 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.Math.Statistics.Hypothesis.ANOVA
 export class MultivariateAnalysisResult {
-   # model set
-   StatisticsObject: <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/ANOVA/StatisticsObject.html">StatisticsObject</a>;
    analysis: <a href="/vignettes/clr/System/Type.html">Type</a>;
+   Coefficients: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   Contributions: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   CPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   FilteredXArray: <a href="/vignettes/clr/System/Double.html">Double[,]</a>;
    NFold: integer;
    OptimizedFactor: integer;
    OptimizedOrthoFactor: integer;
-   SsCVs: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   Presses: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   Totals: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   Q2Values: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   Q2Cums: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   SsPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   CPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   UPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   TPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   WPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   PPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   Coefficients: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   Vips: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   PredictedYs: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   Rmsee: double;
-   ToPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   WoPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
    PoPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   stdevT: double;
-   StdevFilteredXs: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   FilteredXArray: <a href="/vignettes/clr/System/Double.html">Double[,]</a>;
-   PPredCovs: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
    PPredCoeffs: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
-   Contributions: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   PPredCovs: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   PPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   PredictedYs: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   Presses: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   Q2Cums: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   Q2Values: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   Rmsee: double;
+   SsCVs: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   SsPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   # model set
+   StatisticsObject: <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/ANOVA/StatisticsObject.html">StatisticsObject</a>;
+   StdevFilteredXs: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   stdevT: double;
+   ToPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   Totals: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   TPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   UPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   Vips: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   WoPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
+   WPreds: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>analysis</code>: <a href="/vignettes/clr/System/Type.html">Type</a></li>
+<li>use by <i>property</i> member <code>Coefficients</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>Contributions</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>CPreds</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>FilteredXArray</code>: <a href="/vignettes/clr/System/Double.html">Double</a></li>
+<li>use by <i>property</i> member <code>PoPreds</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>PPredCoeffs</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>PPredCovs</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>PPreds</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>PredictedYs</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>Presses</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>Q2Cums</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>Q2Values</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>SsCVs</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>SsPreds</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>StatisticsObject</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/ANOVA/StatisticsObject.html">StatisticsObject</a></li>
+<li>use by <i>property</i> member <code>StdevFilteredXs</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>ToPreds</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>Totals</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>TPreds</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>UPreds</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>Vips</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>WoPreds</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+<li>use by <i>property</i> member <code>WPreds</code>: <a href="/vignettes/clr/System/Collections/ObjectModel/ObservableCollection`1.html">ObservableCollection`1</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

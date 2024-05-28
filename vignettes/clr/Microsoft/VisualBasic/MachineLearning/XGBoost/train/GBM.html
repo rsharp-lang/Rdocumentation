@@ -22,38 +22,36 @@
 
         <h3>Description</h3>
 
-        <p>Tiny implement of Gradient Boosting tree</p>
-
-<p>It is a Tiny implement of Gradient Boosting tree, based on <br />
- XGBoost's scoring function and SLIQ's efficient tree building <br />
- algorithm. TGBoost build the tree in a level-wise way as in <br />
- SLIQ (by constructing Attribute list and Class list). <br />
- Currently, TGBoost support parallel learning on single machine, <br />
+        <p>Tiny implement of Gradient Boosting tree
+ 
+ It is a Tiny implement of Gradient Boosting tree, based on 
+ XGBoost's scoring function and SLIQ's efficient tree building 
+ algorithm. TGBoost build the tree in a level-wise way as in 
+ SLIQ (by constructing Attribute list and Class list). 
+ Currently, TGBoost support parallel learning on single machine, 
  the speed and memory consumption are comparable to XGBoost.</p>
 
 <p>TGBoost supports most features As other library:</p>
 
-<ul>
-<li>Built-in loss , Square error loss for regression task, Logistic loss for classification task</li>
-<li>Early stopping, evaluate On validation Set And conduct early stopping</li>
-<li>Feature importance, output the feature importance after training</li>
-<li>Regularization , lambda, gamma</li>
-<li>Randomness, subsample，colsample</li>
-<li><p>Weighted loss Function , assign weight To Each sample</p>
+<p>+ Built-in loss , Square error loss for regression task, Logistic loss for classification task
+ + Early stopping, evaluate On validation Set And conduct early stopping
+ + Feature importance, output the feature importance after training
+ + Regularization , lambda, gamma
+ + Randomness, subsample，colsample
+ + Weighted loss Function , assign weight To Each sample</p>
 
-<p>Another two features are novel:</p></li>
-<li><p>Handle missing value, XGBoost learn a direction For those <br />
-With missing value, the direction Is left Or right. TGBoost <br />
-take a different approach: it enumerate missing value go To <br />
-left child, right child And missing value child, Then <br />
-choose the best one. So TGBoost use Ternary Tree.</p></li>
-<li>Handle categorical feature, TGBoost order the categorical <br />
-feature by their statistic (Gradient_sum / Hessian_sum) On <br />
-Each tree node, Then conduct split finding As numeric <br />
-feature.</li>
-</ul>
+<p>Another two features are novel:</p>
 
-<p><a href="https://github.com/wepe/tgboost">https://github.com/wepe/tgboost</a></p><br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a> class.</p>
+<p>+ Handle missing value, XGBoost learn a direction For those 
+   With missing value, the direction Is left Or right. TGBoost 
+   take a different approach: it enumerate missing value go To 
+   left child, right child And missing value child, Then 
+   choose the best one. So TGBoost use Ternary Tree.
+ + Handle categorical feature, TGBoost order the categorical 
+   feature by their statistic (Gradient<em>sum / Hessian</em>sum) On 
+   Each tree node, Then conduct split finding As numeric 
+   feature.
+<a href='https://github.com/wepe/tgboost' title='https://github.com/wepe/tgboost'>https://github.com/wepe/tgboost</a></p>
 
         <h3>Declare</h3>        
 
@@ -61,13 +59,22 @@ feature.</li>
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.MachineLearning.XGBoost.train
 export class GBM extends <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a> {
-   first_round_pred: double;
    eta: double;
+   first_round_pred: double;
    loss: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/XGBoost/train/Loss.html">Loss</a>;
-   trees: <a href="/vignettes/clr/Microsoft/VisualBasic/Language/List`1.html">List`1</a>;
+   trees: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/XGBoost/train/Tree.html">iterates(Tree)</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a></li>
+<li>use by <i>property</i> member <code>loss</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/XGBoost/train/Loss.html">Loss</a></li>
+<li>use by <i>property</i> member <code>trees</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/XGBoost/train/Tree.html">iterates(Tree)</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

@@ -35,30 +35,33 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>an R Object, For example a matrix, array Or data frame.</p></p></dd>
+<dd><p>an R Object, For example a matrix, array Or data frame.</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>The functions dim and <code>dim&lt;-</code> are internal generic primitive functions.<br />
- Dim has a method For <code>data.frames</code>, which returns the lengths Of the <br />
- <code>row.names</code> attribute Of x And Of x (As the numbers Of rows And columns <br />
+        <p>The functions dim and <code>dim&lt;-</code> are internal generic primitive functions.
+ Dim has a method For <code>data.frames</code>, which returns the lengths Of the 
+ <code>row.names</code> attribute Of x And Of x (As the numbers Of rows And columns 
  respectively).</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>For the default method, either NULL or a numeric vector, which is <br />
- coerced to integer (by truncation).</p>
-
-<p>For an array (and hence in particular, for a matrix) dim retrieves <br />
- the dim attribute of the object. It is <code>NULL</code> or a vector of mode <br />
- integer.</p>
-
-<p>The replacement method changes the "dim" attribute (provided the New <br />
- value Is compatible) And removes any "dimnames" And "names" <br />
+        <p>For the default method, either NULL or a numeric vector, which is 
+ coerced to integer (by truncation).
+ 
+ For an array (and hence in particular, for a matrix) dim retrieves 
+ the dim attribute of the object. It is <code>NULL</code> or a vector of mode 
+ integer.
+ 
+ The replacement method changes the "dim" attribute (provided the New 
+ value Is compatible) And removes any "dimnames" And "names" 
  attributes.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

@@ -38,55 +38,58 @@
         <table>
             
 <dt>red</dt>
-<dd><p><p>numeric vectors with values in [0, M] where M is maxColorValue. When this is 255, <br />
- the red, blue, green, and alpha values are coerced to integers in 0:255 and the result is computed <br />
- most efficiently.</p></p></dd>
+<dd><p>numeric vectors with values in [0, M] where M is maxColorValue. When this is 255, 
+ the red, blue, green, and alpha values are coerced to integers in 0:255 and the result is computed 
+ most efficiently. [as integer]</p></dd>
 
 
 <dt>green</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as integer]</p></dd>
 
 
 <dt>blue</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as integer]</p></dd>
 
 
 <dt>alpha</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as integer]</p></dd>
 
 
 <dt>names</dt>
-<dd><p><p>character vector. The names for the resulting vector.</p></p></dd>
+<dd><p>character vector. The names for the resulting vector. [as string]</p></dd>
 
 
 <dt>maxColorValue</dt>
-<dd><p><p>number giving the maximum of the color values range, see above.</p></p></dd>
+<dd><p>number giving the maximum of the color values range, see above. [as integer]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>The colors may be specified by passing a matrix or data frame as argument red, and leaving blue and <br />
- green missing. In this case the first three columns of red are taken to be the red, green and blue <br />
- values.</p>
+        <p>The colors may be specified by passing a matrix or data frame as argument red, and leaving blue and 
+ green missing. In this case the first three columns of red are taken to be the red, green and blue 
+ values.
+ 
+ Semi-transparent colors (0 < alpha < 1) are supported only on some devices: at the time Of 
+ writing On the pdf, windows, quartz And X11(type = "cairo") devices And associated bitmap devices 
+ (jpeg, png, bmp, tiff And bitmap). They are supported by several third-party devices such As those 
+ In packages Cairo, cairoDevice And JavaGD. Only some Of these devices support semi-transparent 
+ backgrounds.
+ 
+ Most other graphics devices plot semi-transparent colors As fully transparent, usually With a 
+ warning When first encountered.
+ 
+ NA values are Not allowed For any Of red, blue, green Or alpha.</p>
 
-<p>Semi-transparent colors (0 &lt; alpha &lt; 1) are supported only on some devices: at the time Of <br />
- writing On the pdf, windows, quartz And X11(type = "cairo") devices And associated bitmap devices <br />
- (jpeg, png, bmp, tiff And bitmap). They are supported by several third-party devices such As those <br />
- In packages Cairo, cairoDevice And JavaGD. Only some Of these devices support semi-transparent <br />
- backgrounds.</p>
+        <h3 style="display: block">Authors</h3>
 
-<p>Most other graphics devices plot semi-transparent colors As fully transparent, usually With a <br />
- warning When first encountered.</p>
-
-<p>NA values are Not allowed For any Of red, blue, green Or alpha.</p>
-
+        graphics
 
         <h3>Value</h3>
 
-        <p>A character vector with elements of 7 or 9 characters, "#" followed by the red, blue, green and <br />
- optionally alpha values in hexadecimal (after rescaling to 0 ... 255). The optional alpha values <br />
+        <p>A character vector with elements of 7 or 9 characters, "#" followed by the red, blue, green and 
+ optionally alpha values in hexadecimal (after rescaling to 0 ... 255). The optional alpha values 
  range from 0 (fully transparent) to 255 (opaque).</p>
 
 <p>R does Not use 'premultiplied alpha’.</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/vector.html">vector</a></li></ul>

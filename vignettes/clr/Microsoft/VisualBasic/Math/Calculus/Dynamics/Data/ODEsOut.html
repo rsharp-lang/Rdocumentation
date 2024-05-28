@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>ODEs output, this object can populates the <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Calculus/Dynamics/Data/ODEsOut.html">ODEsOut</a>.<a href="#">y</a> <br />
+        <p>ODEs output, this object can populates the <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Calculus/Dynamics/Data/ODEsOut.html">ODEsOut</a>.<a href="#">y</a> 
  variables values through its enumerator interface.</p>
 
         <h3>Declare</h3>        
@@ -31,20 +31,29 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.Math.Calculus.Dynamics.Data
 export class ODEsOut {
-   y: list;
-   x: double;
-   # 方程组的初始值，积分结果会受到初始值的极大的影响
-   y0: list;
-   params: list;
    # 得到进行积分的步进值
    dx: double;
-   # 获取得到积分计算的分辨率的数值
-   Resolution: double;
    # Is there NAN value in the function value <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Calculus/Dynamics/Data/ODEsOut.html">ODEsOut</a>.<a href="#">y</a> ???
    HaveNaN: boolean;
+   params: list;
+   # 获取得到积分计算的分辨率的数值
+   Resolution: double;
+   x: double;
+   y: list;
+   # 方程组的初始值，积分结果会受到初始值的极大的影响
+   y0: list;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>params</code>: list</li>
+<li>use by <i>property</i> member <code>y</code>: list</li>
+<li>use by <i>property</i> member <code>y0</code>: list</li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

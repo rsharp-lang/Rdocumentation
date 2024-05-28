@@ -35,41 +35,44 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>character vectors containing file paths. Tilde-expansion is done: see path.expand.</p></p></dd>
+<dd><p>character vectors containing file paths. Tilde-expansion is done: see path.expand.</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>What constitutes a ‘file’ is OS-dependent but includes directories. (However, <br />
- directory names must not include a trailing backslash or slash on Windows.) <br />
- See also the section in the help for file.exists on case-insensitive file <br />
- systems.</p>
-
-<p>The file 'mode’ follows POSIX conventions, giving three octal digits summarizing <br />
- the permissions for the file owner, the owner's group and for anyone respectively. <br />
- Each digit is the logical or of read (4), write (2) and execute/search (1) <br />
- permissions.</p>
-
-<p>See files For how file paths With marked encodings are interpreted.</p>
-
-<p>File modes are probably only useful On NTFS file systems, And it seems all three <br />
- digits refer To the file's owner. The execute/search bits are set for directories, <br />
- and for files based on their extensions (e.g., ‘.exe’, ‘.com’, ‘.cmd’ and ‘.bat’ <br />
- files). file.access will give a more reliable view of read/write access <br />
- availability to the R process.</p>
-
-<p>UTF-8-encoded file names Not valid in the current locale can be used.</p>
-
-<p>Junction points And symbolic links are followed, so information Is given about <br />
+        <p>What constitutes a ‘file’ is OS-dependent but includes directories. (However, 
+ directory names must not include a trailing backslash or slash on Windows.) 
+ See also the section in the help for file.exists on case-insensitive file 
+ systems.
+ 
+ The file 'mode’ follows POSIX conventions, giving three octal digits summarizing 
+ the permissions for the file owner, the owner's group and for anyone respectively. 
+ Each digit is the logical or of read (4), write (2) and execute/search (1) 
+ permissions.
+ 
+ See files For how file paths With marked encodings are interpreted.
+ 
+ File modes are probably only useful On NTFS file systems, And it seems all three 
+ digits refer To the file's owner. The execute/search bits are set for directories, 
+ and for files based on their extensions (e.g., ‘.exe’, ‘.com’, ‘.cmd’ and ‘.bat’ 
+ files). file.access will give a more reliable view of read/write access 
+ availability to the R process.
+ 
+ UTF-8-encoded file names Not valid in the current locale can be used.
+ 
+ Junction points And symbolic links are followed, so information Is given about 
  the file/directory To which the link points rather than about the link.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>Double: File size In bytes. For missing file, this function will <br />
- returns a negative number -1; and the file is exists on the filesystem, this <br />
+        <p>Double: File size In bytes. For missing file, this function will 
+ returns a negative number -1; and the file is exists on the filesystem, this 
  function returns ZERO(empty file) or a positive number.</p><h4>clr value class</h4><ul><li>integer</li></ul>
 
         <h3 style="display: none;">Examples</h3>

@@ -24,7 +24,7 @@
 
         <p>A training dataset that stored in XML file.</p>
 
-<p>一般只需要生成这个数据对象, 之后就可以直接使用这个对象来进行统一的训练代码调用即可</p><br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a> class.</p>
+<p>一般只需要生成这个数据对象, 之后就可以直接使用这个对象来进行统一的训练代码调用即可</p>
 
         <h3>Declare</h3>        
 
@@ -38,16 +38,28 @@ export class DataSet extends <a href="/vignettes/clr/Microsoft/VisualBasic/Compo
    NormalizeMatrix: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/ComponentModel/StoreProcedure/NormalizeMatrix.html">NormalizeMatrix</a>;
    # The element names of output vector
    output: string;
-   # 样本的矩阵大小：<code>[属性长度, 样本数量]</code>
-   Size: <a href="/vignettes/clr/System/Drawing/Size.html">Size</a>;
-   width: integer;
    # 神经网络的输出节点的数量
    OutputSize: integer;
+   # 样本的矩阵大小：<code>[属性长度, 样本数量]</code>
+   Size: <a href="/vignettes/clr/System/Drawing/Size.html">Size</a>;
    Stylesheet: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlStyleProcessor.html">XmlStyleProcessor</a>;
    TypeComment: <a href="/vignettes/clr/System/Xml/XmlComment.html">XmlComment</a>;
+   width: integer;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlDataModel.html">XmlDataModel</a></li>
+<li>use by <i>property</i> member <code>DataSamples</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/ComponentModel/StoreProcedure/SampleList.html">SampleList</a></li>
+<li>use by <i>property</i> member <code>NormalizeMatrix</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/ComponentModel/StoreProcedure/NormalizeMatrix.html">NormalizeMatrix</a></li>
+<li>use by <i>property</i> member <code>Size</code>: <a href="/vignettes/clr/System/Drawing/Size.html">Size</a></li>
+<li>use by <i>property</i> member <code>Stylesheet</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/XmlStyleProcessor.html">XmlStyleProcessor</a></li>
+<li>use by <i>property</i> member <code>TypeComment</code>: <a href="/vignettes/clr/System/Xml/XmlComment.html">XmlComment</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>write.code_banner</title>
+    <title>add source code banner to a given visualbasic source file</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
@@ -18,11 +18,11 @@
             </tr>
         </table>
 
-        <h2>write.code_banner</h2>
+        <h2>add source code banner to a given visualbasic source file</h2>
 
         <h3>Description</h3>
 
-        write.code_banner
+        
 
         <h3>Usage</h3>
 
@@ -35,6 +35,17 @@
 
         <table>
             
+<dt>file</dt>
+<dd><p>the file path to the visualbasic source file. [as string]</p></dd>
+
+
+<dt>banner</dt>
+<dd><p>the source code banner object, which could be read from a xml file via <code>read.banner</code> function. [as <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Development/VisualStudio/CodeSign/LicenseInfo.html">LicenseInfo</a>]</p></dd>
+
+
+<dt>rootDir</dt>
+<dd><p>the parent directory of the vbproj file. [as string]</p></dd>
+
         </table>
 
 
@@ -42,6 +53,9 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        devkit
 
         <h3>Value</h3>
 

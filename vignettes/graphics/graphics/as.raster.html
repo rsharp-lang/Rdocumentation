@@ -36,25 +36,23 @@
         <table>
             
 <dt>img</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
 
 <dt>rgb.stack</dt>
-<dd><p><p>A character vector for tells the raster function that extract the signal via rgb stack, <br />
- default nothing means just extract the raster data via the image pixel its brightness <br />
- value, otherwise this parameter should be a character of of value combination of chars: <br />
- <code>r</code>, <code>g</code> and <code>b</code>.</p>
-
-<p>example as: </p>
-
-<ul>
-<li>rgb.stack = ['r'] means just extract the red channel as the raster data</li>
-<li><p>rgb.stack = ['g', 'b'] means extract the raster data via green and blue channel, <br />
- the raster scale value will be evaluated as g * 10 + b</p>
-
-<p>andalso this parameter value could be a .net clr color height map ruler object, which could be used for<br />
-mapping a color sequence to a scale level.</p></li>
-</ul></p></dd>
+<dd><p>A character vector for tells the raster function that extract the signal via rgb stack, 
+ default nothing means just extract the raster data via the image pixel its brightness 
+ value, otherwise this parameter should be a character of of value combination of chars: 
+ <code>r</code>, <code>g</code> and <code>b</code>.
+ 
+ example as: 
+ 
+ + rgb.stack = ['r'] means just extract the red channel as the raster data
+ + rgb.stack = ['g', 'b'] means extract the raster data via green and blue channel, 
+     the raster scale value will be evaluated as g * 10 + b
+ 
+ andalso this parameter value could be a .net clr color height map ruler object, which could be used for
+ mapping a color sequence to a scale level.</p></dd>
 
         </table>
 
@@ -63,6 +61,9 @@ mapping a color sequence to a scale level.</p></li>
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        graphics
 
         <h3>Value</h3>
 

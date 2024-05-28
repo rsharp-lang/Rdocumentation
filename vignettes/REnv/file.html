@@ -107,32 +107,32 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="file.path">
     <a href="./file/file.path.html">file.path</a>
   </td>
-  <td><p>Construct Path to File</p>
-
-<p>Construct the path to a file from components in a<br />
+  <td><p>Construct Path to File
+ 
+ Construct the path to a file from components in a
  platform-independent way.</p></td>
 </tr>
 <tr>
   <td id="file.info">
     <a href="./file/file.info.html">file.info</a>
   </td>
-  <td><p>Extract File Information</p>
-
-<p>Utility function to extract information about files on the user's file systems.</p></td>
+  <td><p>Extract File Information
+ 
+ Utility function to extract information about files on the user's file systems.</p></td>
 </tr>
 <tr>
   <td id="file.copy">
     <a href="./file/file.copy.html">file.copy</a>
   </td>
-  <td><p><code>file.copy</code> works in a similar way to <code>file.append</code> but with the arguments <br />
- in the natural order for copying. Copying to existing destination files is <br />
- skipped unless overwrite = TRUE. The to argument can specify a single existing <br />
- directory. If copy.mode = TRUE file read/write/execute permissions are copied <br />
- where possible, restricted by ‘umask’. (On Windows this applies only to files.<br />
- ) Other security attributes such as ACLs are not copied. On a POSIX filesystem <br />
- the targets of symbolic links will be copied rather than the links themselves, <br />
- and hard links are copied separately. Using copy.date = TRUE may or may not <br />
- copy the timestamp exactly (for example, fractional seconds may be omitted), <br />
+  <td><p><code>file.copy</code> works in a similar way to <code>file.append</code> but with the arguments 
+ in the natural order for copying. Copying to existing destination files is 
+ skipped unless overwrite = TRUE. The to argument can specify a single existing 
+ directory. If copy.mode = TRUE file read/write/execute permissions are copied 
+ where possible, restricted by ‘umask’. (On Windows this applies only to files.
+ ) Other security attributes such as ACLs are not copied. On a POSIX filesystem 
+ the targets of symbolic links will be copied rather than the links themselves, 
+ and hard links are copied separately. Using copy.date = TRUE may or may not 
+ copy the timestamp exactly (for example, fractional seconds may be omitted), 
  but is more likely to do so as from R 3.4.0.</p></td>
 </tr>
 <tr>
@@ -157,32 +157,32 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="normalizePath">
     <a href="./file/normalizePath.html">normalizePath</a>
   </td>
-  <td><p>Express File Paths in Canonical Form</p>
-
-<p>Convert file paths to canonical form for the platform, to display them in a <br />
- user-understandable form and so that relative and absolute paths can be <br />
+  <td><p>Express File Paths in Canonical Form
+ 
+ Convert file paths to canonical form for the platform, to display them in a 
+ user-understandable form and so that relative and absolute paths can be 
  compared.</p></td>
 </tr>
 <tr>
   <td id="R.home">
     <a href="./file/R.home.html">R.home</a>
   </td>
-  <td><p>Return the R Home Directory</p>
+  <td><p>Return the R Home Directory
+ 
+ Return the R home directory, or the full path to a 
+ component of the R installation.
+ 
+ The R home directory is the top-level directory of the R installation being run.</p>
 
-<p>Return the R home directory, or the full path to a <br />
- component of the R installation.</p>
-
-<p>The R home directory is the top-level directory of the R installation being run.</p>
-
-<p>The R home directory Is often referred To As R_HOME, And Is the value Of an <br />
- environment variable Of that name In an R session. It can be found outside <br />
+<p>The R home directory Is often referred To As R_HOME, And Is the value Of an 
+ environment variable Of that name In an R session. It can be found outside 
  an R session by R RHOME.</p></td>
 </tr>
 <tr>
   <td id="dirname">
     <a href="./file/dirname.html">dirname</a>
   </td>
-  <td><p><code>dirname</code> returns the part of the <code>path</code> up to but excluding the last path separator, <br />
+  <td><p><code>dirname</code> returns the part of the <code>path</code> up to but excluding the last path separator, 
  or "." if there is no path separator.</p></td>
 </tr>
 <tr>
@@ -219,16 +219,16 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="file.exists">
     <a href="./file/file.exists.html">file.exists</a>
   </td>
-  <td><p><code>file.exists</code> returns a logical vector indicating whether the files named by its <br />
- argument exist. (Here ‘exists’ is in the sense of the system's stat call: a file <br />
- will be reported as existing only if you have the permissions needed by stat. <br />
- Existence can also be checked by file.access, which might use different permissions <br />
- and so obtain a different result. Note that the existence of a file does not <br />
- imply that it is readable: for that use file.access.) What constitutes a ‘file’ <br />
- is system-dependent, but should include directories. (However, directory names <br />
- must not include a trailing backslash or slash on Windows.) Note that if the file <br />
- is a symbolic link on a Unix-alike, the result indicates if the link points to <br />
- an actual file, not just if the link exists. Lastly, note the different function <br />
+  <td><p><code>file.exists</code> returns a logical vector indicating whether the files named by its 
+ argument exist. (Here ‘exists’ is in the sense of the system's stat call: a file 
+ will be reported as existing only if you have the permissions needed by stat. 
+ Existence can also be checked by file.access, which might use different permissions 
+ and so obtain a different result. Note that the existence of a file does not 
+ imply that it is readable: for that use file.access.) What constitutes a ‘file’ 
+ is system-dependent, but should include directories. (However, directory names 
+ must not include a trailing backslash or slash on Windows.) Note that if the file 
+ is a symbolic link on a Unix-alike, the result indicates if the link points to 
+ an actual file, not just if the link exists. Lastly, note the different function 
  exists which checks for existence of R objects.</p></td>
 </tr>
 <tr>
@@ -241,15 +241,15 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="dir.create">
     <a href="./file/dir.create.html">dir.create</a>
   </td>
-  <td><p>dir.create creates the last element of the path, unless recursive = TRUE. <br />
- Trailing path separators are discarded. On Windows drives are allowed in <br />
- the path specification and unless the path is rooted, it will be interpreted <br />
- relative to the current directory on that drive. mode is ignored on Windows.</p>
-
-<p>One of the idiosyncrasies of Windows Is that directory creation may report <br />
- success but create a directory with a different name, for example dir.create("G.S.") <br />
- creates '"G.S"’. This is undocumented, and what are the precise circumstances <br />
- is unknown (and might depend on the version of Windows). Also avoid directory <br />
+  <td><p>dir.create creates the last element of the path, unless recursive = TRUE. 
+ Trailing path separators are discarded. On Windows drives are allowed in 
+ the path specification and unless the path is rooted, it will be interpreted 
+ relative to the current directory on that drive. mode is ignored on Windows.
+ 
+ One of the idiosyncrasies of Windows Is that directory creation may report 
+ success but create a directory with a different name, for example dir.create("G.S.") 
+ creates '"G.S"’. This is undocumented, and what are the precise circumstances 
+ is unknown (and might depend on the version of Windows). Also avoid directory 
  names with a trailing space.</p></td>
 </tr>
 <tr>
@@ -262,9 +262,9 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="readLines">
     <a href="./file/readLines.html">readLines</a>
   </td>
-  <td><p>Read Text Lines from a Connection</p>
-
-<p>Read some or all text lines from a connection.</p></td>
+  <td><p>Read Text Lines from a Connection
+ 
+ Read some or all text lines from a connection.</p></td>
 </tr>
 <tr>
   <td id="readText">
@@ -308,8 +308,8 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="file">
     <a href="./file/file.html">file</a>
   </td>
-  <td><p>Functions to create, open and close connections, i.e., <br />
- "generalized files", such as possibly compressed files, <br />
+  <td><p>Functions to create, open and close connections, i.e., 
+ "generalized files", such as possibly compressed files, 
  URLs, pipes, etc.</p></td>
 </tr>
 <tr>
@@ -318,7 +318,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>ransfer Binary Data To and From Connections</h3>
 
-<p>Read binary data from or write binary data to a connection<br />
+<p>Read binary data from or write binary data to a connection
  or raw vector.</p></td>
 </tr>
 <tr>
@@ -357,7 +357,7 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Create Names for Temporary Files</h3>
 
-<p><code>tempfile</code> returns a vector of character strings <br />
+<p><code>tempfile</code> returns a vector of character strings 
  which can be used as names for temporary files.</p></td>
 </tr>
 <tr>
@@ -378,10 +378,10 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h2>Delete files or directories</h2>
 
-<p><code>file.remove</code> attempts to remove the files named <br />
- in its argument. On most Unix platforms ‘file’ <br />
- includes empty directories, symbolic links, fifos <br />
- and sockets. On Windows, ‘file’ means a regular file <br />
+<p><code>file.remove</code> attempts to remove the files named 
+ in its argument. On most Unix platforms ‘file’ 
+ includes empty directories, symbolic links, fifos 
+ and sockets. On Windows, ‘file’ means a regular file 
  and not, say, an empty directory.</p></td>
 </tr>
 <tr>

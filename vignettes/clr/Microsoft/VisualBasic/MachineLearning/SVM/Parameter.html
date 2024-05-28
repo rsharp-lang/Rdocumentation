@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MachineLearning.SVM.Parameter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Parameter {Microsoft.VisualBasic.MachineLearning.SVM}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Parameter</h2>
+
+        <h3>Description</h3>
+
+        <p>This class contains the various parameters which can affect the way in which an SVM
+ is learned.  Unless you know what you are doing, chances are you are best off using
+ the default values.</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MachineLearning.SVM
+export class Parameter {
+   # The parameter C of C-SVC, epsilon-SVR, and nu-SVR (default 1)
+   c: double;
+   # Cache memory size in MB (default 100)
+   cacheSize: double;
+   # Zeroeth coefficient in kernel function (default 0)
+   coefficient0: double;
+   # Degree in kernel function (default 3).
+   degree: integer;
+   # Tolerance of termination criterion (default 0.001)
+   EPS: double;
+   # Gamma in kernel function (default 1/k)
+   gamma: double;
+   # Type of kernel function (default Polynomial)
+   kernelType: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/KernelType.html">KernelType</a>;
+   # The parameter nu of nu-SVC, one-class SVM, and nu-SVR (default 0.5)
+   nu: double;
+   # The epsilon in loss function of epsilon-SVR (default 0.1)
+   P: double;
+   # Whether to train an SVC or SVR model for probability estimates, (default False)
+   probability: boolean;
+   # Whether to use the shrinking heuristics, (default True)
+   shrinking: boolean;
+   # Type of SVM (default C-SVC)
+   svmType: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/SvmType.html">SvmType</a>;
+   # <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Encoder/ColorClass.html">ColorClass</a>.<a href="#">name</a>
+   weights: list;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>kernelType</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/KernelType.html">KernelType</a></li>
+<li>use by <i>property</i> member <code>svmType</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/SvmType.html">SvmType</a></li>
+<li>use by <i>property</i> member <code>weights</code>: list</li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

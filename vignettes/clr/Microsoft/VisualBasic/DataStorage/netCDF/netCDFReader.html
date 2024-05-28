@@ -22,7 +22,11 @@
 
         <h3>Description</h3>
 
-        
+        <p>The dotCDF file of a CDF contains magic numbers and numerous
+ internal records are used to organize information about the 
+ contents Of the CDF (For both Single-file And multi-file 
+ CDFs).
+<a href='https://github.com/cheminfo-js/netcdfjs' title='https://github.com/cheminfo-js/netcdfjs'>https://github.com/cheminfo-js/netcdfjs</a></p>
 
         <h3>Declare</h3>        
 
@@ -30,14 +34,49 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.DataStorage.netCDF
 export class netCDFReader {
-   version: string;
-   recordDimension: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/recordDimension.html">recordDimension</a>;
+   # List of dimensions with:
+   #  
+   #   + `name`: String with the name of the dimension
+   #   + `size`: Number with the size of the dimension
    dimensions: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/Dimension.html">Dimension[]</a>;
+   # List of global attributes with:
+   #  
+   #   + `name`: String with the name of the attribute
+   #   + `type`: String with the type of the attribute
+   #   + `value`: A number Or String With the value Of the attribute
    globalAttributes: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/attribute.html">attribute[]</a>;
+   # Metadata for the record dimension
+   #  
+   #   + `length`: Number of elements in the record dimension
+   #   + `id`: Id number In the list Of dimensions For the record dimension
+   #   + `name`: String with the name of the record dimension
+   #   + `recordStep`: Number with the record variables step size
+   recordDimension: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/recordDimension.html">recordDimension</a>;
+   # List of variables with:
+   #  
+   #   + `name`: String with the name of the variable
+   #   + `dimensions`: Array with the dimension IDs of the variable
+   #   + `attributes`: Array with the attributes of the variable
+   #   + `type`: String with the type of the variable
+   #   + `size`: Number with the size of the variable
+   #   + `offset`: Number with the offset where of the variable begins
+   #   + `record`: True if Is a record variable, false otherwise
    variables: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/variable.html">variable[]</a>;
+   # Version for the NetCDF format
+   version: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>dimensions</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/Dimension.html">Dimension</a></li>
+<li>use by <i>property</i> member <code>globalAttributes</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/attribute.html">attribute</a></li>
+<li>use by <i>property</i> member <code>recordDimension</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/recordDimension.html">recordDimension</a></li>
+<li>use by <i>property</i> member <code>variables</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/netCDF/Components/variable.html">variable</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

@@ -36,15 +36,15 @@
         <table>
             
 <dt>[object]</dt>
-<dd><p><p>an R object.</p></p></dd>
+<dd><p>an R object.</p></dd>
 
 
 <dt>namelist</dt>
-<dd><p><p>a character vector of up to the same length as <code>x</code>, or <code>NULL</code>.</p></p></dd>
+<dd><p>a character vector of up to the same length as <code>x</code>, or <code>NULL</code>. [as <a href="/vignettes/clr/System/Array.html">Array</a>]</p></dd>
 
 
 <dt>envir</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
@@ -53,22 +53,30 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>For <code>names</code>, <code>NULL</code> or a character vector of the same length as x. <br />
- (NULL is given if the object has no names, including for objects of <br />
- types which cannot have names.) For an environment, the length is the <br />
- number of objects in the environment but the order of the names is <br />
- arbitrary.</p>
-
-<p>For <code>names&lt;-</code>, the updated object. (Note that the value of <br />
- <code>names(x) &lt;- value</code> Is that of the assignment, value, Not the <br />
+        <p>For <code>names</code>, <code>NULL</code> or a character vector of the same length as x. 
+ (NULL is given if the object has no names, including for objects of 
+ types which cannot have names.) For an environment, the length is the 
+ number of objects in the environment but the order of the names is 
+ arbitrary.
+ 
+ For <code>names&lt;-</code>, the updated object. (Note that the value of 
+ <code>names(x) &lt;- value</code> Is that of the assignment, value, Not the 
  return value from the left-hand side.)</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
-        <h3 style="display: none;">Examples</h3>
+        <h3 style="display: block;">Examples</h3>
 
-        
+        <pre><code id="example_r"> x = list(1,2,3,4,5,6)
+ print(names(x));
+ # NULL
+ names(x) = ["a", "b", "c", "d", "e", "f"];
+ print(names(x));
+ # [1] "a" "b" "c" "d" "e" "f"</code></pre>
 
         <hr />
         <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a

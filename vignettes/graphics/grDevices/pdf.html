@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>pdf</title>
+    <title>PDF Graphics Device</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
@@ -18,11 +18,11 @@
             </tr>
         </table>
 
-        <h2>pdf</h2>
+        <h2>PDF Graphics Device</h2>
 
         <h3>Description</h3>
 
-        pdf
+        <p><br /> pdf starts the graphics device driver for producing PDF graphics.</p>
 
         <h3>Usage</h3>
 
@@ -37,6 +37,30 @@
 
         <table>
             
+<dt>image</dt>
+<dd><p>-</p></dd>
+
+
+<dt>file</dt>
+<dd><p>a character String giving the file path. If it Is Of the 
+ form "|cmd", the output Is piped To the command given by cmd. If it Is NULL, 
+ Then no external file Is created (effectively, no drawing occurs), but the 
+ device may still be queried (e.g., For size Of text).</p>
+
+<p>For use with onefile = FALSE give a C integer format such as "Rplot%03d.pdf" 
+ (the default in that case). (See postscript for further details.)</p>
+
+<p>Tilde expansion(see path.expand) Is done. An input with a marked encoding Is 
+ converted to the native encoding Or an error Is given.</p></dd>
+
+
+<dt>args</dt>
+<dd><p>[as list]</p></dd>
+
+
+<dt>env</dt>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
+
         </table>
 
 
@@ -44,6 +68,9 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        graphics
 
         <h3>Value</h3>
 

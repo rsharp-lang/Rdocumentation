@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>An expressin for create a new symbol inside the runtime environment</p><br /><p>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/SymbolExpression.html">SymbolExpression</a> class.</p>
+        <p>An expressin for create a new symbol inside the runtime environment</p>
 
         <h3>Declare</h3>        
 
@@ -30,27 +30,39 @@
             <code id="clr_ts">
 # namespace SMRUCC.Rsharp.Interpreter.ExecuteEngine.ExpressionSymbols.Closure
 export class DeclareNewSymbol extends <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/SymbolExpression.html">SymbolExpression</a> {
+   expressionName: <a href="/vignettes/clr/SMRUCC/Rsharp/Development/Package/File/ExpressionTypes.html">ExpressionTypes</a>;
+   # true for if the <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/ExpressionSymbols/Closure/DeclareNewSymbol.html">DeclareNewSymbol</a>.<a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/Expression.html">value</a> expression is not nothing
+   hasInitializeExpression: boolean;
+   isCallable: boolean;
+   # does current symbol declaration contains multiple symbol targets?
+   isTuple: boolean;
    # tuple names.
    #  (对于tuple语法，会存在多个变量)
    names: <a href="/vignettes/clr/System/Collections/Generic/IReadOnlyCollection`1.html">IReadOnlyCollection`1</a>;
-   # true for if the <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/ExpressionSymbols/Closure/DeclareNewSymbol.html">DeclareNewSymbol</a>.<a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/Expression.html">value</a> expression is not nothing
-   hasInitializeExpression: boolean;
-   expressionName: <a href="/vignettes/clr/SMRUCC/Rsharp/Development/Package/File/ExpressionTypes.html">ExpressionTypes</a>;
-   # get object value type for current new symbol
-   type: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/TypeCodes.html">TypeCodes</a>;
+   stackFrame: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Diagnostics/StackFrame.html">StackFrame</a>;
    # the size of the symbol names
    symbolSize: integer;
-   # does current symbol declaration contains multiple symbol targets?
-   isTuple: boolean;
-   # The symbol initial value.(初始值)
-   value: <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/Expression.html">Expression</a>;
+   # get object value type for current new symbol
+   type: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/TypeCodes.html">TypeCodes</a>;
    # the unit name of the symbol value if it is a vector
    unit: string;
-   stackFrame: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Diagnostics/StackFrame.html">StackFrame</a>;
-   isCallable: boolean;
+   # The symbol initial value.(初始值)
+   value: <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/Expression.html">Expression</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/SymbolExpression.html">SymbolExpression</a> class: <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/SymbolExpression.html">SymbolExpression</a></li>
+<li>use by <i>property</i> member <code>expressionName</code>: <a href="/vignettes/clr/SMRUCC/Rsharp/Development/Package/File/ExpressionTypes.html">ExpressionTypes</a></li>
+<li>use by <i>property</i> member <code>names</code>: <a href="/vignettes/clr/System/Collections/Generic/IReadOnlyCollection`1.html">IReadOnlyCollection`1</a></li>
+<li>use by <i>property</i> member <code>stackFrame</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Diagnostics/StackFrame.html">StackFrame</a></li>
+<li>use by <i>property</i> member <code>type</code>: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/TypeCodes.html">TypeCodes</a></li>
+<li>use by <i>property</i> member <code>value</code>: <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/Expression.html">Expression</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

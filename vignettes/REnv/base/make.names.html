@@ -37,41 +37,44 @@
         <table>
             
 <dt>names</dt>
-<dd><p><p>character vector To be coerced To syntactically valid names. <br />
- This Is coerced To character If necessary.</p></p></dd>
+<dd><p>character vector To be coerced To syntactically valid names. 
+ This Is coerced To character If necessary.</p></dd>
 
 
 <dt>unique</dt>
-<dd><p><p>logical; if TRUE, the resulting elements are unique. This may <br />
- be desired for, e.g., column names.</p></p></dd>
+<dd><p>logical; if TRUE, the resulting elements are unique. This may 
+ be desired for, e.g., column names. [as boolean]</p></dd>
 
 
 <dt>allow.</dt>
-<dd><p><p>logical. For compatibility with R prior to 1.9.0.</p></p></dd>
+<dd><p>logical. For compatibility with R prior to 1.9.0. [as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>A syntactically valid name consists of letters, numbers and <br />
- the dot or underline characters and starts with a letter or <br />
- the dot not followed by a number. Names such as ".2way" are <br />
+        <p>A syntactically valid name consists of letters, numbers and 
+ the dot or underline characters and starts with a letter or 
+ the dot not followed by a number. Names such as ".2way" are 
  not valid, and neither are the reserved words.</p>
 
-<p>The definition Of a letter depends On the current locale, but <br />
+<p>The definition Of a letter depends On the current locale, but 
  only ASCII digits are considered To be digits.</p>
 
-<p>The character "X" Is prepended If necessary. All invalid <br />
- characters are translated To ".". A missing value Is translated <br />
- To "NA". Names which match R keywords have a dot appended To <br />
+<p>The character "X" Is prepended If necessary. All invalid 
+ characters are translated To ".". A missing value Is translated 
+ To "NA". Names which match R keywords have a dot appended To 
  them. Duplicated values are altered by make.unique.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>A character vector of same length as names with each <br />
- changed to a syntactically valid name, in the current locale's <br />
+        <p>A character vector of same length as names with each 
+ changed to a syntactically valid name, in the current locale's 
  encoding.</p><h4>clr value class</h4><ul><li>string</li></ul>
 
         <h3 style="display: none;">Examples</h3>

@@ -30,7 +30,7 @@
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>kmeans</strong>(<i>x</i>,
     <i>centers</i> = <span style='color: green;'>3</span>,
     <i>bisecting</i> = <span style='color: blue !important;'>FALSE</span>,
-    <i>parallel</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>n.threads</i> = <span style='color: green;'>16</span>,
     <i>debug</i> = <span style='color: blue !important;'>FALSE</span>,
     <i>traceback</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
         </div>
@@ -40,35 +40,43 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>numeric matrix of data, or an object that can be coerced <br />
- to such a matrix (such as a numeric vector or a data <br />
- frame with all numeric columns).</p></p></dd>
+<dd><p>numeric matrix of data, or an object that can be coerced 
+ to such a matrix (such as a numeric vector or a data 
+ frame with all numeric columns).</p></dd>
 
 
 <dt>centers</dt>
-<dd><p><p>either the number of clusters, say k, or a set of initial <br />
- (distinct) cluster centres. If a number, a random set of <br />
- (distinct) rows in x is chosen as the initial centres.</p></p></dd>
+<dd><p>either the number of clusters, say k, or a set of initial 
+ (distinct) cluster centres. If a number, a random set of 
+ (distinct) rows in x is chosen as the initial centres.
+ 
+ this parameter value could be an integer value or a seed value object 
+ in clr type <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/Clustering/CanopySeeds.html">CanopySeeds</a> which is produced via the 
+ <code>canopy</code> function.</p></dd>
 
 
-<dt>parallel</dt>
-<dd><p><p>-</p></p></dd>
+<dt>n.threads</dt>
+<dd><p>the parallel options, for configs the number of 
+ cpu cores for run the parallel task code. [as integer]</p></dd>
 
 
 <dt>debug</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as boolean]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
-        <h3 style="display: none;">Details</h3>
+        <h3 style="display: block;">Details</h3>
 
-        
+        <p>the canopy seed data is only works for the native k-means algorithm currently.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        MLkit
 
         <h3>Value</h3>
 

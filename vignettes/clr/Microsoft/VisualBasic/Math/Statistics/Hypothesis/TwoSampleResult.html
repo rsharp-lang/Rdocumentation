@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/TtestResult.html">TtestResult</a> class.</p>
+        
 
         <h3>Declare</h3>        
 
@@ -30,21 +30,29 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.Math.Statistics.Hypothesis
 export class TwoSampleResult extends <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/TtestResult.html">TtestResult</a> {
+   ci95: double;
+   DegreeFreedom: double;
+   Mean: double;
    MeanX: double;
    MeanY: double;
-   y: double;
-   DegreeFreedom: double;
-   Pvalue: double;
-   TestValue: double;
    opt: <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/Topt.html">Topt</a>;
-   Mean: double;
-   StdErr: double;
+   Pvalue: double;
    SD: double;
+   StdErr: double;
+   TestValue: double;
    x: double;
-   ci95: double;
+   y: double;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/TtestResult.html">TtestResult</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/TtestResult.html">TtestResult</a></li>
+<li>use by <i>property</i> member <code>opt</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/Math/Statistics/Hypothesis/Topt.html">Topt</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

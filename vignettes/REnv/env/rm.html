@@ -37,40 +37,43 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>the objects to be removed, as names (unquoted) or character strings (quoted).</p></p></dd>
+<dd><p>the objects to be removed, as names (unquoted) or character strings (quoted). [as list]</p></dd>
 
 
 <dt>list</dt>
-<dd><p><p>a character vector naming objects to be removed.</p></p></dd>
+<dd><p>a character vector naming objects to be removed.</p></dd>
 
 
 <dt>inherits</dt>
-<dd><p><p>should the enclosing frames of the environment be inspected?</p></p></dd>
+<dd><p>should the enclosing frames of the environment be inspected?. [as boolean]</p></dd>
 
 
 <dt>envir</dt>
-<dd><p><p>the environment to use. See ‘details’.</p></p></dd>
+<dd><p>the environment to use. See ‘details’. [as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>The pos argument can specify the environment from which to remove the <br />
- objects in any of several ways: as an integer (the position in the search<br />
- list); as the character string name of an element in the search list; <br />
- or as an environment (including using sys.frame to access the currently<br />
- active function calls). The envir argument is an alternative way to specify<br />
+        <p>The pos argument can specify the environment from which to remove the 
+ objects in any of several ways: as an integer (the position in the search
+ list); as the character string name of an element in the search list; 
+ or as an environment (including using sys.frame to access the currently
+ active function calls). The envir argument is an alternative way to specify
  an environment, but is primarily there for back compatibility.</p>
 
-<p>It Is Not allowed to remove variables from the base environment And base <br />
+<p>It Is Not allowed to remove variables from the base environment And base 
  namespace, nor from any environment which Is locked (see lockEnvironment).</p>
 
-<p>Earlier versions Of R incorrectly claimed that supplying a character <br />
- vector In ... removed the objects named In the character vector, but it<br />
- removed the character vector. Use the list argument To specify objects <br />
+<p>Earlier versions Of R incorrectly claimed that supplying a character 
+ vector In ... removed the objects named In the character vector, but it
+ removed the character vector. Use the list argument To specify objects 
  via a character vector.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

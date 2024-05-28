@@ -22,11 +22,9 @@
 
         <h3>Description</h3>
 
-        <p>人工神经网络计算用的对象模型</p>
-
-<blockquote>
-  <p><a href="https://github.com/trentsartain/Neural-Network">https://github.com/trentsartain/Neural-Network</a></p>
-</blockquote><br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a> class.</p>
+        <p>人工神经网络计算用的对象模型
+ 
+ ><a href='https://github.com/trentsartain/Neural-Network' title='https://github.com/trentsartain/Neural-Network'>https://github.com/trentsartain/Neural-Network</a></p>
 
         <h3>Declare</h3>        
 
@@ -34,22 +32,33 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.MachineLearning.NeuralNetwork
 export class Network extends <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a> {
-   LearnRate: double;
-   Momentum: double;
-   Truncate: double;
-   # 通过这个属性可以枚举出所有的输入层的神经元节点
-   InputLayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a>;
-   # 通过这个属性可以枚举出所有的隐藏层，然后对每一层隐藏层可以枚举出该隐藏层之中的所有的神经元节点
-   HiddenLayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/HiddenLayers.html">HiddenLayers</a>;
-   # 通过这个属性可以枚举出所有的输出层的神经元节点
-   OutputLayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a>;
-   # 学习率的衰减速率
-   LearnRateDecay: double;
    # 激活函数
    Activations: <a href="/vignettes/clr/System/Collections/Generic/IReadOnlyDictionary`2.html">IReadOnlyDictionary`2</a>;
+   # 通过这个属性可以枚举出所有的隐藏层，然后对每一层隐藏层可以枚举出该隐藏层之中的所有的神经元节点
+   HiddenLayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/HiddenLayers.html">HiddenLayers</a>;
+   # 通过这个属性可以枚举出所有的输入层的神经元节点
+   InputLayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a>;
+   LearnRate: double;
+   # 学习率的衰减速率
+   LearnRateDecay: double;
+   Momentum: double;
+   # 通过这个属性可以枚举出所有的输出层的神经元节点
+   OutputLayer: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a>;
+   Truncate: double;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a></li>
+<li>use by <i>property</i> member <code>Activations</code>: <a href="/vignettes/clr/System/Collections/Generic/IReadOnlyDictionary`2.html">IReadOnlyDictionary`2</a></li>
+<li>use by <i>property</i> member <code>HiddenLayer</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/HiddenLayers.html">HiddenLayers</a></li>
+<li>use by <i>property</i> member <code>InputLayer</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a></li>
+<li>use by <i>property</i> member <code>OutputLayer</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Layer.html">Layer</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

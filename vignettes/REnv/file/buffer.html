@@ -28,7 +28,8 @@
 
         <div style="width: 100%; padding-left: 3%; color: black;">
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>buffer</strong>(
-    <i>type</i> = raw);</code></pre>
+    <i>type</i> = raw,
+    <i>mime</i> = <span style='color: brown;'><strong>"~ifelse(type == 'text' || type == 100, 'text/html','application/octet-stream')"</strong></span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -36,15 +37,24 @@
         <table>
             
 <dt>type</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>the r-sharp internal buffer data type. [as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Serialize/BufferObjects.html">BufferObjects</a>]</p></dd>
+
+
+<dt>mime</dt>
+<dd><p>the data mime-type for http response, some buffer 
+ object type may required of this parameter for specific the correct 
+ mine content type. [as string]</p></dd>
 
         </table>
 
 
-        <h3 style="display: none;">Details</h3>
+        <h3 style="display: block;">Details</h3>
 
-        
+        <p>this function usually works for the http web services.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

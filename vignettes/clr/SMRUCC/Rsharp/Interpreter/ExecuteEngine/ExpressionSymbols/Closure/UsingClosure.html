@@ -22,12 +22,13 @@
 
         <h3>Description</h3>
 
-        <pre><code class="R">using xxx as creator() {
+        <p>```R
+ using xxx as creator() {
+ 
+ }
+ ```</p>
 
-}
-</code></pre>
-
-<p>a subclass of <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/SymbolExpression.html">SymbolExpression</a></p><br /><p>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/SymbolExpression.html">SymbolExpression</a> class.</p>
+<p>a subclass of <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/SymbolExpression.html">SymbolExpression</a></p>
 
         <h3>Declare</h3>        
 
@@ -35,13 +36,23 @@
             <code id="clr_ts">
 # namespace SMRUCC.Rsharp.Interpreter.ExecuteEngine.ExpressionSymbols.Closure
 export class UsingClosure extends <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/SymbolExpression.html">SymbolExpression</a> {
-   type: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/TypeCodes.html">TypeCodes</a>;
    expressionName: <a href="/vignettes/clr/SMRUCC/Rsharp/Development/Package/File/ExpressionTypes.html">ExpressionTypes</a>;
-   stackFrame: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Diagnostics/StackFrame.html">StackFrame</a>;
    isCallable: boolean;
+   stackFrame: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Diagnostics/StackFrame.html">StackFrame</a>;
+   type: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/TypeCodes.html">TypeCodes</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/SymbolExpression.html">SymbolExpression</a> class: <a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/SymbolExpression.html">SymbolExpression</a></li>
+<li>use by <i>property</i> member <code>expressionName</code>: <a href="/vignettes/clr/SMRUCC/Rsharp/Development/Package/File/ExpressionTypes.html">ExpressionTypes</a></li>
+<li>use by <i>property</i> member <code>stackFrame</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Diagnostics/StackFrame.html">StackFrame</a></li>
+<li>use by <i>property</i> member <code>type</code>: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Components/TypeCodes.html">TypeCodes</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

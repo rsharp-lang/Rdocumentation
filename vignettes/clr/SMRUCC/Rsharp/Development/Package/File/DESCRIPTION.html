@@ -30,22 +30,29 @@
             <code id="clr_ts">
 # namespace SMRUCC.Rsharp.Development.Package.File
 export class DESCRIPTION {
+   Author: string;
+   Date: string;
+   Description: string;
+   isEmpty: boolean;
+   License: string;
+   Maintainer: string;
+   meta: list;
    # the package name
    Package: string;
-   Type: string;
    Title: string;
+   Type: string;
    # the package version string
    Version: string;
-   Date: string;
-   Author: string;
-   Maintainer: string;
-   Description: string;
-   License: string;
-   meta: list;
-   isEmpty: boolean;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>meta</code>: list</li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

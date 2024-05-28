@@ -37,36 +37,35 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>a given data sequence</p></p></dd>
+<dd><p>a given data sequence</p></dd>
 
 
 <dt>delimiter</dt>
-<dd><p><p>an element test function to determine that element is a delimiter object</p></p></dd>
+<dd><p>an element test function to determine that element is a delimiter object</p></dd>
 
 
 <dt>argv</dt>
-<dd><p><ul>
-<li>parts: will split the input sequence into n(parts = n) multiple parts</li>
-<li>size: will split the input sequence into m multiple parts, and each part size is n(size=n)</li>
-</ul></p></dd>
+<dd><p>+ parts: will split the input sequence into n(parts = n) multiple parts
+ + size: will split the input sequence into m multiple parts, and each part size is n(size=n). [as list]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>the generated result is different between the vector/list:</p>
+        <p>the generated result is different between the vector/list:
+ 
+ + for vector data: split the value array directly
+ + for list data: split the list keys array and then break the input list 
+       data into multiple parts by keys</p>
 
-<ul>
-<li>for vector data: split the value array directly</li>
-<li>for list data: split the list keys array and then break the input list <br />
-   data into multiple parts by keys</li>
-</ul>
+        <h3 style="display: block">Authors</h3>
 
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

@@ -35,29 +35,32 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>numeric vector of the observations for ecdf; for the methods, an object <br />
- inheriting from class "ecdf".</p></p></dd>
+<dd><p>numeric vector of the observations for ecdf; for the methods, an object 
+ inheriting from class "ecdf".</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>The objects of class "ecdf" are not intended to be used for permanent storage <br />
- and may change structure between versions of R (and did at R 3.0.0). They <br />
- can usually be re-created by</p>
+        <p>The objects of class "ecdf" are not intended to be used for permanent storage 
+ and may change structure between versions of R (and did at R 3.0.0). They 
+ can usually be re-created by
 
-<p></p>
-
-<pre><code class="R">eval(attr(old_obj, "call"), environment(old_obj))
+<pre><code class="R"> eval(attr(old_obj, "call"), environment(old_obj))
 </code></pre>
 
-<p>since the data used Is stored As part Of the Object's environment.</p>
 
+ 
+ since the data used Is stored As part Of the Object's environment.</p>
+
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
 
         <h3>Value</h3>
 
-        <p>For ecdf, a function of class "ecdf", inheriting from the "stepfun" class,<br />
+        <p>For ecdf, a function of class "ecdf", inheriting from the "stepfun" class,
  and hence inheriting a knots() method.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

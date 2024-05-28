@@ -30,26 +30,33 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.ApplicationServices.Development
 export class AssemblyInfo {
-   AssemblyTitle: string;
-   AssemblyDescription: string;
    AssemblyCompany: string;
-   AssemblyProduct: string;
    AssemblyCopyright: string;
-   AssemblyTrademark: string;
-   AssemblyInformationalVersion: string;
-   TargetFramework: string;
-   ComVisible: boolean;
-   Name: string;
-   # The following GUID is for the ID of the typelib if this project is exposed to COM
-   Guid: string;
-   AssemblyVersion: string;
+   AssemblyDescription: string;
    AssemblyFileVersion: string;
    AssemblyFullName: string;
+   AssemblyInformationalVersion: string;
+   AssemblyProduct: string;
+   AssemblyTitle: string;
+   AssemblyTrademark: string;
+   AssemblyVersion: string;
    # The compile date and time of the assembly file.
    BuiltTime: <a href="/vignettes/clr/System/DateTime.html">DateTime</a>;
+   ComVisible: boolean;
+   # The following GUID is for the ID of the typelib if this project is exposed to COM
+   Guid: string;
+   Name: string;
+   TargetFramework: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>BuiltTime</code>: <a href="/vignettes/clr/System/DateTime.html">DateTime</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

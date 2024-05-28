@@ -36,22 +36,20 @@
         <table>
             
 <dt>check</dt>
-<dd><p><p>logical indicating if <code>tmpdir()</code> should be checked and recreated if no longer valid.</p></p></dd>
+<dd><p>logical indicating if <code>tmpdir()</code> should be checked and recreated if no longer valid. [as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <ul>
-<li>On Windows, both will use a backslash as the path separator.
+        <p>+ On Windows, both will use a backslash as the path separator.
+ + On a Unix-alike, the value will be an absolute path (unless tmpdir Is set to a relative path), 
+   but it need Not be canonical (see normalizePath) And on macOS it often Is Not.</p>
 
-<ul>
-<li>On a Unix-alike, the value will be an absolute path (unless tmpdir Is set to a relative path), <br />
-but it need Not be canonical (see normalizePath) And on macOS it often Is Not.</li>
-</ul></li>
-</ul>
+        <h3 style="display: block">Authors</h3>
 
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

@@ -35,56 +35,59 @@
         <table>
             
 <dt>package</dt>
-<dd><p><p>the name Of a package, given As a name Or <br />
- literal character String, Or a character String, depending On <br />
- whether character.only Is False (Default) Or True.</p></p></dd>
+<dd><p>the name Of a package, given As a name Or 
+ literal character String, Or a character String, depending On 
+ whether character.only Is False (Default) Or True. [as string]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>library(package) and require(package) both load the namespace of <br />
- the package with name package and attach it on the search list. <br />
- require is designed for use inside other functions; it returns <br />
- FALSE and gives a warning (rather than an error as library() does <br />
- by default) if the package does not exist. Both functions check <br />
- and update the list of currently attached packages and do not <br />
- reload a namespace which is already loaded. (If you want to <br />
- reload such a package, call detach(unload = TRUE) or unloadNamespace <br />
- first.) If you want to load a package without attaching it on <br />
- the search list, see requireNamespace.</p>
-
-<p>To suppress messages during the loading of packages use <br />
- suppressPackageStartupMessages: this will suppress all messages from <br />
- R itself but Not necessarily all those from package authors.</p>
-
-<p>If library Is called With no package Or help argument, it lists all <br />
- available packages In the libraries specified by Lib.loc, And returns <br />
- the corresponding information In an Object Of Class "libraryIQR". <br />
- (The Structure Of this Class may change In future versions.) Use <br />
- .packages(all = True) To obtain just the names Of all available packages, <br />
- And installed.packages() For even more information.</p>
-
-<p>library(help = somename) computes basic information about the package <br />
- somename, And returns this in an object of class "packageInfo". <br />
- (The structure of this class may change in future versions.) When <br />
- used with the default value (NULL) for lib.loc, the attached packages <br />
+        <p>library(package) and require(package) both load the namespace of 
+ the package with name package and attach it on the search list. 
+ require is designed for use inside other functions; it returns 
+ FALSE and gives a warning (rather than an error as library() does 
+ by default) if the package does not exist. Both functions check 
+ and update the list of currently attached packages and do not 
+ reload a namespace which is already loaded. (If you want to 
+ reload such a package, call detach(unload = TRUE) or unloadNamespace 
+ first.) If you want to load a package without attaching it on 
+ the search list, see requireNamespace.
+ 
+ To suppress messages during the loading of packages use 
+ suppressPackageStartupMessages: this will suppress all messages from 
+ R itself but Not necessarily all those from package authors.
+ 
+ If library Is called With no package Or help argument, it lists all 
+ available packages In the libraries specified by Lib.loc, And returns 
+ the corresponding information In an Object Of Class "libraryIQR". 
+ (The Structure Of this Class may change In future versions.) Use 
+ .packages(all = True) To obtain just the names Of all available packages, 
+ And installed.packages() For even more information.
+ 
+ library(help = somename) computes basic information about the package 
+ somename, And returns this in an object of class "packageInfo". 
+ (The structure of this class may change in future versions.) When 
+ used with the default value (NULL) for lib.loc, the attached packages 
  are searched before the libraries.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>Normally library returns (invisibly) the list of attached <br />
- packages, but TRUE or FALSE if logical.return is TRUE. When <br />
- called as library() it returns an object of class "libraryIQR", <br />
- and for library(help=), one of class "packageInfo".</p>
-
-<p>require returns(invisibly) a logical indicating whether the required <br />
+        <p>Normally library returns (invisibly) the list of attached 
+ packages, but TRUE or FALSE if logical.return is TRUE. When 
+ called as library() it returns an object of class "libraryIQR", 
+ and for library(help=), one of class "packageInfo".
+ 
+ require returns(invisibly) a logical indicating whether the required 
  package Is available.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/IterationReporter`1.html">IterationReporter`1</a> class.</p>
+        
 
         <h3>Declare</h3>        
 
@@ -30,24 +30,34 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.MachineLearning.NeuralNetwork
 export class ANNTrainer extends <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/IterationReporter`1.html">IterationReporter`1</a> {
-   TrainingType: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/TrainingType.html">TrainingType</a>;
+   # [0,1]之间,建议设置一个[0.3,0.6]之间的值, 这个参数表示被随机删除的节点的数量百分比,值越高,则剩下的神经元节点越少
+   dropOutRate: double;
+   ErrorThreshold: double;
    MinError: double;
-   # 对<a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Neuron.html">Neuron</a>.<a href="#">Gradient</a>的剪裁限制阈值，小于等于零表示不进行剪裁，默认不剪裁
-   Truncate: double;
+   # 最终得到的训练结果神经网络
+   NeuronNetwork: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Network.html">Network</a>;
    # 是否对训练样本数据集进行选择性的训练，假若目标样本在当前所训练的模型上面
    #  所计算得到的预测结果和其真实结果的误差足够小的话，目标样本将不会再进行训练
    Selective: boolean;
-   ErrorThreshold: double;
-   # [0,1]之间,建议设置一个[0.3,0.6]之间的值, 这个参数表示被随机删除的节点的数量百分比,值越高,则剩下的神经元节点越少
-   dropOutRate: double;
-   # 最终得到的训练结果神经网络
-   NeuronNetwork: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Network.html">Network</a>;
    TrainingSet: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/TrainingSample.html">TrainingSample[]</a>;
+   TrainingType: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/TrainingType.html">TrainingType</a>;
+   # 对<a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Neuron.html">Neuron</a>.<a href="#">Gradient</a>的剪裁限制阈值，小于等于零表示不进行剪裁，默认不剪裁
+   Truncate: double;
    # 训练所使用到的经验数量,即数据集的大小size
    XP: integer;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/IterationReporter`1.html">IterationReporter`1</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/IterationReporter`1.html">IterationReporter`1</a></li>
+<li>use by <i>property</i> member <code>NeuronNetwork</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Network.html">Network</a></li>
+<li>use by <i>property</i> member <code>TrainingSet</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/TrainingSample.html">TrainingSample</a></li>
+<li>use by <i>property</i> member <code>TrainingType</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/TrainingType.html">TrainingType</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

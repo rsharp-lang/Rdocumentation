@@ -30,22 +30,30 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.MachineLearning.NeuralNetwork
 export class Neuron {
-   Gradient: double;
-   # 这个神经元对象和上一层神经元之间的突触链接列表
-   InputSynapses: <a href="/vignettes/clr/Microsoft/VisualBasic/Language/List`1.html">List`1</a>;
-   # 这个神经元对象和下一层神经元之间的突触链接列表
-   OutputSynapses: <a href="/vignettes/clr/Microsoft/VisualBasic/Language/List`1.html">List`1</a>;
    Bias: double;
    BiasDelta: double;
-   # 神经元之间传递的值，即预测的输出结果
-   Value: double;
-   # 当前的这个神经元节点是否是被随机失活的一个节点?
-   isDroppedOut: boolean;
+   Gradient: double;
    # 当前的这个神经元对象的唯一标识符
    Guid: string;
+   # 这个神经元对象和上一层神经元之间的突触链接列表
+   InputSynapses: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Synapse.html">iterates(Synapse)</a>;
+   # 当前的这个神经元节点是否是被随机失活的一个节点?
+   isDroppedOut: boolean;
+   # 这个神经元对象和下一层神经元之间的突触链接列表
+   OutputSynapses: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Synapse.html">iterates(Synapse)</a>;
+   # 神经元之间传递的值，即预测的输出结果
+   Value: double;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>InputSynapses</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Synapse.html">iterates(Synapse)</a></li>
+<li>use by <i>property</i> member <code>OutputSynapses</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/NeuralNetwork/Synapse.html">iterates(Synapse)</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

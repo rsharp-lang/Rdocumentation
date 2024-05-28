@@ -41,49 +41,52 @@
         <table>
             
 <dt>data</dt>
-<dd><p><p>an optional data vector (including a list or expression vector).<br />
- Non-atomic classed R objects are coerced by as.vector and all<br />
- attributes discarded.</p></p></dd>
+<dd><p>an optional data vector (including a list or expression vector).
+ Non-atomic classed R objects are coerced by as.vector and all
+ attributes discarded.</p></dd>
 
 
 <dt>nrow</dt>
-<dd><p><p>the desired number of rows.</p></p></dd>
+<dd><p>the desired number of rows. [as integer]</p></dd>
 
 
 <dt>ncol</dt>
-<dd><p><p>the desired number of columns.</p></p></dd>
+<dd><p>the desired number of columns. [as integer]</p></dd>
 
 
 <dt>byrow</dt>
-<dd><p><p>logical. If FALSE (the default) the matrix Is filled by columns, <br />
- otherwise the matrix Is filled by rows.</p></p></dd>
+<dd><p>logical. If FALSE (the default) the matrix Is filled by columns, 
+ otherwise the matrix Is filled by rows. [as boolean]</p></dd>
 
 
 <dt>dimnames</dt>
-<dd><p><p>A dimnames attribute For the matrix: NULL Or a list of length 2 <br />
- giving the row And column names respectively. An empty list Is<br />
- treated as NULL, And a list of length one as row names. The <br />
- list can be named, And the list names will be used as names for<br />
- the dimensions.</p></p></dd>
+<dd><p>A dimnames attribute For the matrix: NULL Or a list of length 2 
+ giving the row And column names respectively. An empty list Is
+ treated as NULL, And a list of length one as row names. The 
+ list can be named, And the list names will be used as names for
+ the dimensions. [as string]</p></dd>
 
 
 <dt>sparse</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>If one of nrow or ncol is not given, an attempt is made to infer<br />
- it from the length of data and the other parameter. If neither <br />
- is given, a one-column matrix is returned.</p>
-
-<p>If there are too few elements In data To fill the matrix, Then <br />
- the elements In data are recycled. If data has length zero, NA <br />
- Of an appropriate type Is used For atomic vectors (0 For raw <br />
+        <p>If one of nrow or ncol is not given, an attempt is made to infer
+ it from the length of data and the other parameter. If neither 
+ is given, a one-column matrix is returned.
+ 
+ If there are too few elements In data To fill the matrix, Then 
+ the elements In data are recycled. If data has length zero, NA 
+ Of an appropriate type Is used For atomic vectors (0 For raw 
  vectors) And NULL For lists.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
 
         <h3>Value</h3>
 

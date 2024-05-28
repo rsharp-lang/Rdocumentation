@@ -35,24 +35,28 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>a numeric input.</p></p></dd>
+<dd><p>a numeric input.</p></dd>
 
 
 <dt>freedom</dt>
-<dd><p><p>integer input for degrees of freedom.</p></p></dd>
+<dd><p>integer input for degrees of freedom. [as integer]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <pre><code class="r">&#35;' Evaluates the cumulative distribution function (CDF) for a chi-squared 
-&#35;' distribution with degrees of freedom `k` at a value `x`.
-chisquared.cdf = function( x, k ) {
-return gammaCDF(x, k / 2.0, 0.5);
-}
-</code></pre>
+        <p>```r
+ #' Evaluates the cumulative distribution function (CDF) for a chi-squared 
+ #' distribution with degrees of freedom `k` at a value `x`.
+ chisquared.cdf = function( x, k ) {
+    return gammaCDF(x, k / 2.0, 0.5);
+ }
+ ```</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
 
         <h3>Value</h3>
 

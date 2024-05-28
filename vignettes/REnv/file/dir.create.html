@@ -38,41 +38,44 @@
         <table>
             
 <dt>path</dt>
-<dd><p><p>a character vector containing a single path name.</p></p></dd>
+<dd><p>a character vector containing a single path name. [as string]</p></dd>
 
 
 <dt>showWarnings</dt>
-<dd><p><p>logical; should the warnings on failure be shown?</p></p></dd>
+<dd><p>logical; should the warnings on failure be shown?. [as boolean]</p></dd>
 
 
 <dt>recursive</dt>
-<dd><p><p>logical. Should elements of the path other than the last be created? <br />
- If true, Like the Unix command mkdir -p.</p></p></dd>
+<dd><p>logical. Should elements of the path other than the last be created? 
+ If true, Like the Unix command mkdir -p. [as boolean]</p></dd>
 
 
 <dt>mode</dt>
-<dd><p><p>the mode To be used On Unix-alikes: it will be coerced by as.octmode. <br />
- For Sys.chmod it Is recycled along paths.</p></p></dd>
+<dd><p>the mode To be used On Unix-alikes: it will be coerced by as.octmode. 
+ For Sys.chmod it Is recycled along paths. [as string]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>There is no guarantee that these functions will handle Windows relative paths <br />
- of the form ‘d:path’: try ‘d:./path’ instead. In particular, ‘d:’ is <br />
- not recognized as a directory. Nor are \?\ prefixes (and similar) supported.</p>
+        <p>There is no guarantee that these functions will handle Windows relative paths 
+ of the form ‘d:path’: try ‘d:./path’ instead. In particular, ‘d:’ is 
+ not recognized as a directory. Nor are \\?\ prefixes (and similar) supported.
+ 
+ UTF-8-encoded dirnames Not valid in the current locale can be used.</p>
 
-<p>UTF-8-encoded dirnames Not valid in the current locale can be used.</p>
+        <h3 style="display: block">Authors</h3>
 
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>dir.create and Sys.chmod return invisibly a logical vector indicating if <br />
- the operation succeeded for each of the files attempted. Using a missing <br />
- value for a path name will always be regarded as a failure. dir.create <br />
- indicates failure if the directory already exists. If showWarnings = TRUE, <br />
- dir.create will give a warning for an unexpected failure (e.g., not for a <br />
+        <p>dir.create and Sys.chmod return invisibly a logical vector indicating if 
+ the operation succeeded for each of the files attempted. Using a missing 
+ value for a path name will always be regarded as a failure. dir.create 
+ indicates failure if the directory already exists. If showWarnings = TRUE, 
+ dir.create will give a warning for an unexpected failure (e.g., not for a 
  missing value nor for an already existing component for recursive = TRUE).</p><h4>clr value class</h4><ul><li>boolean</li></ul>
 
         <h3 style="display: none;">Examples</h3>

@@ -35,33 +35,36 @@
         <table>
             
 <dt>text</dt>
-<dd><p><p>character vector. The text to parse. Elements are treated as if <br />
- they were lines of a file. Other R objects will be coerced to <br />
- character if possible.</p></p></dd>
+<dd><p>character vector. The text to parse. Elements are treated as if 
+ they were lines of a file. Other R objects will be coerced to 
+ character if possible. [as string]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>If text has length greater than zero (after coercion) it is used <br />
- in preference to file.</p>
-
-<p>All versions Of R accept input from a connection With End Of line<br />
- marked by LF (As used On Unix), CRLF (As used On DOS/Windows) Or <br />
- CR (As used On classic Mac OS). The final line can be incomplete, <br />
+        <p>If text has length greater than zero (after coercion) it is used 
+ in preference to file.
+ 
+ All versions Of R accept input from a connection With End Of line
+ marked by LF (As used On Unix), CRLF (As used On DOS/Windows) Or 
+ CR (As used On classic Mac OS). The final line can be incomplete, 
  that Is missing the final EOL marker.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>An object of type "expression", with up to n elements if <br />
- specified as a non-negative integer.</p>
-
-<p>A syntax error (including an incomplete expression) will throw an error.</p>
-
-<p>Character strings In the result will have a declared encoding <br />
- If encoding Is "latin1" Or "UTF-8", Or If text Is supplied With <br />
+        <p>An object of type "expression", with up to n elements if 
+ specified as a non-negative integer.
+ 
+ A syntax error (including an incomplete expression) will throw an error.
+ 
+ Character strings In the result will have a declared encoding 
+ If encoding Is "latin1" Or "UTF-8", Or If text Is supplied With 
  every element Of known encoding In a Latin-1 Or UTF-8 locale.</p><h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Interpreter/ExecuteEngine/Expression.html">Expression</a></li></ul>
 
         <h3 style="display: none;">Examples</h3>

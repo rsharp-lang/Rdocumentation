@@ -30,7 +30,7 @@
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>shift</strong>(<i>x</i>,
     <i>n</i> = <span style='color: green;'>1</span>,
     <i>fill</i> = <span style='color: brown;'><strong>"NA"</strong></span>,
-    <i>type</i> = ["lag","lead","shift"],
+    <i>type</i> = [<span style='color: brown;'><strong>'lead'</strong></span>,<span style='color: brown;'><strong>'shift'</strong></span>],
     <i>give.names</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
         </div>
 
@@ -39,51 +39,54 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>A vector, list, data.frame Or data.table.</p></p></dd>
+<dd><p>A vector, list, data.frame Or data.table.</p></dd>
 
 
 <dt>n</dt>
-<dd><p><p>integer vector denoting the offset by which <br />
- to lead or lag the input. To create multiple lead/lag vectors, <br />
- provide multiple values to n; negative values of n will "flip" <br />
- the value of type, i.e., n=-1 and type='lead' is the same as <br />
- n=1 and type='lag'.</p>
-
-<p>this parameter could also be a character vector of the names for <br />
- removes from a given list, if the input x is a tuple list object</p></p></dd>
+<dd><p>integer vector denoting the offset by which 
+ to lead or lag the input. To create multiple lead/lag vectors, 
+ provide multiple values to n; negative values of n will "flip" 
+ the value of type, i.e., n=-1 and type='lead' is the same as 
+ n=1 and type='lag'.
+ 
+ this parameter could also be a character vector of the names for 
+ removes from a given list, if the input x is a tuple list object</p></dd>
 
 
 <dt>fill</dt>
-<dd><p><p>Value to use for padding when the window goes beyond the input <br />
- length.</p></p></dd>
+<dd><p>Value to use for padding when the window goes beyond the input 
+ length.</p></dd>
 
 
 <dt>type</dt>
-<dd><p><p>default is "lag" (look "backwards"). The other <br />
- possible values "lead" (look "forwards") and "shift" (behave same <br />
- as "lag" except given names).</p></p></dd>
+<dd><p>default is "lag" (look "backwards"). The other 
+ possible values "lead" (look "forwards") and "shift" (behave same 
+ as "lag" except given names).</p></dd>
 
 
 <dt>give.names</dt>
-<dd><p><p>default is FALSE which returns an unnamed<br />
- list. When TRUE, names are automatically generated corresponding <br />
- to type and n. If answer is an atomic vector, then the argument <br />
- is ignored.</p></p></dd>
+<dd><p>default is FALSE which returns an unnamed
+ list. When TRUE, names are automatically generated corresponding 
+ to type and n. If answer is an atomic vector, then the argument 
+ is ignored. [as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>The function behavior is different at here when compare with the <br />
- <code>shift</code> function of the <code>data.table</code> package from the original<br />
- R language: the shift function from R language not allow the <strong><code>fill</code></strong><br />
- data be nothing, but the <code>shift</code> function in R# language will <br />
- behavior a different result: when the <strong><code>fill</code></strong> value<br />
- is nothing at here, this function will becomes skip for <strong><code>type</code></strong><br />
- is <code>lag</code> or <code>shift</code> and this function will becomes take for <strong><code>type</code></strong><br />
+        <p>The function behavior is different at here when compare with the 
+ <code>shift</code> function of the <code>data.table</code> package from the original
+ R language: the shift function from R language not allow the <strong>`fill`</strong>
+ data be nothing, but the <code>shift</code> function in R# language will 
+ behavior a different result: when the <strong>`fill`</strong> value
+ is nothing at here, this function will becomes skip for <strong>`type`</strong>
+ is <code>lag</code> or <code>shift</code> and this function will becomes take for <strong>`type`</strong>
  is <code>lead</code>.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

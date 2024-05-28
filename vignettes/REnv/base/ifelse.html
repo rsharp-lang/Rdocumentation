@@ -35,33 +35,36 @@
         <table>
             
 <dt>test</dt>
-<dd><p><p>an object which can be coerced to logical mode.</p></p></dd>
+<dd><p>an object which can be coerced to logical mode.</p></dd>
 
 
 <dt>yes</dt>
-<dd><p><p>return values for true elements of test.</p></p></dd>
+<dd><p>return values for true elements of test.</p></dd>
 
 
 <dt>no</dt>
-<dd><p><p>return values for false elements of test.</p></p></dd>
+<dd><p>return values for false elements of test.</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>If yes or no are too short, their elements are recycled. yes will <br />
- be evaluated if and only if any element of test is true, and <br />
- analogously for no.</p>
+        <p>If yes or no are too short, their elements are recycled. yes will 
+ be evaluated if and only if any element of test is true, and 
+ analogously for no.
+ 
+ Missing values In test give missing values In the result.</p>
 
-<p>Missing values In test give missing values In the result.</p>
+        <h3 style="display: block">Authors</h3>
 
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>A vector of the same length and attributes (including dimensions and "class") <br />
- as test and data values from the values of yes or no. The mode of the answer <br />
- will be coerced from logical to accommodate first any values taken from yes <br />
+        <p>A vector of the same length and attributes (including dimensions and "class") 
+ as test and data values from the values of yes or no. The mode of the answer 
+ will be coerced from logical to accommodate first any values taken from yes 
  and then any values taken from no.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

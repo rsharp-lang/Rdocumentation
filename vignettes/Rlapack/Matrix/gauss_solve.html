@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gaussian elimination</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>gauss_solve {Matrix}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Gaussian elimination</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> In mathematics, Gaussian elimination, also known as row reduction, is an algorithm <br /> for solving systems of linear equations. It consists of a sequence of row-wise <br /> operations performed on the corresponding matrix of coefficients. This method can <br /> also be used to compute the rank of a matrix, the determinant of a square matrix, <br /> and the inverse of an invertible matrix. The method is named after Carl Friedrich <br /> Gauss (1777–1855). To perform row reduction on a matrix, one uses a sequence of<br /> elementary row operations to modify the matrix until the lower left-hand corner of <br /> the matrix is filled with zeros, as much as possible. There are three types of <br /> elementary row operations:<br /> <br /> + Swapping two rows,<br /> + Multiplying a row by a nonzero number,<br /> + Adding a multiple Of one row To another row.<br /> <br /> Using these operations, a matrix can always be transformed into an upper triangular<br /> matrix, And In fact one that Is In row echelon form. Once all Of the leading coefficients <br /> (the leftmost nonzero entry In Each row) are 1, And every column containing a leading<br /> coefficient has zeros elsewhere, the matrix Is said To be In reduced row echelon form.<br /> This final form Is unique; In other words, it Is independent Of the sequence Of row<br /> operations used. For example, In the following sequence Of row operations (where two <br /> elementary operations On different rows are done at the first And third steps), the <br /> third And fourth matrices are the ones In row echelon form, And the final matrix Is <br /> the unique reduced row echelon form.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>gauss_solve</strong>(<i>problem</i>,
+    <i>y</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>problem</dt>
+<dd><p>-</p></dd>
+
+
+<dt>y</dt>
+<dd><p>-</p></dd>
+
+
+<dt>env</dt>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
+
+        <h3>Value</h3>
+
+        <p>a vector of the result x</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>Matrix</em> version 5.0.1.2389 <a
+                href="../Matrix.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

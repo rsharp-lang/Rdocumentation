@@ -43,63 +43,64 @@
         <table>
             
 <dt>data</dt>
-<dd><p><p>The data To be displayed In this layer. There are three options</p>
-
-<p>If NULL, the Default, the data Is inherited from the plot data As specified In the Call To ggplot().<br />
- A data.frame, Or other Object, will override the plot data. All objects will be fortified To produce <br />
- a data frame. See fortify() For which variables will be created.</p>
-
-<p>A Function will be called With a Single argument, the plot data. The Return value must be a data.frame, <br />
- And will be used As the layer data. A Function can be created from a formula (e.g. ~ head(.x, 10)).</p></p></dd>
+<dd><p>The data To be displayed In this layer. There are three options
+ 
+ If NULL, the Default, the data Is inherited from the plot data As specified In the Call To ggplot().
+ A data.frame, Or other Object, will override the plot data. All objects will be fortified To produce 
+ a data frame. See fortify() For which variables will be created.
+ 
+ A Function will be called With a Single argument, the plot data. The Return value must be a data.frame, 
+ And will be used As the layer data. A Function can be created from a formula (e.g. ~ head(.x, 10)). [as <a href="/vignettes/clr/System/Array.html">Array</a>]</p></dd>
 
 
 <dt>size</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
 
 <dt>margin</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
 
 <dt>bg$</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
 
 <dt>colorSet$</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
 
 <dt>ylab$</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
 
 <dt>title$</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
 
 <dt>labelAngle</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as double]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>Computed variables</p>
+        <p>Computed variables
+ 
+ + <code>density</code> density estimate
+ + <code>scaled</code> density estimate, scaled To maximum Of 1
+ + <code>count</code> density * number of points - probably useless for violin plots
+ + <code>violinwidth</code> density scaled For the violin plot, according To area, counts Or To a constant maximum width
+ + <code>n</code> number of points
+ + <code>width</code> width of violin bounding box</p>
 
-<ul>
-<li><code>density</code> density estimate</li>
-<li><code>scaled</code> density estimate, scaled To maximum Of 1</li>
-<li><code>count</code> density * number of points - probably useless for violin plots</li>
-<li><code>violinwidth</code> density scaled For the violin plot, according To area, counts Or To a constant maximum width</li>
-<li><code>n</code> number of points</li>
-<li><code>width</code> width of violin bounding box</li>
-</ul>
+        <h3 style="display: block">Authors</h3>
 
+        graphics
 
         <h3>Value</h3>
 

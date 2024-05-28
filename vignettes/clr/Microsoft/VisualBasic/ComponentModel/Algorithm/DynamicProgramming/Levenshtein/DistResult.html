@@ -30,23 +30,31 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.ComponentModel.Algorithm.DynamicProgramming.Levenshtein
 export class DistResult {
-   Reference: string;
-   Hypotheses: string;
-   DistTable: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Algorithm/DynamicProgramming/Levenshtein/ArrayRow.html">ArrayRow[]</a>;
+   Distance: double;
    # How doest the <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Algorithm/DynamicProgramming/Levenshtein/DistResult.html">DistResult</a>.<a href="#">Hypotheses</a> evolve from <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Algorithm/DynamicProgramming/Levenshtein/DistResult.html">DistResult</a>.<a href="#">Reference</a>.(这个结果描述了subject是如何变化成为Query的)
    DistEdits: string;
-   Path: <a href="/vignettes/clr/Microsoft/VisualBasic/Text/Xml/Models/Coordinate.html">Coordinate[]</a>;
+   DistTable: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Algorithm/DynamicProgramming/Levenshtein/ArrayRow.html">ArrayRow[]</a>;
+   Hypotheses: string;
    Matches: string;
-   Distance: double;
-   # 可以简单地使用这个数值来表述所比较的两个对象之间的相似度
-   Score: double;
    # <code>m+</code> scores.(0-1之间)
    MatchSimilarity: double;
    # 比对上的对象的数目
    NumMatches: integer;
+   Path: <a href="/vignettes/clr/Microsoft/VisualBasic/Text/Xml/Models/Coordinate.html">Coordinate[]</a>;
+   Reference: string;
+   # 可以简单地使用这个数值来表述所比较的两个对象之间的相似度
+   Score: double;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>DistTable</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/Algorithm/DynamicProgramming/Levenshtein/ArrayRow.html">ArrayRow</a></li>
+<li>use by <i>property</i> member <code>Path</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/Text/Xml/Models/Coordinate.html">Coordinate</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

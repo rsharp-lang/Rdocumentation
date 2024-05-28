@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/Imaging/Drawing2D/Shapes/Shape.html">Shape</a> class.</p>
+        
 
         <h3>Declare</h3>        
 
@@ -30,24 +30,38 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.Imaging.Drawing2D.Shapes
 export class Line extends <a href="/vignettes/clr/Microsoft/VisualBasic/Imaging/Drawing2D/Shapes/Shape.html">Shape</a> {
-   Stroke: <a href="/vignettes/clr/System/Drawing/Pen.html">Pen</a>;
    A: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a>;
-   B: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a>;
-   Size: <a href="/vignettes/clr/System/Drawing/Size.html">Size</a>;
-   # 线段的长度
-   Length: double;
-   Cos: double;
-   Sin: double;
    # 返回线段和X轴的夹角，夹角值为弧度值
    Alpha: double;
+   B: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a>;
    Center: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a>;
-   Location: <a href="/vignettes/clr/System/Drawing/Point.html">Point</a>;
-   TooltipTag: string;
+   Cos: double;
    DrawingRegion: <a href="/vignettes/clr/System/Drawing/Rectangle.html">Rectangle</a>;
    EnableAutoLayout: boolean;
+   # 线段的长度
+   Length: double;
+   Location: <a href="/vignettes/clr/System/Drawing/Point.html">Point</a>;
+   Sin: double;
+   Size: <a href="/vignettes/clr/System/Drawing/Size.html">Size</a>;
+   Stroke: <a href="/vignettes/clr/System/Drawing/Pen.html">Pen</a>;
+   TooltipTag: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/Imaging/Drawing2D/Shapes/Shape.html">Shape</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/Imaging/Drawing2D/Shapes/Shape.html">Shape</a></li>
+<li>use by <i>property</i> member <code>A</code>: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a></li>
+<li>use by <i>property</i> member <code>B</code>: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a></li>
+<li>use by <i>property</i> member <code>Center</code>: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a></li>
+<li>use by <i>property</i> member <code>DrawingRegion</code>: <a href="/vignettes/clr/System/Drawing/Rectangle.html">Rectangle</a></li>
+<li>use by <i>property</i> member <code>Location</code>: <a href="/vignettes/clr/System/Drawing/Point.html">Point</a></li>
+<li>use by <i>property</i> member <code>Size</code>: <a href="/vignettes/clr/System/Drawing/Size.html">Size</a></li>
+<li>use by <i>property</i> member <code>Stroke</code>: <a href="/vignettes/clr/System/Drawing/Pen.html">Pen</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

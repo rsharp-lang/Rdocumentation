@@ -91,9 +91,9 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="melt">
     <a href="./reshape2/melt.html">melt</a>
   </td>
-  <td><p>melt: Convert an object into a molten data frame.</p>
-
-<p>This the generic melt function. See the following functions <br />
+  <td><p>melt: Convert an object into a molten data frame.
+ 
+ This the generic melt function. See the following functions 
  for the details about different data structures</p></td>
 </tr>
 <tr>
@@ -120,26 +120,26 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>shift: Fast lead/lag for vectors and lists</h3>
 
-<p>lead or lag vectors, lists, data.frames or data.tables implemented in VisualBasic for speed.</p>
-
-<p>shift accepts vectors, lists, data.frames or data.tables. It always <br />
- returns a list except when the input is a vector and length(n) == 1 <br />
- in which case a vector is returned, for convenience. This is so that <br />
- it can be used conveniently within data.table's syntax. For example, <br />
- DT[, (cols) := shift(.SD, 1L), by=id] would lag every column of .SD by<br />
- 1 for each group and DT[, newcol := colA + shift(colB)] would assign <br />
+<p>lead or lag vectors, lists, data.frames or data.tables implemented in VisualBasic for speed.
+ 
+ shift accepts vectors, lists, data.frames or data.tables. It always 
+ returns a list except when the input is a vector and length(n) == 1 
+ in which case a vector is returned, for convenience. This is so that 
+ it can be used conveniently within data.table's syntax. For example, 
+ DT[, (cols) := shift(.SD, 1L), by=id] would lag every column of .SD by
+ 1 for each group and DT[, newcol := colA + shift(colB)] would assign 
  the sum of two vectors to newcol.</p>
 
-<p>Argument n allows multiple values. For example, DT[, (cols) := shift(.SD, 1:2), by=id] <br />
- would lag every column of .SD by 1 And 2 for each group. If .SD contained<br />
- four columns, the first two elements of the list would correspond to <br />
- lag=1 And lag=2 for the first column of .SD, the next two for second <br />
+<p>Argument n allows multiple values. For example, DT[, (cols) := shift(.SD, 1:2), by=id] 
+ would lag every column of .SD by 1 And 2 for each group. If .SD contained
+ four columns, the first two elements of the list would correspond to 
+ lag=1 And lag=2 for the first column of .SD, the next two for second 
  column of .SD And so on. Please see examples for more.</p>
 
-<p>shift Is designed mainly for use in data.tables along with := Or set. <br />
- Therefore, it returns an unnamed list by default as assigning names for <br />
- each group over And over can be quite time consuming with many groups. <br />
- It may be useful to set names automatically in other cases, which can <br />
+<p>shift Is designed mainly for use in data.tables along with := Or set. 
+ Therefore, it returns an unnamed list by default as assigning names for 
+ each group over And over can be quite time consuming with many groups. 
+ It may be useful to set names automatically in other cases, which can 
  be done by setting give.names to TRUE.</p></td>
 </tr>
 <tr>
@@ -153,6 +153,12 @@ table caption {font-size:14px;font-weight:bolder;}
     <a href="./reshape2/decompose.html">decompose</a>
   </td>
   <td><p>split dataframe by a cell string value split result</p></td>
+</tr>
+<tr>
+  <td id="vector_fill">
+    <a href="./reshape2/vector_fill.html">vector_fill</a>
+  </td>
+  <td><p>fill content which is indexed by a given value list</p></td>
 </tr></tbody>
       </table>
     </div>

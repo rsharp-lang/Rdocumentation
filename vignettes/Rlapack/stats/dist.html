@@ -39,29 +39,29 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>a numeric matrix, data frame or "dist" object.</p></p></dd>
+<dd><p>a numeric matrix, data frame or "dist" object.</p></dd>
 
 
 <dt>method</dt>
-<dd><p><p>the distance measure to be used. This must be one of "euclidean", "maximum", <br />
- "manhattan", "canberra", "binary" or "minkowski". Any unambiguous substring <br />
- can be given.</p></p></dd>
+<dd><p>the distance measure to be used. This must be one of "euclidean", "maximum", 
+ "manhattan", "canberra", "binary" or "minkowski". Any unambiguous substring 
+ can be given. [as string]</p></dd>
 
 
 <dt>diag</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as boolean]</p></dd>
 
 
 <dt>upper</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as boolean]</p></dd>
 
 
 <dt>p%</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
@@ -70,48 +70,54 @@
 
         <p>Available distance measures are (written for two vectors x and y):</p>
 
-<ul>
-<li><p>euclidean:<br />
-Usual distance between the two vectors (2 norm aka L_2), sqrt(sum((x_i - y_i)^2)).</p></li>
-<li><p>maximum:<br />
-Maximum distance between two components Of x And y (supremum norm)</p></li>
-<li><p>manhattan:<br />
-Absolute distance between the two vectors (1 norm aka L_1).</p></li>
-<li><p>canberra:<br />
-<code>sum(|x_i - y_i| / (|x_i| + |y_i|))</code>. Terms with zero numerator And <br />
-denominator are omitted from the sum And treated as if the values were <br />
-missing.</p>
+<p>+ euclidean:
+ Usual distance between the two vectors (2 norm aka L<em>2), sqrt(sum((x</em>i - y_i)^2)).</p>
 
-<p>This Is intended for non-negative values (e.g., counts), in which case the <br />
-denominator can be written in various equivalent ways; Originally, R used <br />
-<code>x_i + y_i</code>, then from 1998 to 2017, |x_i + y_i|, And then the correct <br />
-<code>|x_i| + |y_i|</code>.</p></li>
-<li><p>binary:<br />
-(aka asymmetric binary): The vectors are regarded As binary bits, so non-zero <br />
-elements are 'on’ and zero elements are ‘off’. The distance is the proportion <br />
-of bits in which only one is on amongst those in which at least one is on.</p></li>
-<li><p>minkowski:<br />
-The p norm, the pth root Of the sum Of the pth powers Of the differences <br />
-Of the components.</p>
+<p>+ maximum:
+ Maximum distance between two components Of x And y (supremum norm)</p>
 
-<p>Missing values are allowed, And are excluded from all computations involving <br />
-the rows within which they occur. Further, When Inf values are involved, <br />
-all pairs Of values are excluded When their contribution To the distance gave <br />
-NaN Or NA. If some columns are excluded In calculating a Euclidean, Manhattan, <br />
-Canberra Or Minkowski distance, the sum Is scaled up proportionally To the <br />
-number Of columns used. If all pairs are excluded When calculating a <br />
-particular distance, the value Is NA.</p>
+<p>+ manhattan:
+ Absolute distance between the two vectors (1 norm aka L_1).</p>
 
-<p>The "dist" method of as.matrix() And as.dist() can be used for conversion <br />
-between objects of class "dist" And conventional distance matrices.</p>
+<p>+ canberra:
+ <code>sum(|x_i - y_i| / (|x_i| + |y_i|))</code>. Terms with zero numerator And 
+ denominator are omitted from the sum And treated as if the values were 
+ missing.</p>
 
-<p><code>as.dist()</code> Is a generic function. Its default method handles objects inheriting <br />
-from class "dist", Or coercible to matrices using as.matrix(). Support for <br />
-classes representing distances (also known as dissimilarities) can be added <br />
-by providing an as.matrix() Or, more directly, an as.dist method for such <br />
-a class.</p></li>
-</ul>
+<p>This Is intended for non-negative values (e.g., counts), in which case the 
+ denominator can be written in various equivalent ways; Originally, R used 
+ <code>x_i + y_i</code>, then from 1998 to 2017, |x<em>i + y</em>i|, And then the correct 
+ <code>|x_i| + |y_i|</code>.</p>
 
+<p>+ binary:
+ (aka asymmetric binary): The vectors are regarded As binary bits, so non-zero 
+ elements are 'on’ and zero elements are ‘off’. The distance is the proportion 
+ of bits in which only one is on amongst those in which at least one is on.</p>
+
+<p>+ minkowski:
+ The p norm, the pth root Of the sum Of the pth powers Of the differences 
+ Of the components.</p>
+
+<p>Missing values are allowed, And are excluded from all computations involving 
+ the rows within which they occur. Further, When Inf values are involved, 
+ all pairs Of values are excluded When their contribution To the distance gave 
+ NaN Or NA. If some columns are excluded In calculating a Euclidean, Manhattan, 
+ Canberra Or Minkowski distance, the sum Is scaled up proportionally To the 
+ number Of columns used. If all pairs are excluded When calculating a 
+ particular distance, the value Is NA.</p>
+
+<p>The "dist" method of as.matrix() And as.dist() can be used for conversion 
+ between objects of class "dist" And conventional distance matrices.</p>
+
+<p><code>as.dist()</code> Is a generic function. Its default method handles objects inheriting 
+ from class "dist", Or coercible to matrices using as.matrix(). Support for 
+ classes representing distances (also known as dissimilarities) can be added 
+ by providing an as.matrix() Or, more directly, an as.dist method for such 
+ a class.</p>
+
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
 
         <h3>Value</h3>
 

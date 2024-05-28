@@ -136,8 +136,8 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h2>Fitting Generalized Linear Models</h2>
 
-<p>glm is used to fit generalized linear models, specified by <br />
- giving a symbolic description of the linear predictor and<br />
+<p>glm is used to fit generalized linear models, specified by 
+ giving a symbolic description of the linear predictor and
  a description of the error distribution.</p></td>
 </tr>
 <tr>
@@ -146,9 +146,9 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h2>Family Objects for Models</h2>
 
-<p>Family objects provide a convenient way to specify the <br />
- details of the models used by functions such as glm. <br />
- See the documentation for glm for the details on how <br />
+<p>Family objects provide a convenient way to specify the 
+ details of the models used by functions such as glm. 
+ See the documentation for glm for the details on how 
  such model fitting takes place.</p></td>
 </tr>
 <tr>
@@ -163,9 +163,9 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Fitting Linear Models</h3>
 
-<p>do linear modelling, lm is used to fit linear models. It can be used <br />
- to carry out regression, single stratum analysis of variance and <br />
- analysis of covariance (although aov may provide a more convenient <br />
+<p>do linear modelling, lm is used to fit linear models. It can be used 
+ to carry out regression, single stratum analysis of variance and 
+ analysis of covariance (although aov may provide a more convenient 
  interface for these).</p></td>
 </tr>
 <tr>
@@ -180,17 +180,17 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Model Predictions</h3>
 
-<p>predict is a generic function for predictions from the results of <br />
- various model fitting functions. The function invokes particular <br />
+<p>predict is a generic function for predictions from the results of 
+ various model fitting functions. The function invokes particular 
  methods which depend on the class of the first argument.</p></td>
 </tr>
 <tr>
   <td id="cosine">
     <a href="./math/cosine.html">cosine</a>
   </td>
-  <td><p>Evaluate cos similarity of two vector</p>
-
-<p>the given vector x and y should be contains the elements in the same length.</p></td>
+  <td><p>Evaluate cos similarity of two vector
+ 
+ the given vector x and y should be contains the elements in the same length.</p></td>
 </tr>
 <tr>
   <td id="sim">
@@ -204,25 +204,25 @@ table caption {font-size:14px;font-weight:bolder;}
   </td>
   <td><h3>Ramer-Douglas-Peucker algorithm for curve fitting with a PolyLine</h3>
 
-<p>The <a href="https://en.wikipedia.org/wiki/Ramer-Douglas-Peucker_algorithm">Ramer-Douglas-Peucker algorithm</a> <br />
- for reducing the number of points on a curve.</p>
+<p>The <a href='https://en.wikipedia.org/wiki/Ramer-Douglas-Peucker_algorithm' title='Ramer-Douglas-Peucker algorithm'>Ramer-Douglas-Peucker algorithm</a> 
+ for reducing the number of points on a curve.
+ 
+ If there are no more than two points it does not make sense to simplify.
+ In this case the input is returned without further checks of `x` and `y`.
+ In particular, the input is not checked for `NA` values.
 
-<p>If there are no more than two points it does not make sense to simplify.<br />
- In this case the input is returned without further checks of <code>x</code> and <code>y</code>.<br />
- In particular, the input is not checked for <code>NA</code> values.</p>
+<pre><code class="r"> RamerDouglasPeucker(x = c(0, 1, 3, 5), y = c(2, 1, 0, 1), epsilon = 0.5)
+</code></pre>
 
-<p></p>
-
-<pre><code class="r">RamerDouglasPeucker(x = c(0, 1, 3, 5), y = c(2, 1, 0, 1), epsilon = 0.5)
-</code></pre></td>
+</p></td>
 </tr>
 <tr>
   <td id="curve_fit">
     <a href="./math/curve_fit.html">curve_fit</a>
   </td>
-  <td><p>Use non-linear least squares to fit a function, f, to data.</p>
-
-<p>Assumes <code>ydata = f(xdata, args) + eps</code>.</p></td>
+  <td><p>Use non-linear least squares to fit a function, f, to data.
+ 
+ Assumes <code>ydata = f(xdata, args) + eps</code>.</p></td>
 </tr></tbody>
       </table>
     </div>

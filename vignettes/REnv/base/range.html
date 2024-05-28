@@ -37,44 +37,48 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>any numeric or character objects.</p></p></dd>
+<dd><p>any numeric or character objects.</p></dd>
 
 
 <dt>na.rm</dt>
-<dd><p><p>logical, indicating if NA's should be omitted.</p></p></dd>
+<dd><p>logical, indicating if NA's should be omitted.</p></dd>
 
 
 <dt>finite</dt>
-<dd><p><p>logical, indicating if all non-finite elements should be <br />
- omitted.</p></p></dd>
+<dd><p>logical, indicating if all non-finite elements should be 
+ omitted. [as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>range is a generic function: methods can be defined for it <br />
- directly or via the Summary group generic. For this to work <br />
- properly, the arguments ... should be unnamed, and dispatch <br />
- is on the first argument.</p>
-
-<p>If na.rm Is False, NA And NaN values In any Of the arguments <br />
- will cause NA values To be returned, otherwise NA values are <br />
- ignored.<br />
- If finite Is True, the minimum And maximum Of all finite <br />
- values Is computed, i.e., finite = True includes na.rm = True.</p>
-
-<p>A special situation occurs When there Is no (after omission <br />
+        <p>range is a generic function: methods can be defined for it 
+ directly or via the Summary group generic. For this to work 
+ properly, the arguments ... should be unnamed, and dispatch 
+ is on the first argument.
+ 
+ If na.rm Is False, NA And NaN values In any Of the arguments 
+ will cause NA values To be returned, otherwise NA values are 
+ ignored.
+ If finite Is True, the minimum And maximum Of all finite 
+ values Is computed, i.e., finite = True includes na.rm = True.
+ 
+ A special situation occurs When there Is no (after omission 
  Of NAs) nonempty argument left, see min.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
         this function returns data object of type double.<h4>clr value class</h4><ul><li>double</li></ul>
 
-        <h3 style="display: none;">Examples</h3>
+        <h3 style="display: block;">Examples</h3>
 
-        
+        <pre><code id="example_r"> # [2] 1 6
+ range(1:6);</code></pre>
 
         <hr />
         <div style="text-align: center;">[Package <em>base</em> version 2.33.856.6961 <a

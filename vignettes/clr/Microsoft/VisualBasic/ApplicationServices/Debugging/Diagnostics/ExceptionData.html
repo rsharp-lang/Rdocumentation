@@ -30,14 +30,21 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.ApplicationServices.Debugging.Diagnostics
 export class ExceptionData {
-   TypeFullName: string;
    Message: string;
    # the source expression which trigger this error
    Source: string;
    StackTrace: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Diagnostics/StackFrame.html">StackFrame[]</a>;
+   TypeFullName: string;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>StackTrace</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/Debugging/Diagnostics/StackFrame.html">StackFrame</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

@@ -37,31 +37,35 @@
         <table>
             
 <dt>fileName</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as string]</p></dd>
 
 
 <dt>package</dt>
-<dd><p><p>a character String With the name Of a Single package.<br />
- An Error occurs If more than one package name Is given.</p></p></dd>
+<dd><p>a character String With the name Of a Single package.
+ An Error occurs If more than one package name Is given. [as string]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>do not add extension suffix name for csv data set due to <br />
- the reason of csv file extension suffix will be removed<br />
- automatically in the progress of R compile the data file <br />
+        <p>do not add extension suffix name for csv data set due to 
+ the reason of csv file extension suffix will be removed
+ automatically in the progress of R compile the data file 
  into package file.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+        <p>this function maybe returns a clr stream object if the required file is 
+ inside an in-memory zip archive virtual filesystem.</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>
 

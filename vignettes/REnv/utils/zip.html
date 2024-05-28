@@ -38,47 +38,50 @@
         <table>
             
 <dt>zipfile</dt>
-<dd><p><p>The pathname of the zip file: tilde expansion (see path.expand) will be performed.</p></p></dd>
+<dd><p>The pathname of the zip file: tilde expansion (see path.expand) will be performed. [as string]</p></dd>
 
 
 <dt>files</dt>
-<dd><p><p>A character vector of recorded filepaths to be included.</p></p></dd>
+<dd><p>A character vector of recorded filepaths to be included.</p></dd>
 
 
 <dt>flags</dt>
-<dd><p><p>A character string of flags to be passed to the command: see ‘Details’.</p></p></dd>
+<dd><p>A character string of flags to be passed to the command: see ‘Details’. [as string]</p></dd>
 
 
 <dt>extras</dt>
-<dd><p><p>An optional character vector: see ‘Details’.</p></p></dd>
+<dd><p>An optional character vector: see ‘Details’. [as string]</p></dd>
 
 
 <dt>zip</dt>
-<dd><p><p>A character string specifying the external command to be used.</p></p></dd>
+<dd><p>A character string specifying the external command to be used.</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>On a Unix-alike, the default for zip will by default use the value of <br />
- R_ZIPCMD, which is set in ‘etc/Renviron’ if an unzip command was found<br />
- during configuration. On Windows, the default relies on a zip program<br />
- (for example that from Rtools) being in the path.</p>
-
-<p>The default for flags is that appropriate for zipping up a directory<br />
- tree in a portable way: see the system-specific help for the zip command <br />
- for other possibilities.</p>
-
-<p>Argument extras can be used to specify -x or -i followed by a list of <br />
- filepaths to exclude or include. Since extras will be treated as if <br />
- passed to system, if the filepaths contain spaces they must be quoted <br />
+        <p>On a Unix-alike, the default for zip will by default use the value of 
+ R_ZIPCMD, which is set in ‘etc/Renviron’ if an unzip command was found
+ during configuration. On Windows, the default relies on a zip program
+ (for example that from Rtools) being in the path.
+ 
+ The default for flags is that appropriate for zipping up a directory
+ tree in a portable way: see the system-specific help for the zip command 
+ for other possibilities.
+ 
+ Argument extras can be used to specify -x or -i followed by a list of 
+ filepaths to exclude or include. Since extras will be treated as if 
+ passed to system, if the filepaths contain spaces they must be quoted 
  e.g. by shQuote.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

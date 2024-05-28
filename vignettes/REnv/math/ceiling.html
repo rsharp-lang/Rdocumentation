@@ -35,42 +35,45 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>a numeric vector. Or, for round and signif, a complex vector.</p></p></dd>
+<dd><p>a numeric vector. Or, for round and signif, a complex vector.</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>These are generic functions: methods can be defined <br />
- for them individually or via the Math group generic.</p>
+        <p>These are generic functions: methods can be defined 
+ for them individually or via the Math group generic.
+ 
+ Note that for rounding off a 5, the IEC 60559 standard 
+ (see also ‘IEEE 754’) is expected to be used, ‘go to 
+ the even digit’. Therefore round(0.5) is 0 and 
+ round(-1.5) is -2. However, this is dependent on OS 
+ services and on representation error (since e.g. 0.15 
+ is not represented exactly, the rounding rule applies 
+ to the represented number and not to the printed number, 
+ and so round(0.15, 1) could be either 0.1 or 0.2).
+ 
+ Rounding to a negative number of digits means rounding 
+ to a power of ten, so for example round(x, digits = -2) 
+ rounds to the nearest hundred.
+ 
+ For signif the recognized values of digits are 1...22, 
+ and non-missing values are rounded to the nearest integer 
+ in that range. Complex numbers are rounded to retain the 
+ specified number of digits in the larger of the components. 
+ Each element of the vector is rounded individually, 
+ unlike printing.
+ 
+ These are all primitive functions.</p>
 
-<p>Note that for rounding off a 5, the IEC 60559 standard <br />
- (see also ‘IEEE 754’) is expected to be used, ‘go to <br />
- the even digit’. Therefore round(0.5) is 0 and <br />
- round(-1.5) is -2. However, this is dependent on OS <br />
- services and on representation error (since e.g. 0.15 <br />
- is not represented exactly, the rounding rule applies <br />
- to the represented number and not to the printed number, <br />
- and so round(0.15, 1) could be either 0.1 or 0.2).</p>
+        <h3 style="display: block">Authors</h3>
 
-<p>Rounding to a negative number of digits means rounding <br />
- to a power of ten, so for example round(x, digits = -2) <br />
- rounds to the nearest hundred.</p>
-
-<p>For signif the recognized values of digits are 1...22, <br />
- and non-missing values are rounded to the nearest integer <br />
- in that range. Complex numbers are rounded to retain the <br />
- specified number of digits in the larger of the components. <br />
- Each element of the vector is rounded individually, <br />
- unlike printing.</p>
-
-<p>These are all primitive functions.</p>
-
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

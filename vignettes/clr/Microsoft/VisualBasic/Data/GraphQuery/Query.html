@@ -30,16 +30,24 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.Data.GraphQuery
 export class Query {
+   isArray: boolean;
+   # in form like <code>["a","b","c",...]</code>
+   isTextArray: boolean;
+   members: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/GraphQuery/Query.html">Query[]</a>;
    # the query name
    name: string;
    parser: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/GraphQuery/Parser.html">Parser</a>;
-   isArray: boolean;
-   members: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/GraphQuery/Query.html">Query[]</a>;
-   # in form like <code>["a","b","c",...]</code>
-   isTextArray: boolean;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>members</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/GraphQuery/Query.html">Query</a></li>
+<li>use by <i>property</i> member <code>parser</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/Data/GraphQuery/Parser.html">Parser</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

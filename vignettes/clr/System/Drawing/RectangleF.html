@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <br /><p>this class extends from <a href="/vignettes/clr/System/ValueType.html">ValueType</a> class.</p>
+        
 
         <h3>Declare</h3>        
 
@@ -30,20 +30,29 @@
             <code id="clr_ts">
 # namespace System.Drawing
 export class RectangleF extends <a href="/vignettes/clr/System/ValueType.html">ValueType</a> {
+   Bottom: double;
+   Height: double;
+   IsEmpty: boolean;
+   Left: double;
    Location: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a>;
+   Right: double;
    Size: <a href="/vignettes/clr/System/Drawing/SizeF.html">SizeF</a>;
+   Top: double;
+   Width: double;
    X: double;
    Y: double;
-   Width: double;
-   Height: double;
-   Left: double;
-   Top: double;
-   Right: double;
-   Bottom: double;
-   IsEmpty: boolean;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/System/ValueType.html">ValueType</a> class: <a href="/vignettes/clr/System/ValueType.html">ValueType</a></li>
+<li>use by <i>property</i> member <code>Location</code>: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a></li>
+<li>use by <i>property</i> member <code>Size</code>: <a href="/vignettes/clr/System/Drawing/SizeF.html">SizeF</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

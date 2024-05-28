@@ -27,7 +27,8 @@
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>silhouette_score</strong>(<i>x</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>silhouette_score</strong>(<i>x</i>,
+    <i>traceback</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -35,35 +36,38 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>the cluster result</p></p></dd>
+<dd><p>the cluster result</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>Silhouette score is used to evaluate the quality of clusters created using clustering <br />
- algorithms such as K-Means in terms of how well samples are clustered with other samples <br />
- that are similar to each other. The Silhouette score is calculated for each sample of <br />
- different clusters. To calculate the Silhouette score for each observation/data point, <br />
- the following distances need to be found out for each observations belonging to all the <br />
- clusters:</p>
-
-<p>Mean distance between the observation And all other data points In the same cluster. This<br />
- distance can also be called a mean intra-cluster distance. The mean distance Is denoted by a<br />
- Mean distance between the observation And all other data points Of the Next nearest cluster.<br />
- This distance can also be called a mean nearest-cluster distance. The mean distance Is <br />
- denoted by b</p>
-
-<p>Silhouette score, S, for Each sample Is calculated Using the following formula:</p>
-
-<p>(S = \frac{(b - a)}{max(a, b)})</p>
-
-<p>The value Of the Silhouette score varies from -1 To 1. If the score Is 1, the cluster Is<br />
- dense And well-separated than other clusters. A value near 0 represents overlapping clusters<br />
- With samples very close To the decision boundary Of the neighboring clusters. A negative <br />
+        <p>Silhouette score is used to evaluate the quality of clusters created using clustering 
+ algorithms such as K-Means in terms of how well samples are clustered with other samples 
+ that are similar to each other. The Silhouette score is calculated for each sample of 
+ different clusters. To calculate the Silhouette score for each observation/data point, 
+ the following distances need to be found out for each observations belonging to all the 
+ clusters:
+ 
+ Mean distance between the observation And all other data points In the same cluster. This
+ distance can also be called a mean intra-cluster distance. The mean distance Is denoted by a
+ Mean distance between the observation And all other data points Of the Next nearest cluster.
+ This distance can also be called a mean nearest-cluster distance. The mean distance Is 
+ denoted by b
+ 
+ Silhouette score, S, for Each sample Is calculated Using the following formula:
+ 
+ \(S = \frac{(b - a)}{max(a, b)}\)
+ 
+ The value Of the Silhouette score varies from -1 To 1. If the score Is 1, the cluster Is
+ dense And well-separated than other clusters. A value near 0 represents overlapping clusters
+ With samples very close To the decision boundary Of the neighboring clusters. A negative 
  score [-1, 0] indicates that the samples might have got assigned To the wrong clusters.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        MLkit
 
         <h3>Value</h3>
 

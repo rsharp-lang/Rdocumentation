@@ -30,23 +30,33 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.DataMining.HierarchicalClustering
 export class Cluster {
+   Children: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Cluster.html">iterates(Cluster)</a>;
    Distance: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Hierarchy/Distance.html">Distance</a>;
-   WeightValue: double;
    # value of <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Cluster.html">Cluster</a>.<a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Hierarchy/Distance.html">Distance</a>
    DistanceValue: double;
-   Parent: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Cluster.html">Cluster</a>;
-   # 名称是唯一的？
-   Name: string;
-   Children: <a href="/vignettes/clr/System/Collections/Generic/IList`1.html">IList`1</a>;
-   LeafNames: <a href="/vignettes/clr/System/Collections/Generic/List`1.html">List`1</a>;
    # 是否是一个叶节点？
    isLeaf: boolean;
+   LeafNames: <a href="/vignettes/clr/System/String.html">iterates(String)</a>;
    # 计算出所有的叶节点的总数，包括自己的child的叶节点
    Leafs: integer;
+   # 名称是唯一的？
+   Name: string;
+   Parent: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Cluster.html">Cluster</a>;
    TotalDistance: double;
+   WeightValue: double;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>Children</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Cluster.html">iterates(Cluster)</a></li>
+<li>use by <i>property</i> member <code>Distance</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Hierarchy/Distance.html">Distance</a></li>
+<li>use by <i>property</i> member <code>LeafNames</code>: <a href="/vignettes/clr/System/String.html">iterates(String)</a></li>
+<li>use by <i>property</i> member <code>Parent</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/HierarchicalClustering/Cluster.html">Cluster</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

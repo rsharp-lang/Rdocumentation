@@ -22,12 +22,13 @@
 
         <h3>Description</h3>
 
-        <p><br /> <code>NULL</code> represents the null object in R: it is a reserved word. <br /> <code>NULL</code> is often returned by expressions and functions whose <br /> value is undefined.<br /> <br /> is.null is a primitive function.</p>
+        <p><br /> <code>NULL</code> represents the null object in R: it is a reserved word. <br /> <code>NULL</code> is often returned by expressions and functions whose <br /> value is undefined.<br /> <br /> <code>is.null</code> is a primitive function.</p>
 
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>is.null</strong>(<i>x</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>is.null</strong>(<i>x</i>,
+    <i>els</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -35,27 +36,34 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>an object to be tested or coerced.</p></p></dd>
+<dd><p>an object to be tested or coerced.</p></dd>
+
+
+<dt>els</dt>
+<dd><p>does function test for the elements inside x, not the given object x?. [as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p><code>NULL</code> can be indexed (see Extract) in just about any syntactically <br />
- legal way: whether it makes sense or not, the result is always <code>NULL</code>. <br />
- Objects with value <code>NULL</code> can be changed by replacement operators <br />
- and will be coerced to the type of the right-hand side.</p>
-
-<p><code>NULL</code> Is also used as the empty pairlist: see the examples. Because <br />
- pairlists are often promoted To lists, you may encounter <code>NULL</code> being <br />
- promoted To an empty list.</p>
-
-<p>Objects with value <code>NULL</code> cannot have attributes as there Is only <br />
- one null object attempts to assign them are either an error (attr) <br />
- Or promote the object to an empty list with attribute(s) (attributes <br />
+        <p><code>NULL</code> can be indexed (see Extract) in just about any syntactically 
+ legal way: whether it makes sense or not, the result is always <code>NULL</code>. 
+ Objects with value <code>NULL</code> can be changed by replacement operators 
+ and will be coerced to the type of the right-hand side.
+ 
+ <code>NULL</code> Is also used as the empty pairlist: see the examples. Because 
+ pairlists are often promoted To lists, you may encounter <code>NULL</code> being 
+ promoted To an empty list.
+ 
+ Objects with value <code>NULL</code> cannot have attributes as there Is only 
+ one null object attempts to assign them are either an error (attr) 
+ Or promote the object to an empty list with attribute(s) (attributes 
  And structure).</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p><br /> NA is a logical constant of length 1 which contains a missing value indicator. <br /> NA can be coerced to any other vector type except raw. There are also constants <br /> NA_integer_, NA_real_, NA_complex_ and NA_character_ of the other atomic vector <br /> types which support missing values: all of these are reserved words in the R <br /> language.<br /> <br /> The generic Function Is.na indicates which elements are missing.<br /> The generic Function Is.na&lt;- sets elements To NA.</p>
+        <p><br /> NA is a logical constant of length 1 which contains a missing value indicator. <br /> NA can be coerced to any other vector type except raw. There are also constants <br /> NA<em>integer</em>, NA<em>real</em>, NA<em>complex</em> and NA<em>character</em> of the other atomic vector <br /> types which support missing values: all of these are reserved words in the R <br /> language.<br /> <br /> The generic Function Is.na indicates which elements are missing.<br /> The generic Function Is.na<- sets elements To NA.</p>
 
         <h3>Usage</h3>
 
@@ -35,12 +35,12 @@
         <table>
             
 <dt>x</dt>
-<dd><p><p>an R object to be tested: the default method for is.na and anyNA <br />
- handle atomic vectors, lists, pairlists, and NULL.</p></p></dd>
+<dd><p>an R object to be tested: the default method for is.na and anyNA 
+ handle atomic vectors, lists, pairlists, and NULL.</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
@@ -49,29 +49,32 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 
-        <p>The default method for is.na applied to an atomic vector returns a logical vector <br />
- of the same length as its argument x, containing TRUE for those elements marked NA <br />
- or, for numeric or complex vectors, NaN, and FALSE otherwise. (A complex value is <br />
- regarded as NA if either its real or imaginary part is NA or NaN.) dim, dimnames <br />
+        <p>The default method for is.na applied to an atomic vector returns a logical vector 
+ of the same length as its argument x, containing TRUE for those elements marked NA 
+ or, for numeric or complex vectors, NaN, and FALSE otherwise. (A complex value is 
+ regarded as NA if either its real or imaginary part is NA or NaN.) dim, dimnames 
  and names attributes are copied to the result.</p>
 
-<p>The Default methods also work For lists And pairlists</p>
-
-<p>For Is.na, elementwise the result Is false unless that element Is a length-one atomic <br />
- vector And the single element of that vector Is regarded as NA Or NaN (note that any <br />
- Is.na method for the class of the element Is ignored).</p>
-
-<p>anyNA(recursive = FALSE) works the same way as Is.na; anyNA(recursive = TRUE) applies <br />
+<p>The Default methods also work For lists And pairlists
+ 
+ For Is.na, elementwise the result Is false unless that element Is a length-one atomic 
+ vector And the single element of that vector Is regarded as NA Or NaN (note that any 
+ Is.na method for the class of the element Is ignored).
+ 
+ anyNA(recursive = FALSE) works the same way as Is.na; anyNA(recursive = TRUE) applies 
  anyNA (with method dispatch) to each element.</p>
 
-<p>The data frame method For Is.na returns a logical matrix With the same dimensions As <br />
- the data frame, And With dimnames taken from the row And column names Of the data <br />
+<p>The data frame method For Is.na returns a logical matrix With the same dimensions As 
+ the data frame, And With dimnames taken from the row And column names Of the data 
  frame.</p>
 
-<p>anyNA(NULL) Is false; Is.na(NULL) Is logical(0) (no longer warning since R version <br />
+<p>anyNA(NULL) Is false; Is.na(NULL) Is logical(0) (no longer warning since R version 
  3.5.0).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
 
         <h3 style="display: none;">Examples</h3>

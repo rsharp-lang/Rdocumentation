@@ -39,43 +39,42 @@
         <table>
             
 <dt>image</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>-</p></dd>
 
 
 <dt>file</dt>
-<dd><p><p>The output file name, with an appropriate extension.</p></p></dd>
+<dd><p>The output file name, with an appropriate extension.</p></dd>
 
 
 <dt>args</dt>
-<dd><p><p>additional arguments for the bitmap device:</p>
-
-<ol>
-<li>size, width, height: Dimensions of the display region.</li>
-<li>res, dpi: Resolution, in dots per inch.</li>
-</ol></p></dd>
+<dd><p>additional arguments for the bitmap device:
+ 
+ 1. size, width, height: Dimensions of the display region.
+ 2. res, dpi: Resolution, in dots per inch. [as list]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>This section describes the implementation of the conventions for <br />
- graphics devices set out in the “R Internals Manual”. These devices <br />
- follow the underlying device, so when viewed at the stated res:</p>
+        <p>This section describes the implementation of the conventions for 
+ graphics devices set out in the “R Internals Manual”. These devices 
+ follow the underlying device, so when viewed at the stated res:
+ 
+ 1. The Default device size Is 7 inches square.
+ 2. Font sizes are In big points.
+ 3. The Default font family Is (For the standard Ghostscript setup) URW Nimbus Sans.
+ 4. Line widths are As a multiple Of 1/96 inch, With no minimum.
+ 5. Circle of any radius are allowed.
+ 6. Colours are interpreted by the viewing/printing application.</p>
 
-<ol>
-<li>The Default device size Is 7 inches square.</li>
-<li>Font sizes are In big points.</li>
-<li>The Default font family Is (For the standard Ghostscript setup) URW Nimbus Sans.</li>
-<li>Line widths are As a multiple Of 1/96 inch, With no minimum.</li>
-<li>Circle of any radius are allowed.</li>
-<li>Colours are interpreted by the viewing/printing application.</li>
-</ol>
+        <h3 style="display: block">Authors</h3>
 
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

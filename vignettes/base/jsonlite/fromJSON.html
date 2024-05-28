@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p><br /> These functions are used to convert between JSON data <br /> and R objects. The toJSON and fromJSON functions use a <br /> class based mapping, which follows conventions outlined <br /> in this paper: <a href="https://arxiv.org/abs/1403.2805">https://arxiv.org/abs/1403.2805</a> (also<br /> available as vignette).</p>
+        <p><br /> These functions are used to convert between JSON data <br /> and R objects. The toJSON and fromJSON functions use a <br /> class based mapping, which follows conventions outlined <br /> in this paper:<a href='https://arxiv.org/abs/1403.2805' title='https://arxiv.org/abs/1403.2805'>https://arxiv.org/abs/1403.2805</a>(also<br /> available as vignette).</p>
 
         <h3>Usage</h3>
 
@@ -40,55 +40,58 @@
         <table>
             
 <dt>txt</dt>
-<dd><p><p>a JSON string, URL or file</p></p></dd>
+<dd><p>a JSON string, URL or file. [as string]</p></dd>
 
 
 <dt>simplifyVector</dt>
-<dd><p><p>coerce JSON arrays containing only primitives into an atomic vector</p></p></dd>
+<dd><p>coerce JSON arrays containing only primitives into an atomic vector. [as boolean]</p></dd>
 
 
 <dt>simplifyDataFrame</dt>
-<dd><p><p>coerce JSON arrays containing only records (JSON objects) into a data frame</p></p></dd>
+<dd><p>coerce JSON arrays containing only records (JSON objects) into a data frame. [as boolean]</p></dd>
 
 
 <dt>simplifyMatrix</dt>
-<dd><p><p>coerce JSON arrays containing vectors of equal mode and dimension into matrix or array</p></p></dd>
+<dd><p>coerce JSON arrays containing vectors of equal mode and dimension into matrix or array. [as boolean]</p></dd>
 
 
 <dt>flatten</dt>
-<dd><p><p>automatically flatten nested data frames into a single non-nested data frame</p></p></dd>
+<dd><p>automatically flatten nested data frames into a single non-nested data frame. [as boolean]</p></dd>
 
 
 <dt>args</dt>
-<dd><p><p>arguments passed on to class specific print methods</p></p></dd>
+<dd><p>arguments passed on to class specific print methods. [as list]</p></dd>
 
 
 <dt>env</dt>
-<dd><p><p>-</p></p></dd>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>The toJSON and fromJSON functions are drop-in replacements <br />
- for the identically named functions in packages rjson and <br />
- RJSONIO. Our implementation uses an alternative, somewhat <br />
- more consistent mapping between R objects and JSON strings.</p>
-
-<p>The serializeJSON and unserializeJSON functions in this <br />
- package use an alternative system to convert between R objects <br />
- and JSON, which supports more classes but is much more verbose.<br />
- A JSON string is always unicode, using UTF-8 by default, <br />
- hence there is usually no need to escape any characters. <br />
- However, the JSON format does support escaping of unicode <br />
- characters, which are encoded using a backslash followed <br />
- by a lower case "u" and 4 hex characters, for example: <br />
- "Z\u00FCrich". The fromJSON function will parse such escape <br />
- sequences but it is usually preferable to encode unicode <br />
- characters in JSON using native UTF-8 rather than escape <br />
+        <p>The toJSON and fromJSON functions are drop-in replacements 
+ for the identically named functions in packages rjson and 
+ RJSONIO. Our implementation uses an alternative, somewhat 
+ more consistent mapping between R objects and JSON strings.
+ 
+ The serializeJSON and unserializeJSON functions in this 
+ package use an alternative system to convert between R objects 
+ and JSON, which supports more classes but is much more verbose.
+ A JSON string is always unicode, using UTF-8 by default, 
+ hence there is usually no need to escape any characters. 
+ However, the JSON format does support escaping of unicode 
+ characters, which are encoded using a backslash followed 
+ by a lower case "u" and 4 hex characters, for example: 
+ "Z\u00FCrich". The fromJSON function will parse such escape 
+ sequences but it is usually preferable to encode unicode 
+ characters in JSON using native UTF-8 rather than escape 
  sequences.</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics
 
         <h3>Value</h3>
 

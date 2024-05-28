@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <p>A trained svm data model that can be apply for classify analysis.</p><br /><p>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a> class.</p>
+        <p>A trained svm data model that can be apply for classify analysis.</p>
 
         <h3>Declare</h3>        
 
@@ -30,16 +30,26 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.MachineLearning.SVM
 export class SVMModel extends <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a> {
-   model: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Model.html">Model</a>;
-   transform: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/IRangeTransform.html">IRangeTransform</a>;
+   dimensionNames: string;
    # use for get <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Encoder/ColorClass.html">ColorClass</a> based on 
    #  the prediction result value
    factors: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Encoder/ClassEncoder.html">ClassEncoder</a>;
+   model: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Model.html">Model</a>;
    SVR: boolean;
-   dimensionNames: string;
+   transform: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/IRangeTransform.html">IRangeTransform</a>;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/Model.html">Model</a></li>
+<li>use by <i>property</i> member <code>factors</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/Encoder/ClassEncoder.html">ClassEncoder</a></li>
+<li>use by <i>property</i> member <code>model</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/Model.html">Model</a></li>
+<li>use by <i>property</i> member <code>transform</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/SVM/IRangeTransform.html">IRangeTransform</a></li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a

@@ -38,9 +38,10 @@
     <i>res</i> = <span style='color: blue !important;'>NULL</span>,
     <i>family</i> = <span style='color: brown;'><strong>""</strong></span>,
     <i>restoreConsole</i> = <span style='color: blue !important;'>TRUE</span>,
-    <i>type</i> = ["windows","cairo","cairo-png"],
+    <i>type</i> = [<span style='color: brown;'><strong>'cairo'</strong></span>,<span style='color: brown;'><strong>'cairo-png'</strong></span>],
     <i>antialias</i> = <span style='color: blue !important;'>TRUE</span>,
-    <i>symbolfamily</i> = <span style='color: brown;'><strong>"default"</strong></span>);</code></pre>
+    <i>symbolfamily</i> = <span style='color: brown;'><strong>"default"</strong></span>,
+    <i>...</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -48,51 +49,64 @@
         <table>
             
 <dt>filename</dt>
-<dd><p><p>the path Of the output file, up To 511 characters. The page number Is substituted If a C Integer format Is included In the character String, As In the Default, And tilde-expansion Is performed (see path.expand). (The result must be less than 600 characters Long. See postscript For further details.)</p></p></dd>
+<dd><p>the path Of the output file, up To 511 characters. The page 
+ number Is substituted If a C Integer format Is included In the character String, 
+ As In the Default, And tilde-expansion Is performed (see path.expand). (The result 
+ must be less than 600 characters Long. See postscript For further details.)</p></dd>
 
 
 <dt>width</dt>
-<dd><p><p>the width of the device.</p></p></dd>
+<dd><p>the width of the device. [as integer]</p></dd>
 
 
 <dt>height</dt>
-<dd><p><p>the height of the device.</p></p></dd>
+<dd><p>the height of the device. [as integer]</p></dd>
 
 
 <dt>units</dt>
-<dd><p><p>The units in which height and width are given. Can be px (pixels, the default), in (inches), cm or mm.</p></p></dd>
+<dd><p>The units in which height and width are given. Can be px (pixels,
+ the default), in (inches), cm or mm.</p></dd>
 
 
 <dt>pointsize</dt>
-<dd><p><p>the default pointsize of plotted text, interpreted as big points (1/72 inch) at res ppi.</p></p></dd>
+<dd><p>the default pointsize of plotted text, interpreted as big
+ points (1/72 inch) at res ppi. [as double]</p></dd>
 
 
 <dt>bg</dt>
-<dd><p><p>the initial background colour: can be overridden by setting par("bg").</p></p></dd>
+<dd><p>the initial background colour: can be overridden by setting par("bg").</p></dd>
 
 
 <dt>res</dt>
-<dd><p><p>The nominal resolution In ppi which will be recorded In the bitmap file, If a positive Integer. Also used For units other than the Default. If Not specified, taken As 72 ppi To Set the size Of text And line widths.</p></p></dd>
+<dd><p>The nominal resolution In ppi which will be recorded In the bitmap 
+ file, If a positive Integer. Also used For units other than the Default. If Not 
+ specified, taken As 72 ppi To Set the size Of text And line widths.</p></dd>
 
 
 <dt>family</dt>
-<dd><p><p>A length-one character vector specifying the default font family. The default means to use the font numbers on the Windows GDI versions and "sans" on the cairographics versions.</p></p></dd>
+<dd><p>A length-one character vector specifying the default font family. 
+ The default means to use the font numbers on the Windows GDI versions and "sans" on 
+ the cairographics versions.</p></dd>
 
 
 <dt>restoreConsole</dt>
-<dd><p><p>See the ‘Details’ section of windows. For type == "windows" only.</p></p></dd>
+<dd><p>See the ‘Details’ section of windows. For type == "windows" 
+ only. [as boolean]</p></dd>
 
 
 <dt>type</dt>
-<dd><p><p>Should be plotting be done using Windows GDI or cairographics?</p></p></dd>
+<dd><p>Should be plotting be done using Windows GDI or cairographics?</p></dd>
 
 
 <dt>antialias</dt>
-<dd><p><p>Length-one character vector.</p>
+<dd><p>Length-one character vector.</p>
 
-<p>For allowed values And their effect on fonts with type = "windows" see windows: For that type if the argument Is missing the default Is taken from windows.options()$bitmap.aa.win.</p>
+<p>For allowed values And their effect on fonts with type = "windows" see windows: 
+ For that type if the argument Is missing the default Is taken from 
+ <code>windows.options()$bitmap.aa.win</code>.</p>
 
-<p>For allowed values And their effect (on fonts And lines, but Not fills) with type = "cairo" see svg.</p></p></dd>
+<p>For allowed values And their effect (on fonts And lines, but Not fills) with 
+ type = "cairo" see svg. [as boolean]</p></dd>
 
         </table>
 
@@ -101,6 +115,9 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

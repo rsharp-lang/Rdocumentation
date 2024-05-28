@@ -37,57 +37,60 @@
         <table>
             
 <dt>file</dt>
-<dd><p><p>a (readable binary-mode) connection or a character <br />
- string giving the name of the file to load (when tilde expansion is <br />
- done).</p></p></dd>
+<dd><p>a (readable binary-mode) connection or a character 
+ string giving the name of the file to load (when tilde expansion is 
+ done). [as string]</p></dd>
 
 
 <dt>envir</dt>
-<dd><p><p>the environment where the data should be loaded.</p></p></dd>
+<dd><p>the environment where the data should be loaded. [as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/GlobalEnvironment.html">GlobalEnvironment</a>]</p></dd>
 
 
 <dt>verbose</dt>
-<dd><p><p>should item names be printed during loading?</p></p></dd>
+<dd><p>should item names be printed during loading?. [as boolean]</p></dd>
 
         </table>
 
 
         <h3 style="display: block;">Details</h3>
 
-        <p>load can load R objects saved in the current or any earlier format. <br />
- It can read a compressed file (see save) directly from a file or from <br />
+        <p>load can load R objects saved in the current or any earlier format. 
+ It can read a compressed file (see save) directly from a file or from 
  a suitable connection (including a call to url).</p>
 
-<p>A Not-open connection will be opened in mode "rb" And closed after <br />
- use. Any connection other than a gzfile Or gzcon connection will be <br />
- wrapped in gzcon to allow compressed saves to be handled: note that <br />
- this leaves the connection In an altered state (In particular, <br />
- binary-only), And that it needs To be closed explicitly (it will <br />
+<p>A Not-open connection will be opened in mode "rb" And closed after 
+ use. Any connection other than a gzfile Or gzcon connection will be 
+ wrapped in gzcon to allow compressed saves to be handled: note that 
+ this leaves the connection In an altered state (In particular, 
+ binary-only), And that it needs To be closed explicitly (it will 
  Not be garbage-collected).</p>
 
-<p>Only R objects saved In the current format (used since R 1.4.0) can <br />
- be read from a connection. If no input Is available On a connection <br />
- a warning will be given, but any input Not In the current format <br />
+<p>Only R objects saved In the current format (used since R 1.4.0) can 
+ be read from a connection. If no input Is available On a connection 
+ a warning will be given, but any input Not In the current format 
  will result In a Error.</p>
 
-<p>Loading from an earlier version will give a warning about the 'magic number’: <br />
- magic numbers 1971:1977 are from R &lt; 0.99.0, and RD[ABX]1 from <br />
- R 0.99.0 to R 1.3.1. These are all obsolete, and you are strongly <br />
+<p>Loading from an earlier version will give a warning about the 'magic number’: 
+ magic numbers 1971:1977 are from R < 0.99.0, and RD[ABX]1 from 
+ R 0.99.0 to R 1.3.1. These are all obsolete, and you are strongly 
  recommended to re-save such files in a current format.</p>
 
-<p>The verbose argument Is mainly intended For debugging. If it Is True, <br />
- Then As objects from the file are loaded, their names will be printed <br />
- To the console. If verbose Is Set To an Integer value greater than <br />
- one, additional names corresponding To attributes And other parts Of <br />
- individual objects will also be printed. Larger values will print names <br />
+<p>The verbose argument Is mainly intended For debugging. If it Is True, 
+ Then As objects from the file are loaded, their names will be printed 
+ To the console. If verbose Is Set To an Integer value greater than 
+ one, additional names corresponding To attributes And other parts Of 
+ individual objects will also be printed. Larger values will print names 
  To a greater depth.</p>
 
-<p>Objects can be saved With references To namespaces, usually As part Of <br />
- the environment Of a Function Or formula. Such objects can be loaded <br />
- even If the Namespace Is Not available: it Is replaced by a reference <br />
- to the global environment with a warning. The warning identifies the <br />
+<p>Objects can be saved With references To namespaces, usually As part Of 
+ the environment Of a Function Or formula. Such objects can be loaded 
+ even If the Namespace Is Not available: it Is replaced by a reference 
+ to the global environment with a warning. The warning identifies the 
  first object with such a reference (but there may be more than one).</p>
 
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
 
         <h3>Value</h3>
 

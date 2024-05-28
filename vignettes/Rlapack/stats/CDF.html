@@ -37,20 +37,20 @@
         <table>
             
 <dt>FUNC</dt>
-<dd><p><p>function for run value integral, this function should <br />
- accept a number as parameter and produce new number as output.</p></p></dd>
+<dd><p>function for run value integral, this function should 
+ accept a number as parameter and produce new number as output.</p></dd>
 
 
 <dt>range</dt>
-<dd><p><p>the value range of the target function to do integral</p></p></dd>
+<dd><p>the value range of the target function to do integral</p></dd>
 
 
 <dt>p0</dt>
-<dd><p><p>the y0 value for the integral</p></p></dd>
+<dd><p>the y0 value for the integral. [as double]</p></dd>
 
 
 <dt>resolution</dt>
-<dd><p><p>the RK4 integral algorithm resolution</p></p></dd>
+<dd><p>the RK4 integral algorithm resolution. [as integer]</p></dd>
 
         </table>
 
@@ -59,16 +59,17 @@
 
         
 
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
 
         <h3>Value</h3>
 
-        <p>this function returns a tuple list object that contains the data slots:</p>
-
-<ul>
-<li><code>ecdf</code>: the result value of the integral, a numeric scalar value</li>
-<li><code>x</code>: a numeric vector for x axis</li>
-<li><code>y</code>: a numeric vector for y axis</li>
-</ul> the list data also has some specificied data fields: <code>list(ecdf, x, y)</code>.<h4>clr value class</h4><ul><li>list</li></ul>
+        <p>this function returns a tuple list object that contains the data slots:
+ 
+ + <code>ecdf</code>: the result value of the integral, a numeric scalar value
+ + <code>x</code>: a numeric vector for x axis
+ + <code>y</code>: a numeric vector for y axis</p> the list data also has some specificied data fields: <code>list(ecdf, x, y)</code>.<h4>clr value class</h4><ul><li>list</li></ul>
 
         <h3 style="display: none;">Examples</h3>
 

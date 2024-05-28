@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        <br /><p>this class extends from <a href="/vignettes/clr/System/Array.html">Array</a> class.</p>
+        
 
         <h3>Declare</h3>        
 
@@ -30,16 +30,24 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.MachineLearning.SVM
 export class Node[] extends <a href="/vignettes/clr/System/Array.html">Array</a> {
+   IsFixedSize: boolean;
+   IsReadOnly: boolean;
+   IsSynchronized: boolean;
    Length: integer;
    LongLength: integer;
    Rank: integer;
    SyncRoot: <i>any</i> kind;
-   IsReadOnly: boolean;
-   IsFixedSize: boolean;
-   IsSynchronized: boolean;
 }
 </code>
         </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/System/Array.html">Array</a> class: <a href="/vignettes/clr/System/Array.html">Array</a></li>
+<li>use by <i>property</i> member <code>SyncRoot</code>: <i>any</i> kind</li>
+</ol>
+
 
         <hr />
         <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
