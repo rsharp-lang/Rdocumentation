@@ -27,15 +27,17 @@
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>str_empty</strong>(<i>string</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>str_empty</strong>(<i>x</i>,
+    <i>whitespace.empty</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>test.empty.factor</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
 
         <table>
             
-<dt>[string]</dt>
-<dd><p>-</p></dd>
+<dt>x</dt>
+<dd><p>a character vector that contains multiple string for do the test. [as string]</p></dd>
 
         </table>
 
@@ -50,7 +52,8 @@
 
         <h3>Value</h3>
 
-        this function returns data object of type boolean.<h4>clr value class</h4><ul><li>boolean</li></ul>
+        <p>a logical vector of the test result. TRUE means the given string
+ is asserted as an empty factor.</p><h4>clr value class</h4><ul><li>boolean</li></ul>
 
         <h3 style="display: none;">Examples</h3>
 
@@ -67,4 +70,4 @@
 <script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
 <script type="text/javascript">r_highlights("example_r");</script>
 
-</html>
+</html>

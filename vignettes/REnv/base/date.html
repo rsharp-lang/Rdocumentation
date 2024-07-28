@@ -28,7 +28,9 @@
 
         <div style="width: 100%; padding-left: 3%; color: black;">
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>date</strong>(
-    <i>str</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+    <i>str</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>format</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>safe</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -38,12 +40,18 @@
 <dt>str</dt>
 <dd><p>this parameter also can accept the unix timestamp. [as string]</p></dd>
 
+
+<dt>format</dt>
+<dd><p>specific the date string parser format, example as <code>yyyyMMdd</code> will be 
+ used for parse the given string <code>20220101</code> as <code>#2022-01-01#</code>. [as string]</p></dd>
+
         </table>
 
 
-        <h3 style="display: none;">Details</h3>
+        <h3 style="display: block;">Details</h3>
 
-        
+        <p>the given number string will not be treated as unix timestamp
+ if the format string has been specific.</p>
 
         <h3 style="display: block">Authors</h3>
 
@@ -68,4 +76,4 @@
 <script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
 <script type="text/javascript">r_highlights("example_r");</script>
 
-</html>
+</html>

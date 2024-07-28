@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create a progress bar helper function</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>progress_bar {utils}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Create a progress bar helper function</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>progress_bar</strong>(<i>total</i>,
+    <i>width</i> = <span style='color: green;'>45</span>,
+    <i>interval</i> = <span style='color: green;'>5</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>total</dt>
+<dd><p>[as integer]</p></dd>
+
+
+<dt>width</dt>
+<dd><p>[as integer]</p></dd>
+
+
+<dt>interval</dt>
+<dd><p>the progress display internal, should be value in range [1,100]. [as integer]</p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics Institute
+
+        <h3>Value</h3>
+
+        this function returns data object of type <a href="/vignettes/clr/SMRUCC/Rsharp/Development/Components/ProgressBarFunction.html">ProgressBarFunction</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Development/Components/ProgressBarFunction.html">ProgressBarFunction</a></li></ul>
+
+        <h3 style="display: block;">Examples</h3>
+
+        <pre><code id="example_r"> let bar = progress_bar(total = 10);
+ 
+ bar("test 1");
+ bar("test 2");
+ bar("test 3");</code></pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>utils</em> version 2.33.856.6961 <a
+                href="../utils.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

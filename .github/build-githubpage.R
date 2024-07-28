@@ -18,7 +18,11 @@ const index = list();
 for(dll_name in clr_modules) {
     let libs = [];
 
-    str(dll_name);
+    if (!file.exists(`${app_dir}/${dll_name}`)) {
+        next;
+    } else {
+        str(dll_name);
+    }
 
     # generates the html help documents
     for(pkg_namespace in package_utils::parseDll(dll = `${app_dir}/${dll_name}`)) {
