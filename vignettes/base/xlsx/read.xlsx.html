@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>read a sheet table in xlsx file as a ``dataframe`` object.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>read.xlsx {xlsx}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>read a sheet table in xlsx file as a ``dataframe`` object.</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>read.xlsx</strong>(<i>file</i>,
+    <i>sheetIndex</i> = <span style='color: brown;'><strong>"Sheet1"</strong></span>,
+    <i>row.names</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>raw</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>check.names</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>check.modes</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>comment.char</i> = <span style='color: #000000;'><strong>"#"</strong></span>,
+    <i>skip.rows</i> = <span style='color: green;'>-1</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>sheetIndex</dt>
+<dd><p>the data sheet index or name for read data. the index value of 
+ parameter should be start from base 1 if the type is an integer 
+ index</p></dd>
+
+
+<dt>check.modes</dt>
+<dd><p>check the data type of each column in the dataframe? 
+ this options is working if the <code>raw</code> parameter is 
+ set to <code>FALSE</code>. [as boolean]</p></dd>
+
+
+<dt>check.names</dt>
+<dd><p>make valid R# symbol names of each column in the dataframe?
+ this options is working if the <code>raw</code> parameter is set
+ to <code>FALSE</code>. [as boolean]</p></dd>
+
+
+<dt>row.names</dt>
+<dd><p>A character vector for set row names of the generated dataframe, or 
+ a character name in the dataframe, or an integer value to indicate
+ that which column should be used as the row names of the 
+ dataframe object.
+ 
+ this options is working if the <code>raw</code> parameter is set
+ to <code>FALSE</code>.</p></dd>
+
+
+<dt>file</dt>
+<dd><p>the file path of the target xlsx data file.</p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics
+
+        <h3>Value</h3>
+
+        this function returns data object in these one of the listed data types: <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a>, <a href="/vignettes/clr/Microsoft/VisualBasic/Data/csv/IO/File.html">File</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a></li><li><a href="/vignettes/clr/Microsoft/VisualBasic/Data/csv/IO/File.html">File</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>xlsx</em> version 6.0.0.3654 <a
+                href="../xlsx.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

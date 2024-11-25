@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>utils</title>
+    <meta name="author" content="xie.guigang@gcmodeller.org" />
+    <meta name="copyright" content="SMRUCC genomics Copyright (c) 2022" />
+    <meta name="keywords" content="R#; utils; base" />
+    <meta name="generator" content="https://github.com/rsharp-lang" />
+    <meta name="theme-color" content="#333" />
+    <meta name="description" content="The R Utils Package..." />
+    <meta class="foundation-data-attribute-namespace" />
+    <meta class="foundation-mq-xxlarge" />
+    <meta class="foundation-mq-xlarge" />
+    <meta class="foundation-mq-large" />
+    <meta class="foundation-mq-medium" />
+    <meta class="foundation-mq-small" />
+    <meta class="foundation-mq-topbar" />
+    <style>
+
+.table-three-line {
+border-collapse:collapse; /* 关键属性：合并表格内外边框(其实表格边框有2px，外面1px，里面还有1px哦) */
+border:solid #000000; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */
+border-width:2px 0 2px 0px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */
+}
+.left-1{
+    border:solid #000000;border-width:1px 1px 2px 0px;padding:2px;
+    font-weight:bolder;
+}
+.right-1{
+    border:solid #000000;border-width:1px 0px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.mid-1{
+    border:solid #000000;border-width:1px 1px 2px 1px;padding:2px;
+    font-weight:bolder;
+}
+.left{
+    border:solid #000000;border-width:1px 1px 1px 0px;padding:2px;
+}
+.right{
+    border:solid #000000;border-width:1px 0px 1px 1px;padding:2px;
+}
+.mid{
+    border:solid #000000;border-width:1px 1px 1px 1px;padding:2px;
+}
+table caption {font-size:14px;font-weight:bolder;}
+</style>
+  </head>
+  <body>
+    <table width="100%" summary="page for {utils}">
+      <tbody>
+        <tr>
+          <td>{utils}</td>
+          <td style="text-align: right;">R# Documentation</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>utils</h1>
+    <hr />
+    <p style="     font-size: 1.125em;     line-height: .8em;     margin-left: 0.5%;     background-color: #fbfbfb;     padding: 24px; ">
+      <code>
+        <span style="color: blue;">require</span>(<span style="color: black; font-weight: bold;">R</span>);
+                               <br /><br /><span style="color: green;">#' The R Utils Package</span><br /><span style="color: blue;">imports</span><span style="color: brown"> "utils"</span><span style="color: blue;"> from</span><span style="color: brown"> "base"</span>;
+                           </code>
+    </p>
+    <p><p>The R Utils Package</p></p>
+    <blockquote>
+      <p style="font-style: italic; font-size: 0.9em;">
+                           <p>The R Utils Package</p>
+                           </p>
+    </blockquote>
+    <div id="main-wrapper">
+      <table class="table-three-line" style="display: block">
+        <caption>.NET clr type export</caption>
+        <tbody><tr>
+  <td id="entity">
+    <a href="/vignettes/clr/Microsoft/VisualBasic/Data/csv/IO/EntityObject.html">entity: EntityObject</a>
+  </td>
+  <td><p>The object entity, <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/DataSourceModel/DynamicPropertyBase`1.html">DynamicPropertyBase`1</a>, string.
+ (有名称属性的表抽象对象)</p></td>
+</tr>
+<tr>
+  <td id="dataset">
+    <a href="/vignettes/clr/Microsoft/VisualBasic/Data/csv/IO/DataSet.html">dataset: DataSet</a>
+  </td>
+  <td><p>The numeric dataset, <a href="/vignettes/clr/Microsoft/VisualBasic/ComponentModel/DataSourceModel/DynamicPropertyBase`1.html">DynamicPropertyBase`1</a>, double.</p></td>
+</tr></tbody>
+      </table>
+      <br />
+      <br />
+      <table class="table-three-line">
+        <caption>.NET clr function exports</caption>
+        <tbody><tr>
+  <td id="readRData">
+    <a href="./utils/readRData.html">readRData</a>
+  </td>
+  <td><p>read <code>*.rda</code> data file which is saved from R environment.</p></td>
+</tr>
+<tr>
+  <td id="load.csv">
+    <a href="./utils/load.csv.html">load.csv</a>
+  </td>
+  <td><p>load csv as a .NET CLR object vector</p></td>
+</tr>
+<tr>
+  <td id="read.feather">
+    <a href="./utils/read.feather.html">read.feather</a>
+  </td>
+  <td><p>read the feather as dataframe</p></td>
+</tr>
+<tr>
+  <td id="write.feather">
+    <a href="./utils/write.feather.html">write.feather</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="read.csv">
+    <a href="./utils/read.csv.html">read.csv</a>
+  </td>
+  <td><h3>Data Input</h3>
+
+<p>Reads a file in table format and creates a data frame from it, 
+ with cases corresponding to lines and variables to fields in 
+ the file.</p></td>
+</tr>
+<tr>
+  <td id="write.csv">
+    <a href="./utils/write.csv.html">write.csv</a>
+  </td>
+  <td><h3>Data Output</h3>
+
+<p>prints its required argument <code>x</code> (after converting it to a 
+ data frame if it is not one nor a matrix) to a file or 
+ connection.</p></td>
+</tr></tbody>
+      </table>
+    </div>
+    <hr />
+    <div style="text-align: center;">[<a href="../index.html">Document Index</a>]</div>
+  </body>
+</html>

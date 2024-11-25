@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pearson's Chi-squared Test for Count Data</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>chisq.test {stats}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Pearson's Chi-squared Test for Count Data</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> chisq.test performs chi-squared contingency table tests and goodness-of-fit tests.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>chisq.test</strong>(<i>x</i>,
+    <i>y</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>correct</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>p</i> = <span style='color: brown;'><strong>"~rep(1/length(x), length(x))"</strong></span>,
+    <i>rescale.p</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>simulate.p.value</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>B</i> = <span style='color: green;'>2000</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p>a numeric vector Or matrix. x And y can also both be factors.</p></dd>
+
+
+<dt>y</dt>
+<dd><p>a numeric vector; ignored if x is a matrix. If x is a factor, y should be a factor of the same length.</p></dd>
+
+
+<dt>correct</dt>
+<dd><p>a logical indicating whether to apply continuity correction when computing the test statistic for 2 by 2 tables: 
+ one half is subtracted from all ||O-E|| differences; however, the correction will Not be bigger than the differences themselves. 
+ No correction Is done if simulate.p.value = TRUE. [as boolean]</p></dd>
+
+
+<dt>p</dt>
+<dd><p>a vector of probabilities of the same length as x. An error is given if any entry of p is negative.</p></dd>
+
+
+<dt>rescale.p</dt>
+<dd><p>a logical scalar; if TRUE then p is rescaled (if necessary) to sum to 1. If rescale.p is FALSE, 
+ and p does not sum to 1, an error is given. [as boolean]</p></dd>
+
+
+<dt>simulate.p.value</dt>
+<dd><p>a logical indicating whether to compute p-values by Monte Carlo simulation. [as boolean]</p></dd>
+
+
+<dt>B</dt>
+<dd><p>an integer specifying the number of replicates used in the Monte Carlo test. [as integer]</p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>If x is a matrix with one row or column, or if x is a vector and y is not given, then a goodness-of-fit
+ test is performed (x is treated as a one-dimensional contingency table). The entries of x must be 
+ non-negative integers. In this case, the hypothesis tested is whether the population probabilities
+ equal those in p, or are all equal if p is not given.</p>
+
+<p>If x is a matrix with at least two rows and columns, it is taken as a two-dimensional contingency table:
+ the entries of x must be non-negative integers. Otherwise, x and y must be vectors or factors of the
+ same length; cases with missing values are removed, the objects are coerced to factors, and the contingency
+ table is computed from these. Then Pearson's chi-squared test is performed of the null hypothesis that 
+ the joint distribution of the cell counts in a 2-dimensional contingency table is the product of the 
+ row and column marginals.</p>
+
+<p>If simulate.p.value is FALSE, the p-value is computed from the asymptotic chi-squared distribution of the
+ test statistic; continuity correction is only used in the 2-by-2 case (if correct is TRUE, the default). 
+ Otherwise the p-value is computed for a Monte Carlo test (Hope, 1968) with B replicates. The default 
+ B = 2000 implies a minimum p-value of about 0.0005 (1 / (B + 1)).</p>
+
+<p>In the contingency table case, simulation is done by random sampling from the set of all contingency tables
+ with given marginals, and works only if the marginals are strictly positive. Continuity correction is never 
+ used, and the statistic is quoted without it. Note that this is not the usual sampling situation assumed
+ for the chi-squared test but rather that for Fisher's exact test.</p>
+
+<p>In the goodness-of-fit case simulation is done by random sampling from the discrete distribution specified 
+ by p, each sample being of size <code>n = sum(x)</code>. This simulation is done in R and may be slow.</p>
+
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
+
+        <h3>Value</h3>
+
+        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: block;">Examples</h3>
+
+        <pre><code id="example_r"> table <- matrix(c(30, 50, 20, 10), nrow = 2)
+ rownames(table) <- c("Group1", "Group2")
+ colnames(table) <- c("Yes", "No")
+ 
+ result <- chisq.test(table)
+ 
+ print(result)</code></pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stats</em> version 5.0.1.2389 <a
+                href="../stats.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

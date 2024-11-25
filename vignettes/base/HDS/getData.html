@@ -27,7 +27,8 @@
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>getData</strong>(<i>pack</i>, <i>file</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>getData</strong>(<i>pack</i>, <i>file</i>,
+    <i>load.memory</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -40,6 +41,11 @@
 
 <dt>file</dt>
 <dd><p>[as <a href="/vignettes/clr/Microsoft/VisualBasic/DataStorage/HDSPack/FileSystem/StreamBlock.html">StreamBlock</a>]</p></dd>
+
+
+<dt>load.memory</dt>
+<dd><p>load the block file data into memory on load instead of 
+ open a <a href="/vignettes/clr/Microsoft/VisualBasic/ApplicationServices/SubStream.html">SubStream</a> of the base file. [as boolean]</p></dd>
 
         </table>
 

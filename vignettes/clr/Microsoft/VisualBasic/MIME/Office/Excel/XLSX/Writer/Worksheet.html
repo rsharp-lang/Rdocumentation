@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer.Worksheet</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Worksheet {Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Worksheet</h2>
+
+        <h3>Description</h3>
+
+        <p>Class representing a worksheet of a workbook</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer
+export class Worksheet {
+   # Gets the active Pane is splitting is applied.
+   #  The value is nullable. If null, no splitting was defined
+   ActivePane: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a>;
+   # Gets the active Style of the worksheet. If null, no style is defined as active
+   ActiveStyle: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Style.html">Style</a>;
+   # Gets the range of the auto-filter. Wrapped to Nullable to provide null as value. If null, no auto-filter is applied
+   AutoFilterRange: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a>;
+   # Gets the cells of the worksheet as dictionary with the cell address as key and the cell object as value
+   Cells: list;
+   # Gets all columns with non-standard properties, like auto filter applied or a special width as dictionary with the zero-based column index as key and the column object as value
+   Columns: list;
+   # Gets or sets the direction when using AddNextCell method
+   CurrentCellDirection: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/CellDirection.html">CellDirection</a>;
+   # Gets or sets the default column width
+   DefaultColumnWidth: double;
+   # Gets or sets the default Row height
+   DefaultRowHeight: double;
+   # Gets the FreezeSplitPanes
+   #  Gets whether split panes are frozen.
+   #  The value is nullable. If null, no freezing is applied. This property also does not apply if <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Worksheet.html">Worksheet</a>.<a href="/vignettes/clr/System/Nullable`1.html">PaneSplitAddress</a> is null
+   FreezeSplitPanes: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a>;
+   # Gets or sets whether the worksheet is hidden. If true, the worksheet is not listed as tab in the workbook's worksheet selection
+   #  If the worksheet is not part of a workbook, or the only one in the workbook, an exception will be thrown.
+   #  If the worksheet is the selected one, and attempted to set hidden, an exception will be thrown. Define another selected worksheet prior to this call, in this case.
+   Hidden: boolean;
+   # Gets the hidden rows as dictionary with the zero-based row number as key and a boolean as value. True indicates hidden, false visible.
+   HiddenRows: list;
+   # Gets the merged cells (only references) as dictionary with the cell address as key and the range object as value
+   MergedCells: list;
+   # Gets the split address for frozen panes or if pane split was defined in number of columns and / or rows. 
+   #  For vertical splits, only the column component is considered. For horizontal splits, only the row component is considered.
+   #  The value is nullable. If null, no frozen panes or split by columns / rows are applied to the worksheet. 
+   #  However, splitting can still be applied, if the value is defined in characters.
+   #  See also: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Worksheet.html">Worksheet</a>.<a href="/vignettes/clr/System/Nullable`1.html">PaneSplitLeftWidth</a> and <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Worksheet.html">Worksheet</a>.<a href="/vignettes/clr/System/Nullable`1.html">PaneSplitTopHeight</a> for splitting in characters (without freezing)
+   PaneSplitAddress: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a>;
+   # Gets the width of the left, vertical split pane, measured from the left of the window.
+   #  The value is nullable. If null, no vertical split of the worksheet is applied
+   #  The value is only applicable to split the worksheet into panes, but not to freeze them.
+   #  See also: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Worksheet.html">Worksheet</a>.<a href="/vignettes/clr/System/Nullable`1.html">PaneSplitAddress</a>
+   PaneSplitLeftWidth: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a>;
+   # Gets the height of the upper, horizontal split pane, measured from the top of the window.
+   #  The value is nullable. If null, no horizontal split of the worksheet is applied.
+   #  The value is only applicable to split the worksheet into panes, but not to freeze them.
+   #  See also: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Worksheet.html">Worksheet</a>.<a href="/vignettes/clr/System/Nullable`1.html">PaneSplitAddress</a>
+   PaneSplitTopHeight: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a>;
+   # Gets the Top Left cell address of the bottom right pane if applicable and splitting is applied.
+   #  The column is only relevant for vertical split, whereas the row component is only relevant for a horizontal split.
+   #  The value is nullable. If null, no splitting was defined.
+   PaneSplitTopLeftCell: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a>;
+   # Gets defined row heights as dictionary with the zero-based row number as key and the height (float from 0 to 409.5) as value
+   RowHeights: list;
+   # Gets all ranges of selected cells of this worksheet. An empty list is returned if no cells are selected
+   SelectedCellRanges: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Range.html">iterates(Range)</a>;
+   # Returns either null (if no cells are selected), or the first defined range of selected cells
+   SelectedCells: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a>;
+   # Gets or sets the internal ID of the worksheet
+   SheetID: integer;
+   # Gets or sets the name of the worksheet
+   SheetName: string;
+   # Gets the password used for sheet protection. See @<code>M:Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer.Worksheet.SetSheetProtectionPassword(System.String)</code> to set the password
+   SheetProtectionPassword: string;
+   # gets the encrypted hash of the password, defined with <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Worksheet.html">Worksheet</a>.<a href="#">SheetProtectionPassword</a>. The value will be null, if no password is defined
+   SheetProtectionPasswordHash: string;
+   # Gets the list of SheetProtectionValues. These values define the allowed actions if the worksheet is protected
+   SheetProtectionValues: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/SheetProtectionValue.html">iterates(SheetProtectionValue)</a>;
+   # Gets or sets whether the worksheet is protected. If true, protection is enabled
+   UseSheetProtection: boolean;
+   # Gets or sets the Reference to the parent Workbook
+   WorkbookReference: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Workbook.html">Workbook</a>;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>ActivePane</code>: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a></li>
+<li>use by <i>property</i> member <code>ActiveStyle</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Style.html">Style</a></li>
+<li>use by <i>property</i> member <code>AutoFilterRange</code>: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a></li>
+<li>use by <i>property</i> member <code>Cells</code>: list</li>
+<li>use by <i>property</i> member <code>Columns</code>: list</li>
+<li>use by <i>property</i> member <code>CurrentCellDirection</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/CellDirection.html">CellDirection</a></li>
+<li>use by <i>property</i> member <code>FreezeSplitPanes</code>: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a></li>
+<li>use by <i>property</i> member <code>HiddenRows</code>: list</li>
+<li>use by <i>property</i> member <code>MergedCells</code>: list</li>
+<li>use by <i>property</i> member <code>PaneSplitAddress</code>: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a></li>
+<li>use by <i>property</i> member <code>PaneSplitLeftWidth</code>: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a></li>
+<li>use by <i>property</i> member <code>PaneSplitTopHeight</code>: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a></li>
+<li>use by <i>property</i> member <code>PaneSplitTopLeftCell</code>: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a></li>
+<li>use by <i>property</i> member <code>RowHeights</code>: list</li>
+<li>use by <i>property</i> member <code>SelectedCellRanges</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Range.html">iterates(Range)</a></li>
+<li>use by <i>property</i> member <code>SelectedCells</code>: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a></li>
+<li>use by <i>property</i> member <code>SheetProtectionValues</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/SheetProtectionValue.html">iterates(SheetProtectionValue)</a></li>
+<li>use by <i>property</i> member <code>WorkbookReference</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Workbook.html">Workbook</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

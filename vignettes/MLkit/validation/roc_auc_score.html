@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Compute Area Under the Receiver Operating Characteristic Curve (ROC AUC) from prediction scores.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>roc_auc_score {validation}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Compute Area Under the Receiver Operating Characteristic Curve (ROC AUC) from prediction scores.</h2>
+
+        <h3>Description</h3>
+
+        
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>roc_auc_score</strong>(<i>y.true</i>, <i>pred</i>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>y.true</dt>
+<dd><p>array-like of shape (n<em>samples,) or (n</em>samples, n_classes)
+ True binary labels Or binary label indicators. The multiclass case
+ expects shape(n<em>samples,) And labels With values In 0, 1, ..., n</em>classes-1. [as double]</p></dd>
+
+
+<dt>pred</dt>
+<dd><p>array-like of shape (n<em>samples,) or (n</em>samples, n_classes)
+ Target scores, can either be probability estimates Of the positive
+ Class, confidence values, Or non-thresholded measure of decisions
+ (as returned by "decision_function" on some classifiers). [as double]</p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+        <h3 style="display: block">Authors</h3>
+
+        MLkit
+
+        <h3>Value</h3>
+
+        this function returns data object of type double.<h4>clr value class</h4><ul><li>double</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>validation</em> version 1.0.0.0 <a
+                href="../validation.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Input</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>read.csv {utils}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Data Input</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Reads a file in table format and creates a data frame from it, <br /> with cases corresponding to lines and variables to fields in <br /> the file.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>read.csv</strong>(<i>file</i>,
+    <i>header</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>row.names</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>check.names</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>check.modes</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>encoding</i> = <span style='color: brown;'><strong>"unknown"</strong></span>,
+    <i>comment.char</i> = <span style='color: #000000;'><strong>"#"</strong></span>,
+    <i>tsv</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>skip.rows</i> = <span style='color: green;'>-1</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>file</dt>
+<dd><p>the name of the file which the data are to be read from. Each 
+ row of the table appears as one line of the file. If it does 
+ not contain an absolute path, the file name is relative to the 
+ current working directory, getwd(). Tilde-expansion is performed 
+ where supported. This can be a compressed file (see file).
+ 
+ Alternatively, file can be a readable text-mode connection (which 
+ will be opened for reading if necessary, And if so closed (And 
+ hence destroyed) at the end of the function call). (If <code>stdin()</code>
+ Is used, the prompts for lines may be somewhat confusing. 
+ Terminate input with a blank line Or an EOF signal, Ctrl-D on Unix 
+ And Ctrl-Z on Windows. Any pushback on stdin() will be cleared 
+ before return.)
+ 
+ file can also be a complete URL. (For the supported URL schemes, 
+ see the 'URLs’ section of the help for <code>url</code>.)</p></dd>
+
+
+<dt>encoding</dt>
+<dd><p>encoding to be assumed for input strings. It is used to mark character 
+ strings as known to be in Latin-1 or UTF-8 (see Encoding): it is not 
+ used to re-encode the input, but allows R to handle encoded strings in 
+ their native encoding (if one of those two). 
+ 
+ use <a href="/vignettes/clr/System/Text/Encoding.html">Encoding</a>.<a href="/vignettes/clr/System/Text/Encoding.html">Default</a> by default.</p></dd>
+
+
+<dt>row.names</dt>
+<dd><p>a vector of row names. This can be a vector giving the actual row names, 
+ or a single number giving the column of the table which contains the 
+ row names, or character string giving the name of the table column 
+ containing the row names.</p>
+
+<p>If there Is a header And the first row contains one fewer field than the 
+ number Of columns, the first column In the input Is used For the row 
+ names. Otherwise If row.names Is missing, the rows are numbered.</p>
+
+<p>Using row.names = NULL forces row numbering. Missing Or NULL row.names 
+ generate row names that are considered To be 'automatic’ (and not 
+ preserved by as.matrix).</p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics
+
+        <h3>Value</h3>
+
+        this function returns data object of type <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a>.<h4>clr value class</h4><ul><li><a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Internal/Object/dataframe.html">dataframe</a></li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>utils</em> version 6.0.0.3654 <a
+                href="../utils.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

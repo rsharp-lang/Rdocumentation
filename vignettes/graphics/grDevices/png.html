@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BMP, JPEG, PNG and TIFF graphics devices</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>png {grDevices}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>BMP, JPEG, PNG and TIFF graphics devices</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Graphics devices for BMP, JPEG, PNG and TIFF format bitmap files.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>png</strong>(
+    <i>image</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>filename</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>width</i> = <span style='color: green;'>480</span>,
+    <i>height</i> = <span style='color: green;'>480</span>,
+    <i>units</i> = <span style='color: brown;'><strong>"px"</strong></span>,
+    <i>pointsize</i> = <span style='color: green;'>12</span>,
+    <i>bg</i> = <span style='color: #FFFFFF;'><strong>"white"</strong></span>,
+    <i>res</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>family</i> = <span style='color: brown;'><strong>""</strong></span>,
+    <i>restoreConsole</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>type</i> = [<span style='color: brown;'><strong>'cairo'</strong></span>,<span style='color: brown;'><strong>'cairo-png'</strong></span>],
+    <i>antialias</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>symbolfamily</i> = <span style='color: brown;'><strong>"default"</strong></span>,
+    <i>...</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>filename</dt>
+<dd><p>the path Of the output file, up To 511 characters. The page 
+ number Is substituted If a C Integer format Is included In the character String, 
+ As In the Default, And tilde-expansion Is performed (see path.expand). (The result 
+ must be less than 600 characters Long. See postscript For further details.)</p></dd>
+
+
+<dt>width</dt>
+<dd><p>the width of the device. [as integer]</p></dd>
+
+
+<dt>height</dt>
+<dd><p>the height of the device. [as integer]</p></dd>
+
+
+<dt>units</dt>
+<dd><p>The units in which height and width are given. Can be px (pixels,
+ the default), in (inches), cm or mm.</p></dd>
+
+
+<dt>pointsize</dt>
+<dd><p>the default pointsize of plotted text, interpreted as big
+ points (1/72 inch) at res ppi. [as double]</p></dd>
+
+
+<dt>bg</dt>
+<dd><p>the initial background colour: can be overridden by setting par("bg").</p></dd>
+
+
+<dt>res</dt>
+<dd><p>The nominal resolution In ppi which will be recorded In the bitmap 
+ file, If a positive Integer. Also used For units other than the Default. If Not 
+ specified, taken As 72 ppi To Set the size Of text And line widths.</p></dd>
+
+
+<dt>family</dt>
+<dd><p>A length-one character vector specifying the default font family. 
+ The default means to use the font numbers on the Windows GDI versions and "sans" on 
+ the cairographics versions.</p></dd>
+
+
+<dt>restoreConsole</dt>
+<dd><p>See the ‘Details’ section of windows. For type == "windows" 
+ only. [as boolean]</p></dd>
+
+
+<dt>type</dt>
+<dd><p>Should be plotting be done using Windows GDI or cairographics?</p></dd>
+
+
+<dt>antialias</dt>
+<dd><p>Length-one character vector.</p>
+
+<p>For allowed values And their effect on fonts with type = "windows" see windows: 
+ For that type if the argument Is missing the default Is taken from 
+ <code>windows.options()$bitmap.aa.win</code>.</p>
+
+<p>For allowed values And their effect (on fonts And lines, but Not fills) with 
+ type = "cairo" see svg. [as boolean]</p></dd>
+
+        </table>
+
+
+        <h3 style="display: none;">Details</h3>
+
+        
+
+        <h3 style="display: block">Authors</h3>
+
+        graphics
+
+        <h3>Value</h3>
+
+        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>grDevices</em> version 1.0.0.0 <a
+                href="../grDevices.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

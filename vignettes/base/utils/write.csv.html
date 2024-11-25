@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Output</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>write.csv {utils}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Data Output</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> prints its required argument <code>x</code> (after converting it to a <br /> data frame if it is not one nor a matrix) to a file or <br /> connection.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>write.csv</strong>(<i>x</i>,
+    <i>file</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>row.names</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>fileEncoding</i> = <span style='color: brown;'><strong>""</strong></span>,
+    <i>tsv</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>number.format</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>meta.blank</i> = <span style='color: brown;'><strong>""</strong></span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p>the object to be written, preferably a matrix or data frame. 
+ If not, it is attempted to coerce x to a data frame.</p></dd>
+
+
+<dt>file</dt>
+<dd><p>either a character string naming a file or a connection open 
+ for writing. "" indicates output to the console.</p></dd>
+
+
+<dt>fileEncoding</dt>
+<dd><p>character string: if non-empty declares the encoding to be 
+ used on a file (not a connection) so the character data can 
+ be re-encoded as they are written.</p></dd>
+
+
+<dt>env</dt>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
+
+
+<dt>row.names</dt>
+<dd><p>either a logical value indicating whether the row names of 
+ x are to be written along with x, or a character vector of 
+ row names to be written.</p></dd>
+
+
+<dt>meta.blank</dt>
+<dd><p>set the cell value for represents the missing value of the metadata 
+ column when do save of the clr object array. [as string]</p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>this function will create an empty table file if the given data
+ table object <strong>`x`</strong> is nothing.</p>
+
+        <h3 style="display: block">Authors</h3>
+
+        SMRUCC genomics
+
+        <h3>Value</h3>
+
+        this function returns data object of type boolean.<h4>clr value class</h4><ul><li>boolean</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>utils</em> version 6.0.0.3654 <a
+                href="../utils.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

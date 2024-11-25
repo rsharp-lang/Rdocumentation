@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        
+        <p>the metadata of the R# package file</p>
 
         <h3>Declare</h3>        
 
@@ -30,16 +30,24 @@
             <code id="clr_ts">
 # namespace SMRUCC.Rsharp.Development.Package.File
 export class DESCRIPTION {
+   # the author names for write this packages
    Author: string;
+   # the date time for build this package
    Date: string;
+   # A long text for make notes about this package its function and usage.
    Description: string;
+   # check of the content data of current package metadata is empty or not?
    isEmpty: boolean;
+   # the license name
    License: string;
    Maintainer: string;
+   # other additional metadata about this package
    meta: list;
    # the package name
    Package: string;
+   # the title display of the current package.
    Title: string;
+   # the type of the current R# package.
    Type: string;
    # the package version string
    Version: string;

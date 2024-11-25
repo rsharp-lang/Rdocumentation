@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>K-NN Classifier in R Programming</title>
+    <title>k-Nearest Neighbour Classification</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
@@ -18,54 +18,59 @@
             </tr>
         </table>
 
-        <h2>K-NN Classifier in R Programming</h2>
+        <h2>k-Nearest Neighbour Classification</h2>
 
         <h3>Description</h3>
 
-        <p><br /> K-Nearest Neighbor or K-NN is a Supervised Non-linear classification <br /> algorithm. K-NN is a Non-parametric algorithm i.e it doesn’t make any <br /> assumption about underlying data or its distribution. It is one of <br /> the simplest and widely used algorithm which depends on it’s k value<br /> (Neighbors) and finds it’s applications in many industries like <br /> finance industry, healthcare industry etc.</p>
+        <p><br /> k-nearest neighbour classification for test set from training set. For each <br /> row of the test set, the k nearest (in Euclidean distance) training set <br /> vectors are found, and the classification is decided by majority vote, with <br /> ties broken at random. If there are ties for the kth nearest vector, all <br /> candidates are included in the vote.</p>
 
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>knn</strong>(<i>x</i>,
-    <i>k</i> = <span style='color: green;'>16</span>,
-    <i>jaccard</i> = <span style='color: green;'>0.6</span>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>knn</strong>(<i>train</i>, <i>test</i>, <i>cl</i>,
+    <i>k</i> = <span style='color: green;'>1</span>,
+    <i>l</i> = <span style='color: green;'>0</span>,
+    <i>prob</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>use.all</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
 
         <table>
             
-<dt>x</dt>
-<dd><p>-</p></dd>
+<dt>train</dt>
+<dd><p>matrix or data frame of training set cases.</p></dd>
+
+
+<dt>test</dt>
+<dd><p>matrix or data frame of test set cases. A vector will be interpreted as a row vector for a single case.</p></dd>
+
+
+<dt>cl</dt>
+<dd><p>factor of true classifications of training set</p></dd>
 
 
 <dt>k</dt>
-<dd><p>[as integer]</p></dd>
+<dd><p>number of neighbours considered. [as integer]</p></dd>
 
 
-<dt>jaccard</dt>
-<dd><p>[as double]</p></dd>
+<dt>l</dt>
+<dd><p>minimum vote for definite decision, otherwise doubt. (More precisely, less than k-l dissenting votes are allowed, even if k is increased by ties.). [as double]</p></dd>
 
 
-<dt>env</dt>
-<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
+<dt>prob</dt>
+<dd><p>If this is true, the proportion of the votes for the winning class are returned as attribute prob. [as boolean]</p></dd>
+
+
+<dt>use.all</dt>
+<dd><p>controls handling of ties. If true, all distances equal to the kth largest are included. If false, a random selection of distances equal to the kth is chosen to use exactly k neighbours. [as boolean]</p></dd>
 
         </table>
 
 
-        <h3 style="display: block;">Details</h3>
+        <h3 style="display: none;">Details</h3>
 
-        <p>In the KNN algorithm, K specifies the number of neighbors and its 
- algorithm is as follows:</p>
-
-<p>+ Choose the number K Of neighbor.
- + Take the K Nearest Neighbor Of unknown data point according To distance.
- + Among the K-neighbors, Count the number Of data points In Each category.
- + Assign the New data point To a category, where you counted the most neighbors.
- 
- For the Nearest Neighbor classifier, the distance between two points 
- Is expressed in the form of Euclidean Distance.</p>
+        
 
         <h3 style="display: block">Authors</h3>
 
@@ -73,11 +78,22 @@
 
         <h3>Value</h3>
 
-        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+        <p>Factor of classifications of test set. doubt will be returned as NA.</p><h4>clr value class</h4><ul><li>string</li><li>double</li></ul>
 
-        <h3 style="display: none;">Examples</h3>
+        <h3 style="display: block;">Examples</h3>
 
-        
+        <pre><code id="example_r"> imports "dataset" from "MLkit";
+ 
+ data(bezdekIris);
+ print(bezdekIris);
+ 
+ # create training/test for demo
+ set.seed(123);
+ 
+ let [training, test] = split_training_test(iris, ratio = 0.7);
+ let predictions = knn(train = training[, -"class"], test = test[, -"class"], cl = training$class, k = 3); 
+ 
+ print(predictions);</code></pre>
 
         <hr />
         <div style="text-align: center;">[Package <em>clustering</em> version 1.0.0.0 <a

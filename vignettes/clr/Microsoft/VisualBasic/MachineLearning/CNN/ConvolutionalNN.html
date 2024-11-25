@@ -33,7 +33,7 @@
  
  @author Daniel Persson (mailto.woden@gmail.com) and s.chekanov</p>
 
-<p>+<a href='https://github.com/kalaspuffar/JavaCNN' title='https://github.com/kalaspuffar/JavaCNN'>https://github.com/kalaspuffar/JavaCNN</a> +<a href='https://github.com/karpathy/convnetjs' title='https://github.com/karpathy/convnetjs'>https://github.com/karpathy/convnetjs</a></p>
+<p>+;;;auto<em>url+1xxx;;; +;;;auto</em>url+2xxx;;;</p>
 
         <h3>Declare</h3>        
 
@@ -43,8 +43,11 @@
 export class ConvolutionalNN {
    # Accumulate parameters and gradients for the entire network
    BackPropagationResult: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/data/BackPropResult.html">BackPropResult[]</a>;
+   # get the input layer of the network
    input: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/layers/InputLayer.html">InputLayer</a>;
+   # get number of layers
    LayerNum: integer;
+   # get the output layer of the network
    output: <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/CNN/losslayers/LossLayer.html">LossLayer</a>;
    # This is a convenience function for returning the argmax
    #  prediction, assuming the last layer of the net is a softmax

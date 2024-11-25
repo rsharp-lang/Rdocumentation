@@ -22,7 +22,7 @@
 
         <h3>Description</h3>
 
-        
+        <p>A key-value pair of the html attribute, includes the attribute name and attribute value</p>
 
         <h3>Declare</h3>        
 
@@ -32,7 +32,9 @@
 export class ValueAttribute extends <a href="/vignettes/clr/System/ValueType.html">ValueType</a> {
    IsEmpty: boolean;
    Name: string;
+   # get the first attribute value string
    Value: string;
+   # A collection of the attribute values, apply for the multiple value attribute data, example as class attribute
    Values: <a href="/vignettes/clr/System/String.html">iterates(String)</a>;
 }
 </code>

@@ -27,13 +27,23 @@
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>detectCores</strong>();</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>detectCores</strong>(
+    <i>all.tests</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>logical</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
 
         <table>
             
+<dt>all.tests</dt>
+<dd><p>Logical: if true apply all known tests. [as boolean]</p></dd>
+
+
+<dt>logical</dt>
+<dd><p>Logical: if possible, use the number of physical CPUs/cores (if FALSE) or logical CPUs (if TRUE). 
+ Currently this is honoured only on macOS, Solaris and Windows. [as boolean]</p></dd>
+
         </table>
 
 

@@ -90,6 +90,12 @@ table caption {font-size:14px;font-weight:bolder;}
     <a href="/vignettes/clr/MLkit/UnionMatrix.html">data_matrix: UnionMatrix</a>
   </td>
   <td><p>A matrix for the sparse numeric (double) data.</p></td>
+</tr>
+<tr>
+  <td id="data_sample">
+    <a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/ComponentModel/StoreProcedure/SampleData.html">data_sample: SampleData</a>
+  </td>
+  <td><p>the in-memory sample data object</p></td>
 </tr></tbody>
       </table>
       <br />
@@ -97,6 +103,43 @@ table caption {font-size:14px;font-weight:bolder;}
       <table class="table-three-line">
         <caption>.NET clr function exports</caption>
         <tbody><tr>
+  <td id="as.data.frame.sampledata">
+    <a href="./dataset/as.data.frame.sampledata.html">as.data.frame.sampledata</a>
+  </td>
+  <td><a href="/vignettes/clr/Microsoft/VisualBasic/MachineLearning/ComponentModel/StoreProcedure/SampleData.html">SampleData</a>: <p>the in-memory sample data object</p></td>
+</tr>
+<tr>
+  <td id="as.data.frame.unionmatrix">
+    <a href="./dataset/as.data.frame.unionmatrix.html">as.data.frame.unionmatrix</a>
+  </td>
+  <td><a href="/vignettes/clr/MLkit/UnionMatrix.html">UnionMatrix</a>: <p>A matrix for the sparse numeric (double) data.</p></td>
+</tr>
+<tr>
+  <td id="as.data.frame.sequencegraphtransform">
+    <a href="./dataset/as.data.frame.sequencegraphtransform.html">as.data.frame.sequencegraphtransform</a>
+  </td>
+  <td><a href="/vignettes/clr/Microsoft/VisualBasic/Data/GraphTheory/SequenceGraphTransform.html">SequenceGraphTransform</a>: <p>Sequence Graph Transform (SGT) — Sequence Embedding for Clustering, Classification, and Search
+ 
+ Sequence Graph Transform (SGT) is a sequence embedding function. SGT extracts 
+ the short- and long-term sequence features and embeds them in a finite-dimensional 
+ feature space. The long and short term patterns embedded in SGT can be tuned 
+ without any increase in the computation.
+ 
+ > <a href='https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py' title='https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py'>https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py</a></p></td>
+</tr>
+<tr>
+  <td id="as.data.frame.dataframe">
+    <a href="./dataset/as.data.frame.dataframe.html">as.data.frame.dataframe</a>
+  </td>
+  <td><a href="/vignettes/clr/Microsoft/VisualBasic/Math/DataFrame/DataFrame.html">DataFrame</a>: <p>R language liked dataframe object</p></td>
+</tr>
+<tr>
+  <td id="plot.idataembedding">
+    <a href="./dataset/plot.idataembedding.html">plot.idataembedding</a>
+  </td>
+  <td><a href="/vignettes/clr/Microsoft/VisualBasic/DataMining/ComponentModel/IDataEmbedding.html">IDataEmbedding</a>: </td>
+</tr>
+<tr>
   <td id="SGT">
     <a href="./dataset/SGT.html">SGT</a>
   </td>
@@ -107,7 +150,13 @@ table caption {font-size:14px;font-weight:bolder;}
  feature space. The long and short term patterns embedded in SGT can be tuned 
  without any increase in the computation.
  
- ><a href='https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py' title='https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py'>https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py</a></p></td>
+ > <a href='https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py' title='https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py'>https://github.com/cran2367/sgt/blob/25bf28097788fbbf9727abad91ec6e59873947cc/python/sgt-package/sgt/sgt.py</a></p></td>
+</tr>
+<tr>
+  <td id="fit_embedding">
+    <a href="./dataset/fit_embedding.html">fit_embedding</a>
+  </td>
+  <td><p>Make sequence graph embedding as a vector</p></td>
 </tr>
 <tr>
   <td id="split_training_test">
@@ -119,7 +168,7 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="estimate_alphabets">
     <a href="./dataset/estimate_alphabets.html">estimate_alphabets</a>
   </td>
-  <td></td>
+  <td><p>A helper function for estimates the char set for SGT algorithm features input</p></td>
 </tr>
 <tr>
   <td id="sample_id">
@@ -185,7 +234,7 @@ table caption {font-size:14px;font-weight:bolder;}
   <td id="as.sampleSet">
     <a href="./dataset/as.sampleSet.html">as.sampleSet</a>
   </td>
-  <td></td>
+  <td><p>make data set convert</p></td>
 </tr>
 <tr>
   <td id="read.ML_model">
@@ -198,6 +247,12 @@ table caption {font-size:14px;font-weight:bolder;}
     <a href="./dataset/write.ML_model.html">write.ML_model</a>
   </td>
   <td><p>write the data model to file</p></td>
+</tr>
+<tr>
+  <td id="create_single_sampledata">
+    <a href="./dataset/create_single_sampledata.html">create_single_sampledata</a>
+  </td>
+  <td></td>
 </tr>
 <tr>
   <td id="write.sample_set">

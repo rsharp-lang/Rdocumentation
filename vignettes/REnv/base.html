@@ -94,32 +94,6 @@ table caption {font-size:14px;font-weight:bolder;}
       <table class="table-three-line">
         <caption>.NET clr function exports</caption>
         <tbody><tr>
-  <td id="saveRDS">
-    <a href="./base/saveRDS.html">saveRDS</a>
-  </td>
-  <td><p>Serialization Interface for Single Objects
- 
- Functions to write a single R object to a file, and to restore it.</p></td>
-</tr>
-<tr>
-  <td id="readRDS">
-    <a href="./base/readRDS.html">readRDS</a>
-  </td>
-  <td><p>Serialization Interface for Single Objects
- 
- Functions to write a single R object to a file, and to restore it.</p></td>
-</tr>
-<tr>
-  <td id="save.image">
-    <a href="./base/save.image.html">save.image</a>
-  </td>
-  <td><h3>Save R Objects</h3>
-
-<p><code>save.image()</code> is just a short-cut for ‘save my current workspace’, 
- i.e., save(list = ls(all.names = TRUE), file = ".RData", envir = .GlobalEnv). 
- It is also what happens with q("yes").</p></td>
-</tr>
-<tr>
   <td id="isTRUE">
     <a href="./base/isTRUE.html">isTRUE</a>
   </td>
@@ -309,6 +283,12 @@ table caption {font-size:14px;font-weight:bolder;}
  generic functions with methods for other R classes.</p></td>
 </tr>
 <tr>
+  <td id="rowwise">
+    <a href="./base/rowwise.html">rowwise</a>
+  </td>
+  <td><p>dataframe to rows</p></td>
+</tr>
+<tr>
   <td id="t">
     <a href="./base/t.html">t</a>
   </td>
@@ -463,6 +443,18 @@ table caption {font-size:14px;font-weight:bolder;}
   <td><p>‘is.vector’ returns ‘TRUE’ if ‘x’ is a vector of the specified
  mode having no attributes <em>other than names</em>.  It returns 'FALSE’
  otherwise.</p></td>
+</tr>
+<tr>
+  <td id="is.array">
+    <a href="./base/is.array.html">is.array</a>
+  </td>
+  <td><p>Check of the given object is clr array or not</p></td>
+</tr>
+<tr>
+  <td id="as.array">
+    <a href="./base/as.array.html">as.array</a>
+  </td>
+  <td><p>cast any R object collection as a generic type clr array</p></td>
 </tr>
 <tr>
   <td id="is.na">
@@ -698,6 +690,32 @@ table caption {font-size:14px;font-weight:bolder;}
 <p>writes an external representation of R objects to the specified file. 
  The objects can be read back from the file at a later date by using 
  the function load or attach (or data in some cases).</p></td>
+</tr>
+<tr>
+  <td id="saveRDS">
+    <a href="./base/saveRDS.html">saveRDS</a>
+  </td>
+  <td><p>Serialization Interface for Single Objects
+ 
+ Functions to write a single R object to a file, and to restore it.</p></td>
+</tr>
+<tr>
+  <td id="readRDS">
+    <a href="./base/readRDS.html">readRDS</a>
+  </td>
+  <td><p>Serialization Interface for Single Objects
+ 
+ Functions to write a single R object to a file, and to restore it.</p></td>
+</tr>
+<tr>
+  <td id="save.image">
+    <a href="./base/save.image.html">save.image</a>
+  </td>
+  <td><h3>Save R Objects</h3>
+
+<p><code>save.image()</code> is just a short-cut for ‘save my current workspace’, 
+ i.e., save(list = ls(all.names = TRUE), file = ".RData", envir = .GlobalEnv). 
+ It is also what happens with q("yes").</p></td>
 </tr></tbody>
       </table>
     </div>

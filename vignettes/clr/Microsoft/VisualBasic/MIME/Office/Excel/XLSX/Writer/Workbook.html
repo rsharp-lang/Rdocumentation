@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer.Workbook</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Workbook {Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Workbook</h2>
+
+        <h3>Description</h3>
+
+        <p>Class representing a workbook</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer
+export class Workbook {
+   # Gets the current worksheet
+   CurrentWorksheet: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Worksheet.html">Worksheet</a>;
+   # Gets or sets the filename of the workbook
+   Filename: string;
+   # Gets or sets a value indicating whether Hidden
+   #  Gets or sets whether the whole workbook is hidden
+   Hidden: boolean;
+   # Gets a value indicating whether LockStructureIfProtected
+   #  Gets whether the structure are locked if workbook is protected. See also @<code>M:Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer.Workbook.SetWorkbookProtection(System.Boolean,System.Boolean,System.Boolean,System.String)</code>
+   LockStructureIfProtected: boolean;
+   # Gets a value indicating whether LockWindowsIfProtected
+   #  Gets whether the windows are locked if workbook is protected. See also @<code>M:Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer.Workbook.SetWorkbookProtection(System.Boolean,System.Boolean,System.Boolean,System.String)</code>
+   LockWindowsIfProtected: boolean;
+   # Gets the selected worksheet. The selected worksheet is not the current worksheet while design time but the selected sheet in the output file
+   SelectedWorksheet: integer;
+   # Gets or sets a value indicating whether UseWorkbookProtection
+   #  Gets or sets whether the workbook is protected
+   UseWorkbookProtection: boolean;
+   # Gets or sets the WorkbookMetadata
+   #  Meta data object of the workbook
+   WorkbookMetadata: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Metadata.html">Metadata</a>;
+   # Gets the password used for workbook protection. See also @<code>M:Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer.Workbook.SetWorkbookProtection(System.Boolean,System.Boolean,System.Boolean,System.String)</code>
+   WorkbookProtectionPassword: string;
+   WorkbookProtectionPasswordHash: string;
+   # Gets the list of worksheets in the workbook
+   Worksheets: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Worksheet.html">iterates(Worksheet)</a>;
+   # Gets the shortener object for the current worksheet
+   WS: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Shortener.html">Shortener</a>;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>CurrentWorksheet</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Worksheet.html">Worksheet</a></li>
+<li>use by <i>property</i> member <code>WorkbookMetadata</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Metadata.html">Metadata</a></li>
+<li>use by <i>property</i> member <code>Worksheets</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Worksheet.html">iterates(Worksheet)</a></li>
+<li>use by <i>property</i> member <code>WS</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Shortener.html">Shortener</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

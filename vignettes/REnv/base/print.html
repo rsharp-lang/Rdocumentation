@@ -46,7 +46,21 @@
  
  #### max.print
  integer, the max number of elements to print. this parameter value
- will overrides the max.print options from the options function. [as list]</p></dd>
+ will overrides the max.print options from the options function.
+ 
+ #### syntax.highlight
+ logical, indicates that show the R# runtime expression object code
+ with syntax highlights? default is TRUE.
+ 
+ #### max.width
+ integer, the max character number for display in a cell when apply for 
+ print of the dataframe contents. default config is max 200 character
+ in a cell. if the cell string char length is greater then this threshold
+ then the display string will be truncated.
+ 
+ #### select
+ character, a character vector for select the columns for display when 
+ do print of a dataframe object. [as list]</p></dd>
 
 
 <dt>env</dt>

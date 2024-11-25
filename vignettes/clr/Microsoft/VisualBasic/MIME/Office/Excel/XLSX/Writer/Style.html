@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer.Style</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>Style {Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>Style</h2>
+
+        <h3>Description</h3>
+
+        <p>Class representing a Style with sub classes within a style sheet. An instance of this class
+ is only a container for the different sub-classes. These sub-classes contain the actual
+ styling information</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.MIME.Office.Excel.XLSX.Writer
+export class Style extends <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/AbstractStyle.html">AbstractStyle</a> {
+   # Gets or sets the current Border object of the style
+   CurrentBorder: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Border.html">Border</a>;
+   # Gets or sets the current CellXf object of the style
+   CurrentCellXf: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/CellXf.html">CellXf</a>;
+   # Gets or sets the current Fill object of the style
+   CurrentFill: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Fill.html">Fill</a>;
+   # Gets or sets the current Font object of the style
+   CurrentFont: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Font.html">Font</a>;
+   # Gets or sets the current NumberFormat object of the style
+   CurrentNumberFormat: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/NumberFormat.html">NumberFormat</a>;
+   InternalID: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a>;
+   # Gets a value indicating whether IsInternalStyle
+   #  Gets whether the style is system internal. Such styles are not meant to be altered
+   IsInternalStyle: boolean;
+   # Gets or sets the name of the informal style. If not defined, the automatically calculated hash will be used as name
+   Name: string;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>this class extends from <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/AbstractStyle.html">AbstractStyle</a> class: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/AbstractStyle.html">AbstractStyle</a></li>
+<li>use by <i>property</i> member <code>CurrentBorder</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Border.html">Border</a></li>
+<li>use by <i>property</i> member <code>CurrentCellXf</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/CellXf.html">CellXf</a></li>
+<li>use by <i>property</i> member <code>CurrentFill</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Fill.html">Fill</a></li>
+<li>use by <i>property</i> member <code>CurrentFont</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/Font.html">Font</a></li>
+<li>use by <i>property</i> member <code>CurrentNumberFormat</code>: <a href="/vignettes/clr/Microsoft/VisualBasic/MIME/Office/Excel/XLSX/Writer/NumberFormat.html">NumberFormat</a></li>
+<li>use by <i>property</i> member <code>InternalID</code>: <a href="/vignettes/clr/System/Nullable`1.html">Nullable`1</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>
