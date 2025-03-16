@@ -22,7 +22,9 @@
 
         <h3>Description</h3>
 
-        <p>矢量图形</p>
+        <p>An abstract shape element with layout information data.</p>
+
+<p>(矢量图形)</p>
 
         <h3>Declare</h3>        
 
@@ -30,11 +32,14 @@
             <code id="clr_ts">
 # namespace Microsoft.VisualBasic.Imaging.Drawing2D.Shapes
 export class Shape {
-   DrawingRegion: <a href="/vignettes/clr/System/Drawing/Rectangle.html">Rectangle</a>;
+   # create the layout rectangle value based on the shape <a href="/vignettes/clr/Microsoft/VisualBasic/Imaging/Drawing2D/Shapes/Shape.html">Shape</a>.<a href="/vignettes/clr/System/Drawing/PointF.html">Location</a> and its shape <a href="/vignettes/clr/Microsoft/VisualBasic/Imaging/Drawing2D/Shapes/Shape.html">Shape</a>.<a href="/vignettes/clr/System/Drawing/SizeF.html">Size</a>.
+   DrawingRegion: <a href="/vignettes/clr/System/Drawing/RectangleF.html">RectangleF</a>;
    # 默认是允许自动组织布局的
    EnableAutoLayout: boolean;
-   Location: <a href="/vignettes/clr/System/Drawing/Point.html">Point</a>;
-   Size: <a href="/vignettes/clr/System/Drawing/Size.html">Size</a>;
+   # the location of the current shape element
+   Location: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a>;
+   Size: <a href="/vignettes/clr/System/Drawing/SizeF.html">SizeF</a>;
+   # the metadata string of current shape element
    TooltipTag: string;
 }
 </code>
@@ -43,9 +48,9 @@ export class Shape {
         <h3>.NET clr type reference tree</h3>
 
         <ol>
-<li>use by <i>property</i> member <code>DrawingRegion</code>: <a href="/vignettes/clr/System/Drawing/Rectangle.html">Rectangle</a></li>
-<li>use by <i>property</i> member <code>Location</code>: <a href="/vignettes/clr/System/Drawing/Point.html">Point</a></li>
-<li>use by <i>property</i> member <code>Size</code>: <a href="/vignettes/clr/System/Drawing/Size.html">Size</a></li>
+<li>use by <i>property</i> member <code>DrawingRegion</code>: <a href="/vignettes/clr/System/Drawing/RectangleF.html">RectangleF</a></li>
+<li>use by <i>property</i> member <code>Location</code>: <a href="/vignettes/clr/System/Drawing/PointF.html">PointF</a></li>
+<li>use by <i>property</i> member <code>Size</code>: <a href="/vignettes/clr/System/Drawing/SizeF.html">SizeF</a></li>
 </ol>
 
 

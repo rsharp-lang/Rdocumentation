@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.Math.Statistics.MomentFunctions.ProductMoments</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>ProductMoments {Microsoft.VisualBasic.Math.Statistics.MomentFunctions}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>ProductMoments</h2>
+
+        <h3>Description</h3>
+
+        <p>In statistics, moments are a set of numerical characteristics that describe the shape and features of a probability distribution. 
+ Sample moments are the same concept applied to a sample of data, rather than an entire population. They are used to estimate 
+ the corresponding population moments and to understand the properties of the data distribution.
+ 
+ Here's a basic introduction to the concept of sample moments:
+ 
+ ### Definition:
+ 
+ 1. <strong>Sample Mean (First Moment):</strong>
+    The sample mean is the average of the data points in a sample. It is a measure of the central tendency of the data.
+      \[
+      \bar{x} = \frac{1}{n} \sum<em>{i=1}^{n} x</em>i
+      \]
+    where \( x_i \) are the data points and \( n \) is the number of data points in the sample.
+ 2. <strong>Sample Variance (Second Central Moment):</strong>
+    The sample variance measures the spread or dispersion of the data points around the sample mean.
+      \[
+      s^2 = \frac{1}{n-1} \sum<em>{i=1}^{n} (x</em>i - \bar{x})^2
+      \]
+    The denominator \( n-1 \) is used instead of \( n \) to provide an unbiased estimate of the population variance.
+ 3. <strong>Sample Standard Deviation:</strong>
+    The sample standard deviation is the square root of the sample variance and is also a measure of dispersion.
+      \[
+      s = \sqrt{s^2}
+      \]
+ 4. <strong>Higher-Order Sample Moments:</strong>
+    Higher-order moments describe the shape of the distribution. For example:
+    - <strong>Third Moment:</strong> Measures skewness, which indicates the asymmetry of the data distribution.
+    - <strong>Fourth Moment:</strong> Measures kurtosis, which indicates the "tailedness" of the data distribution.
+    
+ ### Calculation:
+ 
+ To calculate sample moments, you simply apply the formulas to your data set. For instance, to find the sample mean,
+ you add up all the data points and divide by the number of points.
+ 
+ ### Use:
+ 
+ Sample moments are used to:
+ - Estimate population parameters.
+ - Assess the shape of the data distribution (e.g., normality, skewness, kurtosis).
+ - Form the basis for many statistical tests and procedures.
+ 
+ ### Properties:
+ - <strong>Unbiasedness:</strong> Some sample moments are designed to be unbiased estimators, meaning that the expected value of the sample moment equals the population moment.
+ - <strong>Efficiency:</strong> Different sample moments may have different levels of variability; some are more efficient than others.
+ - <strong>Robustness:</strong> Certain moments are more robust to outliers than others.
+ 
+ ### Example:
+ If you have a sample of data: \( \{2, 4, 4, 4, 5, 5, 7, 9\} \), you can calculate the sample mean, variance, 
+ and other moments to understand the central tendency, dispersion, and shape of the data distribution.
+ 
+ sample moments are fundamental tools in statistics for summarizing and understanding the characteristics of
+ a data set. They provide a way to quantify features such as location, spread, and shape, which are essential 
+ for further statistical analysis.
+ 
+ @author Will<em>and</em>Sara</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.Math.Statistics.MomentFunctions
+export class ProductMoments {
+   # the input raw data vector
+   data: <a href="/vignettes/clr/System/Collections/Generic/IReadOnlyCollection`1.html">IReadOnlyCollection`1</a>;
+   kurtosis: double;
+   max: double;
+   mean: double;
+   median: double;
+   min: double;
+   sampleSize: integer;
+   skewness: double;
+   standardDeviation: double;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>data</code>: <a href="/vignettes/clr/System/Collections/Generic/IReadOnlyCollection`1.html">IReadOnlyCollection`1</a></li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

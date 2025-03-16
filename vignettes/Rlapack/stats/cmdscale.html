@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Classical (Metric) Multidimensional Scaling</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>cmdscale {stats}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Classical (Metric) Multidimensional Scaling</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Classical multidimensional scaling (MDS) of a data matrix. Also known as principal coordinates analysis (Gower, 1966).</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>cmdscale</strong>(<i>d</i>,
+    <i>k</i> = <span style='color: green;'>2</span>,
+    <i>.list</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>d</dt>
+<dd><p>a distance structure such as that returned by dist or a full symmetric matrix containing the dissimilarities.</p></dd>
+
+
+<dt>k</dt>
+<dd><p>the maximum dimension of the space which the data are to be represented in; must be in {1,2,…,n−1}. [as integer]</p></dd>
+
+
+<dt>.list</dt>
+<dd><p>logical indicating If a list should be returned Or just the n×k matrix, see 'Value:’. [as boolean]</p></dd>
+
+
+<dt>env</dt>
+<dd><p>[as <a href="/vignettes/clr/SMRUCC/Rsharp/Runtime/Environment.html">Environment</a>]</p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>Multidimensional scaling takes a set of dissimilarities and returns a set of points such that the distances 
+ between the points are approximately equal to the dissimilarities. (It is a major part of what ecologists 
+ call ‘ordination’.)
+ A set of Euclidean distances on n points can be represented exactly in at most 
+ n−1 dimensions. cmdscale follows the analysis of Mardia (1978), and returns the best-fitting 
+ k-dimensional representation, where k may be less than the argument k.
+ The representation is only determined up to location (cmdscale takes the column means of the configuration 
+ to be at the origin), rotations and reflections. The configuration returned is given in principal-component 
+ axes, so the reflection chosen may differ between R platforms (see prcomp).
+ When add = TRUE, a minimal additive constant c∗ is computed such that the dissimilarities 
+ dij +c∗ are Euclidean and hence can be represented in n - 1 dimensions. Whereas S (Becker et al, 1988) 
+ computes this constant using an approximation suggested by Torgerson, R uses the analytical solution of 
+ Cailliez (1983), see also Cox and Cox (2001). Note that because of numerical errors the computed eigenvalues 
+ need not all be non-negative, and even theoretically the representation could be in fewer than n - 1 
+ dimensions.</p>
+
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
+
+        <h3>Value</h3>
+
+        <p>If <code>.list</code> is false (as per default), a matrix with k columns whose rows give the coordinates of the points chosen to represent the dissimilarities.
+ Otherwise, a list containing the following components.
+ 
+ + points: a matrix with up to k columns whose rows give the coordinates of the points chosen to represent the dissimilarities.
+ + eig: the n eigenvalues computed during the scaling process if eig is true. NB: versions of R before 2.12.1 returned only k but were documented to return n−1.
+ + x: the doubly centered distance matrix if x.ret is true.
+ + ac: the additive constant c∗, 0 if add = FALSE.
+ + GOF: a numeric vector of length 2, equal to say (g1 ,g2), where gi =(∑j=1,k λj )/(∑j=1,n Ti (λj )), where 
+        λj are the eigenvalues (sorted in decreasing order), T1 (v)=∣v∣, and T2 (v)=max(v,0).</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stats</em> version 5.0.1.2389 <a
+                href="../stats.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

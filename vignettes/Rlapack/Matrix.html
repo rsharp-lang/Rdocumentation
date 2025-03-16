@@ -125,10 +125,84 @@ table caption {font-size:14px;font-weight:bolder;}
       <table class="table-three-line">
         <caption>.NET clr function exports</caption>
         <tbody><tr>
+  <td id="readBin.stream">
+    <a href="./Matrix/readBin.stream.html">readBin.stream</a>
+  </td>
+  <td><a href="/vignettes/clr/System/IO/Stream.html">Stream</a>: </td>
+</tr>
+<tr>
+  <td id="writeBin.numericmatrix">
+    <a href="./Matrix/writeBin.numericmatrix.html">writeBin.numericmatrix</a>
+  </td>
+  <td><a href="/vignettes/clr/Microsoft/VisualBasic/Math/LinearAlgebra/Matrix/NumericMatrix.html">NumericMatrix</a>: <h3>.NET GeneralMatrix class.</h3>
+
+<p>The .NET <a href="/vignettes/clr/Microsoft/VisualBasic/Math/LinearAlgebra/Matrix/GeneralMatrix.html">GeneralMatrix</a> Class provides the fundamental operations of numerical
+ linear algebra.  Various constructors create Matrices from two dimensional
+ arrays of double precision floating point numbers.  Various "gets" and
+ "sets" provide access to submatrices and matrix elements.  Several methods 
+ implement basic matrix arithmetic, including matrix addition and
+ multiplication, matrix norms, and element-by-element array operations.
+ Methods for reading and printing matrices are also included.  All the
+ operations in this version of the <a href="/vignettes/clr/Microsoft/VisualBasic/Math/LinearAlgebra/Matrix/GeneralMatrix.html">GeneralMatrix</a> Class involve real matrices.
+ Complex matrices may be handled in a future version.
+ 
+ Five fundamental matrix decompositions, which consist of pairs or triples
+ of matrices, permutation vectors, and the like, produce results in five
+ decomposition classes.  These decompositions are accessed by the <a href="/vignettes/clr/Microsoft/VisualBasic/Math/LinearAlgebra/Matrix/GeneralMatrix.html">GeneralMatrix</a>
+ class to compute solutions of simultaneous linear equations, determinants,
+ inverses and other matrix functions.  
+ 
+ The five decompositions are:
+ 
+ + <a href="/vignettes/clr/Microsoft/VisualBasic/Math/LinearAlgebra/Matrix/CholeskyDecomposition.html">CholeskyDecomposition</a> of symmetric, positive definite matrices.
+ + <a href="/vignettes/clr/Microsoft/VisualBasic/Math/LinearAlgebra/Matrix/LUDecomposition.html">LUDecomposition</a> of rectangular matrices.
+ + <a href="/vignettes/clr/Microsoft/VisualBasic/Math/LinearAlgebra/Matrix/QRDecomposition.html">QRDecomposition</a> of rectangular matrices.
+ + <a href="/vignettes/clr/Microsoft/VisualBasic/Math/LinearAlgebra/Matrix/SingularValueDecomposition.html">SingularValueDecomposition</a> of rectangular matrices.
+ + <a href="/vignettes/clr/Microsoft/VisualBasic/Math/LinearAlgebra/Matrix/EigenvalueDecomposition.html">EigenvalueDecomposition</a> of both symmetric and nonsymmetric square matrices.
+ 
+ Example of use:
+ 
+ Solve a linear system A x = b and compute the residual norm, <code>||b - A x||</code>.
+
+<pre><code class="csharp"> double[][] vals;
+ GeneralMatrix A = New NumericMatrix(vals);
+ GeneralMatrix b = GeneralMatrix.Random(3,1);
+ GeneralMatrix x = A.Solve(b);
+ GeneralMatrix r = A.Multiply(x).Subtract(b);
+ double rnorm = r.NormInf();
+</code></pre>
+
+</p></td>
+</tr>
+<tr>
+  <td id="one">
+    <a href="./Matrix/one.html">one</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="zero">
+    <a href="./Matrix/zero.html">zero</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="gauss">
+    <a href="./Matrix/gauss.html">gauss</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
   <td id="fromGraph">
     <a href="./Matrix/fromGraph.html">fromGraph</a>
   </td>
   <td><p>create matrix from a graph</p></td>
+</tr>
+<tr>
+  <td id="parse">
+    <a href="./Matrix/parse.html">parse</a>
+  </td>
+  <td><p>Parse the given base64 string as matrix</p></td>
 </tr>
 <tr>
   <td id="matrix">
@@ -139,6 +213,12 @@ table caption {font-size:14px;font-weight:bolder;}
 <p>matrix creates a matrix from the given set of values.</p></td>
 </tr>
 <tr>
+  <td id="as.integer">
+    <a href="./Matrix/as.integer.html">as.integer</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
   <td id="nmf">
     <a href="./Matrix/nmf.html">nmf</a>
   </td>
@@ -147,6 +227,12 @@ table caption {font-size:14px;font-weight:bolder;}
 <p>Fit a non-negative matrix factorization model to a given target matrix. 
  The function allows for different update rules and initialization 
  methods, and can fit different NMF variants.</p></td>
+</tr>
+<tr>
+  <td id="nmf_decompose">
+    <a href="./Matrix/nmf_decompose.html">nmf_decompose</a>
+  </td>
+  <td></td>
 </tr>
 <tr>
   <td id="as.matrix">

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scaling and Centering of Matrix-like Objects</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>scale {math}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>Scaling and Centering of Matrix-like Objects</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> <code>scale</code> is generic function whose default method centers and/or scales the columns of a numeric matrix.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>scale</strong>(<i>x</i>,
+    <i>center</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>scale</i> = <span style='color: blue !important;'>TRUE</span>,
+    <i>strict</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p>a numeric matrix(like object).</p></dd>
+
+
+<dt>center</dt>
+<dd><p>either a logical value or numeric-alike vector of length equal to the number of columns of x, 
+ where ‘numeric-alike’ means that as.numeric(.) will be applied successfully if is.numeric(.) 
+ is not true. [as boolean]</p></dd>
+
+
+<dt>strict</dt>
+<dd><p>throw error when set strict to TRUE and if non-numeric column occurs. [as boolean]</p></dd>
+
+
+<dt>scale</dt>
+<dd><p>either a logical value or a numeric-alike vector of length equal to the number of columns of x. [as boolean]</p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>The value of center determines how column centering is performed. If center is a numeric-alike vector with 
+ length equal to the number of columns of x, then each column of x has the corresponding value from center 
+ subtracted from it. If center is TRUE then centering is done by subtracting the column means (omitting NAs)
+ of x from their corresponding columns, and if center is FALSE, no centering is done.
+ 
+ The value of scale determines how column scaling is performed (after centering). If scale is a numeric-alike 
+ vector with length equal to the number of columns of x, then each column of x is divided by the corresponding 
+ value from scale. If scale is TRUE then scaling is done by dividing the (centered) columns of x by their
+ standard deviations if center is TRUE, and the root mean square otherwise. If scale is FALSE, no scaling
+ is done.
+ 
+ The root-mean-square for a (possibly centered) column is defined as 
+ 
+ sqrt(∑((x2)/(n−1)))
+ 
+ , where</p>
+
+<p>x is a vector of the non-missing values and 
+ n is the number of non-missing values. 
+ 
+ In the case center = TRUE, this is the same as the standard deviation, but in general it is not. (To scale 
+ by the standard deviations without centering, use scale(x, center = FALSE, scale = apply(x, 2, sd, na.rm = TRUE)).)</p>
+
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
+
+        <h3>Value</h3>
+
+        <p>For scale.default, the centered, scaled matrix. The numeric centering and scalings used (if any) 
+ are returned as attributes "scaled:center" and "scaled:scale"</p><h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: none;">Examples</h3>
+
+        
+
+        <hr />
+        <div style="text-align: center;">[Package <em>math</em> version 5.0.1.2389 <a
+                href="../math.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

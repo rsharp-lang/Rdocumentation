@@ -29,7 +29,8 @@
         <div style="width: 100%; padding-left: 3%; color: black;">
             <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>readLines</strong>(<i>con</i>,
     <i>encoding</i> = UTF8,
-    <i>stream</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
+    <i>stream</i> = <span style='color: blue !important;'>FALSE</span>,
+    <i>strict</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -45,6 +46,10 @@
  a lazy load data pipeline. default value of this option is FALSE, which
  means this function will returns a character vector which contains all 
  data content lines directly. [as boolean]</p></dd>
+
+
+<dt>strict</dt>
+<dd><p>this function will returns an empty string vector if not in strict mode. [as boolean]</p></dd>
 
         </table>
 

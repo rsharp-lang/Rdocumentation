@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microsoft.VisualBasic.Data.Framework.DataFrame</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>DataFrame {Microsoft.VisualBasic.Data.Framework}</td>
+                <td style="text-align: right;">.NET clr documentation</td>
+            </tr>
+        </table>
+
+        <h2>DataFrame</h2>
+
+        <h3>Description</h3>
+
+        <p>R language liked dataframe object</p>
+
+        <h3>Declare</h3>        
+
+        <pre>
+            <code id="clr_ts">
+# namespace Microsoft.VisualBasic.Data.Framework
+export class DataFrame {
+   # the dimension size of current dataframe object, with data axis dimension 
+   #  mapping of:
+   #  
+   #  1. width: feature size, column size
+   #  2. height: sample size, row size
+   dims: <a href="/vignettes/clr/System/Drawing/Size.html">Size</a>;
+   # the column field names
+   featureNames: string;
+   # the dataframe columns
+   features: list;
+   # get the number of the feature columns inside current dataframe object
+   nfeatures: integer;
+   # the n rows of the matrix
+   nsamples: integer;
+   # get the row names labels in current dataframe object, the size of 
+   #  this row names vector should be equals to the number of rows in 
+   #  current dataframe object.
+   rownames: string;
+}
+</code>
+        </pre>
+
+        <h3>.NET clr type reference tree</h3>
+
+        <ol>
+<li>use by <i>property</i> member <code>dims</code>: <a href="/vignettes/clr/System/Drawing/Size.html">Size</a></li>
+<li>use by <i>property</i> member <code>features</code>: list</li>
+</ol>
+
+
+        <hr />
+        <div style="text-align: center;">[Package <em>{$package}</em> version {$version} <a
+                href="../{$package}.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("clr_ts");</script>
+
+</html>

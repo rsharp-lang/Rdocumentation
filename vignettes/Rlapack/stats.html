@@ -244,6 +244,14 @@ table caption {font-size:14px;font-weight:bolder;}
  of a data matrix.</p></td>
 </tr>
 <tr>
+  <td id="pt">
+    <a href="./stats/pt.html">pt</a>
+  </td>
+  <td><h2>The Student t Distribution</h2>
+
+<p>Density, distribution function, quantile function and random generation for the t distribution with df degrees of freedom (and optional non-centrality parameter ncp).</p></td>
+</tr>
+<tr>
   <td id="t.test">
     <a href="./stats/t.test.html">t.test</a>
   </td>
@@ -324,6 +332,14 @@ table caption {font-size:14px;font-weight:bolder;}
   <td></td>
 </tr>
 <tr>
+  <td id="cmdscale">
+    <a href="./stats/cmdscale.html">cmdscale</a>
+  </td>
+  <td><h3>Classical (Metric) Multidimensional Scaling</h3>
+
+<p>Classical multidimensional scaling (MDS) of a data matrix. Also known as principal coordinates analysis (Gower, 1966).</p></td>
+</tr>
+<tr>
   <td id="plsda">
     <a href="./stats/plsda.html">plsda</a>
   </td>
@@ -352,6 +368,30 @@ table caption {font-size:14px;font-weight:bolder;}
   <td></td>
 </tr>
 <tr>
+  <td id="gamma">
+    <a href="./stats/gamma.html">gamma</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="lgamma">
+    <a href="./stats/lgamma.html">lgamma</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="beta">
+    <a href="./stats/beta.html">beta</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td id="lbeta">
+    <a href="./stats/lbeta.html">lbeta</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
   <td id="iqr_outliers">
     <a href="./stats/iqr_outliers.html">iqr_outliers</a>
   </td>
@@ -362,6 +402,176 @@ table caption {font-size:14px;font-weight:bolder;}
     <a href="./stats/poisson_disk.html">poisson_disk</a>
   </td>
   <td><p>Fast Poisson Disk Sampling in Arbitrary Dimensions. Robert Bridson. ACM SIGGRAPH 2007</p></td>
+</tr>
+<tr>
+  <td id="kurtosis">
+    <a href="./stats/kurtosis.html">kurtosis</a>
+  </td>
+  <td><p><strong>Kurtosis</strong> is a statistical measure that describes the "tailedness" of the probability distribution of a
+ real-valued random variable. In simpler terms, it indicates the extent to which the tails of the distribution 
+ differ from those of a normal distribution.
+ 
+ ### Key Points about Kurtosis:
+ 
+ 1. <strong>Definition</strong>:
+ 
+    - Kurtosis is the fourth standardized moment of a distribution.
+    - It is calculated as the average of the squared deviations of the data from its mean, raised to the fourth power, standardized by the standard deviation raised to the fourth power.
+    
+ 2. <strong>Types of Kurtosis</strong>:
+ 
+    - <strong>Mesokurtic</strong>: Distributions with kurtosis similar to that of the normal distribution (kurtosis value of 3). The tails of a mesokurtic distribution are neither particularly fat nor particularly thin.
+    - <strong>Leptokurtic</strong>: Distributions with positive kurtosis greater than 3. These distributions have "fat tails" and a sharp peak, indicating more frequent large deviations from the mean than a normal distribution.
+    - <strong>Platykurtic</strong>: Distributions with kurtosis less than 3. These distributions have "thin tails" and a flatter peak, indicating fewer large deviations from the mean than a normal distribution.
+    
+ 3. <strong>Excess Kurtosis</strong>:
+ 
+    - Often, kurtosis is reported as "excess kurtosis," which is the kurtosis value minus 3. This adjustment makes the kurtosis of a normal distribution equal to 0.
+    - Positive excess kurtosis indicates a leptokurtic distribution, while negative excess kurtosis indicates a platykurtic distribution.
+    
+ 4. <strong>Interpretation</strong>:
+ 
+    - High kurtosis in a data set is an indicator that data has heavy tails or outliers. This can affect the performance of statistical models and methods that assume normality.
+    - Low kurtosis indicates that the data has light tails and lacks outliers.
+    
+ 5. <strong>Applications</strong>:
+ 
+    - In finance, kurtosis is used to describe the distribution of returns of an investment. A high kurtosis indicates a higher risk of extreme returns.
+    - In data analysis, kurtosis helps in understanding the shape of the data distribution and identifying potential outliers.
+    
+ 6. <strong>Calculation in R</strong>:
+ 
+    - The `kurtosis()` function in the `e1071` package can be used to calculate kurtosis in R.
+    - Alternatively, kurtosis can be calculated manually using the formula:
+
+<pre><code class="R"> kurtosis &lt;- sum((data - mean(data))^4) / ((length(data) - 1) * sd(data)^4) - 3
+</code></pre>
+
+
+ 
+ kurtosis is a statistical measure for understanding the shape of a data distribution, particularly the behavior 
+ of its tails. It is widely used in various fields, including finance, data analysis, and statistics.</p></td>
+</tr>
+<tr>
+  <td id="skewness">
+    <a href="./stats/skewness.html">skewness</a>
+  </td>
+  <td><p><strong>Skewness</strong>
+ 
+ Skewness is a fundamental statistical measure used to describe the asymmetry of the probability distribution of a 
+ real-valued random variable. It provides insights into the direction and extent of the deviation from a symmetric 
+ distribution.
+ 
+ ### Key Aspects of Skewness:
+ 
+ 1. <strong>Definition</strong>:
+ 
+    - Skewness is the third standardized moment of a distribution.
+    - It is calculated as the average of the cubed deviations of the data from its mean, standardized by the standard deviation raised to the third power.
+    
+ 2. <strong>Types of Skewness</strong>:
+ 
+    - <strong>Zero Skewness</strong>: Indicates a symmetric distribution where the mean, median, and mode are all equal.
+    - <strong>Positive Skewness (Right-Skewed)</strong>: The tail on the right side of the distribution is longer or fatter. In this case, the mean is greater than the median.
+    - <strong>Negative Skewness (Left-Skewed)</strong>: The tail on the left side of the distribution is longer or fatter. Here, the mean is less than the median.
+    
+ 3. <strong>Interpretation</strong>:
+ 
+    - Skewness values close to zero suggest a nearly symmetric distribution.
+    - Positive values indicate right-skewed distributions, while negative values indicate left-skewed distributions.
+    - The magnitude of the skewness value reflects the degree of asymmetry.
+    
+ 4. <strong>Applications</strong>:
+ 
+    - <strong>Finance</strong>: Used to analyze the distribution of returns on investments, helping investors understand the potential for extreme outcomes.
+    - <strong>Economics</strong>: Assists in examining income distributions, enabling economists to assess income inequality.
+    - <strong>Natural Sciences</strong>: Describes the distribution of experimental data in scientific research.
+    
+ 5. <strong>Considerations</strong>:
+ 
+    - Skewness is just one aspect of distribution shape and should be considered alongside other statistical measures like kurtosis for a comprehensive understanding.
+    - For small sample sizes, the estimation of skewness can be unreliable.
+    
+ In essence, skewness is a statistical tool for understanding the asymmetry of data distributions, 
+ with wide-ranging applications in various fields such as finance, economics, and the natural 
+ sciences.</p></td>
+</tr>
+<tr>
+  <td id="product_moments">
+    <a href="./stats/product_moments.html">product_moments</a>
+  </td>
+  <td><p>In statistics, moments are a set of numerical characteristics that describe the shape and features of a probability distribution. 
+ Sample moments are the same concept applied to a sample of data, rather than an entire population. They are used to estimate 
+ the corresponding population moments and to understand the properties of the data distribution.
+ 
+ Here's a basic introduction to the concept of sample moments:
+ 
+ ### Definition:
+ 
+ 1. <strong>Sample Mean (First Moment):</strong>
+    The sample mean is the average of the data points in a sample. It is a measure of the central tendency of the data.
+      \[
+      \bar{x} = \frac{1}{n} \sum<em>{i=1}^{n} x</em>i
+      \]
+    where \( x_i \) are the data points and \( n \) is the number of data points in the sample.
+ 2. <strong>Sample Variance (Second Central Moment):</strong>
+    The sample variance measures the spread or dispersion of the data points around the sample mean.
+      \[
+      s^2 = \frac{1}{n-1} \sum<em>{i=1}^{n} (x</em>i - \bar{x})^2
+      \]
+    The denominator \( n-1 \) is used instead of \( n \) to provide an unbiased estimate of the population variance.
+ 3. <strong>Sample Standard Deviation:</strong>
+    The sample standard deviation is the square root of the sample variance and is also a measure of dispersion.
+      \[
+      s = \sqrt{s^2}
+      \]
+ 4. <strong>Higher-Order Sample Moments:</strong>
+    Higher-order moments describe the shape of the distribution. For example:
+    - <strong>Third Moment:</strong> Measures skewness, which indicates the asymmetry of the data distribution.
+    - <strong>Fourth Moment:</strong> Measures kurtosis, which indicates the "tailedness" of the data distribution.
+    
+ ### Calculation:
+ 
+ To calculate sample moments, you simply apply the formulas to your data set. For instance, to find the sample mean,
+ you add up all the data points and divide by the number of points.
+ 
+ ### Use:
+ 
+ Sample moments are used to:
+ - Estimate population parameters.
+ - Assess the shape of the data distribution (e.g., normality, skewness, kurtosis).
+ - Form the basis for many statistical tests and procedures.
+ 
+ ### Properties:
+ - <strong>Unbiasedness:</strong> Some sample moments are designed to be unbiased estimators, meaning that the expected value of the sample moment equals the population moment.
+ - <strong>Efficiency:</strong> Different sample moments may have different levels of variability; some are more efficient than others.
+ - <strong>Robustness:</strong> Certain moments are more robust to outliers than others.
+ 
+ ### Example:
+ If you have a sample of data: \( \{2, 4, 4, 4, 5, 5, 7, 9\} \), you can calculate the sample mean, variance, 
+ and other moments to understand the central tendency, dispersion, and shape of the data distribution.
+ 
+ sample moments are fundamental tools in statistics for summarizing and understanding the characteristics of
+ a data set. They provide a way to quantify features such as location, spread, and shape, which are essential 
+ for further statistical analysis.
+ 
+ @author Will<em>and</em>Sara</p></td>
+</tr>
+<tr>
+  <td id="moment">
+    <a href="./stats/moment.html">moment</a>
+  </td>
+  <td><h3>Statistical Moments</h3>
+
+<p>This function computes the sample moment of specified order.</p></td>
+</tr>
+<tr>
+  <td id="emd_dist">
+    <a href="./stats/emd_dist.html">emd_dist</a>
+  </td>
+  <td><h3>Earth Mover's Distance</h3>
+
+<p>Implementation of the Fast Earth Mover's Algorithm by Ofir Pele and Michael Werman.</p></td>
 </tr></tbody>
       </table>
     </div>

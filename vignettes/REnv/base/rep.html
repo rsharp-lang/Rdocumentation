@@ -27,7 +27,9 @@
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>rep</strong>(<i>x</i>, <i>times</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>rep</strong>(<i>x</i>,
+    <i>times</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>each</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -38,6 +40,12 @@
 <dd><p>a vector (of any mode including a list) or a factor or (for rep only) 
  a POSIXct or POSIXlt or Date object; or an S4 object containing such 
  an object.</p></dd>
+
+
+<dt>each</dt>
+<dd><p>non-negative integer. Each element of x is repeated each times. Other 
+ inputs will be coerced to an integer or double vector and the first 
+ element taken. Treated as 1 if NA or invalid. [as integer]</p></dd>
 
 
 <dt>times</dt>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>**Skewness**</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" type="text/css" href="https://rdocumentation.rsharp.net/assets/page.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <table style="width: 100%;">
+            <tr>
+                <td>skewness {stats}</td>
+                <td style="text-align: right;">R Documentation</td>
+            </tr>
+        </table>
+
+        <h2>**Skewness**</h2>
+
+        <h3>Description</h3>
+
+        <p><br /> Skewness is a fundamental statistical measure used to describe the asymmetry of the probability distribution of a <br /> real-valued random variable. It provides insights into the direction and extent of the deviation from a symmetric <br /> distribution.<br /> <br /> ### Key Aspects of Skewness:<br /> <br /> 1. <strong>Definition<em></em>:<br /> <br />    - Skewness is the third standardized moment of a distribution.<br />    - It is calculated as the average of the cubed deviations of the data from its mean, standardized by the standard deviation raised to the third power.<br />    <br /> 2. <em></em>Types of Skewness<em></em>:<br /> <br />    - <em></em>Zero Skewness<em></em>: Indicates a symmetric distribution where the mean, median, and mode are all equal.<br />    - <em></em>Positive Skewness (Right-Skewed)<em></em>: The tail on the right side of the distribution is longer or fatter. In this case, the mean is greater than the median.<br />    - <em></em>Negative Skewness (Left-Skewed)<em></em>: The tail on the left side of the distribution is longer or fatter. Here, the mean is less than the median.<br />    <br /> 3. <em></em>Interpretation<em></em>:<br /> <br />    - Skewness values close to zero suggest a nearly symmetric distribution.<br />    - Positive values indicate right-skewed distributions, while negative values indicate left-skewed distributions.<br />    - The magnitude of the skewness value reflects the degree of asymmetry.<br />    <br /> 4. <em></em>Applications<em></em>:<br /> <br />    - <em></em>Finance<em></em>: Used to analyze the distribution of returns on investments, helping investors understand the potential for extreme outcomes.<br />    - <em></em>Economics<em></em>: Assists in examining income distributions, enabling economists to assess income inequality.<br />    - <em></em>Natural Sciences<em></em>: Describes the distribution of experimental data in scientific research.<br />    <br /> 5. <em></em>Considerations</strong>:<br /> <br />    - Skewness is just one aspect of distribution shape and should be considered alongside other statistical measures like kurtosis for a comprehensive understanding.<br />    - For small sample sizes, the estimation of skewness can be unreliable.<br />    <br /> In essence, skewness is a statistical tool for understanding the asymmetry of data distributions, <br /> with wide-ranging applications in various fields such as finance, economics, and the natural <br /> sciences.</p>
+
+        <h3>Usage</h3>
+
+        <div style="width: 100%; padding-left: 3%; color: black;">
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>skewness</strong>(<i>x</i>,
+    <i>type</i> = Classical);</code></pre>
+        </div>
+
+        <h3>Arguments</h3>
+
+        <table>
+            
+<dt>x</dt>
+<dd><p>-</p></dd>
+
+        </table>
+
+
+        <h3 style="display: block;">Details</h3>
+
+        <p>If x contains missings and these are not removed, the skewness is NA.
+ Otherwise, write xi for the non-missing elements of x, n for their number, μ for their mean, s for their standard deviation, and 
+ mr =∑i (xi −μ) ^ r /n for the sample moments of order r.</p>
+
+<p>Joanes and Gill (1998) discuss three methods for estimating skewness:</p>
+
+<p>Type 1: g1 = m3 / m2 ^ (3/2). This is the typical definition used in many older textbooks.
+ Type 2: G1 = g1 * sqrt(n(n−1)) /(n−2). Used in SAS and SPSS.
+ Type 3: b1 = m3 /s^3 = g1 * ((n−1)/n) ^ (3/2) . Used in MINITAB and BMDP.</p>
+
+<p>All three skewness measures are unbiased under normality.</p>
+
+        <h3 style="display: block">Authors</h3>
+
+        sciBASIC.NET
+
+        <h3>Value</h3>
+
+        this function returns data object of type <i>any</i> kind.<h4>clr value class</h4><ul><li><i>any</i> kind</li></ul>
+
+        <h3 style="display: block;">Examples</h3>
+
+        <pre><code id="example_r"> # Example data
+ data <- c(2, 4, 4, 4, 5, 5, 7, 9);
+ # Calculate skewness using e1071 package
+ skewness_value <- skewness(data);
+ print(skewness_value);
+ 
+ skewness(data,type = 1);
+ # [1] 0.65625
+ skewness(data,type = 2);
+ # [1] 0.8184876
+ skewness(data,type = 3);
+ # [1] 0.5371325
+ 
+ # Manual calculation of skewness
+ n <- length(data);
+ mean_data <- mean(data);
+ sd_data <- sd(data);
+ skewness_manual <- sum((data - mean_data)^3) / ((n - 1) * sd_data^3);
+ print(skewness_manual);</code></pre>
+
+        <hr />
+        <div style="text-align: center;">[Package <em>stats</em> version 5.0.1.2389 <a
+                href="../stats.html">Index</a>]
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/R_syntax.js"></script>
+<script type="text/javascript" src="https://rdocumentation.rsharp.net/assets/highlights.js"></script>
+<script type="text/javascript">r_highlights("example_r");</script>
+
+</html>

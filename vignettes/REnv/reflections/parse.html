@@ -27,7 +27,9 @@
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>parse</strong>(<i>text</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>parse</strong>(
+    <i>text</i> = <span style='color: blue !important;'>NULL</span>,
+    <i>file</i> = <span style='color: blue !important;'>NULL</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -38,6 +40,12 @@
 <dd><p>character vector. The text to parse. Elements are treated as if 
  they were lines of a file. Other R objects will be coerced to 
  character if possible. [as string]</p></dd>
+
+
+<dt>file</dt>
+<dd><p>a connection, or a character String giving the name Of a file Or a URL To read 
+ the expressions from. If file Is "" And text Is missing Or NULL Then input 
+ Is taken from the console.</p></dd>
 
         </table>
 
